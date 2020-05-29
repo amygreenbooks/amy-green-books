@@ -3,12 +3,14 @@
 <div class="ph3 bg-off-white">
 	<div class="center mw6 pv3">
 
-		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
+		<h1 class="db tc pv4 primary f1 b lh-title">{{.Title}}</h1>
 
-		{{ .Content }}
+    <div class="cms">
+		  {{ .Content }}
+    </div>
 
 		<div class="flex-ns mb3">
-	        	{{ range .Params.contact_entries }}
+      {{ range .Params.contact_entries }}
 				<div>
 					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
 					<p>{{ .text }}</p>

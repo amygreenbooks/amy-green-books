@@ -11,19 +11,29 @@
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
+  </div>
 
-    <h2 class="mw6 f3 b lh-title">
-    {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
-      Preorder now at:
-    {{ else }}
-      Purchase today at:
-    {{ end }}
-    </h2>
+  <div class="bg-grey-1 pv4 mb4">
+    <div class="mw6 ph3 center">
+      <h2 class="f3 b lh-title primary">
+      {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
+        Preorder now at:
+      {{ else }}
+        Purchase today at:
+      {{ end }}
+      </h2>
 
-    <div class="mw6 flex flex-wrap items-center justify-center">
-    {{ range $index, $element := .Params.retailers }}
-      {{ partial "retailer" $element }}
-    {{ end }}
+      <div class="flex flex-wrap justify-center">
+      {{ range $index, $element := .Params.retailers }}
+        {{ partial "retailer" $element }}
+      {{ end }}
+      </div>
     </div>
+  </div>
+
+  <div class="center mb4 ph3 mw6">
+    {{ range .Params.endorsements }}
+      {{ partial "blockquote" . }}
+    {{ end }}
   </div>
 {{ end }}

@@ -24,6 +24,13 @@ retailers:
   - name: "Indie Bound"
     link: "https://www.indiebound.org/book/9780764237164"
     imageUrl: "/img/indie-bound.jpg"
+endorsements:
+  - author: Jake Lokkesmoe
+    quote: >-
+      Amy is super awesome! So awesome indeed that I married her!
+  - author: Philipp Trommler
+    quote: >-
+      This is a quote! It's not very helpful though. Sorry about that :/
 ---
 
 Headstrong Johanna Berglund, a linguistics student at the University of  Minnesota, has very definite plans for her future . . . plans that do  not include returning to her hometown and the secrets and heartaches she  left behind there. But the US Army wants her to work as a translator at  a nearby camp for German POWs.

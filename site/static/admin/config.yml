@@ -35,6 +35,13 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Name, name: name, widget: string}
           - {label: Link, name: link, widget: string}
           - {label: Image, name: imageUrl, widget: image}
+      - label: Endorsements
+        name: endorsements
+        label_singular: endorsement
+        widget: list
+        fields:
+          - {label: Author, name: author, widget: string}
+          - {label: Quote, name: quote, widget: text}
   - name: "pages"
     label: "Pages"
     files:
@@ -53,7 +60,6 @@ collections: # A list of collections the CMS should be able to edit
         name: "contact"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
           - {label: Body, name: body, widget: markdown}
           - label: Contact Entries
             name: contact_entries
