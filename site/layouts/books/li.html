@@ -6,8 +6,10 @@
   <div class="pl3-m w-50-m">
     <header>
       <h3 class="f3 b lh-title mb1">{{.Title}}</h3>
-      {{ if isset .Params "releasedate" }}
-        <p class="mid-gray lh-title mb2">{{ dateFormat "Jan, 2006" .Params.releasedate }}</p>
+      {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
+        <p class="mid-gray lh-title mb2">
+          Releases: {{ dateFormat "January 2006" .Params.releasedate }}
+        </p>
       {{ end }}
     </header>
     <p>{{.Description}}</p>

@@ -1,14 +1,29 @@
 {{ define "main" }}
   <div class="mw6 center ph3 pv4">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
-    </div>
-    <div class="cms mw6">
+    {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
+      <p class="grey-3 b lh-title mb2">
+        Releases: {{ dateFormat "January 2006" .Params.releasedate }}
+      </p>
+    {{ end }}
+    <div class="cms mw6 mb4">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
+    </div>
+
+    <h2 class="mw6 f3 b lh-title">
+    {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
+      Preorder now at:
+    {{ else }}
+      Purchase today at:
+    {{ end }}
+    </h2>
+
+    <div class="mw6 flex flex-wrap items-center justify-center">
+    {{ range $index, $element := .Params.retailers }}
+      {{ partial "retailer" $element }}
+    {{ end }}
     </div>
   </div>
 {{ end }}

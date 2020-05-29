@@ -27,6 +27,14 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Summary", name: "description", widget: "text"}
       - {label: "Cover Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - label: Retailers
+        name: retailers
+        label_singular: Retailer
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Link, name: link, widget: string}
+          - {label: Image, name: imageUrl, widget: image}
   - name: "pages"
     label: "Pages"
     files:
