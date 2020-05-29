@@ -1,8 +1,8 @@
 ---
 title: Things We Didn't Say
-date: 2020-05-01
-releaseDate: 2020-11-01
-description: >
+date: 2020-05-01T00:00:00.000Z
+releaseDate: 2020-11-01T05:00:00.000Z
+description: |
   This is some cool info about Things We Didn't Say!
 image: /img/things-we-didnt-say.jpg
 ---
