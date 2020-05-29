@@ -1,0 +1,18 @@
+<article class="flex-m mhn3-m mb4">
+  <a class="db pr3-m w-50-m" href="{{ .RelPermalink }}">
+    <img src="{{.Params.image}}" alt="" class="db mb2">
+  </a>
+
+  <div class="pl3-m w-50-m">
+    <header>
+      <h3 class="f3 b lh-title mb1">{{.Title}}</h3>
+      {{ if isset .Params "releasedate" }}
+        <p class="mid-gray lh-title mb2">{{ dateFormat "Jan, 2006" .Params.releasedate }}</p>
+      {{ end }}
+    </header>
+    <p>{{.Description}}</p>
+    <footer>
+      <a href="{{ .RelPermalink }}" class="link">Learn more →</a>
+    </footer>
+  </div>
+</article>
