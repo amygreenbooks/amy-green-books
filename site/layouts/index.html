@@ -1,9 +1,21 @@
+{{ define "header" }}
+  {{ partial "jumbotron" (dict "title" .Title "subtitle" .Params.subtitle) }}
+
+  <nav class="flex flex-wrap justify-center bb b--primary bw2">
+    {{ partial "nav-links" }}
+  </nav>
+{{ end}}
+
 {{ define "main" }}
+  <div class="bg-grey-1 pb4 pt5">
+    <div class="mw7 center">
+      {{ partial "books" . }}
+    </div>
+  </div>
 
-{{ partial "hero" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
-
-{{ partial "books" . }}
-
-{{ partial "short-text" .Params.welcome}}
-
+  <div class="bg-off-white pb4 pt5">
+    <div class="mw7 center">
+      {{ partial "media-block-reverse" .Params.welcome}}
+    </div>
+  </div>
 {{ end }}

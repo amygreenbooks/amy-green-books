@@ -1,12 +1,12 @@
 <div class="flex-m mhn3-m mb4">
 
-  <div class="ph3-m w-50-m">
-    <img src="{{.imageUrl}}" alt="" class="db mb2">
+  <div class="ph3">
+    <img src="{{.imageUrl}}" alt="" class="db mb2 center mw4">
   </div>
 
-  <div class="ph3-m w-50-m">
+  <div class="ph3">
     <h3 class="f3 b lh-title mb1">{{.heading}}</h3>
-    <p>{{.text}}</p>
+    <div class="cms">{{.text | markdownify}}</div>
   </div>
 
 </div>
