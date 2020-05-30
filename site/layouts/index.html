@@ -1,9 +1,26 @@
 {{ define "header" }}
-  {{ partial "jumbotron" (dict "title" .Title "subtitle" .Params.subtitle) }}
+  <div class="cover bg-primary">
+    <div class="mw7 center pv5 pv6-l ph3">
+      <div class="db mb3">
+        <div class="mw7 relative mb3">
+          <h1 class="f2 f1-l b di lh-title mb3 mw6 white">
+            {{.Title}}
+          </h1>
+        </div>
+        <div class="mw7 relative">
+          {{ if .Params.subtitle }}
+          <p class="f4 fw5 di lh-title mb3 mw6 highlight">
+            {{.Params.subtitle}}
+          </p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
 
-  <nav class="flex flex-wrap justify-center bb b--primary bw2">
-    {{ partial "nav-links" }}
-  </nav>
+    <nav class="bg-primary flex flex-wrap justify-center bw2 white">
+      {{ partial "nav-links" }}
+    </nav>
+  </div>
 {{ end}}
 
 {{ define "main" }}
