@@ -1770,10 +1770,10 @@ assert@^1.1.1:
     object-assign "^4.1.1"
     util "0.10.3"
 
-assets-webpack-plugin@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/assets-webpack-plugin/-/assets-webpack-plugin-5.0.0.tgz#1364ee787ac42f8481673d6300238c8d5997abb3"
-  integrity sha512-EwtEQ120nPtRJ9NMu6zJxDB5L05yAHfhAglsQkC/8YD5Oxa2sJeZGukKSLQH8HdLEQhVUWKm+OmUtz+2S/zJwA==
+assets-webpack-plugin@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/assets-webpack-plugin/-/assets-webpack-plugin-5.0.1.tgz#3d5c2462591c8fe8cba879e5caf3fb89b269c4c3"
+  integrity sha512-OmscGQ/WXJZqq6sX+X3uva6G/FHcsBSuuL3u2ywdaxSH7gCKIe1N57843HAD4DIqB0qzQdU3vsOTMhbFrUYWVw==
   dependencies:
     camelcase "6.0.0"
     escape-string-regexp "4.0.0"
