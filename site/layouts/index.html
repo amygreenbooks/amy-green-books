@@ -1,15 +1,18 @@
+
 {{ define "header" }}
-  <div class="cover bg-primary">
-    <div class="mw7 center pv5 pv6-l ph3">
+{{ $altHeader := false }}
+  <div class="hero cover bg-cover" style="background-image:url('{{.Params.image}}');background-position: 84% 70%;">
+    <div style="background:rgba(0,0,0,0.1)">
+    <div class="mw7 center pv5 pv6-l ph3 tr">
       <div class="db mb3">
-        <div class="mw7 relative mb3">
-          <h1 class="f2 f1-l b di lh-title mb3 mw6 white">
+        <div class="relative mb2">
+          <h1 class="f2 f1-l b di lh-title mw6 white{{if $altHeader}} ph2 bg-black{{end}}">
             {{.Title}}
           </h1>
         </div>
-        <div class="mw7 relative">
+        <div class="relative">
           {{ if .Params.subtitle }}
-          <p class="f4 fw5 di lh-title mb3 mw6 highlight">
+          <p class="f3 fw5 di lh-title mw6 {{if $altHeader}}ph2 white bg-primary{{else}}grey-5{{end}}">
             {{.Params.subtitle}}
           </p>
           {{ end }}
@@ -17,9 +20,19 @@
       </div>
     </div>
 
-    <nav class="bg-primary flex flex-wrap justify-center bw2 white">
-      {{ partial "nav-links" }}
+    <nav class="flex flex-wrap justify-center bw2 white bg-black main-nav">
+      <ul class="flex">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{.URL}}" class="pv3 ph4 no-underline db nowrap{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+              {{.Name}}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
     </nav>
+      </div>
   </div>
 {{ end}}
 

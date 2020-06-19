@@ -1,14 +1,14 @@
-<div class="pv5 pv6-l ph3 bg-center cover">
-  <div class="mw7 center ph3">
+<div class="pv5 ph3 pv6-l{{if isset . "imageUrl" }} bg-center cover{{end}}" style="background-image:url('{{.imageUrl}}')">
+  <div class="mw7 center">
     <div class="db mb3">
-      <div class="mw7 relative mb3">
-        <h1 class="f2 f1-l b di lh-title mb3 mw6 primary">
+      <div class="mw7 relative mb2">
+        <h1 class="f2 f1-l b di lh-title {{if isset . "imageUrl" }}ph2 bg-black white{{else}}primary{{end}}">
           {{.title}}
         </h1>
       </div>
       <div class="mw7 relative">
         {{ if .subtitle }}
-        <p class="f4 fw5 di lh-title mb3 mw6 grey-3">
+        <p class="f4 fw5 di lh-title {{if isset . "imageUrl" }}ph2 bg-primary white{{else}}grey-3{{end}}">
           {{.subtitle}}
         </p>
         {{ end }}

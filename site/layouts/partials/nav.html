@@ -1,11 +1,18 @@
-<nav class="bg-primary relative white">
-	<div class="mw7 overflow-x-scroll overflow-x-visible-ns flex flex-wrap justify-between items-center center">
+<nav class="bg-black relative white main-nav">
+	<div class="mw7 flex-ns flex-wrap justify-between items-center center">
 		<!-- Logo -->
-		<a href="/" class="pa3 fw6 db mr4 nowrap no-underline">
+		<a href="/" class="pa3 fw6 db mr4-ns nowrap no-underline bg-primary bw1 b--primary bb bt">
 			Amy Lynn Green
 		</a>
-
-		<!-- Primary Nav -->
-		{{ partial "nav-links" }}
+    <ul class="flex overflow-x-scroll overflow-x-visible-ns">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{.URL}}" class="pa3 no-underline db nowrap bb bw2{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} b--primary{{else}} b--black{{end}}">
+            {{.Name}}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
 	</div>
 </nav>
