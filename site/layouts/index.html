@@ -20,12 +20,12 @@
       </div>
     </div>
 
-    <nav class="flex flex-wrap justify-center bw2 white bg-black main-nav">
-      <ul class="flex">
+    <nav class="flex justify-center bw2 white bg-black main-nav">
+      <ul class="flex flex-wrap justify-between w-100 mw6">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-          <li>
-            <a href="{{.URL}}" class="pv3 ph4 no-underline db nowrap{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+          <li class="flex-auto tc">
+            <a href="{{.URL}}" class="pv3 ph2 no-underline db nowrap{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
               {{.Name}}
             </a>
           </li>
