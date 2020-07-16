@@ -1,5 +1,5 @@
 import React from "react";
-import Markdown from "./components/Markdown";
+import Markdown from "./components/markdown";
 
 export default class PostPreview extends React.Component {
   render() {
