@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
-  {{ partial "head" . }}
+  <head>
+    {{ partial "head" . }}
+    {{ block "opengraph" . }}
+    <!-- Open Graph -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Amy Green Books">
+    <meta property="og:url" content="/">
+    {{ end }}
+  </head>
   <body class="sans-serif">
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}

@@ -1,3 +1,10 @@
+{{define "opengraph"}}
+<meta property="og:type" content="book">
+<meta property="og:book:author" content="Amy Lynn Green">
+{{ if (isset .Params "isbn") }}<meta property="og:book:isbn" content="{{ .Params.isbn }}">{{ end }}
+{{ if (isset .Params "releasedate") }}<meta property="og:book:releasedate" content="{{ (time .Params.releasedate).Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
+{{end}}
+
 {{ define "main" }}
   <div class="mw6 center ph3 pv4">
     <h1 class="f2 lh-title b mb3"><em>{{.Title}}</em></h1>

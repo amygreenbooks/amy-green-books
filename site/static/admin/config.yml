@@ -22,6 +22,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "ISBN", name: "isbn", widget: "string"}
       - {label: "Create Date", name: "date", widget: "datetime"}
       - {label: "Release Date", name: "releaseDate", widget: "datetime"}
       - {label: "Summary", name: "description", widget: "text"}
