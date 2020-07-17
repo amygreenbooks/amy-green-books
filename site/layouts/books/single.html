@@ -1,29 +1,33 @@
-{{define "meta"}}
-<meta property="og:type" content="book">
-<meta property="og:book:author" content="Amy Lynn Green">
-<meta property="og:article:author" content="Amy Lynn Green" />
-<meta property="article:author" content="Amy Lynn Green" />
-<meta name="author" content="Amy Lynn Green" />
-
-{{ if (isset .Params "isbn") }}<meta property="og:book:isbn" content="{{ .Params.isbn }}">{{ end }}
-{{ if (isset .Params "releasedate") }}<meta property="og:book:releasedate" content="{{ (time .Params.releasedate).Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
-{{end}}
-
 {{ define "main" }}
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3"><em>{{.Title}}</em></h1>
-    {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
-      <p class="grey-3 b lh-title mb2">
-        Releases: {{ dateFormat "January 2006" .Params.releasedate }}
-      </p>
+  <article class="mw6 center ph3 pv4" itemscope itemtype="https://schema.org/Book">
+    <header>
+      <h1 class="f2 lh-title b i mb3" itemprop="name">{{.Title}}</h1>
+      {{ with .Params.releasedate }}
+        <p class="grey-3 b lh-title mb2">
+          {{ if ((time .).After now) }}
+            Releases:
+          {{ else }}
+            Released:
+          {{ end }}
+          <time itemprop="datePublished" datetime="{{ dateFormat "2006-01-02T15:04:05Z0700" . }}">
+            {{ dateFormat "January 2006" . }}
+          </time>
+        </p>
+      {{ end }}
+    </header>
+
+    {{ with .Params.image }}
+      <figure>
+        <img itemprop="image" src="{{ . }}" alt="Cover for {{ $.Title }}" />
+      </figure>
     {{ end }}
-    <div class="cms mw6 mb4">
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+
+    <div class="cms mb4" itemprop="abstract">
       {{ .Content }}
     </div>
-  </div>
+  </article>
 
-  <div class="bg-grey-1 pv4 mb4">
+  <section class="bg-grey-1 pv4 mb4">
     <div class="mw6 ph3 center">
       <h2 class="f3 b lh-title primary">
       {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
@@ -39,11 +43,11 @@
       {{ end }}
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="center mb4 ph3 mw6">
+  <section class="center mb4 ph3 mw6">
     {{ range .Params.endorsements }}
       {{ partial "blockquote" . }}
     {{ end }}
-  </div>
+  </section>
 {{ end }}

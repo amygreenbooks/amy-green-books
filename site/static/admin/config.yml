@@ -52,7 +52,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
+          - {label: "Banner Image", name: bannerImage, widget: image}
           - {label: "Welcome", name: welcome, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "markdown"},
@@ -63,7 +63,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: description, widget: string}
-          - {label: Image, name: image, widget: "image"}
+          - {label: "Banner Image", name: bannerImage, widget: "image"}
           - {label: Body, name: body, widget: markdown}
           - label: Contact Entries
             name: contact_entries

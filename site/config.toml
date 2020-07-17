@@ -1,7 +1,15 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
+baseURL = "https://www.amygreenbooks.com/"
 title = "Amy Lynn Green"
+
+[params]
+  author = "Amy Lynn Green"
+  description = "Amy Lynn Green is a lifelong lover of books, history, and library cards. She worked in publishing for six years before writing her first historical fiction novel, based on the WWII home-front of Minnesota, the state where she lives, works, and survives long winters."
+  ogimage = "/img/og-image.jpg"
+  facebook = "https://www.facebook.com/amygreenbooks/"
+  instagram = "https://www.instagram.com/amygreenbooks/"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details:

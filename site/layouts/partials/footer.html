@@ -25,8 +25,8 @@
     </ul>
 
     <ul class="mhn2 tc">
-      {{ partial "social-icon" (dict "link" "https://www.facebook.com/amygreenbooks/" "svg" "icons-facebook") }}
-      {{ partial "social-icon" (dict "link" "https://www.instagram.com/amygreenbooks/" "svg" "icons-instagram") }}
+      {{ partial "social-icon" (dict "link" .Site.Params.facebook "svg" "icons-facebook") }}
+      {{ partial "social-icon" (dict "link" .Site.Params.instagram "svg" "icons-instagram") }}
     </ul>
 	</div>
 

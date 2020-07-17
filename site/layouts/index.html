@@ -1,7 +1,7 @@
 
 {{ define "header" }}
 {{ $altHeader := false }}
-  <div class="hero cover bg-cover" style="background-image:url('{{.Params.image}}');background-position: 84% 70%;">
+  <div class="hero cover bg-cover" style="background-image:url('{{.Params.bannerImage}}');background-position: 84% 70%;">
     <div style="background:rgba(0,0,0,0.1)">
     <div class="mw7 center pv5 pv6-l ph3 tr">
       <div class="db mb3">
@@ -12,7 +12,7 @@
         </div>
         <div class="relative">
           {{ if .Params.subtitle }}
-          <p class="f3 fw5 di lh-title mw6 {{if $altHeader}}ph2 white bg-primary{{else}}grey-5{{end}}">
+          <p class="f3 fw5 di lh-title mw6 {{if $altHeader}}ph2 white bg-primary{{else}}black{{end}}">
             {{.Params.subtitle}}
           </p>
           {{ end }}

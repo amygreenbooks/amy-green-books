@@ -18,13 +18,13 @@ export default class PostPreview extends React.Component {
             <div className="mw7 center pv5 pv6-l ph3 tr">
               <div className="db mb3">
                 <div className="relative mb2">
-                  <h1 className="f2 f1-l b di lh-title mw6 white{{if $altHeader}} ph2 bg-black{{end}}">
+                  <h1 className="f2 f1-l b di lh-title mw6 white">
                     {entry.getIn(["data", "title"])}
                   </h1>
                 </div>
                 <div className="relative">
                   {entry.getIn(["data", "subtitle"]) && (
-                    <p className="f3 fw5 di lh-title mw6 {{if $altHeader}}ph2 white bg-primary{{else}}grey-5{{end}}">
+                    <p className="f3 fw5 di lh-title mw6 black">
                       {entry.getIn(["data", "subtitle"])}
                     </p>
                   )}

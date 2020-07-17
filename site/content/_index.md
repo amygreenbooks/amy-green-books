@@ -1,7 +1,7 @@
 ---
 title: "Amy Lynn Green"
 subtitle: Historical Fiction Author
-image: /img/typewriter-banner.jpg
+bannerImage: /img/typewriter-banner.jpg
 welcome:
   heading: Welcome!
   image: /img/home-amy.jpg
