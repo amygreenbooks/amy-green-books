@@ -61,18 +61,14 @@ endorsements:
     author: Beverly Lewis
   - quote: >-
       *Things We Didn’t Say* is the best sort of book: where the characters
-
       feel like friends, the story feels like home, and the pages beckon you
-
       to turn them ceaselessly, immersing you in an absorbing world. Amy
-
       Lynn Green expertly wields wit, heart, history, and enveloping storytelling
-
       in this glorious debut!
     author: Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*
   - quote: Based on actual World War II experiences, and sparkling with humor and
       touches of romance, this is an impressive debut from a multitalented
-      writer.”
+      writer.
     author: Julie Klassen, author of *The Bridge to Belle Island*
 ---
 Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.

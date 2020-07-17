@@ -5,7 +5,7 @@
 
   <div class="pl3-m w-50-m">
     <header>
-      <h3 class="f3 b lh-title mb1">{{.Title}}</h3>
+      <h3 class="f3 b lh-title mb1"><em>{{.Title}}</em></h3>
       {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
         <p class="mid-gray lh-title mb2">
           Releases: {{ dateFormat "January 2006" .Params.releasedate }}

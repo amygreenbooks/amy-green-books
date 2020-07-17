@@ -15,10 +15,13 @@
 
     <ul class="mb3 center flex-ns flex-wrap justify-between mw5 tc">
       <li><a href="/" class="link">Home</a></li>
-      <li><a href="/books/" class="link">Books</a></li>
-      <li><a href="/about/" class="link">Meet Amy</a></li>
-      <li><a href="/contact/" class="link">Contact</a></li>
-      <li><a href="/news/" class="link">News</a></li>
+      {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{.URL}}" class="link">
+            {{.Name}}
+          </a>
+        </li>
+      {{ end }}
     </ul>
 
     <ul class="mhn2 tc">
