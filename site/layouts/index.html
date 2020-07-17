@@ -26,7 +26,7 @@
         {{ range .Site.Menus.main }}
           <li class="flex-auto tc">
             <a href="{{.URL}}" class="pv3 ph2 no-underline db nowrap{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
-              {{.Name}}
+              {{.Title}}
             </a>
           </li>
         {{ end }}
