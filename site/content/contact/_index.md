@@ -1,12 +1,12 @@
 ---
 title: Contact
-description: "I'd love to hear from you"
+description: I'd love to hear from you.
 image: /img/letters2.jpg
 menu:
   main:
-    title: "Contact"
+    title: Contact
     weight: 3
-#contact_entries:
-#  - heading: "Mailing Address"
-#    text: "PO BOX 1234"
 ---
+## Drop me a line below.
+
+Whether you want to chat books, contact me about speaking opportunities, or just say hello, I share the same love of mail as my characters.
