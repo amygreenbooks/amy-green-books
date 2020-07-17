@@ -28,10 +28,6 @@ retailers:
     link: https://www.indiebound.org/book/9780764237164
     imageUrl: /img/indie-bound.jpg
 endorsements:
-  - author: Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*
-    quote: "*Things We Didn’t Stay* is a stand-out novel as brilliant and brave as
-      its heroine. . . . An utterly satisfying read you’ll want to share as soon
-      as you reach its conclusion."
   - author: Lynn Austin, author of *If I Were You*
     quote: |-
       This compelling novel of life on the US home front during World War
@@ -41,11 +37,10 @@ endorsements:
       on your bookshelf, because this book is a keeper!
     author: Sarah Sundin, bestselling and award-winning author of *When Twilight
       Breaks* and the Sunrise at Normandy series
-  - quote: |-
-      Amy Green’s debut novel kept me guessing to the very end—twist
-      upon twist upon twist. She is a master plotter, so read every single
-      word!
-    author: Beverly Lewis
+  - author: Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*
+    quote: "*Things We Didn’t Stay* is a stand-out novel as brilliant and brave as
+      its heroine. . . . An utterly satisfying read you’ll want to share as soon
+      as you reach its conclusion."
   - quote: |-
       Amy Green pens a fascinating story of intrigue and love in her book
       *Things We Didn’t Say*. Set against the backdrop of World War II, Amy
@@ -53,6 +48,17 @@ endorsements:
       situations that force them to take a deeper look at who they are and
       what they really want out of life.
     author: Tracie Peterson
+  - quote: A fascinating excavation of a little-known moment in US history executed
+      with an inimitable voice and extremely clever style. Excessively readable,
+      this winsome epistolary is underscored by a deep look at patriotism,
+      prejudice, unwavering faith, duty, and love. . . . A dazzlingly smart and
+      confident debut, *Things We Didn’t Say* is as moving as it is memorable.”
+    author: Rachel McMillan, author of *The London Restoration*
+  - quote: |-
+      Amy Green’s debut novel kept me guessing to the very end—twist
+      upon twist upon twist. She is a master plotter, so read every single
+      word!
+    author: Beverly Lewis
   - quote: >-
       *Things We Didn’t Say* is the best sort of book: where the characters
 
@@ -68,12 +74,6 @@ endorsements:
       touches of romance, this is an impressive debut from a multitalented
       writer.”
     author: Julie Klassen, author of *The Bridge to Belle Island*
-  - quote: A fascinating excavation of a little-known moment in US history executed
-      with an inimitable voice and extremely clever style. Excessively readable,
-      this winsome epistolary is underscored by a deep look at patriotism,
-      prejudice, unwavering faith, duty, and love. . . . A dazzlingly smart and
-      confident debut, *Things We Didn’t Say* is as moving as it is memorable.”
-    author: Rachel McMillan, author of *The London Restoration*
 ---
 Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.
 
