@@ -1,5 +1,6 @@
 import React from "react";
 import format from "date-fns/format";
+import Markdown from "./components/markdown";
 
 const Retailer = ({ name, link, imageUrl }) => (
   <div class="w-third pa2 border-box flex w100">
@@ -46,7 +47,6 @@ export default class BookPreview extends React.Component {
             </p>
           )}
           <div class="cms mw6 mb4">
-            <p>{entry.getIn(["data", "description"])}</p>
             {image && <img src={image} alt={entry.getIn(["data", "title"])} />}
             {widgetFor("body")}
           </div>
@@ -54,7 +54,7 @@ export default class BookPreview extends React.Component {
 
         <div class="bg-grey-1 pv4 mb4">
           <div class="mw6 ph3 center">
-            <h2 class="f3 b lh-title primary">Preorder now at:</h2>
+            <h2 class="f3 b lh-title primary">Pre-order now at:</h2>
 
             <div class="flex flex-wrap justify-center">
               {retailers.map(({ name, link, imageUrl }, i) => (
