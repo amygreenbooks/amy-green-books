@@ -3,24 +3,23 @@
 {{ partial "jumbotron" (dict "title" .Title "subtitle" .Description "imageUrl" .Params.image) }}
 
 <div class="ph3 bg-off-white">
-	<div class="center mw6 pv3">
+  <div class="center mw6 pv3">
 
     <div class="cms">
-		  {{ .Content }}
+      {{ .Content }}
     </div>
 
-		<div class="flex-ns mb3">
+    <div class="flex-ns mb3">
       {{ range .Params.contact_entries }}
-				<div>
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
-				</div>
-			{{ end }}
-		</div>
+        <div>
+          <p>{{ .text }}</p>
+        </div>
+      {{ end }}
+    </div>
 
-		{{ partial "contact-form" . }}
+    {{ partial "contact-form" . }}
 
-	</div>
+  </div>
 </div>
 
 {{ end }}
