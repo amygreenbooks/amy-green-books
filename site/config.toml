@@ -1,7 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-baseURL = "https://www.amygreenbooks.com/"
 title = "Amy Lynn Green"
 
 [params]
