@@ -2,14 +2,14 @@ import React from "react";
 import format from "date-fns/format";
 import Markdown from "./components/markdown";
 
-const Retailer = ({ name, link, imageUrl }) => (
+const Retailer = ({ name, link, image }) => (
   <div class="w-third pa2 border-box flex w100">
     <a
       class="db pa2 raise bg-off-white flex items-center w-100 br1"
       href={link}
     >
       <img
-        src={imageUrl}
+        src={image}
         alt={name}
         className="db mw-100 br0 center"
         style={{ maxHeight: 100 }}
@@ -57,8 +57,8 @@ export default class BookPreview extends React.Component {
             <h2 class="f3 b lh-title primary">Pre-order now at:</h2>
 
             <div class="flex flex-wrap justify-center">
-              {retailers.map(({ name, link, imageUrl }, i) => (
-                <Retailer key={i} name={name} link={link} imageUrl={imageUrl} />
+              {retailers.map(({ name, link, image }, i) => (
+                <Retailer key={i} name={name} link={link} image={image} />
               ))}
             </div>
           </div>

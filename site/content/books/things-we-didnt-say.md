@@ -15,22 +15,22 @@ image: /img/things-we-didnt-say.jpg
 retailers:
   - name: Amazon
     link: https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/
-    imageUrl: /img/amazon.png
+    image: /img/amazon.png
   - name: Baker Book House
     link: https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164
-    imageUrl: /img/baker-book-house.png
+    image: /img/baker-book-house.png
   - name: BAM
     link: https://www.booksamillion.com/p/Things-We-Didnt-Say/Amy-Lynn-Green/9780764237164
-    imageUrl: /img/bam.png
+    image: /img/bam.png
   - name: Barnes & Noble
     link: https://www.barnesandnoble.com/w/things-we-didnt-say-amy-lynn-green/1136472139
-    imageUrl: /img/barnes-and-noble.png
+    image: /img/barnes-and-noble.png
   - name: Christian Book
     link: https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
-    imageUrl: /img/christian-book.png
+    image: /img/christian-book.png
   - name: Indie Bound
     link: https://www.indiebound.org/book/9780764237164
-    imageUrl: /img/indie-bound.jpg
+    image: /img/indie-bound.jpg
 endorsements:
   - author: Lynn Austin, author of *If I Were You*
     quote: |-

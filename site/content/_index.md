@@ -4,7 +4,7 @@ subtitle: Historical Fiction Author
 image: /img/typewriter-banner.jpg
 welcome:
   heading: Welcome!
-  imageUrl: /img/home-amy.jpg
+  image: /img/home-amy.jpg
   text: |
     Whether you heard about my WWII epistolary novel, or know me from the writing world and are interested in what I’m up to, or just want to follow my publication journey, I’m glad you stopped by.
 
