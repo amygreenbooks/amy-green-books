@@ -9,7 +9,7 @@
       {{ range .Site.Menus.main }}
         <li>
           <a href="{{.URL}}" class="pa3 no-underline db nowrap bb bw2{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} b--primary{{else}} b--black{{end}}">
-            {{.Name}}
+            {{.Title}}
           </a>
         </li>
       {{ end }}

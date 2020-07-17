@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
+    <h1 class="f2 lh-title b mb3"><em>{{.Title}}</em></h1>
     {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
       <p class="grey-3 b lh-title mb2">
         Releases: {{ dateFormat "January 2006" .Params.releasedate }}
