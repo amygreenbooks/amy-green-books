@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article class="mw5 ph3 center cms mb4">
-    {{ with .Params.image }}
+    {{ with .Params.aboutImage }}
       <img src="{{ . }}" alt="{{ $.Title }}" />
     {{ end }}
     {{ .Content }}

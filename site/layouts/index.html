@@ -1,31 +1,23 @@
 
 {{ define "header" }}
-{{ $altHeader := false }}
   <div class="hero cover bg-cover" style="background-image:url('{{.Params.bannerImage}}');background-position: 84% 70%;">
     <div style="background:rgba(0,0,0,0.1)">
-    <div class="mw7 center pv5 pv6-l ph3 tr">
-      <div class="db mb3">
-        <div class="relative mb2">
-          <h1 class="f2 f1-l b di lh-title mw6 white{{if $altHeader}} ph2 bg-black{{end}}">
-            {{.Title}}
-          </h1>
-        </div>
-        <div class="relative">
-          {{ if .Params.subtitle }}
-          <p class="f3 fw5 di lh-title mw6 {{if $altHeader}}ph2 white bg-primary{{else}}black{{end}}">
-            {{.Params.subtitle}}
-          </p>
-          {{ end }}
-        </div>
-      </div>
-    </div>
+    <header class="mw7 center pv5 pv6-l ph3 tr mb3">
+      <h1 class="f2 f1-l b lh-title white mb2">
+        {{.Title}}
+      </h1>
+      {{ if .Params.subtitle }}
+      <p class="f3 fw5 lh-title mw-100 black">
+        {{.Params.subtitle}}
+      </p>
+      {{ end }}
+    </header>
 
     <nav class="flex justify-center bw2 white bg-black main-nav">
       <ul class="flex flex-wrap justify-between w-100 mw6">
-        {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
           <li class="flex-auto tc">
-            <a href="{{.URL}}" class="pv3 ph2 no-underline db nowrap{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+            <a href="{{.URL}}" class="pv3 ph2 no-underline db nowrap">
               {{.Title}}
             </a>
           </li>

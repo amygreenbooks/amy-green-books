@@ -5,10 +5,10 @@
 			Amy Lynn Green
 		</a>
     <ul class="flex overflow-x-scroll overflow-x-visible-ns">
-      {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
+        {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
         <li>
-          <a href="{{.URL}}" class="pa3 no-underline db nowrap bb bw2{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} b--primary{{else}} b--black{{end}}">
+          <a href="{{.URL}}" class="pa3 no-underline db nowrap bb bw2 {{if $active}}b--primary{{else}}b--black{{end}}">
             {{.Title}}
           </a>
         </li>

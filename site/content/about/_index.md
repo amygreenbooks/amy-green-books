@@ -1,6 +1,6 @@
 ---
 title: "Meet Amy"
-image: "/img/meet-amy.png"
+aboutImage: "/img/meet-amy.png"
 menu:
   main:
     title: "Meet Amy"

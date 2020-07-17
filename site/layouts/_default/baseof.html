@@ -7,10 +7,15 @@
     {{ end }}
   </head>
   <body class="sans-serif">
+    <div id="skip">
+      <a href="#maincontent" class="hidden">Skip to main content</a>
+    </div>
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
 
-    {{ block "main" . }}{{ end }}
+    <main id="maincontent">
+      {{ block "main" . }}{{ end }}
+    </main>
 
     {{ block "footer" . }}{{ partial "footer" . }}{{end}}
 
