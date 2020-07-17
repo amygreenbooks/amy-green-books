@@ -7,7 +7,6 @@
       </p>
     {{ end }}
     <div class="cms mw6 mb4">
-      <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
@@ -17,7 +16,7 @@
     <div class="mw6 ph3 center">
       <h2 class="f3 b lh-title primary">
       {{ if (and (isset .Params "releasedate") ((time .Params.releasedate).After now)) }}
-        Preorder now at:
+        Pre-order now at:
       {{ else }}
         Purchase today at:
       {{ end }}

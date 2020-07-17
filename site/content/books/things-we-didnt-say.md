@@ -29,7 +29,8 @@ retailers:
     imageUrl: /img/indie-bound.jpg
 endorsements:
   - author: Jake Lokkesmoe
-    quote: Things We Didn’t Stay is a stand-out novel as brilliant and brave as its
+    quote: >-
+      *Things We Didn’t Stay* is a stand-out novel as brilliant and brave as its
       heroine. I was moved to both laughter and tears while tagging along with
       Johanna Berglund on her emotional and spiritual journey. When I wasn’t
       pausing to savor a particularly profound passage, I was turning the pages
@@ -38,8 +39,8 @@ endorsements:
   - author: Philipp Trommler
     quote: This is a quote! It's not very helpful though. Sorry about that :/
 ---
-Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.\
-\
-Johanna arrives to find the once-sleepy town exploding with hostility. Most patriotic citizens want nothing to do with German soldiers laboring in their fields, and they're not afraid to criticize those who work at the camp as well. When Johanna describes the trouble to her friend Peter Ito, a language instructor at a school for military intelligence officers, he encourages her to give the town that rejected her a second chance.\
-\
-As Johanna interacts with the men of the camp and censors their letters home, she begins to see the prisoners in a more sympathetic light. But advocating for better treatment makes her enemies in the community, especially when charismatic German spokesman Stefan Werner begins to show interest in Johanna and her work. The longer Johanna wages her home-front battle, the more the lines between compassion and treason become blurred--and it's no longer clear whom she can trust.
+Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.
+
+Johanna arrives to find the once-sleepy town exploding with hostility. Most patriotic citizens want nothing to do with German soldiers laboring in their fields, and they're not afraid to criticize those who work at the camp as well. When Johanna describes the trouble to her friend Peter Ito, a language instructor at a school for military intelligence officers, he encourages her to give the town that rejected her a second chance.
+
+As Johanna interacts with the men of the camp and censors their letters home, she begins to see the prisoners in a more sympathetic light. But advocating for better treatment makes her enemies in the community, especially when charismatic German spokesman Stefan Werner begins to show interest in Johanna and her work. The longer Johanna wages her home-front battle, the more the lines between compassion and treason become blurred&mdash;and it's no longer clear whom she can trust.

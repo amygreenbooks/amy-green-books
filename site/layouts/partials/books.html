@@ -1,7 +1,5 @@
 <div class="ph3">
 
-  <h2 class="f2 b lh-title mb4">Books</h2>
-
   {{ with .Site.GetPage "section" "books" }}
     {{ range .Pages }}
       {{ .Render "li" }}

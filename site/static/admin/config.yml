@@ -41,7 +41,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: list
         fields:
           - {label: Author, name: author, widget: string}
-          - {label: Quote, name: quote, widget: text}
+          - {label: Quote, name: quote, widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
