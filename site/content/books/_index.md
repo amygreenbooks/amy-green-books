@@ -1,5 +1,5 @@
 ---
 title: Books
-description: Check out my books
+description: Explore history with me
 bannerImage: "/img/books.jpg"
 ---

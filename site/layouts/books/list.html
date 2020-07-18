@@ -1,18 +1,21 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "title" .Title "subtitle" .Description "image" .Params.image) }}
+{{ partial "jumbotron" (dict "title" .Title "subtitle" .Description "image" .Params.bannerImage) }}
 
-<div class="mw7 center">
-  <div class="mw7 center ph3">
-    {{ .Content }}
+<section class="mw7 center ph3 mv4">
+  {{ .Content }}
+</section>
+
+<section class="ph3 mt4 mb5">
+  <div class="mw7 center">
+    {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
+      {{ .Render "li"}}
+    {{ end }}
   </div>
+</section>
 
-  <ul class="mw7 center ph3 pt4">
-      {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
-        {{ .Render "li"}}
-      {{ end }}
-  </ul>
+<nav class="mw7 center ph3 mt4 mb5">
   {{ partial "pagination" . }}
-</div>
+</nav>
 
 {{end}}
