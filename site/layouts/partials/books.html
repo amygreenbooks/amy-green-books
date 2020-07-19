@@ -1,9 +1,7 @@
 <div class="ph3">
-
   {{ with .Site.GetPage "section" "books" }}
     {{ range .Pages }}
       {{ .Render "li" }}
     {{ end }}
   {{ end }}
-
 </div>

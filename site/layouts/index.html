@@ -29,15 +29,15 @@
 {{ end}}
 
 {{ define "main" }}
-  <div class="bg-grey-1 pb4 pt5">
+  <section class="bg-grey-1 pb4 pt5">
     <div class="mw7 center">
       {{ partial "books" . }}
     </div>
-  </div>
+  </section>
 
-  <div class="bg-off-white pb4 pt5">
+  <section class="bg-off-white pb4 pt5">
     <div class="mw7 center">
       {{ partial "media-block-reverse" .Params.welcome}}
     </div>
-  </div>
+  </section>
 {{ end }}
