@@ -5,7 +5,7 @@ bannerImage: /img/contactheader.jpg
 menu:
   main:
     title: Contact
-    weight: 3
+    weight: 4
 ---
 ## Drop me a line below.
 

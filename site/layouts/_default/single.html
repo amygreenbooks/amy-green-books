@@ -1,15 +1,11 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "bannerImage" .Params.banner "title" .Title "subtitle" .Description) }}
+{{ partial "jumbotron" (dict "title" .Title "subtitle" .Description "image" .Params.bannerImage) }}
 
-<div class="ph3 bg-off-white">
-  <div class="center mw6 pv3">
-
-    <div class="cms">
-      {{ .Content }}
-    </div>
-
+<section class="ph3 bg-off-white">
+  <div class="center mw7 pv3 cms">
+    {{ .Content }}
   </div>
-</div>
+</section>
 
 {{ end }}
