@@ -35,7 +35,7 @@
     "codemirror": "^5.57.0",
     "copy-webpack-plugin": "^6.0.3",
     "cross-env": "^7.0.0",
-    "css-loader": "^4.2.1",
+    "css-loader": "^4.2.2",
     "date-fns": "^2.16.0",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "^2.22.0",
