@@ -1,11 +1,8 @@
 ---
 title: Things We Didn't Say
+isbn: "9780764237164"
 date: 2020-05-01T00:00:00.000Z
 releaseDate: 2020-11-01T05:00:00.000Z
-menu:
-  main:
-    title: "Books"
-    weight: 1
 description: In this epistolary novel from the WWII home front, Johanna Berglund
   is forced to return to her small Midwestern town to become a translator at a
   German prisoner of war camp. There, amid old secrets and prejudice, she finds
@@ -42,7 +39,7 @@ endorsements:
     author: Sarah Sundin, bestselling and award-winning author of *When Twilight
       Breaks* and the Sunrise at Normandy series
   - author: Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*
-    quote: "*Things We Didn’t Stay* is a stand-out novel as brilliant and brave as
+    quote: "*Things We Didn’t Say* is a stand-out novel as brilliant and brave as
       its heroine. . . . An utterly satisfying read you’ll want to share as soon
       as you reach its conclusion."
   - quote: |-
@@ -55,25 +52,28 @@ endorsements:
   - quote: A fascinating excavation of a little-known moment in US history executed
       with an inimitable voice and extremely clever style. Excessively readable,
       this winsome epistolary is underscored by a deep look at patriotism,
-      prejudice, unwavering faith, duty, and love. . . . A dazzlingly smart and
-      confident debut, *Things We Didn’t Say* is as moving as it is memorable.”
+      prejudice, unwavering faith, duty, and love. . . .A dazzlingly smart and
+      confident debut, *Things We Didn’t Say* is as moving as it is memorable.
     author: Rachel McMillan, author of *The London Restoration*
   - quote: |-
       Amy Green’s debut novel kept me guessing to the very end—twist
       upon twist upon twist. She is a master plotter, so read every single
       word!
     author: Beverly Lewis
-  - quote: >-
-      *Things We Didn’t Say* is the best sort of book: where the characters
-      feel like friends, the story feels like home, and the pages beckon you
-      to turn them ceaselessly, immersing you in an absorbing world. Amy
-      Lynn Green expertly wields wit, heart, history, and enveloping storytelling
-      in this glorious debut!
+  - quote: "*Things We Didn’t Say* is the best sort of book: where the characters
+      feel like friends, the story feels like home, and the pages beckon you to
+      turn them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
+      expertly wields wit, heart, history, and enveloping storytelling in this
+      glorious debut!"
     author: Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*
   - quote: Based on actual World War II experiences, and sparkling with humor and
       touches of romance, this is an impressive debut from a multitalented
       writer.
     author: Julie Klassen, author of *The Bridge to Belle Island*
+menu:
+  main:
+    title: Books
+    weight: 1
 ---
 Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.
 
