@@ -1,10 +1,10 @@
 ---
 title: "Amy Lynn Green"
 subtitle: Historical Fiction Author
-bannerImage: /img/typewriter-banner.jpg
+bannerImage: /media/typewriter-banner.jpg
 welcome:
   heading: Welcome!
-  image: /img/home-amy.jpg
+  image: /media/home-amy.jpg
   text: |
     Whether you heard about my WWII epistolary novel, or know me from the writing world and are interested in what I’m up to, or just want to follow my publication journey, I’m glad you stopped by.
 
