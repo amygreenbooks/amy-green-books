@@ -1,6 +1,6 @@
 ---
 title: Contact
-bannerImage: /img/contactheader.jpg
+bannerImage: /media/contactheader.jpg
 ---
 
 Thanks for your message!

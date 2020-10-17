@@ -8,26 +8,26 @@ description: In this epistolary novel from the WWII home front, Johanna Berglund
   German prisoner of war camp. There, amid old secrets and prejudice, she finds
   that the POWs have hidden depths. When the lines between compassion and
   treason are blurred, she must decide where her heart truly lies.
-image: /img/things-we-didnt-say.jpg
+image: /media/things-we-didnt-say.jpg
 retailers:
   - name: Amazon
     link: https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/
-    image: /img/amazon.png
+    image: /media/amazon.png
   - name: Baker Book House
     link: https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164
-    image: /img/baker-book-house.png
+    image: /media/baker-book-house.png
   - name: BAM
     link: https://www.booksamillion.com/p/Things-We-Didnt-Say/Amy-Lynn-Green/9780764237164
-    image: /img/bam.png
+    image: /media/bam.png
   - name: Barnes & Noble
     link: https://www.barnesandnoble.com/w/things-we-didnt-say-amy-lynn-green/1136472139
-    image: /img/barnes-and-noble.png
+    image: /media/barnes-and-noble.png
   - name: Christian Book
     link: https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
-    image: /img/christian-book.png
+    image: /media/christian-book.png
   - name: Indie Bound
     link: https://www.indiebound.org/book/9780764237164
-    image: /img/indie-bound.jpg
+    image: /media/indie-bound.jpg
 endorsements:
   - author: Lynn Austin, author of *If I Were You*
     quote: |-

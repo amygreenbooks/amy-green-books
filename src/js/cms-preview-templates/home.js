@@ -42,7 +42,7 @@ export default class PostPreview extends React.Component {
               <article className="flex-m mhn3-m mb4">
                 <div className="db pr3-m w-50-m">
                   <img
-                    src="/img/things-we-didnt-say.jpg"
+                    src="/media/things-we-didnt-say.jpg"
                     alt=""
                     className="db mb2"
                   />

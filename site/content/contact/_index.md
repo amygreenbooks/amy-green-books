@@ -1,7 +1,7 @@
 ---
 title: Contact
 description: I'd love to hear from you.
-bannerImage: /img/contactheader.jpg
+bannerImage: /media/contactheader.jpg
 menu:
   main:
     title: Contact
