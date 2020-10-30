@@ -1,9 +1,10 @@
 {
-  "name": "victor-hugo",
+  "name": "amy-green-books",
   "version": "1.0.0",
-  "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
-  "repository": "netlify/victor-hugo",
+  "description": "The personal website of author Amy Lynn Green.",
+  "repository": "jakelokkesmoe/amy-green-books",
   "main": "index.js",
+  "homepage": "https://www.amygreenbooks.com/",
   "scripts": {
     "lint": "eslint src",
     "start": "run-p start:**",
