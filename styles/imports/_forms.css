@@ -1,5 +1,4 @@
-fieldset
-{
+fieldset {
   position: relative;
 }
 
@@ -14,7 +13,8 @@ fieldset
   padding: 0;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: var(--grey-2);
   border-radius: var(--border-radius);
   padding: 12px 16px 10px;
@@ -23,43 +23,45 @@ input, textarea {
   position: relative;
   transition: var(--hover-transition);
   z-index: 2;
-  &:focus {
-    background-color: var(--white);
-  }
-  &:focus + label {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(-120%);
-  }
+}
+
+input:focus,
+textarea:focus {
+  background-color: var(--white);
+}
+input:focus + label,
+textarea:focus + label {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-120%);
 }
 
 ::-webkit-input-placeholder {
-   color: var(--black);
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--black);
+  font-size: var(--spacing-medium);
+  line-height: normal;
 }
 
 :-moz-placeholder {
-   color: var(--black);
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--black);
+  font-size: var(--spacing-medium);
+  line-height: normal;
 }
 
 ::-moz-placeholder {
-   color: var(--black);
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--black);
+  font-size: var(--spacing-medium);
+  line-height: normal;
 }
 
 :-ms-input-placeholder {
-   color: var(--black);
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--black);
+  font-size: var(--spacing-medium);
+  line-height: normal;
 }
 
-label
-{
-  font-size: .875rem;
+label {
+  font-size: 0.875rem;
   font-weight: 800;
   color: var(--white);
   background-color: var(--primary);

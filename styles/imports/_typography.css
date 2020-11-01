@@ -1,14 +1,19 @@
 html {
   font-size: var(--font-size);
-  @media (--breakpoint-medium) {
-    font-size: var(--font-size-m);
-  }
-  @media (--breakpoint-large) {
-    font-size: var(--font-size-l);
-  }
   background-color: var(--black);
 }
 
+@media (--breakpoint-medium) {
+  html {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media (--breakpoint-large) {
+  html {
+    font-size: var(--font-size-l);
+  }
+}
 
 body {
   font-family: var(--font-family);
@@ -18,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--off-white);
- }
+}
 
 p {
   margin-bottom: var(--spacing-medium);
@@ -34,7 +39,7 @@ em {
 }
 
 sup {
-  font-size: .6rem;
+  font-size: 0.6rem;
   font-weight: 700;
   vertical-align: super;
 }
@@ -74,7 +79,7 @@ sup {
 }
 
 @media (--breakpoint-not-small) {
-  .measure-ns  {
+  .measure-ns {
     max-width: 30em;
   }
   .measure-wide-ns {

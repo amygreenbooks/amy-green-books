@@ -6,10 +6,12 @@
 .divider-grey {
   box-shadow: inset 0 -4px 0 var(--grey-1);
   /* Link hover states */
-  & a {
-    transition: var(--hover-transition);
-  }
-  & ul a:hover, & ul a:focus {
-    box-shadow: inset 0 -4px 0 var(--primary);
-  }
+}
+
+.divider-grey a {
+  transition: var(--hover-transition);
+}
+.divider-grey ul a:hover,
+.divider-grey ul a:focus {
+  box-shadow: inset 0 -4px 0 var(--primary);
 }
