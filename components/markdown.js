@@ -1,7 +1,8 @@
+import { Fragment } from "react";
 import PropTypes from "prop-types";
 import unified from "unified";
-import parse from "remark-parse";
-import reactRenderer from "remark-react";
+import markdownParse from "remark-parse";
+import remark2react from "remark-react";
 import Link from "next/link";
 
 function MarkdownLink({ children, href, ...props }) {
@@ -19,19 +20,23 @@ function MarkdownLink({ children, href, ...props }) {
   );
 }
 
-const options = {
-  remarkReactComponents: {
-    a: MarkdownLink,
-  },
-};
+const Markdown = ({ markdown, noParagraph = false }) => {
+  const options = {
+    remarkReactComponents: {
+      a: MarkdownLink,
+    },
+  };
 
-const Markdown = ({ markdown }) => {
+  if (noParagraph) {
+    options.remarkReactComponents.p = Fragment;
+  }
+
   const html = unified()
-    .use(parse)
-    .use(reactRenderer, options)
+    .use(markdownParse)
+    .use(remark2react, options)
     .processSync(markdown).result;
 
-  return <div className="cms">{html}</div>;
+  return <>{html}</>;
 };
 
 Markdown.propTypes = {

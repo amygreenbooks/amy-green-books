@@ -66,7 +66,9 @@ export default function Home({ homeContent, books }) {
 
             <div className="ph3">
               <h3 className="f3 b lh-title mb1">{welcome.heading}</h3>
-              <Markdown markdown={welcome.text} />
+              <div className="cms">
+                <Markdown markdown={welcome.text} />
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +78,7 @@ export default function Home({ homeContent, books }) {
 }
 
 export async function getStaticProps() {
-  const homeContent = await getContentData("index");
+  const homeContent = await getContentData(null, "index");
   const books = getSortedContentData("books");
   return {
     props: {

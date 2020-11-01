@@ -1,8 +1,7 @@
 ---
 title: Things We Didn't Say
 isbn: "9780764237164"
-date: "2020-05-01T00:00:00.000Z"
-releaseDate: "2020-11-01T05:00:00.000Z"
+releaseDate: "2020-11-01"
 description: In this epistolary novel from the WWII home front, Johanna Berglund
   is forced to return to her small Midwestern town to become a translator at a
   German prisoner of war camp. There, amid old secrets and prejudice, she finds
