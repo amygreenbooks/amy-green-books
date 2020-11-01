@@ -1,6 +1,26 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
+import {
+  author,
+  siteTitle,
+  description as siteDescription,
+  domain,
+  socialLinks,
+} from "../content/siteConfig";
 
-export default function Meta({ home }) {
+export default function Meta({
+  home,
+  book,
+  title: titleProp,
+  description: descriptionProp,
+  image,
+}) {
+  const title = home || !titleProp ? siteTitle : `${titleProp} | ${siteTitle}`;
+  const description =
+    home || !descriptionProp ? siteDescription : descriptionProp;
+
+  const router = useRouter();
+
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -13,13 +33,13 @@ export default function Meta({ home }) {
         rel="sitemap"
         type="application/xml"
         title="Sitemap"
-        href="{{ .Site.BaseURL }}sitemap.xml"
+        href="/sitemap.xml"
       />
 
-      <link rel="canonical" href="{{ .Permalink }}" itemProp="url" />
+      {/* <link rel="canonical" href="{{ .Permalink }}" itemProp="url" />
       <meta name="url" content="{{ .Permalink }}" />
       <meta name="twitter:url" content="{{ .Permalink }}" />
-      <meta property="og:url" content="{{ .Permalink }}" />
+      <meta property="og:url" content="{{ .Permalink }}" /> */}
 
       {/* Favicons */}
       <link
@@ -59,100 +79,60 @@ export default function Meta({ home }) {
       />
       <meta name="theme-color" content="#CF262C" />
 
-      {home ? (
-        <>
-          <title>Amy Green Books</title>
-          <meta property="og:title" content="{{ $.Site.Title }}" />
-          <meta name="twitter:title" content="{{ $.Site.Title }}" />
-          <meta itemProp="name" content="{{ $.Site.Title }}" />
-          <meta name="application-name" content="{{ $.Site.Title }}" />
+      <title>{title}</title>
+      <meta property="og:title" content={title} />
+      <meta name="twitter:title" content={title} />
+      <meta itemProp="name" content={title} />
+      <meta name="application-name" content={title} />
 
-          <meta name="description" content="{{ $.Site.Params.description }}" />
-          <meta
-            itemProp="description"
-            content="{{ $.Site.Params.description }}"
-          />
-          <meta
-            property="og:description"
-            content="{{ $.Site.Params.description }}"
-          />
-          <meta
-            name="twitter:description"
-            content="{{ $.Site.Params.description }}"
-          />
+      <meta name="description" content={description} />
+      <meta itemProp="description" content={description} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:description" content={description} />
+
+      <meta property="og:site_name" content={siteTitle} />
+
+      {image ? (
+        <>
+          <meta itemProp="image" content={`${domain}${image}`} />
+          <meta property="og:image" content={`${domain}${image}`} />
+          <meta name="twitter:image" content={`${domain}${image}`} />
+          <meta name="twitter:image:src" content={`${domain}${image}`} />
         </>
       ) : (
         <>
+          <meta itemProp="image" content={`${domain}/media/ogimage.jpg`} />
+          <meta property="og:image" content={`${domain}/media/ogimage.jpg`} />
+          <meta name="twitter:image" content={`${domain}/media/ogimage.jpg`} />
           <meta
-            property="og:title"
-            content="{{ .Title }} | {{ $.Site.Title }}"
-          />
-          <meta
-            name="twitter:title"
-            content="{{ .Title }} | {{ $.Site.Title }}"
-          />
-          <meta itemProp="name" content="{{ .Title }} | {{ $.Site.Title }}" />
-          <meta
-            name="application-name"
-            content="{{ .Title }} | {{ $.Site.Title }}"
-          />
-
-          <meta name="description" content="{{ .Params.description }}" />
-          <meta itemProp="description" content="{{ .Params.description }}" />
-          <meta property="og:description" content="{{ .Params.description }}" />
-          <meta
-            name="twitter:description"
-            content="{{ .Params.description }}"
+            name="twitter:image:src"
+            content={`${domain}/media/ogimage.jpg`}
           />
         </>
       )}
-      <meta property="og:site_name" content="{{ $.Site.Title }}" />
-      {/*
-{{ with .Params.image }}
-  <meta itemProp="image" content="{{ . | absURL }}" />
-  <meta property="og:image" content="{{ . | absURL }}" />
-  <meta name="twitter:image" content="{{ . | absURL }}" />
-  <meta name="twitter:image:src" content="{{ . | absURL }}" />
-{{ else }}
-  <meta itemProp="image" content="{{ .Site.Params.ogimage | absURL }}" />
-  <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
-  <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
-  <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
-{{ end }}
 
-{{ if eq .Section "books" }}
-  <meta property="og:type" content="book"/>
-  <meta property="article:publisher" content="{{ .Site.Params.facebook }}" />
-
-  <meta property="og:book:author" content="{{ .Site.Params.author }}"/>
-  <meta property="og:article:author" content="{{ .Site.Params.author }}" />
-  <meta property="article:author" content="{{ .Site.Params.author }}" />
-  <meta name="author" content="{{ .Site.Params.author }}" />
-
-  {{ with .Params.isbn }}
-    <meta property="og:book:isbn" content="{{ . }}"/>
-  {{ end }}
-
-  {{ with .Params.releasedate }}
-    <meta property="og:book:releasedate" content="{{ dateFormat "2006-01-02T15:04:05Z0700" . }}"/>
-  {{ end }}
-{{ else }}
-  <meta property="og:type" content="website" />
-  <meta name="author" content="{{ .Site.Params.author }}" />
-  <script defer type="application/ld+json"/>
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "url": "{{ .Permalink }}",
-      "sameAs": [
-        "{{ .Site.Params.facebook }}",
-        "{{ .Site.Params.instagram }}"
-      ],
-      "name": "{{ .Title }}"
-    }
-  </script>
-{{ end }}
-  */}
+      {!book && (
+        <>
+          <meta property="og:type" content="website" />
+          <meta name="author" content={author} />
+          <script
+            defer
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: `{
+              "@context": "http://schema.org",
+              "@type": "WebSite",
+              "url": "${domain}${router.asPath}",
+              "sameAs": [
+                "${socialLinks.facebook}",
+                "${socialLinks.instagram}"
+              ],
+              "name": "${title}"
+            }`,
+            }}
+          ></script>
+        </>
+      )}
       <meta name="robots" content="index,follow" />
       <meta name="googlebot" content="index,follow" />
 

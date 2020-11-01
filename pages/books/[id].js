@@ -1,9 +1,12 @@
+import Head from "next/head";
 import { parseISO } from "date-fns";
 import DateComponent from "../../components/date";
 import Layout from "../../components/layout";
+import Markdown from "../../components/markdown";
 import Retailer from "../../components/retailer";
 import Endorsement from "../../components/endorsement";
 import { getAllContentIds, getContentData } from "../../lib/content";
+import { socialLinks, author } from "../../content/siteConfig";
 
 const contentType = "books";
 
@@ -11,8 +14,10 @@ export default function Book({ bookData }) {
   const {
     title,
     releaseDate,
+    description,
     image,
-    contentHtml,
+    isbn,
+    contentMark,
     retailers,
     endorsements,
   } = bookData;
@@ -20,7 +25,22 @@ export default function Book({ bookData }) {
   const isReleased = releaseDate && parseISO(releaseDate) < Date.now();
 
   return (
-    <Layout>
+    <Layout title={title} description={description} image={image} book>
+      <Head>
+        <meta property="og:type" content="book" />
+        <meta property="article:publisher" content={socialLinks.facebook} />
+
+        <meta property="og:book:author" content={author} />
+        <meta property="og:article:author" content={author} />
+        <meta property="article:author" content={author} />
+        <meta name="author" content={author} />
+
+        {isbn && <meta property="og:book:isbn" content={isbn} />}
+
+        {releaseDate && (
+          <meta property="og:book:releasedate" content={releaseDate} />
+        )}
+      </Head>
       <article
         className="mw6 center ph3 mt4 mb5"
         itemScope
@@ -47,11 +67,9 @@ export default function Book({ bookData }) {
           </figure>
         )}
 
-        <div
-          className="cms mb4"
-          itemProp="abstract"
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-        />
+        <div className="cms mb4" itemProp="abstract">
+          <Markdown markdown={contentMark} />
+        </div>
       </article>
 
       <section className="mt4 mb5 bg-grey-1 pv4">

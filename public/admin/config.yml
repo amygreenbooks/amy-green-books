@@ -1,22 +1,77 @@
 backend:
   name: git-gateway
-  branch: master
-media_folder: public/img
-public_folder: img
-collections:
+
+media_folder: "public/media" # Folder where user uploaded files should go
+public_folder: "/media"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "books"
+    label: "Books"
+    label_singular: "Book"
+    folder: "content/books"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "ISBN", name: "isbn", widget: "string" }
+      - { label: "Create Date", name: "date", widget: "datetime" }
+      - { label: "Release Date", name: "releaseDate", widget: "datetime" }
+      - { label: "Summary", name: "description", widget: "text" }
+      - {
+          label: "Cover Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: Retailers
+        name: retailers
+        label_singular: Retailer
+        widget: list
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Link, name: link, widget: string }
+          - { label: Image, name: image, widget: image }
+      - label: Endorsements
+        name: endorsements
+        label_singular: endorsement
+        widget: list
+        fields:
+          - { label: Author, name: author, widget: "markdown" }
+          - { label: Quote, name: quote, widget: "markdown" }
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Home"
+      - file: "content/index.md"
+        label: "Home Page"
         name: "home"
-        file: "content/home.md"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
-            widget: list
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: "Banner Image", name: bannerImage, widget: image }
+          - {
+              label: "Welcome",
+              name: welcome,
+              widget: object,
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: string },
+                  { label: "Text", name: "text", widget: "markdown" },
+                  { label: "Image", name: "image", widget: "image" },
+                ],
+            }
+      - file: "content/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: description, widget: string }
+          - { label: "Success Message", name: bannerImage, widget: "image" }
+          - { label: "Banner Image", name: successMessage, widget: "markdown" }
+          - { label: Body, name: body, widget: markdown }
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: "image" }
+          - { label: Body, name: body, widget: markdown }

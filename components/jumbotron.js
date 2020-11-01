@@ -1,0 +1,39 @@
+import cn from "classnames";
+
+export default function Jumbotron({ title, subtitle, image }) {
+  return (
+    <div
+      className={cn("pv5 ph3 pv6-l", {
+        "bg-center cover": image,
+      })}
+      style={{ backgroundImage: image && `url('${image}')` }}
+    >
+      <div className="mw7 center">
+        <div className="db mb3">
+          <div className="mw7 relative mb2">
+            <h1
+              className={cn("f2 f1-l b di lh-title", {
+                "ph2 bg-black white": image,
+                primary: !image,
+              })}
+            >
+              {title}
+            </h1>
+          </div>
+          <div className="mw7 relative">
+            {subtitle && (
+              <p
+                className={cn("f4 fw5 di lh-title", {
+                  "ph2 bg-primary white": image,
+                  "grey-3": !image,
+                })}
+              >
+                {subtitle}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
