@@ -39,7 +39,7 @@ export default function Contact({
                   placeholder="Name"
                   className="input w-100 mb2"
                 />
-                <label for="name" className="label">
+                <label htmlFor="name" className="label">
                   Name
                 </label>
               </div>
@@ -51,7 +51,7 @@ export default function Contact({
                   placeholder="Email"
                   className="input w-100 mb2"
                 />
-                <label for="email" className="label">
+                <label htmlFor="email" className="label">
                   Email
                 </label>
               </div>
@@ -66,7 +66,7 @@ export default function Contact({
                 cols="80"
                 className="textarea w-100"
               />
-              <label for="message" className="label">
+              <label htmlFor="message" className="label">
                 Your message
               </label>
             </div>

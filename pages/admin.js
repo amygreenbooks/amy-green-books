@@ -5,6 +5,10 @@ import HomePreview from "../components/cms-preview-templates/homePreview";
 import AboutPreview from "../components/cms-preview-templates/aboutPreview";
 import ContactPreview from "../components/cms-preview-templates/contactPreview";
 
+if (typeof window === "undefined") {
+  global.window = {};
+}
+
 import("netlify-cms-app").then((CMS) => {
   init(CMS);
 });

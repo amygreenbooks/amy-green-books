@@ -1,6 +1,5 @@
 import Layout from "../components/layout";
-import Contact from "../components/pages/contact";
-
+import Contact from "../components/layouts/contact";
 import { getContentData } from "../lib/content";
 
 export default function ContactPage({ content }) {
