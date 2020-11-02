@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import unified from "unified";
 import markdownParse from "remark-parse";
@@ -21,11 +22,14 @@ function MarkdownLink({ children, href, ...props }) {
 }
 
 const Markdown = ({ markdown, noParagraph = false }) => {
+  const router = useRouter();
   const options = {
-    remarkReactComponents: {
-      a: MarkdownLink,
-    },
+    remarkReactComponents: {},
   };
+
+  if (router) {
+    options.remarkReactComponents.a = MarkdownLink;
+  }
 
   if (noParagraph) {
     options.remarkReactComponents.p = Fragment;

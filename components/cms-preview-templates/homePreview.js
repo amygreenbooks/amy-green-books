@@ -1,12 +1,18 @@
 import Home from "../layouts/home";
+import Masthead from "../masthead";
 
 export default function HomePreview({ entry, getAsset }) {
-  // let image = getAsset(entry.getIn(["data", "image"]));
-
-  // const entryRetailers = entry.getIn(["data", "retailers"]);
-  // const retailers = entryRetailers ? entryRetailers.toJS() : [];
-
-  // const entryEndorsements = entry.getIn(["data", "endorsements"]);
-  // const endorsements = entryEndorsements ? entryEndorsements.toJS() : [];
-  return <Home title={entry.getIn(["data", "title"])} />;
+  const entryWelcome = entry.getIn(["data", "welcome"]);
+  const welcome = entryWelcome ? entryWelcome.toJS() : {};
+  return (
+    <>
+      <Masthead
+        title={entry.getIn(["data", "title"])}
+        subtitle={entry.getIn(["data", "subtitle"])}
+        bannerImage={getAsset(entry.getIn(["data", "bannerImage"]))}
+        mainMenu={[]}
+      />
+      <Home books={[]} welcome={welcome} />
+    </>
+  );
 }

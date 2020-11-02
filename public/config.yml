@@ -76,13 +76,17 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: description, widget: string }
-          - { label: "Success Message", name: bannerImage, widget: "image" }
-          - { label: "Banner Image", name: successMessage, widget: "markdown" }
+          - { label: "Banner Image", name: bannerImage, widget: "image" }
+          - {
+              label: "Success Message",
+              name: successMessage,
+              widget: "markdown",
+            }
           - { label: Body, name: body, widget: markdown }
       - file: "content/about.md"
         label: "About Page"
         name: "about"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: "image" }
+          - { label: Image, name: aboutImage, widget: "image" }
           - { label: Body, name: body, widget: markdown }

@@ -1,4 +1,3 @@
-import cn from "classnames";
 import { parseISO } from "date-fns";
 import DateComponent from "../date";
 import Markdown from "../markdown";
