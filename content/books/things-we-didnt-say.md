@@ -1,83 +1,85 @@
 ---
 title: Things We Didn't Say
-isbn: "9780764237164"
-releaseDate: "2020-11-01"
-description: In this epistolary novel from the WWII home front, Johanna Berglund
-  is forced to return to her small Midwestern town to become a translator at a
-  German prisoner of war camp. There, amid old secrets and prejudice, she finds
-  that the POWs have hidden depths. When the lines between compassion and
-  treason are blurred, she must decide where her heart truly lies.
+isbn: '9780764237164'
+date: '2020-11-02T00:00:00'
+releaseDate: '2020-11-02'
+description: >-
+  In this epistolary novel from the WWII home front, Johanna Berglund is forced
+  to return to her small Midwestern town to become a translator at a German
+  prisoner of war camp. There, amid old secrets and prejudice, she finds that
+  the POWs have hidden depths. When the lines between compassion and treason are
+  blurred, she must decide where her heart truly lies.
 image: /media/things-we-didnt-say.jpg
 retailers:
-  - name: Amazon
-    link: https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/
-    image: /media/amazon.png
-  - name: Baker Book House
-    link: https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164
-    image: /media/baker-book-house.png
-  - name: BAM
-    link: https://www.booksamillion.com/p/Things-We-Didnt-Say/Amy-Lynn-Green/9780764237164
-    image: /media/bam.png
-  - name: Barnes & Noble
-    link: https://www.barnesandnoble.com/w/things-we-didnt-say-amy-lynn-green/1136472139
-    image: /media/barnes-and-noble.png
-  - name: Christian Book
-    link: https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
-    image: /media/christian-book.png
-  - name: Indie Bound
-    link: https://www.indiebound.org/book/9780764237164
-    image: /media/indie-bound.jpg
+  - image: /media/amazon.png
+    link: 'https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/'
+    name: Amazon
+  - image: /media/baker-book-house.png
+    link: 'https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164'
+    name: Baker Book House
+  - image: /media/bam.png
+    link: >-
+      https://www.booksamillion.com/p/Things-We-Didnt-Say/Amy-Lynn-Green/9780764237164
+    name: BAM
+  - image: /media/barnes-and-noble.png
+    link: >-
+      https://www.barnesandnoble.com/w/things-we-didnt-say-amy-lynn-green/1136472139
+    name: Barnes & Noble
+  - image: /media/christian-book.png
+    link: >-
+      https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
+    name: Christian Book
+  - image: /media/indie-bound.jpg
+    link: 'https://www.indiebound.org/book/9780764237164'
+    name: Indie Bound
 endorsements:
-  - author: Lynn Austin, author of *If I Were You*
+  - author: 'Lynn Austin, author of *If I Were You*'
     quote: |-
       This compelling novel of life on the US home front during World War
       II fascinated me from beginning to end.
-  - quote:
-      With impeccable research, Amy Lynn Green casts a light on the POW camps
-      in America during World War II and on the dangers of prejudice. Make space
-      on your bookshelf, because this book is a keeper!
-    author: Sarah Sundin, bestselling and award-winning author of *When Twilight
+  - author: >-
+      Sarah Sundin, bestselling and award-winning author of *When Twilight
       Breaks* and the Sunrise at Normandy series
-  - author: Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*
-    quote:
-      "*Things We Didn’t Say* is a stand-out novel as brilliant and brave as
-      its heroine. . . . An utterly satisfying read you’ll want to share as soon
-      as you reach its conclusion."
-  - quote: |-
+    quote: >-
+      With impeccable research, Amy Lynn Green casts a light on the POW camps in
+      America during World War II and on the dangers of prejudice. Make space on
+      your bookshelf, because this book is a keeper!
+  - author: 'Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*'
+    quote: >-
+      *Things We Didn’t Say* is a stand-out novel as brilliant and brave as its
+      heroine. . . . An utterly satisfying read you’ll want to share as soon as
+      you reach its conclusion.
+  - author: Tracie Peterson
+    quote: |-
       Amy Green pens a fascinating story of intrigue and love in her book
       *Things We Didn’t Say*. Set against the backdrop of World War II, Amy
       takes care to bring history alive as she moves her characters through
       situations that force them to take a deeper look at who they are and
       what they really want out of life.
-    author: Tracie Peterson
-  - quote:
+  - author: 'Rachel McMillan, author of *The London Restoration*'
+    quote: >-
       A fascinating excavation of a little-known moment in US history executed
       with an inimitable voice and extremely clever style. Excessively readable,
       this winsome epistolary is underscored by a deep look at patriotism,
       prejudice, unwavering faith, duty, and love. . . .A dazzlingly smart and
       confident debut, *Things We Didn’t Say* is as moving as it is memorable.
-    author: Rachel McMillan, author of *The London Restoration*
-  - quote: |-
+  - author: Beverly Lewis
+    quote: |-
       Amy Green’s debut novel kept me guessing to the very end—twist
       upon twist upon twist. She is a master plotter, so read every single
       word!
-    author: Beverly Lewis
-  - quote:
-      "*Things We Didn’t Say* is the best sort of book: where the characters
-      feel like friends, the story feels like home, and the pages beckon you to
-      turn them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
+  - author: 'Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*'
+    quote: >-
+      *Things We Didn’t Say* is the best sort of book: where the characters feel
+      like friends, the story feels like home, and the pages beckon you to turn
+      them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
       expertly wields wit, heart, history, and enveloping storytelling in this
-      glorious debut!"
-    author: Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*
-  - quote:
+      glorious debut!
+  - author: 'Julie Klassen, author of *The Bridge to Belle Island*'
+    quote: >-
       Based on actual World War II experiences, and sparkling with humor and
       touches of romance, this is an impressive debut from a multitalented
       writer.
-    author: Julie Klassen, author of *The Bridge to Belle Island*
-menu:
-  main:
-    title: Books
-    weight: 1
 ---
 
 Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.
