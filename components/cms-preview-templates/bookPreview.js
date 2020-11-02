@@ -1,6 +1,6 @@
 import Book from "../layouts/book";
 
-export default function BookPreview({ entry, widgetFor, getAsset }) {
+export default function BookPreview({ entry, getAsset }) {
   let image = getAsset(entry.getIn(["data", "image"]));
 
   const entryRetailers = entry.getIn(["data", "retailers"]);

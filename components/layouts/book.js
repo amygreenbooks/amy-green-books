@@ -4,7 +4,6 @@ import DateComponent from "../date";
 import Markdown from "../markdown";
 import Retailer from "../retailer";
 import Endorsement from "../endorsement";
-import styles from "./book.module.css";
 
 export default function Book({
   title,
@@ -19,7 +18,7 @@ export default function Book({
   return (
     <>
       <article
-        className={cn("mw6 center ph3 mt4 mb5", styles.article)}
+        className={"mw6 center ph3 mt4 mb5"}
         itemScope
         itemType="https://schema.org/Book"
       >
