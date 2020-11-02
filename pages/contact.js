@@ -16,7 +16,19 @@ export default function Contact({ content }) {
         </div>
 
         <div className="mb4">
-          <form name="contact" method="POST" action="/contact/success" netlify>
+          <form
+            name="contact"
+            method="POST"
+            action="/contact/success"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             <div className="flex-l mhn1-l">
               <div className="pr1-l w-50-l relative">
                 <input

@@ -119,16 +119,17 @@ export default function Meta({
             defer
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: `{
-              "@context": "http://schema.org",
-              "@type": "WebSite",
-              "url": "${domain}${router.asPath}",
-              "sameAs": [
-                "${socialLinks.facebook}",
-                "${socialLinks.instagram}"
-              ],
-              "name": "${title}"
-            }`,
+              __html:
+                `{` +
+                `"@context":"http://schema.org",` +
+                `"@type":"WebSite",` +
+                `"url":"${domain}${router.asPath}",` +
+                `"sameAs":[` +
+                `"${socialLinks.facebook}",` +
+                `"${socialLinks.instagram}"` +
+                `],` +
+                `"name": "${title}"` +
+                `}`,
             }}
           ></script>
         </>
