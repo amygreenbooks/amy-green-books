@@ -5,13 +5,11 @@ import HomePreview from "../components/cms-preview-templates/homePreview";
 import AboutPreview from "../components/cms-preview-templates/aboutPreview";
 import ContactPreview from "../components/cms-preview-templates/contactPreview";
 
-if (typeof window === "undefined") {
-  global.window = {};
+if (typeof window !== "undefined") {
+  import("netlify-cms-app").then((CMS) => {
+    init(CMS);
+  });
 }
-
-import("netlify-cms-app").then((CMS) => {
-  init(CMS);
-});
 
 function init(CMS) {
   CMS.registerPreviewStyle(styles.toString(), { raw: true });
