@@ -1,4 +1,4 @@
-fieldset {
+.fieldset {
   position: relative;
 }
 
@@ -13,8 +13,8 @@ fieldset {
   padding: 0;
 }
 
-input,
-textarea {
+.input,
+.textarea {
   background-color: var(--grey-2);
   border-radius: var(--border-radius);
   padding: 12px 16px 10px;
@@ -25,12 +25,12 @@ textarea {
   z-index: 2;
 }
 
-input:focus,
-textarea:focus {
+.input:focus,
+.textarea:focus {
   background-color: var(--white);
 }
-input:focus + label,
-textarea:focus + label {
+.input:focus + .label,
+.textarea:focus + .label {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(-120%);
@@ -60,7 +60,7 @@ textarea:focus + label {
   line-height: normal;
 }
 
-label {
+.label {
   font-size: 0.875rem;
   font-weight: 800;
   color: var(--white);

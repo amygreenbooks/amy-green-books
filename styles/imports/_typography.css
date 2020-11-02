@@ -15,6 +15,10 @@ html {
   }
 }
 
+html {
+  background-color: var(--off-white);
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--spacing-medium);

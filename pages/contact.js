@@ -36,9 +36,11 @@ export default function Contact({ content }) {
                   id="name"
                   name="name"
                   placeholder="Name"
-                  className="w-100 mb2"
+                  className="input w-100 mb2"
                 />
-                <label for="name">Name</label>
+                <label for="name" className="label">
+                  Name
+                </label>
               </div>
               <div className="pl1-l w-50-l relative">
                 <input
@@ -46,9 +48,11 @@ export default function Contact({ content }) {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className="w-100 mb2"
+                  className="input w-100 mb2"
                 />
-                <label for="email">Email</label>
+                <label for="email" className="label">
+                  Email
+                </label>
               </div>
             </div>
 
@@ -59,9 +63,11 @@ export default function Contact({ content }) {
                 placeholder="Your message"
                 rows="8"
                 cols="80"
-                className="w-100"
+                className="textarea w-100"
               />
-              <label for="message">Your message</label>
+              <label for="message" className="label">
+                Your message
+              </label>
             </div>
             <div className="tc">
               <button type="submit" className="btn w-100 w-auto-ns raise">

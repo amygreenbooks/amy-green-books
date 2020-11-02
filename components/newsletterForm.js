@@ -14,26 +14,30 @@ export default function NewsletterForm() {
         <div className="flex-auto mb2 mb0-ns mr2-ns relative">
           <input
             type="text"
-            className="form-control w-100"
+            className="form-control input w-100"
             data-inputmask=""
             id="newsletter-fname"
             name="fields[name]"
             placeholder="First Name"
             autoComplete="name"
           />
-          <label htmlFor="newsletter-fname">First Name</label>
+          <label htmlFor="newsletter-fname" className="label">
+            First Name
+          </label>
         </div>
         <div className="flex-auto mb2 mb0-ns mr2-ns relative">
           <input
             type="email"
-            className="form-control w-100"
+            className="form-control input w-100"
             data-inputmask=""
             id="newsletter-email"
             name="fields[email]"
             placeholder="Email"
             autoComplete="email"
           />
-          <label htmlFor="newsletter-email">Email</label>
+          <label htmlFor="newsletter-email" className="label">
+            Email
+          </label>
         </div>
 
         <button
