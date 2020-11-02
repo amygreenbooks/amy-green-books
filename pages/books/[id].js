@@ -6,7 +6,7 @@ import { socialLinks, author } from "../../content/siteConfig";
 
 const contentType = "books";
 
-export default function Book({ bookData }) {
+export default function BookPage({ bookData }) {
   const { title, releaseDate, description, image, isbn } = bookData;
 
   return (
