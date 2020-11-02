@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Head from "next/head";
 import styles from "!css-loader!postcss-loader!../../styles/main.css";
 import BookPreview from "../../components/cms-preview-templates/bookPreview";
 
@@ -28,6 +29,9 @@ export default function Admin() {
 
   return (
     <>
+      <Head>
+        <title>Admin | Amy Green Books</title>
+      </Head>
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </>
   );
