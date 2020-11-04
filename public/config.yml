@@ -49,8 +49,18 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: Author, name: author, widget: "markdown" }
           - { label: Quote, name: quote, widget: "markdown" }
+  - name: "landingPages"
+    label: "Landing Pages"
+    label_singular: "Landing Page"
+    folder: "content/pages"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: description, widget: string }
+      - { label: "Banner Image", name: bannerImage, widget: image }
+      - { label: Body, name: body, widget: markdown }
   - name: "pages"
-    label: "Pages"
+    label: "Default Pages"
     files:
       - file: "content/index.md"
         label: "Home Page"

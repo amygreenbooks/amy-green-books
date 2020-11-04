@@ -4,6 +4,7 @@ import BookPreview from "../components/cms-preview-templates/bookPreview";
 import HomePreview from "../components/cms-preview-templates/homePreview";
 import AboutPreview from "../components/cms-preview-templates/aboutPreview";
 import ContactPreview from "../components/cms-preview-templates/contactPreview";
+import PagePreview from "../components/cms-preview-templates/pagePreview";
 
 if (typeof window !== "undefined") {
   import("netlify-cms-app").then((CMS) => {
@@ -17,6 +18,7 @@ function init(CMS) {
   CMS.registerPreviewTemplate("home", HomePreview);
   CMS.registerPreviewTemplate("about", AboutPreview);
   CMS.registerPreviewTemplate("contact", ContactPreview);
+  CMS.registerPreviewTemplate("page", PagePreview);
   CMS.init();
 
   document.body.style.minHeight = "100vh";

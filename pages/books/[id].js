@@ -32,7 +32,12 @@ export default function BookPage({ bookData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllContentIds(contentType);
+  const paths = getAllContentIds(contentType).map((id) => ({
+    params: {
+      id,
+    },
+  }));
+
   return {
     paths,
     fallback: false,
