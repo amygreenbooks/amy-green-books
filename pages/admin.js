@@ -18,7 +18,7 @@ function init(CMS) {
   CMS.registerPreviewTemplate("home", HomePreview);
   CMS.registerPreviewTemplate("about", AboutPreview);
   CMS.registerPreviewTemplate("contact", ContactPreview);
-  CMS.registerPreviewTemplate("page", PagePreview);
+  CMS.registerPreviewTemplate("landingPages", PagePreview);
   CMS.init();
 
   document.body.style.minHeight = "100vh";
