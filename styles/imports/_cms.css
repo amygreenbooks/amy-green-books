@@ -87,13 +87,13 @@
 }
 .cms ol > li:before {
   font-weight: 800;
-  left: var(--spacing-medium);
-  margin-right: 1.33rem;
-  position: relative;
+  margin-right: var(--spacing-small);
+  position: absolute;
   height: 100%;
   content: counter(i);
   counter-increment: i;
   color: var(--primary);
+  right: 100%;
 }
 
 /* Blockquotes */
@@ -110,4 +110,12 @@
 
 .cms blockquote p {
   margin: 0;
+}
+
+.cms-editor-visual ul {
+  list-style-type: circle;
+}
+
+.cms-editor-visual ol {
+  list-style-type: decimal;
 }
