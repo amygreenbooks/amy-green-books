@@ -15,7 +15,7 @@
     "netlify-cms-app": "^2.14.4",
     "next": "^10.0.3",
     "next-on-netlify": "^2.6.3",
-    "postcss": "^8.1.14",
+    "postcss": "^8.2.1",
     "postcss-custom-media": "^7.0.8",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^13.0.0",
