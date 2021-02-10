@@ -6,7 +6,14 @@ function menuItem(title, url) {
 }
 
 export const mainMenu = [
-  menuItem("Books", "/books/things-we-didnt-say"),
+  {
+    title: "Books",
+    url: "/books/things-we-didnt-say",
+    subMenus: [
+      menuItem("The Lines Between Us", "/books/the-lines-between-us"),
+      menuItem("Things We Didn't Say", "/books/things-we-didnt-say"),
+    ],
+  },
   menuItem("Meet Amy", "/about"),
   menuItem("Contact", "/contact"),
 ];

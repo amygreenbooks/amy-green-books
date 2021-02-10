@@ -6,7 +6,7 @@ export default function Home({ books, welcome }) {
     <>
       <section className="bg-grey-1 pb4 pt5">
         <div className="mw7 center">
-          <div className="ph3">
+          <div className="ph3 flex-m">
             {books.map((book) => (
               <BookSummary key={book.id} {...book} />
             ))}
