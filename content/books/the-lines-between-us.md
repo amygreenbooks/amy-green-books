@@ -9,10 +9,7 @@ description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   tragic accident raises suspicions, they’re forced to work together, but the
   truth they uncover may lead to an impossible—and dangerous—choice.
 image: /media/the-lines-between-us.jpg
-retailers:
-  - link: https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/
-    name: Amazon
-    image: /media/amazon.png
+retailers: []
 endorsements: []
 ---
 Since the attack on Pearl Harbor, Gordon Hooper and his buddy Jack Armitage have done "work of national importance" in the West as conscientious objectors: volunteering as smokejumpers, and parachuting into and extinguishing raging wildfires. But the number of winter blazes they’re called to in early 1945 seems suspiciously high, and when an accident leaves Jack badly injured, Gordon realizes the facts don’t add up.
