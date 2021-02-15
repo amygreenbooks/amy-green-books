@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import Markdown from "../../components/markdown";
 import Jumbotron from "../../components/jumbotron";
 import { getContentData, getSortedContentData } from "../../lib/content";
-import { mainMenu } from "../content/siteConfig";
+import { mainMenu } from "../../content/siteConfig";
 
 export default function ContactSuccess({ content, menu }) {
   const { successMessage, title, bannerImage } = content;
