@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { mainMenu, socialLinks } from "../content/siteConfig";
+import { socialLinks } from "../content/siteConfig";
 import NewsletterForm from "./newsletterForm";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
 
-export default function Footer() {
+export default function Footer({ mainMenu }) {
   return (
     <>
       <footer className="bg-black ph3 pv4 white">

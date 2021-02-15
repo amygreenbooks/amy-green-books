@@ -3,12 +3,14 @@ backend:
 
 media_folder: "public/media" # Folder where user uploaded files should go
 public_folder: "/media"
+publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "books"
     label: "Books"
     label_singular: "Book"
     folder: "content/books"
+    preview_path: "books/{{slug}}"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -53,6 +55,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Landing Pages"
     label_singular: "Landing Page"
     folder: "content/pages"
+    preview_path: "{{slug}}"
     create: true
     fields:
       - { label: Title, name: title, widget: string }
@@ -83,6 +86,7 @@ collections: # A list of collections the CMS should be able to edit
       - file: "content/contact.md"
         label: "Contact Page"
         name: "contact"
+        preview_path: "contact"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: description, widget: string }
@@ -96,6 +100,7 @@ collections: # A list of collections the CMS should be able to edit
       - file: "content/about.md"
         label: "About Page"
         name: "about"
+        preview_path: "about"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Image, name: aboutImage, widget: "image" }

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NavigationLink from "./navigationLink";
 
 export default function Masthead({ bannerImage, title, subtitle, mainMenu }) {
   return (
@@ -21,12 +21,8 @@ export default function Masthead({ bannerImage, title, subtitle, mainMenu }) {
 
         <nav className="flex justify-center bw2 white bg-black main-nav">
           <ul className="flex flex-wrap justify-between w-100 mw6">
-            {mainMenu.map(({ title, url }) => (
-              <li key={url} className="flex-auto tc">
-                <Link href={url}>
-                  <a className="pv3 ph2 no-underline db nowrap">{title}</a>
-                </Link>
-              </li>
+            {mainMenu.map((menu) => (
+              <NavigationLink key={menu.title} {...menu} />
             ))}
           </ul>
         </nav>

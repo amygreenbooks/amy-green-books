@@ -2,13 +2,14 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import Markdown from "../../components/markdown";
 import Jumbotron from "../../components/jumbotron";
-import { getContentData } from "../../lib/content";
+import { getContentData, getSortedContentData } from "../../lib/content";
+import { mainMenu } from "../content/siteConfig";
 
-export default function ContactSuccess({ content }) {
+export default function ContactSuccess({ content, menu }) {
   const { successMessage, title, bannerImage } = content;
 
   return (
-    <Layout>
+    <Layout mainMenu={menu}>
       <Jumbotron title={title} image={bannerImage} />
       <div className="ph3 bg-off-white">
         <div className="center mw6 pv3 cms">
@@ -27,6 +28,7 @@ export async function getStaticProps() {
   return {
     props: {
       content,
+      menu: mainMenu(getSortedContentData("books")),
     },
   };
 }

@@ -5,7 +5,7 @@ import Home from "../components/layouts/home";
 import { getContentData, getSortedContentData } from "../lib/content";
 import { mainMenu } from "../content/siteConfig";
 
-export default function HomePage({ homeContent, books }) {
+export default function HomePage({ homeContent, books, menu }) {
   const { title, subtitle, bannerImage, welcome } = homeContent;
 
   const nav = (
@@ -13,12 +13,12 @@ export default function HomePage({ homeContent, books }) {
       title={title}
       subtitle={subtitle}
       bannerImage={bannerImage}
-      mainMenu={mainMenu}
+      mainMenu={menu}
     />
   );
 
   return (
-    <Layout nav={nav}>
+    <Layout nav={nav} mainMenu={menu}>
       <Head>
         <title>{"Amy Green Books"}</title>
       </Head>
@@ -34,6 +34,7 @@ export async function getStaticProps() {
     props: {
       homeContent,
       books,
+      menu: mainMenu(books),
     },
   };
 }

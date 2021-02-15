@@ -1,5 +1,6 @@
+import { parseISO } from "date-fns";
 import Link from "next/link";
-import Date from "./date";
+import DateCmp from "./date";
 
 export default function BookSummary({
   id,
@@ -8,22 +9,24 @@ export default function BookSummary({
   releaseDate,
   description,
 }) {
+  const isReleased = !releaseDate || parseISO(releaseDate) < Date.now();
+
   return (
-    <article className="flex-m mhn3-m mb4">
+    <article>
       <Link href={`/books/${id}`}>
-        <a className="db mr3-m mb2 w-50-m">
-          <img src={image} alt={title} className="db pa1 border-box" />
+        <a className="side img-side">
+          <img src={image} alt={title} className="db pa1 border-box center" />
         </a>
       </Link>
 
-      <div className="pl3-m w-50-m">
+      <div className="side text-side">
         <header>
           <h3 className="f3 b lh-title mb1">
             <em>{title}</em>
           </h3>
-          {releaseDate && (
+          {!isReleased && (
             <p className="mid-gray lh-title mb2">
-              Releases: <Date dateString={releaseDate} />
+              Releases: <DateCmp dateString={releaseDate} />
             </p>
           )}
         </header>
@@ -34,6 +37,36 @@ export default function BookSummary({
           </Link>
         </footer>
       </div>
+      <style jsx>{`
+        article {
+          display: flex;
+          flex: 1 1 auto;
+          flex-wrap: wrap;
+          margin-bottom: var(--spacing-large);
+          min-width: 50%;
+        }
+
+        .side {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 var(--spacing-medium);
+        }
+
+        .img-side {
+          min-width: 16rem;
+          margin-bottom: var(--spacing-small);
+        }
+
+        .text-side {
+          min-width: 20rem;
+          flex: 1 1;
+        }
+
+        img {
+          max-height: 25rem;
+        }
+      `}</style>
     </article>
   );
 }

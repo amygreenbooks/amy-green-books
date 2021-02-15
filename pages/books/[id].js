@@ -1,16 +1,27 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Book from "../../components/layouts/book";
-import { getAllContentIds, getContentData } from "../../lib/content";
+import {
+  getAllContentIds,
+  getContentData,
+  getSortedContentData,
+} from "../../lib/content";
 import { socialLinks, author } from "../../content/siteConfig";
+import { mainMenu } from "../../content/siteConfig";
 
 const contentType = "books";
 
-export default function BookPage({ bookData }) {
+export default function BookPage({ bookData, menu }) {
   const { title, releaseDate, description, image, isbn } = bookData;
 
   return (
-    <Layout title={title} description={description} image={image} book>
+    <Layout
+      title={title}
+      description={description}
+      image={image}
+      book
+      mainMenu={menu}
+    >
       <Head>
         <meta property="og:type" content="book" />
         <meta property="article:publisher" content={socialLinks.facebook} />
@@ -49,6 +60,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       bookData,
+      menu: mainMenu(getSortedContentData("books")),
     },
   };
 }

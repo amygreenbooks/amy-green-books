@@ -89,11 +89,6 @@
   font-size: 1.488rem;
 }
 
-.main-nav a:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-}
-
 .ml-form-embedSubmitLoad {
   display: inline-block;
   width: 20px;

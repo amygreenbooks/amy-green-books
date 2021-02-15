@@ -61,11 +61,13 @@ export default function Book({
         </div>
       </section>
 
-      <section className="mw6 center ph3 mt4 mb5">
-        {endorsements.map((endorsement, i) => (
-          <Endorsement key={`endorsement-${i}`} {...endorsement} />
-        ))}
-      </section>
+      {endorsements && (
+        <section className="mw6 center ph3 mt4 mb5">
+          {endorsements.map((endorsement, i) => (
+            <Endorsement key={`endorsement-${i}`} {...endorsement} />
+          ))}
+        </section>
+      )}
     </>
   );
 }

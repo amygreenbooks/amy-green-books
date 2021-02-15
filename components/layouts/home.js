@@ -5,12 +5,10 @@ export default function Home({ books, welcome }) {
   return (
     <>
       <section className="bg-grey-1 pb4 pt5">
-        <div className="mw7 center">
-          <div className="ph3">
-            {books.map((book) => (
-              <BookSummary key={book.id} {...book} />
-            ))}
-          </div>
+        <div className="mw7 center flex-m">
+          {books.map((book) => (
+            <BookSummary key={book.id} {...book} />
+          ))}
         </div>
       </section>
 
