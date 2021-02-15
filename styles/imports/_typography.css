@@ -29,20 +29,20 @@ body {
   background-color: var(--off-white);
 }
 
-p {
+#__next p {
   margin-bottom: var(--spacing-medium);
   max-width: 32rem;
 }
 
-strong {
+#__next strong {
   font-weight: var(--bold-font-weight);
 }
 
-em {
+#__next em {
   font-style: italic;
 }
 
-sup {
+#__next sup {
   font-size: 0.6rem;
   font-weight: 700;
   vertical-align: super;
