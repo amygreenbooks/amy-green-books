@@ -1,8 +1,8 @@
 ---
 title: Things We Didn't Say
-isbn: '9780764237164'
-date: '2020-11-02T00:00:00'
-releaseDate: '2020-11-02'
+isbn: "9780764237164"
+date: 2020-11-02T00:00:00
+releaseDate: 2020-11-02
 description: >-
   In this epistolary novel from the WWII home front, Johanna Berglund is forced
   to return to her small Midwestern town to become a translator at a German
@@ -12,10 +12,10 @@ description: >-
 image: /media/things-we-didnt-say.jpg
 retailers:
   - image: /media/amazon.png
-    link: 'https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/'
+    link: "https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/"
     name: Amazon
   - image: /media/baker-book-house.png
-    link: 'https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164'
+    link: "https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164"
     name: Baker Book House
   - image: /media/bam.png
     link: >-
@@ -30,10 +30,10 @@ retailers:
       https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
     name: Christian Book
   - image: /media/indie-bound.jpg
-    link: 'https://www.indiebound.org/book/9780764237164'
+    link: "https://www.indiebound.org/book/9780764237164"
     name: Indie Bound
 endorsements:
-  - author: 'Lynn Austin, author of *If I Were You*'
+  - author: "Lynn Austin, author of *If I Were You*"
     quote: |-
       This compelling novel of life on the US home front during World War
       II fascinated me from beginning to end.
@@ -44,7 +44,7 @@ endorsements:
       With impeccable research, Amy Lynn Green casts a light on the POW camps in
       America during World War II and on the dangers of prejudice. Make space on
       your bookshelf, because this book is a keeper!
-  - author: 'Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*'
+  - author: "Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*"
     quote: >-
       *Things We Didn’t Say* is a stand-out novel as brilliant and brave as its
       heroine. . . . An utterly satisfying read you’ll want to share as soon as
@@ -56,7 +56,7 @@ endorsements:
       takes care to bring history alive as she moves her characters through
       situations that force them to take a deeper look at who they are and
       what they really want out of life.
-  - author: 'Rachel McMillan, author of *The London Restoration*'
+  - author: "Rachel McMillan, author of *The London Restoration*"
     quote: >-
       A fascinating excavation of a little-known moment in US history executed
       with an inimitable voice and extremely clever style. Excessively readable,
@@ -68,14 +68,14 @@ endorsements:
       Amy Green’s debut novel kept me guessing to the very end—twist
       upon twist upon twist. She is a master plotter, so read every single
       word!
-  - author: 'Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*'
+  - author: "Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*"
     quote: >-
       *Things We Didn’t Say* is the best sort of book: where the characters feel
       like friends, the story feels like home, and the pages beckon you to turn
       them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
       expertly wields wit, heart, history, and enveloping storytelling in this
       glorious debut!
-  - author: 'Julie Klassen, author of *The Bridge to Belle Island*'
+  - author: "Julie Klassen, author of *The Bridge to Belle Island*"
     quote: >-
       Based on actual World War II experiences, and sparkling with humor and
       touches of romance, this is an impressive debut from a multitalented
