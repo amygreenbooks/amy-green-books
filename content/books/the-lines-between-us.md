@@ -8,7 +8,7 @@ description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   to fight fires as a smokejumper, while she joined the Army Corps. When a
   tragic accident raises suspicions, they’re forced to work together, but the
   truth they uncover may lead to an impossible—and dangerous—choice.
-image: ""
+image: /media/the-lines-between-us.jpg
 retailers:
   - link: https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/
     name: Amazon
