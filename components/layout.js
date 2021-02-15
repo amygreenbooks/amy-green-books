@@ -3,7 +3,7 @@ import Nav from "./nav";
 import Footer from "./footer";
 import styles from "./layout.module.css";
 
-export default function Layout({ children, home, nav, ...props }) {
+export default function Layout({ children, home, nav, mainMenu, ...props }) {
   return (
     <>
       <Meta home={home} {...props} />
@@ -11,11 +11,11 @@ export default function Layout({ children, home, nav, ...props }) {
         <a href="#maincontent">Skip to main content</a>
       </div>
 
-      {nav || <Nav />}
+      {nav || <Nav mainMenu={mainMenu} />}
 
       <main id="maincontent">{children}</main>
 
-      <Footer />
+      <Footer mainMenu={mainMenu} />
     </>
   );
 }

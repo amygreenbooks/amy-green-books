@@ -5,15 +5,24 @@ function menuItem(title, url) {
   };
 }
 
-export const mainMenu = [
-  {
-    title: "Books",
-    url: "/books/things-we-didnt-say",
-    subMenus: [
-      menuItem("The Lines Between Us", "/books/the-lines-between-us"),
-      menuItem("Things We Didn't Say", "/books/things-we-didnt-say"),
-    ],
-  },
+function booksMenu(books) {
+  if (books.length > 1) {
+    return [
+      {
+        title: "Books",
+        url: "/books/things-we-didnt-say",
+        subMenus: books.map((b) => menuItem(b.title, `/books/${b.id}`)),
+      },
+    ];
+  } else if (books.length === 1) {
+    return [menuItem("Books", `/books/${books[0].id}`)];
+  } else {
+    return [];
+  }
+}
+
+export const mainMenu = (books) => [
+  ...booksMenu(books),
   menuItem("Meet Amy", "/about"),
   menuItem("Contact", "/contact"),
 ];

@@ -1,10 +1,11 @@
 import Layout from "../components/layout";
 import About from "../components/layouts/about";
-import { getContentData } from "../lib/content";
+import { getContentData, getSortedContentData } from "../lib/content";
+import { mainMenu } from "../content/siteConfig";
 
-export default function AboutPage({ content }) {
+export default function AboutPage({ content, menu }) {
   return (
-    <Layout>
+    <Layout mainMenu={menu}>
       <About {...content} />
     </Layout>
   );
@@ -15,6 +16,7 @@ export async function getStaticProps() {
   return {
     props: {
       content,
+      menu: mainMenu(getSortedContentData("books")),
     },
   };
 }

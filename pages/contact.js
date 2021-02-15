@@ -1,10 +1,11 @@
 import Layout from "../components/layout";
 import Contact from "../components/layouts/contact";
-import { getContentData } from "../lib/content";
+import { getContentData, getSortedContentData } from "../lib/content";
+import { mainMenu } from "../content/siteConfig";
 
-export default function ContactPage({ content }) {
+export default function ContactPage({ content, menu }) {
   return (
-    <Layout>
+    <Layout mainMenu={menu}>
       <Contact {...content} />
     </Layout>
   );
@@ -15,6 +16,7 @@ export async function getStaticProps() {
   return {
     props: {
       content,
+      menu: mainMenu(getSortedContentData("books")),
     },
   };
 }
