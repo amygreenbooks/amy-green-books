@@ -2,6 +2,7 @@ import ScrollAnimation from "./util/animateOnScroll";
 import cn from "classnames";
 
 const rotate = 15;
+const spineActualWidthRems = 0.7;
 
 const BookCover = ({
   Component = "figure",
@@ -22,7 +23,7 @@ const BookCover = ({
         .book {
           perspective: 1600px;
           position: relative;
-          padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+          padding: 0.5rem 0.5rem 0.5rem ${1 + spineActualWidthRems}rem;
         }
 
         .cover,
@@ -44,7 +45,7 @@ const BookCover = ({
           background-color: #ccc;
           top: 0.5rem;
           bottom: 0.5rem;
-          left: 1.5rem;
+          left: ${1 + spineActualWidthRems}rem;
           position: absolute;
           transform-origin: left;
           width: 4.5rem;
@@ -65,7 +66,7 @@ const BookCover = ({
         :global(.animated.enter) .book:focus .cover,
         .book:hover .cover,
         .book:focus .cover {
-          transform: rotateY(0deg) translateX(-0.5rem);
+          transform: rotateY(0deg) translateX(-${spineActualWidthRems}rem);
         }
 
         :global(.animated) .spine,
@@ -73,7 +74,7 @@ const BookCover = ({
         :global(.animated.enter) .book:focus .spine,
         .book:hover .spine,
         .book:focus .spine {
-          transform: rotateY(90deg) translateZ(-0.5rem);
+          transform: rotateY(90deg) translateZ(-${spineActualWidthRems}rem);
         }
 
         @media (prefers-reduced-motion) {

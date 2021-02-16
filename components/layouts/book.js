@@ -67,15 +67,21 @@ export default function Book({
         .book-details {
           margin-top: var(--spacing-large);
           margin-bottom: var(--spacing-extra-large);
+          grid-template-rows: repeat(4, auto);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
         }
 
         @media screen and (min-width: 46em) {
           .book-details {
             display: grid;
             grid-template-columns: 1fr 4rem 11rem 21rem 4rem 1fr;
-            grid-template-rows: repeat(4, auto);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
+          }
+        }
+
+        @media screen and (min-width: 69em) {
+          .book-details {
+            grid-template-columns: 1fr 9rem 11rem 21rem 9rem 1fr;
           }
         }
 
@@ -84,6 +90,7 @@ export default function Book({
         .endorsements {
           padding-left: var(--spacing-medium);
           padding-right: var(--spacing-medium);
+          width: 100%;
           max-width: 32rem;
           margin: 0 auto;
         }
@@ -94,7 +101,7 @@ export default function Book({
 
         .image {
           grid-area: 1 / 2 / 3 / 4;
-          max-width: 15rem;
+          max-width: 20rem;
           margin: 0 auto var(--spacing-medium);
         }
 
