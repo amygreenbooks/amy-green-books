@@ -1,6 +1,7 @@
 import { parseISO } from "date-fns";
 import Link from "next/link";
 import DateCmp from "./date";
+import BookCover from "./bookCover";
 
 export default function BookSummary({
   id,
@@ -15,7 +16,7 @@ export default function BookSummary({
     <article>
       <Link href={`/books/${id}`}>
         <a className="side img-side">
-          <img src={image} alt={title} className="db pa1 border-box center" />
+          <BookCover title={title} image={image} animateIn />
         </a>
       </Link>
 
@@ -50,21 +51,17 @@ export default function BookSummary({
           display: block;
           margin-left: auto;
           margin-right: auto;
+        }
+
+        .text-side {
+          min-width: 48%;
+          flex: 1 1;
           padding: 0 var(--spacing-medium);
         }
 
         .img-side {
-          min-width: 16rem;
-          margin-bottom: var(--spacing-small);
-        }
-
-        .text-side {
-          min-width: 20rem;
-          flex: 1 1;
-        }
-
-        img {
-          max-height: 25rem;
+          max-width: 18rem;
+          margin: 0 auto;
         }
       `}</style>
     </article>
