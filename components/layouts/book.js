@@ -9,6 +9,7 @@ export default function Book({
   title,
   releaseDate,
   image,
+  spineImage,
   contentMark,
   retailers,
   endorsements,
@@ -34,7 +35,11 @@ export default function Book({
       </header>
 
       <div className="image">
-        <BookCover title={`Cover for ${title}`} image={image} />
+        <BookCover
+          title={`Cover for ${title}`}
+          image={image}
+          spineImage={spineImage}
+        />
       </div>
 
       <div className="cms body" itemProp="abstract">

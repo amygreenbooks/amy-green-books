@@ -1,7 +1,7 @@
 import ScrollAnimation from "./util/animateOnScroll";
 import cn from "classnames";
 
-const rotate = 15;
+const rotate = 27;
 const spineActualWidthRems = 0.7;
 
 const BookCover = ({
@@ -15,8 +15,11 @@ const BookCover = ({
 }) => {
   const book = (
     <>
-      <Component className={cn(className, "book")} {...props}>
-        <div className="spine"></div>
+      <Component
+        className={cn(className, "book", { "animated-book": !!spineImage })}
+        {...props}
+      >
+        {spineImage && <img src={spineImage} className="spine" />}
         <img src={image} alt={title} className="cover" />
       </Component>
       <style jsx>{`
@@ -29,69 +32,71 @@ const BookCover = ({
         .cover,
         .spine {
           transition: transform 1s ease 0s;
+          border-radius: 0;
+          display: block;
         }
 
         .cover {
           max-width: 100%;
           max-height: 100%;
-          display: block;
           margin: 0 auto;
           transform-origin: left;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-          border-radius: 0;
         }
 
         .spine {
           background-color: #ccc;
           top: 0.5rem;
           bottom: 0.5rem;
-          left: ${1 + spineActualWidthRems}rem;
+          right: calc(100% - ${1 + spineActualWidthRems}rem);
           position: absolute;
-          transform-origin: left;
-          width: 4.5rem;
+          transform-origin: right;
+          height: calc(100% - 1rem);
         }
 
-        .cover,
-        :global(.animated.enter) .cover {
+        .animated-book .cover,
+        :global(.animated.enter) .animated-book .cover {
           transform: rotateY(${rotate}deg);
         }
 
-        .spine,
-        :global(.animated.enter) .spine {
-          transform: rotateY(${rotate + 90}deg);
+        .animated-book .spine,
+        :global(.animated.enter) .animated-book .spine {
+          transform: rotateY(${rotate - 90}deg);
         }
 
-        :global(.animated) .cover,
-        :global(.animated.enter) .book:hover .cover,
-        :global(.animated.enter) .book:focus .cover,
-        .book:hover .cover,
-        .book:focus .cover {
+        :global(.animated) .animated-book .cover,
+        :global(.animated.enter) .animated-book:hover .cover,
+        :global(.animated.enter) .animated-book:focus .cover,
+        .animated-book:hover .cover,
+        .animated-book:focus .cover,
+        .cover {
           transform: rotateY(0deg) translateX(-${spineActualWidthRems}rem);
         }
 
-        :global(.animated) .spine,
-        :global(.animated.enter) .book:hover .spine,
-        :global(.animated.enter) .book:focus .spine,
-        .book:hover .spine,
-        .book:focus .spine {
-          transform: rotateY(90deg) translateZ(-${spineActualWidthRems}rem);
+        :global(.animated) .animated-book .spine,
+        :global(.animated.enter) .animated-book:hover .spine,
+        :global(.animated.enter) .animated-book:focus .spine,
+        .animated-book:hover .spine,
+        .animated-book:focus .spine,
+        .spine {
+          transform: rotateY(-90deg) translateZ(${spineActualWidthRems}rem);
         }
 
         @media (prefers-reduced-motion) {
-          :global(.animated) .cover,
-          :global(.animated.enter) .book:hover .cover,
-          :global(.animated.enter) .book:focus .cover,
-          .book:hover .cover,
-          .book:focus .cover {
+          :global(.animated) .animated-book .cover,
+          :global(.animated.enter) .animated-book:hover .cover,
+          :global(.animated.enter) .animated-book:focus .cover,
+          .animated-book:hover .cover,
+          .animated-book:focus .cover {
             transform: rotateY(${rotate}deg);
           }
 
-          :global(.animated) .spine,
-          :global(.animated.enter) .book:hover .spine,
-          :global(.animated.enter) .book:focus .spine,
-          .book:hover .spine,
-          .book:focus .spine {
-            transform: rotateY(${rotate + 90}deg);
+          :global(.animated) .animated-book .spine,
+          :global(.animated.enter) .animated-book:hover .spine,
+          :global(.animated.enter) .animated-book:focus .spine,
+          .animated-book:hover .spine,
+          .animated-book:focus .spine {
+            transform: rotateY(${rotate - 90}deg);
           }
         }
       `}</style>

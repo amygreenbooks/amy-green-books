@@ -6,6 +6,7 @@ import BookCover from "./bookCover";
 export default function BookSummary({
   id,
   image,
+  spineImage,
   title,
   releaseDate,
   description,
@@ -16,7 +17,12 @@ export default function BookSummary({
     <article>
       <Link href={`/books/${id}`}>
         <a className="side img-side">
-          <BookCover title={title} image={image} animateIn />
+          <BookCover
+            title={title}
+            image={image}
+            spineImage={spineImage}
+            animateIn
+          />
         </a>
       </Link>
 

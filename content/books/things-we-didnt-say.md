@@ -10,6 +10,7 @@ description: >-
   the POWs have hidden depths. When the lines between compassion and treason are
   blurred, she must decide where her heart truly lies.
 image: /media/things-we-didnt-say.jpg
+spineImage: /media/things-we-didnt-say-spine.jpg
 retailers:
   - image: /media/amazon.png
     link: "https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/"
@@ -82,7 +83,7 @@ endorsements:
       writer.
 ---
 
-Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future . . . plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.
+Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future&nbsp;.&nbsp;.&nbsp;. plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.
 
 Johanna arrives to find the once-sleepy town exploding with hostility. Most patriotic citizens want nothing to do with German soldiers laboring in their fields, and they're not afraid to criticize those who work at the camp as well. When Johanna describes the trouble to her friend Peter Ito, a language instructor at a school for military intelligence officers, he encourages her to give the town that rejected her a second chance.
 
