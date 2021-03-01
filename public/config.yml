@@ -35,6 +35,12 @@ collections: # A list of collections the CMS should be able to edit
           widget: "image",
           required: false,
         }
+      - {
+          label: "Spine Image",
+          name: "spineImage",
+          widget: "image",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: Retailers
         name: retailers
