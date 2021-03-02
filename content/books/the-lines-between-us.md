@@ -1,7 +1,7 @@
 ---
 title: The Lines Between Us
 isbn: "9780764237171"
-date: 2021-02-15T08:08:37
+date: 2021-03-02T06:00:00
 releaseDate: 2021-09-01
 description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   were broken up by their convictions. As a conscientious objector, he went west
