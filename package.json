@@ -15,7 +15,7 @@
     "gray-matter": "^4.0.2",
     "lodash.throttle": "^4.1.1",
     "netlify-cms-app": "^2.14.26",
-    "next": "^10.0.7",
+    "next": "^10.0.9",
     "next-on-netlify": "^2.9.0",
     "postcss": "^8.2.6",
     "postcss-custom-media": "^8.0.0",
