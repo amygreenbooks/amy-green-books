@@ -33,7 +33,14 @@ export async function getStaticProps() {
   return {
     props: {
       homeContent,
-      books,
+      books: books.map((b) => ({
+        id: b.id || null,
+        image: b.image || null,
+        spineImage: b.spineImage || null,
+        title: b.title || null,
+        releaseDate: b.releaseDate || null,
+        description: b.description || null,
+      })),
       menu: mainMenu(books),
     },
   };
