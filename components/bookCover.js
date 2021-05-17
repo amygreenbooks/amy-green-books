@@ -19,7 +19,9 @@ const BookCover = ({
         className={cn(className, "book", { "animated-book": !!spineImage })}
         {...props}
       >
-        {spineImage && <img src={spineImage} className="spine" />}
+        {spineImage && (
+          <img src={spineImage} className="spine" aria-hidden="true" />
+        )}
         <img src={image} alt={title} className="cover" />
       </Component>
       <style jsx>{`
