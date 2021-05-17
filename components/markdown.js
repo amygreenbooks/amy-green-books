@@ -7,28 +7,22 @@ import slug from "remark-slug";
 import remark2rehype from "remark-rehype";
 import raw from "rehype-raw";
 import rehype2react from "rehype-react";
-import Link from "next/link";
 
-function MarkdownLink({ children, href, ...props }) {
-  if (href && href.match(/:\/\//g)) {
-    return (
-      <a href={href} target="_blank" {...props}>
-        {children}
-      </a>
-    );
-  }
-  return (
-    <Link href={href}>
-      <a {...props}>{children}</a>
-    </Link>
-  );
-}
+import { H1, H2, H3, H4, H5, H6 } from "./typography/h";
+import MarkdownLink from "./typography/link";
 
 var own = {}.hasOwnProperty;
 
 const Markdown = ({ markdown, noParagraph = false }) => {
   const router = useRouter();
-  const components = {};
+  const components = {
+    h1: H1,
+    h2: H2,
+    h3: H3,
+    h4: H4,
+    h5: H5,
+    h6: H6,
+  };
 
   if (router) {
     components.a = MarkdownLink;
