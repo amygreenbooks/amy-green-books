@@ -6,14 +6,14 @@ import { getContentData, getSortedContentData } from "../../lib/content";
 import { mainMenu } from "../../content/siteConfig";
 
 export default function ContactSuccess({ content, menu }) {
-  const { successMessage, title, bannerImage } = content;
+  const { successMessage_md, title, bannerImage } = content;
 
   return (
     <Layout mainMenu={menu}>
       <Jumbotron title={title} image={bannerImage} />
       <div className="ph3 bg-off-white">
         <div className="center mw6 pv3 cms">
-          <Markdown markdown={successMessage} />
+          <Markdown source={successMessage_md} />
           <p>
             <Link href="/">Back to Home</Link>
           </p>
@@ -28,7 +28,7 @@ export async function getStaticProps() {
   return {
     props: {
       content,
-      menu: mainMenu(getSortedContentData("books")),
+      menu: mainMenu(await getSortedContentData("books")),
     },
   };
 }

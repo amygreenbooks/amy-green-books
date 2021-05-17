@@ -1,20 +1,10 @@
-import React, { Fragment } from "react";
-import { useRouter } from "next/router";
-import PropTypes from "prop-types";
-import unified from "unified";
-import markdownParse from "remark-parse";
-import slug from "remark-slug";
-import remark2rehype from "remark-rehype";
-import raw from "rehype-raw";
-import rehype2react from "rehype-react";
+import { Fragment } from "react";
+import { MDXRemote } from "next-mdx-remote";
 
-import { H1, H2, H3, H4, H5, H6 } from "./typography/h";
-import MarkdownLink from "./typography/link";
+import { H1, H2, H3, H4, H5, H6 } from "../components/typography/h";
+import MarkdownLink from "../components/typography/link";
 
-var own = {}.hasOwnProperty;
-
-const Markdown = ({ markdown, noParagraph = false }) => {
-  const router = useRouter();
+const Markdown = ({ source, noParagraph = false }) => {
   const components = {
     h1: H1,
     h2: H2,
@@ -22,40 +12,14 @@ const Markdown = ({ markdown, noParagraph = false }) => {
     h4: H4,
     h5: H5,
     h6: H6,
+    a: MarkdownLink,
   };
-
-  if (router) {
-    components.a = MarkdownLink;
-  }
 
   if (noParagraph) {
     components.p = Fragment;
   }
 
-  const options = {
-    sanitize: false,
-    createElement: (name, props, children) => {
-      return React.createElement(
-        own.call(components, name) ? components[name] : name,
-        props,
-        children
-      );
-    },
-  };
-
-  const html = unified()
-    .use(markdownParse)
-    .use(slug)
-    .use(remark2rehype, { allowDangerousHtml: true })
-    .use(raw)
-    .use(rehype2react, options)
-    .processSync(markdown).result;
-
-  return <>{html}</>;
-};
-
-Markdown.propTypes = {
-  markdown: PropTypes.string.isRequired,
+  return <MDXRemote {...source} components={components} />;
 };
 
 export default Markdown;

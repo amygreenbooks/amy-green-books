@@ -16,7 +16,7 @@ export async function getStaticProps() {
   return {
     props: {
       content,
-      menu: mainMenu(getSortedContentData("books")),
+      menu: mainMenu(await getSortedContentData("books")),
     },
   };
 }

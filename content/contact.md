@@ -2,7 +2,7 @@
 title: Contact
 description: I'd love to hear from you.
 bannerImage: /media/contactheader.jpg
-successMessage: "Thanks for your message!"
+successMessage_md: "Thanks for your message!"
 ---
 
 ## Drop me a line below.

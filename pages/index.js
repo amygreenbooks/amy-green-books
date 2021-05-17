@@ -29,7 +29,7 @@ export default function HomePage({ homeContent, books, menu }) {
 
 export async function getStaticProps() {
   const homeContent = await getContentData(null, "index");
-  const books = getSortedContentData("books");
+  const books = await getSortedContentData("books");
   return {
     props: {
       homeContent,

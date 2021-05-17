@@ -10,7 +10,7 @@ export default function Book({
   releaseDate,
   image,
   spineImage,
-  contentMark,
+  source,
   retailers,
   endorsements,
 }) {
@@ -43,7 +43,7 @@ export default function Book({
       </div>
 
       <div className="cms body" itemProp="abstract">
-        <Markdown markdown={contentMark} />
+        <Markdown source={source} />
       </div>
 
       <section className="mt4 mb5 bg-grey-1 pv4 purchase">

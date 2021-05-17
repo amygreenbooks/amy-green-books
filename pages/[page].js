@@ -35,7 +35,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       pageContent,
-      menu: mainMenu(getSortedContentData("books")),
+      menu: mainMenu(await getSortedContentData("books")),
     },
   };
 }

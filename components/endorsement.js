@@ -1,13 +1,13 @@
 import Markdown from "./markdown";
 
-export default function Endorsement({ quote, author }) {
+export default function Endorsement({ quote_md, author_md }) {
   return (
     <blockquote className="bg-grey-1 primary pa3 mb3 br1 b mw6 center">
       <p className="f4 mb1">
-        “<Markdown markdown={quote} noParagraph />”
+        “<Markdown source={quote_md} noParagraph />”
       </p>
       <cite className="tr db grey-3">
-        <Markdown markdown={author} noParagraph />
+        <Markdown source={author_md} noParagraph />
       </cite>
     </blockquote>
   );

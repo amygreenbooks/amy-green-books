@@ -1,7 +1,7 @@
 import Markdown from "../markdown";
 import Jumbotron from "../jumbotron";
 
-export default function Page({ title, description, bannerImage, contentMark }) {
+export default function Page({ title, description, bannerImage, source }) {
   return (
     <>
       {/* <Jumbotron title={title} subtitle={description} image={bannerImage} /> */}
@@ -14,7 +14,7 @@ export default function Page({ title, description, bannerImage, contentMark }) {
             )}
           </header>
           <div className="cms">
-            <Markdown markdown={contentMark} />
+            <Markdown source={source} />
           </div>
         </article>
       </div>

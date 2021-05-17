@@ -26,7 +26,7 @@ export default function Home({ books, welcome }) {
             <div className="ph3">
               <h3 className="f3 b lh-title mb1">{welcome.heading}</h3>
               <div className="cms">
-                <Markdown markdown={welcome.text} />
+                <Markdown source={welcome.text_md} />
               </div>
             </div>
           </div>

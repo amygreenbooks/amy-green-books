@@ -1,19 +1,14 @@
 import Markdown from "../markdown";
 import Jumbotron from "../jumbotron";
 
-export default function Contact({
-  title,
-  description,
-  bannerImage,
-  contentMark,
-}) {
+export default function Contact({ title, description, bannerImage, source }) {
   return (
     <>
       <Jumbotron title={title} subtitle={description} image={bannerImage} />
 
       <article className="mw6 center ph3 mt4 mb5">
         <div className="cms">
-          <Markdown markdown={contentMark} />
+          <Markdown source={source} />
         </div>
 
         <div className="mb4">

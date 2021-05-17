@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function MarkdownLink({ children, href, ...props }) {
-  if (href && href.match(/:\/\//g)) {
+  const router = useRouter();
+  if (!router || (href && href.match(/:\/\//g))) {
     return (
       <a href={href} target="_blank" {...props}>
         {children}

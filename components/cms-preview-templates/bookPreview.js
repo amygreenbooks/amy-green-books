@@ -12,7 +12,7 @@ export default function BookPreview({ entry, getAsset }) {
       title={entry.getIn(["data", "title"])}
       releaseDate={entry.getIn(["data", "releaseDate"])}
       image={getAsset(entry.getIn(["data", "image"]))}
-      contentMark={entry.getIn(["data", "body"])}
+      source={entry.getIn(["data", "body"])}
       retailers={retailers}
       endorsements={endorsements}
     />

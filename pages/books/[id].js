@@ -60,7 +60,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       bookData,
-      menu: mainMenu(getSortedContentData("books")),
+      menu: mainMenu(await getSortedContentData("books")),
     },
   };
 }
