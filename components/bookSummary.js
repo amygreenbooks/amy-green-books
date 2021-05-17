@@ -44,6 +44,7 @@ export default function BookSummary({
           </Link>
         </footer>
       </div>
+
       <style jsx>{`
         article {
           display: flex;

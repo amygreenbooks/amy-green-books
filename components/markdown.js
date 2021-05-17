@@ -1,15 +1,18 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import unified from "unified";
 import markdownParse from "remark-parse";
-import remark2react from "remark-react";
+import slug from "remark-slug";
+import remark2rehype from "remark-rehype";
+import raw from "rehype-raw";
+import rehype2react from "rehype-react";
 import Link from "next/link";
 
 function MarkdownLink({ children, href, ...props }) {
   if (href && href.match(/:\/\//g)) {
     return (
-      <a href={href} {...props}>
+      <a href={href} target="_blank" {...props}>
         {children}
       </a>
     );
@@ -21,23 +24,37 @@ function MarkdownLink({ children, href, ...props }) {
   );
 }
 
+var own = {}.hasOwnProperty;
+
 const Markdown = ({ markdown, noParagraph = false }) => {
   const router = useRouter();
-  const options = {
-    remarkReactComponents: {},
-  };
+  const components = {};
 
   if (router) {
-    options.remarkReactComponents.a = MarkdownLink;
+    components.a = MarkdownLink;
   }
 
   if (noParagraph) {
-    options.remarkReactComponents.p = Fragment;
+    components.p = Fragment;
   }
+
+  const options = {
+    sanitize: false,
+    createElement: (name, props, children) => {
+      return React.createElement(
+        own.call(components, name) ? components[name] : name,
+        props,
+        children
+      );
+    },
+  };
 
   const html = unified()
     .use(markdownParse)
-    .use(remark2react, options)
+    .use(slug)
+    .use(remark2rehype, { allowDangerousHtml: true })
+    .use(raw)
+    .use(rehype2react, options)
     .processSync(markdown).result;
 
   return <>{html}</>;
