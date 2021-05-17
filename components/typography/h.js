@@ -26,8 +26,8 @@ export default function Header({
       <style jsx>{`
         .anchor {
           float: left;
-          padding-right: 6px;
-          margin-left: -24px;
+          padding-right: 0.2em;
+          margin-left: -0.8em;
           color: #ccc;
           text-decoration: none;
           opacity: 0;
