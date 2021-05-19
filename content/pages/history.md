@@ -1,11 +1,11 @@
 ---
 title: History
-description: One of my favorite aspects of writing historical fiction is weaving real-life people and stories into my books. If you want to learn how closely my novels resemble actual events, read on! If you’re a WWII history lover who hasn’t read my books, just know that there will be some spoilers for events in the novels.
+description: One of my favorite aspects of writing historical fiction is weaving real people and stories into my books. If you want to learn how closely my novels resemble actual events, read on! If you’re a WWII history lover who hasn’t read my books, just know that there will be some spoilers for events in the novels.
 ---
 
 ## The History Behind _Things We Didn't Say_
 
-**Fact:** Almost everything about the Military Intelligence Service’s Japanese Language school is accurate. Peter Ito is fictional, but the dynamics between Hawaiian and Californian students, the increased pressure to turn out translators quickly, and even students studying in the privy late at night are all taken directly from my research. [The Densho Encylopedia](https://encyclopedia.densho.org/Military_Intelligence_Service_Language_School/) is a great summary for anyone wanting to learn more, with plenty of links to other resources.
+**Fact:** Almost everything about the Military Intelligence Service’s Japanese Language school is accurate. Peter Ito is fictional, but the dynamics between Hawaiian and Californian students, the increased pressure to turn out translators quickly, and even students studying in the privy late at night are all taken directly from my research. [The Densho Encylopedia](https://encyclopedia.densho.org/Military_Intelligence_Service_Language_School/) has a great summary for anyone wanting to learn more, with plenty of links to other resources.
 
 <figure>
   <img src="/media/translatorschool.jpg" />

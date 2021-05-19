@@ -57,16 +57,21 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: Author, name: author_md, widget: "markdown" }
           - { label: Quote, name: quote_md, widget: "markdown" }
-  - name: "landingPages"
-    label: "Landing Pages"
-    label_singular: "Landing Page"
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
     folder: "content/pages"
     preview_path: "{{slug}}"
     create: true
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Subtitle, name: description, widget: string }
-      - { label: "Banner Image", name: bannerImage, widget: image }
+      - {
+          label: "Banner Image",
+          name: bannerImage,
+          widget: image,
+          required: false,
+        }
       - { label: Body, name: body, widget: markdown }
   - name: "pages"
     label: "Default Pages"
