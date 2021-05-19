@@ -4,9 +4,8 @@ export default function Jumbotron({ title, subtitle, image }) {
   return (
     <div
       className={cn("pv5 ph3 pv6-l", {
-        "bg-center cover": image,
+        "bg-center cover banner": image,
       })}
-      style={{ backgroundImage: image && `url('${image}')` }}
     >
       <div className="mw7 center">
         <div className="db mb3">
@@ -34,6 +33,25 @@ export default function Jumbotron({ title, subtitle, image }) {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .banner {
+          background-image: url("${image}?nf_resize=fit&h=250");
+          background-image: image-set(
+            url("${image}?nf_resize=fit&h=250") 1x,
+            url("${image}?nf_resize=fit&h=500") 2x
+          );
+        }
+
+        @media screen and (min-width: 60em) {
+          .banner {
+            background-image: url("${image}?nf_resize=fit&h=500");
+            background-image: image-set(
+              url("${image}?nf_resize=fit&h=500") 1x,
+              url("${image}?nf_resize=fit&h=1000") 2x
+            );
+          }
+        }
+      `}</style>
     </div>
   );
 }

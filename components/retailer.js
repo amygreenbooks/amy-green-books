@@ -1,3 +1,5 @@
+import imgSrcSet from "./util/imgSrcSet";
+
 export default function Retailer({ link, image, name }) {
   return (
     <div className="w-third-ns w-50 pa2 border-box flex w100">
@@ -6,7 +8,15 @@ export default function Retailer({ link, image, name }) {
         target="_blank"
         href={link}
       >
-        <img src={image} alt={name} className="db mw-100 br0 center" />
+        <img
+          {...imgSrcSet({
+            src: image,
+            resize: "fit",
+            h: 100,
+          })}
+          alt={name}
+          className="db mw-100 br0 center"
+        />
       </a>
       <style jsx>{`
         img {

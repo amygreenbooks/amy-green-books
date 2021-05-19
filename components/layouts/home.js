@@ -1,3 +1,4 @@
+import imgSrcSet from "../util/imgSrcSet";
 import BookSummary from "../bookSummary";
 import Markdown from "../markdown";
 
@@ -17,7 +18,11 @@ export default function Home({ books, welcome }) {
           <div className="flex-m mhn3-m mb4">
             <div className="ph3 order-last-m">
               <img
-                src={welcome.image}
+                {...imgSrcSet({
+                  src: welcome.image,
+                  resize: "fit",
+                  w: 350,
+                })}
                 alt="Amy Lynn Green"
                 className="db mb2 center mw4"
               />

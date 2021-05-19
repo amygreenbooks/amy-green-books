@@ -1,4 +1,5 @@
 import ScrollAnimation from "./util/animateOnScroll";
+import imgSrcSet from "./util/imgSrcSet";
 import cn from "classnames";
 
 const rotate = 27;
@@ -20,9 +21,25 @@ const BookCover = ({
         {...props}
       >
         {spineImage && (
-          <img src={spineImage} className="spine" aria-hidden="true" />
+          <img
+            {...imgSrcSet({
+              src: spineImage,
+              resize: "fit",
+              h: 500,
+            })}
+            className="spine"
+            aria-hidden="true"
+          />
         )}
-        <img src={image} alt={title} className="cover" />
+        <img
+          {...imgSrcSet({
+            src: image,
+            resize: "fit",
+            h: 500,
+          })}
+          alt={title}
+          className="cover"
+        />
       </Component>
       <style jsx>{`
         .book {
@@ -40,7 +57,7 @@ const BookCover = ({
 
         .cover {
           max-width: 100%;
-          max-height: 100%;
+          max-height: 500px;
           margin: 0 auto;
           transform-origin: left;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;

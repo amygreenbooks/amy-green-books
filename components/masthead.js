@@ -2,13 +2,7 @@ import NavigationLink from "./navigationLink";
 
 export default function Masthead({ bannerImage, title, subtitle, mainMenu }) {
   return (
-    <div
-      className="hero cover bg-cover"
-      style={{
-        backgroundImage: `url('${bannerImage}')`,
-        backgroundPosition: "84% 70%",
-      }}
-    >
+    <div className="hero cover bg-cover banner">
       <div
         style={{
           background: `rgba(0,0,0,0.1)`,
@@ -27,6 +21,27 @@ export default function Masthead({ bannerImage, title, subtitle, mainMenu }) {
           </ul>
         </nav>
       </div>
+
+      <style jsx>{`
+        .banner {
+          background-image: url("${bannerImage}?nf_resize=fit&h=350");
+          background-image: image-set(
+            url("${bannerImage}?nf_resize=fit&h=350") 1x,
+            url("${bannerImage}?nf_resize=fit&h=700") 2x
+          );
+          background-position: 84% 70%;
+        }
+
+        @media screen and (min-width: 60em) {
+          .banner {
+            background-image: url("${bannerImage}?nf_resize=fit&h=600");
+            background-image: image-set(
+              url("${bannerImage}?nf_resize=fit&h=600") 1x,
+              url("${bannerImage}?nf_resize=fit&h=1200") 2x
+            );
+          }
+        }
+      `}</style>
     </div>
   );
 }
