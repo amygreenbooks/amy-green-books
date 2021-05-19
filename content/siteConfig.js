@@ -25,6 +25,7 @@ export const mainMenu = (books) => [
   ...booksMenu(books),
   menuItem("Meet Amy", "/about"),
   menuItem("Contact", "/contact"),
+  menuItem("History", "/history"),
 ];
 
 export const socialLinks = {

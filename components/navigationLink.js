@@ -29,7 +29,7 @@ export default function NavigationLink({ home, title, url, subMenus }) {
   const name = `menu-${title.replace(" ", "-")}`;
 
   return (
-    <li className={cn("flex-auto tc", { home, active })}>
+    <li className={cn("tc nav-cont", { home, active })}>
       {subMenus ? (
         <>
           <button
@@ -59,6 +59,10 @@ export default function NavigationLink({ home, title, url, subMenus }) {
       )}
 
       <style jsx>{`
+        .nav-cont {
+          flex: 1 0 auto;
+        }
+
         .nav-link {
           background: transparent;
           box-sizing: border-box;
