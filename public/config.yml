@@ -73,7 +73,7 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
       - { label: Body, name: body, widget: markdown }
-  - name: "pages"
+  - name: "defaultPages"
     label: "Default Pages"
     files:
       - file: "content/index.md"
