@@ -19,7 +19,7 @@
     "netlify-cms-app": "^2.15.6",
     "next": "^10.2.0",
     "next-mdx-remote": "^3.0.1",
-    "postcss": "^8.2.15",
+    "postcss": "^8.3.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.0.2",
