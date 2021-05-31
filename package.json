@@ -31,7 +31,7 @@
     "to-string-loader": "^1.1.6"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^10.2.2",
+    "@next/bundle-analyzer": "^10.2.3",
     "cross-env": "^7.0.3"
   }
 }
