@@ -3308,10 +3308,10 @@ netlify-cms-widget-text@^2.4.1:
   dependencies:
     react-textarea-autosize "^8.0.0"
 
-next-mdx-remote@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-3.0.4.tgz#c9b4aff4ec0780b08f34ccd6be966e569d6d4fda"
-  integrity sha512-n/xN6GaeBgJiuTJDrG6iqJ2EY5rEZ99Vf2H1nc75MNn1a6XnZLgT6uQJxqbSN84svc9aU3CSxfRlOqgqVVPHIg==
+next-mdx-remote@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/next-mdx-remote/-/next-mdx-remote-3.0.7.tgz#37d93cd1722b2f0ed21cf3e6da09e30907bb21f1"
+  integrity sha512-qLHf9nJHozhnntasYWUD+Y3xGAitMaG4dcS0qy+AxjS4pN241qwH6Rbik53ZqOA6ZCFWBCB/Y1HEQKDFnq1rew==
   dependencies:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
