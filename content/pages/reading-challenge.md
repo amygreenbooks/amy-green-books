@@ -3,7 +3,7 @@ title: Reading Challenge
 description:
 ---
 
-<h2 class="mt6">
+<h2 className="mt6" id="welcome">
   <img src="/media/reading-challenge-banner.svg" alt="Welcome, avid readers of christian fiction! I'm Amy Lynn Green, historical fiction author, and I love books and pizza" />
 </h2>
 
@@ -19,13 +19,13 @@ There is a link to a form to enter a pizza giveaway below, but here’s my sugge
 
 Here are a few “resources” (read: fun goodies) I created to motivate you, if the thought of delicious cheesy goodness isn’t enough.
 
-<h2 class="mt5">
+<h2 style={{ marginTop: "var(--spacing-extra-large)" }} id="placemat">
   <img src="/media/reading-challenge-1.svg" alt="Downloadable Placemat" />
 </h2>
 
 You remember the good ol’ days of getting to color your own paper placemat? Now, by printing these, you can re-live the experience.
 
-<h2 class="mt5">
+<h2 style={{ marginTop: "var(--spacing-extra-large)" }} id="pizza-recipes">
   <img src="/media/reading-challenge-2.svg" alt="My Favorite Pizza Recipes" />
 </h2>
 
@@ -39,7 +39,7 @@ Dough: Deep Dish Pizza from Basics with Babish
 
 https://basicswithbabish.co/basicsepisodes/pizza-dough
 
-<h2 class="mt5">
+<h2 style={{ marginTop: "var(--spacing-extra-large)" }} id="giveaway">
   <img src="/media/reading-challenge-4.svg" alt="Giveaway" />
 </h2>
 
@@ -53,7 +53,7 @@ https://forms.gle/iPhd8G7e9VYSq2qB8
 
 I’ll contact winners by February 10 via email. These contests are open outside of the US, but if you win as an international reader, I might substitute a different gift card of equivalent value based on what’s available in your country. Your email address won’t be added to a list or used for anything other than contacting you if you’re a winner.
 
-<h2 class="mt5">
+<h2 style={{ marginTop: "var(--spacing-extra-large)" }} id="pizza-party-tips">
   <img src="/media/reading-challenge-3.svg" alt="Pizza Party Tips and Ideas" />
 </h2>
 
