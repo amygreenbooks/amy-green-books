@@ -1,6 +1,6 @@
 ---
 title: Reading Challenge
-description:
+description: " "
 ---
 
 <h2 className="mt6" id="welcome">
