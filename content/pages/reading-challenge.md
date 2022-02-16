@@ -59,7 +59,7 @@ Want to do more than just reward yourself with pizza delivery? Here are some par
 ### Pizza Party with Friends (or your book club)
 
 * If you’re making your own pizzas, have everyone bring an unusual pizza topping to share—anything from mini meatballs to goat cheese to banana peppers.
-* Alternately, if weather permits, plan on a bonfire. [Here are some great ways to make simple pizzas over an open flame](<* https://www.takethetruck.com/blog/campfire-camping-pizza>).
+* Alternately, if weather permits, plan on a bonfire. [Here are some great ways to make simple pizzas over an open flame](https://www.takethetruck.com/blog/campfire-camping-pizza).
 * Print a blank bracket and fill it in with toppings before making copies. Have everyone vote on the champion, then let the debates begin! Alternately, you could use local or chain pizza places.
 * Break out the board games afterward, watch a movie set in Italy, or enjoy a sports game together.
 
