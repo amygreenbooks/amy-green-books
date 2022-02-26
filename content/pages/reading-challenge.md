@@ -41,7 +41,7 @@ For those who completed the official Avid Readers of Christian Fiction challenge
 
 For everyone: whether you completed the challenge or not, you [can fill out this form](https://forms.gle/iPhd8G7e9VYSq2qB8) to enter a giveaway for a surprise pack of three Christian fiction books that I used to complete the challenge.
 
-I’ll contact winners by March 1 via email. These contests are open outside of the US, but if you win as an international reader, I might substitute a different gift card of equivalent value based on what’s available in your country. Your email address won’t be added to a list or used for anything other than contacting you if you’re a winner.
+I’ll contact winners by March 6 via email. These contests are open outside of the US, but if you win as an international reader, I might substitute a different gift card of equivalent value based on what’s available in your country. Your email address won’t be added to a list or used for anything other than contacting you if you’re a winner.
 
 <h2 style={{ marginTop: "var(--spacing-extra-large)" }} id="pizza-party-tips">
   <img src="/media/reading-challenge-3.svg" alt="Pizza Party Tips and Ideas" />
