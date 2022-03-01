@@ -18,13 +18,16 @@ retailers:
     link: https://bakerbookhouse.com/products/277335
     name: Baker Book House
   - image: /media/bam.png
-    link: https://www.booksamillion.com/p/Lines-Between-Us/Amy-Lynn-Green/9780764237171?id=8146067149628
+    link: >-
+      https://www.booksamillion.com/p/Lines-Between-Us/Amy-Lynn-Green/9780764237171?id=8146067149628
     name: BAM
   - image: /media/barnes-and-noble.png
-    link: https://www.barnesandnoble.com/w/the-lines-between-us-amy-lynn-green/1138791237
+    link: >-
+      https://www.barnesandnoble.com/w/the-lines-between-us-amy-lynn-green/1138791237
     name: Barnes & Noble
   - image: /media/christian-book.png
-    link: https://www.christianbook.com/the-lines-between-us/amy-green/9780764237171/pd/237177
+    link: >-
+      https://www.christianbook.com/the-lines-between-us/amy-green/9780764237171/pd/237177
     name: Christian Book
   - image: /media/indie-bound.jpg
     link: https://www.indiebound.org/book/9780764237171
