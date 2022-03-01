@@ -10,7 +10,7 @@ function booksMenu(books) {
     return [
       {
         title: "Books",
-        url: "/books/things-we-didnt-say",
+        url: `/books/${books[0].id}`,
         subMenus: books.map((b) => menuItem(b.title, `/books/${b.id}`)),
       },
     ];

@@ -2,6 +2,7 @@ import { parseISO } from "date-fns";
 import Link from "next/link";
 import DateCmp from "./date";
 import BookCover from "./bookCover";
+import cn from "classnames";
 
 export default function BookSummary({
   id,
@@ -10,11 +11,12 @@ export default function BookSummary({
   title,
   releaseDate,
   description,
+  featured,
 }) {
   const isReleased = !releaseDate || parseISO(releaseDate) < Date.now();
 
   return (
-    <article>
+    <article className={cn({ featured })}>
       <Link href={`/books/${id}`}>
         <a className="side img-side">
           <BookCover
@@ -50,8 +52,24 @@ export default function BookSummary({
           display: flex;
           flex: 1 1 auto;
           flex-wrap: wrap;
-          margin-bottom: var(--spacing-large);
+          padding-bottom: var(--spacing-extra-large);
           min-width: 50%;
+          align-items: ${description ? "flex-start" : "center"};
+        }
+
+        .featured {
+          background-color: white;
+        }
+
+        @media screen and (min-width: 50em) {
+          article {
+            width: ${featured ? "100%" : "50%"};
+          }
+
+          .featured {
+            padding-left: 4%;
+            padding-right: 4%;
+          }
         }
 
         .side {
@@ -68,7 +86,7 @@ export default function BookSummary({
 
         .img-side {
           max-width: 18rem;
-          margin: 0 auto;
+          margin: 0 auto var(--spacing-medium);
         }
       `}</style>
     </article>
