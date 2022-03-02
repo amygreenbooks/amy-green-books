@@ -2,7 +2,11 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import Masthead from "../components/masthead";
 import Home from "../components/layouts/home";
-import { getContentData, getSortedContentData } from "../lib/content";
+import {
+  getContentData,
+  getSortedContentData,
+  getBookSummaryData,
+} from "../lib/content";
 import { mainMenu } from "../content/siteConfig";
 
 export default function HomePage({ homeContent, books, menu }) {
@@ -33,14 +37,7 @@ export async function getStaticProps() {
   return {
     props: {
       homeContent,
-      books: books.map((b) => ({
-        id: b.id || null,
-        image: b.image || null,
-        spineImage: b.spineImage || null,
-        title: b.title || null,
-        releaseDate: b.releaseDate || null,
-        description: b.description || null,
-      })),
+      books: books.map(getBookSummaryData),
       menu: mainMenu(books),
     },
   };

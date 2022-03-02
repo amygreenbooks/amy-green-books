@@ -61,7 +61,7 @@ export default function Book({
       </section>
 
       {endorsements && (
-        <section className="mt4 mb5 endorsements">
+        <section className="mb5 endorsements">
           {endorsements.map((endorsement, i) => (
             <Endorsement key={`endorsement-${i}`} {...endorsement} />
           ))}
@@ -71,7 +71,6 @@ export default function Book({
       <style jsx>{`
         .book-details {
           margin-top: var(--spacing-large);
-          margin-bottom: var(--spacing-extra-large);
           grid-template-rows: repeat(4, auto);
           grid-column-gap: 0px;
           grid-row-gap: 0px;
@@ -97,7 +96,8 @@ export default function Book({
           padding-right: var(--spacing-medium);
           width: 100%;
           max-width: 32rem;
-          margin: 0 auto;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .header {

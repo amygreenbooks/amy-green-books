@@ -12,8 +12,12 @@ export default function BookSummary({
   releaseDate,
   description,
   featured,
+  retailers,
 }) {
   const isReleased = !releaseDate || parseISO(releaseDate) < Date.now();
+  const retailer = retailers.reduce((acc, n) =>
+    n.name === "Baker Book House" ? n : acc
+  );
 
   return (
     <article className={cn({ featured })}>
@@ -44,6 +48,17 @@ export default function BookSummary({
           <Link href={`/books/${id}`}>
             <a className="link">Learn more →</a>
           </Link>
+          {featured && !isReleased && retailer && (
+            <div className="mt2">
+              <a
+                href={retailer.link}
+                target="_blank"
+                className="bg-primary white f6 btn raise"
+              >
+                Pre-Order Now!
+              </a>
+            </div>
+          )}
         </footer>
       </div>
 

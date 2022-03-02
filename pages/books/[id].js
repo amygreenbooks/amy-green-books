@@ -1,17 +1,19 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import Book from "../../components/layouts/book";
+import BookNavigation from "../../components/bookNavigation";
 import {
   getAllContentIds,
   getContentData,
   getSortedContentData,
+  getBookSummaryData,
 } from "../../lib/content";
 import { socialLinks, author } from "../../content/siteConfig";
 import { mainMenu } from "../../content/siteConfig";
 
 const contentType = "books";
 
-export default function BookPage({ bookData, menu }) {
+export default function BookPage({ bookData, next, previous, menu }) {
   const { title, releaseDate, description, image, isbn } = bookData;
 
   return (
@@ -38,6 +40,7 @@ export default function BookPage({ bookData, menu }) {
         )}
       </Head>
       <Book {...bookData} />
+      <BookNavigation next={next} previous={previous} />
     </Layout>
   );
 }
@@ -57,10 +60,21 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const bookData = await getContentData(contentType, params.id);
+  const allBooks = await getSortedContentData("books");
+  const bookIndex = allBooks.findIndex((n) => n.id == params.id);
+  const previous = getBookSummaryData(
+    allBooks[(bookIndex + 1) % allBooks.length]
+  );
+  const next = getBookSummaryData(
+    allBooks[(bookIndex + allBooks.length - 1) % allBooks.length]
+  );
+
   return {
     props: {
       bookData,
-      menu: mainMenu(await getSortedContentData("books")),
+      next,
+      previous,
+      menu: mainMenu(allBooks),
     },
   };
 }
