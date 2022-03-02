@@ -101,7 +101,7 @@ export default function NavigationLink({ home, title, url, subMenus }) {
           position: absolute;
           background-color: var(--black);
           display: none;
-          z-index: 100;
+          z-index: 10000;
         }
 
         .dropdown.open {
