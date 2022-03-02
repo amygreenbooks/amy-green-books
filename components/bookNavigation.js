@@ -6,7 +6,7 @@ function BookNavLink({ id, image, title, right }) {
     <>
       <Link href={`/books/${id}`}>
         <a className="flex items-center pa2 book-link raise">
-          {!right && <span className="arrow mr2">←</span>}
+          {!right && <span className="arrow mr2 db-ns dn">←</span>}
           <img
             {...imgSrcSet({
               src: image,
@@ -22,7 +22,7 @@ function BookNavLink({ id, image, title, right }) {
             </h4>
             <p className="ma0 f6">View Book</p>
           </div>
-          {right && <span className="arrow mr2">→</span>}
+          {right && <span className="arrow mr2 db-ns dn">→</span>}
         </a>
       </Link>
       <style jsx>{`
@@ -50,7 +50,7 @@ export default function BookNavigation({ next, previous }) {
   return (
     <section className="mw6 mb5 ph3 center">
       <h2 className="lh-title primary f3 b mb1">Explore my other books</h2>
-      <div className="flex">
+      <div className="flex-ns">
         <div className="book-nav">{next && <BookNavLink {...next} />}</div>
         <div className="book-nav">
           {previous && <BookNavLink {...previous} right />}
