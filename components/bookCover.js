@@ -3,7 +3,7 @@ import imgSrcSet from "./util/imgSrcSet";
 import cn from "classnames";
 
 const rotate = 27;
-const spineActualWidthRems = 0.7;
+const spineActualWidthRems = 0.65;
 
 const BookCover = ({
   Component = "figure",
@@ -43,9 +43,14 @@ const BookCover = ({
       </Component>
       <style jsx>{`
         .book {
-          perspective: 1600px;
+          perspective: 1800px;
           position: relative;
-          padding: 0.5rem 0.5rem 0.5rem ${1 + spineActualWidthRems}rem;
+          margin: 0.5rem;
+          z-index: 1;
+        }
+
+        .animated-book {
+          margin: 0.5rem 0.5rem 0.5rem ${1 + spineActualWidthRems}rem;
         }
 
         .cover,
@@ -58,24 +63,25 @@ const BookCover = ({
         .cover {
           max-width: 100%;
           max-height: 500px;
-          margin: 0 auto;
           transform-origin: left;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+          margin: 0 auto;
         }
 
         .spine {
           background-color: #ccc;
-          top: 0.5rem;
-          bottom: 0.5rem;
-          right: calc(100% - ${1 + spineActualWidthRems}rem);
+          top: 0;
+          bottom: 0;
+          right: 100%;
           position: absolute;
           transform-origin: right;
-          height: calc(100% - 1rem);
+          height: 100%;
         }
 
         .animated-book .cover,
         :global(.animated.enter) .animated-book .cover {
           transform: rotateY(${rotate}deg);
+          margin: 0;
         }
 
         .animated-book .spine,
@@ -87,8 +93,7 @@ const BookCover = ({
         :global(.animated.enter) .animated-book:hover .cover,
         :global(.animated.enter) .animated-book:focus .cover,
         .animated-book:hover .cover,
-        .animated-book:focus .cover,
-        .cover {
+        .animated-book:focus .cover {
           transform: rotateY(0deg) translateX(-${spineActualWidthRems}rem);
         }
 

@@ -16,8 +16,8 @@ function BookNavLink({ id, image, title, right }) {
             aria-labelledby={`exp-book-${id}`}
             className="cover"
           />
-          <div className="ml2">
-            <h4 className="f6 b mb1" id={`exp-book-${id}`}>
+          <div className="ml3 ml2-ns">
+            <h4 className="f5 f6-ns b mb1" id={`exp-book-${id}`}>
               <em>{title}</em>
             </h4>
             <p className="ma0 f6">View Book</p>
