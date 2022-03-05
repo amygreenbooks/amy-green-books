@@ -57,6 +57,21 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: Author, name: author_md, widget: "markdown" }
           - { label: Quote, name: quote_md, widget: "markdown" }
+  - name: "history"
+    label: "History"
+    folder: "content/history"
+    preview_path: "{{slug}}"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ss",
+        }
+      - { label: "List Image", name: "image", widget: "image", required: false }
+      - { label: Body, name: body, widget: markdown }
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
@@ -65,7 +80,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: description, widget: string }
+      - { label: Subtitle, name: description, widget: string, required: false }
       - {
           label: "Banner Image",
           name: bannerImage,
@@ -81,7 +96,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "home"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: "Banner Image", name: bannerImage, widget: image }
           - {
               label: "Welcome",

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import Book from "../../components/layouts/book";
 import BookNavigation from "../../components/bookNavigation";
+import HistoryLink from "../../components/historyLink";
 import {
   getAllContentIds,
   getContentData,
@@ -13,8 +14,8 @@ import { mainMenu } from "../../content/siteConfig";
 
 const contentType = "books";
 
-export default function BookPage({ bookData, next, previous, menu }) {
-  const { title, releaseDate, description, image, isbn } = bookData;
+export default function BookPage({ bookData, next, previous, history, menu }) {
+  const { id, title, releaseDate, description, image, isbn } = bookData;
 
   return (
     <Layout
@@ -41,6 +42,21 @@ export default function BookPage({ bookData, next, previous, menu }) {
       </Head>
       <Book {...bookData} />
       <BookNavigation next={next} previous={previous} />
+      {history && (
+        <HistoryLink
+          href={`/history/${history.id}`}
+          title={
+            <>
+              History Behind <em>{history.title}</em>
+            </>
+          }
+          description={
+            <>
+              Explore the real history behind <em>{title}</em>
+            </>
+          }
+        />
+      )}
     </Layout>
   );
 }
@@ -68,12 +84,16 @@ export async function getStaticProps({ params }) {
   const next = getBookSummaryData(
     allBooks[(bookIndex + allBooks.length - 1) % allBooks.length]
   );
+  const history =
+    (await getSortedContentData("history")).find((n) => n.id === params.id) ||
+    null;
 
   return {
     props: {
       bookData,
       next,
       previous,
+      history,
       menu: mainMenu(allBooks),
     },
   };

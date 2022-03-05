@@ -60,7 +60,7 @@ export default function Book({
         </div>
       </section>
 
-      {endorsements && (
+      {endorsements && endorsements.length > 0 && (
         <section className="mb5 endorsements">
           {endorsements.map((endorsement, i) => (
             <Endorsement key={`endorsement-${i}`} {...endorsement} />
