@@ -7,26 +7,26 @@ export default function HistorySummary({ id, title, image, flip }) {
     <>
       <Link href={`/history/${id}`}>
         <a className="article-link db pv3 mb4 br1">
-          <article id={id} className="flex-ns">
-            <div className={cn("ph3 img-side", { "order-last-ns": flip })}>
+          <article id={id} className="flex-ns items-center">
+            <div className={cn("ph3", { "order-last-ns": flip })}>
               <img
                 {...imgSrcSet({
                   src: image,
-                  resize: "fit",
-                  w: 214,
+                  resize: "smartcrop",
+                  w: 260,
+                  h: 150,
                 })}
                 alt={`The History Behind ${title}`}
-                className="db mb2 center mw4"
-                width={214}
+                className="db center"
               />
             </div>
 
-            <div className={cn("ph3 text-side", { "tr-ns": flip })}>
+            <div className={cn("ph3 flex-auto", { "tr-ns": flip })}>
               <p className="mb0 grey-3 f6">Explore the history behind</p>
               <h2 className="f3 b lh-title mb1">
                 <em>{title}</em>
               </h2>
-              <p>Read Post →</p>
+              <p className="mb0">Read Post →</p>
             </div>
           </article>
         </a>
@@ -46,14 +46,6 @@ export default function HistorySummary({ id, title, image, flip }) {
 
         .article-link:hover h2 {
           color: var(--primary);
-        }
-
-        .text-side {
-          flex: 1 1 66%;
-        }
-
-        .img-side {
-          flex: 1 1 214px;
         }
 
         @media screen and (min-width: 50em) {

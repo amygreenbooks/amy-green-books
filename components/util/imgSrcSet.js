@@ -1,4 +1,7 @@
 export default function imgSrcSet({ src, resize, h, w }) {
+  if (process.env.NODE_ENV === "development") {
+    src = `https://amygreenbooks.com${src}`;
+  }
   let srcSet = null;
   if (resize) {
     src = `${src}?nf_resize=${resize}`;
