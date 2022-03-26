@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { MDXRemote } from "next-mdx-remote";
 
-import { H1, H2, H3, H4, H5, H6 } from "../components/typography/h";
-import MarkdownLink from "../components/typography/link";
+import { H1, H2, H3, H4, H5, H6 } from "./typography/h";
+import MarkdownLink from "./typography/link";
 
 const Markdown = ({ source, noParagraph = false }) => {
   const components = {

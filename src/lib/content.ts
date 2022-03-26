@@ -2,13 +2,22 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { serialize, transformMatter } from "./markdownProcessor";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const postsDirectory = path.join(process.cwd(), "content");
 
+export type Source = MDXRemoteSerializeResult<Record<string, unknown>>;
+
+export type ContentData = {
+  id: string;
+  source?: Source;
+  [key: string]: any;
+};
+
 export async function getSortedContentData(
-  contentType,
-  includeContent = false
-) {
+  contentType: string,
+  includeContent: boolean = false
+): Promise<Array<ContentData>> {
   // Get file names under /content/{contentType}
   const dirPath = path.join(postsDirectory, contentType);
   if (!fs.existsSync(dirPath)) {
@@ -16,7 +25,7 @@ export async function getSortedContentData(
   }
 
   const fileNames = fs.readdirSync(dirPath);
-  const allData = await Promise.all(
+  const allData: Array<ContentData> = await Promise.all(
     fileNames
       .filter((fileName) => fileName.match(/\.md$/))
       .filter((fileName) => fileName !== "index.md")
@@ -39,7 +48,7 @@ export async function getSortedContentData(
         const data = await transformMatter(n.data);
 
         // Combine the data with the id
-        let result = {
+        let result: ContentData = {
           id: n.id,
           ...data,
         };
@@ -62,7 +71,7 @@ export async function getSortedContentData(
   });
 }
 
-export function getAllContentIds(contentType) {
+export function getAllContentIds(contentType: string): Array<string> {
   const dirPath = path.join(postsDirectory, contentType);
   if (!fs.existsSync(dirPath)) {
     return [];
@@ -76,7 +85,10 @@ export function getAllContentIds(contentType) {
   return fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
 }
 
-export async function getContentData(contentType, id) {
+export async function getContentData(
+  contentType: string,
+  id: string
+): Promise<ContentData> {
   const fullPath = contentType
     ? path.join(postsDirectory, contentType, `${id}.md`)
     : path.join(postsDirectory, `${id}.md`);
@@ -94,8 +106,18 @@ export async function getContentData(contentType, id) {
   };
 }
 
-export const getBookSummaryData = (b) => ({
-  id: b.id || null,
+export type BookSummary = {
+  id: string;
+  image?: string;
+  spineImage?: string;
+  title?: string;
+  releaseDate?: Date;
+  description?: string;
+  retailers?: Array<any>;
+};
+
+export const getBookSummaryData = (b: ContentData): BookSummary => ({
+  id: b.id,
   image: b.image || null,
   spineImage: b.spineImage || null,
   title: b.title || null,

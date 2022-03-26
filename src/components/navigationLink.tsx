@@ -2,8 +2,14 @@ import React from "react";
 import cn from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { MenuItem } from "../siteConfig";
 
-export default function NavigationLink({ home, title, url, subMenus }) {
+export default function NavigationLink({
+  home,
+  title,
+  url,
+  subMenus,
+}: MenuItem & { home?: boolean }) {
   const router = useRouter();
   const active = router.asPath.indexOf(url) !== -1;
 

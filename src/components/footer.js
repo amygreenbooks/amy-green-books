@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { socialLinks } from "../content/siteConfig";
+import { socialLinks } from "../siteConfig";
 import NewsletterForm from "./newsletterForm";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";

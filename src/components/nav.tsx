@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { MenuItem } from "../siteConfig";
 import NavigationLink from "./navigationLink";
 
-export default function Nav({ mainMenu }) {
+export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
   return (
     <nav className="bg-black relative white main-nav">
       <div className="mw7 flex-ns flex-wrap justify-between items-center center">

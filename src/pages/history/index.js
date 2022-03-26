@@ -2,7 +2,7 @@ import Layout from "../../components/layout";
 import HistorySummary from "../../components/historySummary";
 import HistoryLayout from "../../components/layouts/history";
 import { getContentData, getSortedContentData } from "../../lib/content";
-import { mainMenu } from "../../content/siteConfig";
+import { mainMenu } from "../../siteConfig";
 
 export default function HistoryListPage({ index, posts, menu }) {
   return (

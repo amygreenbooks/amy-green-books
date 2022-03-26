@@ -1,16 +1,20 @@
-import slug from "remark-slug";
+import slug from "rehype-slug";
 import { serialize as mdxSerialize } from "next-mdx-remote/serialize";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
-export const serialize = (content, scope) =>
-  mdxSerialize(content, { scope, mdxOptions: { remarkPlugins: [slug] } });
+export const serialize = (
+  content: string,
+  scope?: Record<string, unknown>
+): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> =>
+  mdxSerialize(content, { scope, mdxOptions: { rehypePlugins: [slug] } });
 
-export async function transformMatter(data) {
+export async function transformMatter(data: { [key: string]: any }) {
   data = stringifyDates(data);
   data = parseMatterMd(data);
   return data;
 }
 
-async function parseMatterMd(data) {
+async function parseMatterMd(data: { [key: string]: any }) {
   return (
     await Promise.all(
       Object.entries(data).map(async ([key, value]) => {
@@ -33,7 +37,7 @@ async function parseMatterMd(data) {
   }, {});
 }
 
-function stringifyDates(data) {
+function stringifyDates(data: { [key: string]: any }) {
   return Object.entries(data)
     .map(([key, value]) => [
       key,

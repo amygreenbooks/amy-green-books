@@ -7,7 +7,8 @@ import {
   getSortedContentData,
   getBookSummaryData,
 } from "../lib/content";
-import { mainMenu } from "../content/siteConfig";
+import { mainMenu } from "../siteConfig";
+import { GetStaticProps } from "next";
 
 export default function HomePage({ homeContent, books, menu }) {
   const { title, subtitle, bannerImage, welcome } = homeContent;
@@ -31,7 +32,7 @@ export default function HomePage({ homeContent, books, menu }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const homeContent = await getContentData(null, "index");
   const books = await getSortedContentData("books");
   return {
@@ -41,4 +42,4 @@ export async function getStaticProps() {
       menu: mainMenu(books),
     },
   };
-}
+};

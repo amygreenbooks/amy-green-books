@@ -6,7 +6,7 @@ import {
   getSortedContentData,
   getAllContentIds,
 } from "../../lib/content";
-import { mainMenu } from "../../content/siteConfig";
+import { mainMenu } from "../../siteConfig";
 import HistoryLink from "../../components/historyLink";
 
 const contentType = "history";

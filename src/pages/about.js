@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import About from "../components/layouts/about";
 import { getContentData, getSortedContentData } from "../lib/content";
-import { mainMenu } from "../content/siteConfig";
+import { mainMenu } from "../siteConfig";
 
 export default function AboutPage({ content, menu }) {
   return (

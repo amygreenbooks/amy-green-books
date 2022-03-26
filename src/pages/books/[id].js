@@ -9,8 +9,7 @@ import {
   getSortedContentData,
   getBookSummaryData,
 } from "../../lib/content";
-import { socialLinks, author } from "../../content/siteConfig";
-import { mainMenu } from "../../content/siteConfig";
+import { socialLinks, author, mainMenu } from "../../siteConfig";
 
 const contentType = "books";
 

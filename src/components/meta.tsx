@@ -6,7 +6,7 @@ import {
   description as siteDescription,
   domain,
   socialLinks,
-} from "../content/siteConfig";
+} from "../siteConfig";
 
 export default function Meta({
   home,
@@ -14,6 +14,12 @@ export default function Meta({
   title: titleProp,
   description: descriptionProp,
   image,
+}: {
+  home?: boolean;
+  book?: boolean;
+  title?: string;
+  description?: string;
+  image?: string;
 }) {
   const title = home || !titleProp ? siteTitle : `${titleProp} | ${siteTitle}`;
   const description =
