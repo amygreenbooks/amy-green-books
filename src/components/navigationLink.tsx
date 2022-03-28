@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import cn from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -15,16 +15,16 @@ export default function NavigationLink({
 
   const [isOpen, setIsOpen] = React.useState(false);
 
-  function showMenu(event) {
+  const showMenu: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
     setIsOpen(true);
-  }
+  };
 
   React.useEffect(() => {
-    function closeMenu(event) {
+    const closeMenu = (event: MouseEvent) => {
       event.preventDefault();
       setIsOpen(false);
-    }
+    };
 
     if (isOpen) {
       document.addEventListener("click", closeMenu);

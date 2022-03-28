@@ -4,13 +4,23 @@ import Masthead from "../components/masthead";
 import Home from "../components/layouts/home";
 import {
   getContentData,
-  getSortedContentData,
+  getBookSummaries,
   getBookSummaryData,
+  ContentData,
+  BookSummary,
 } from "../lib/content";
-import { mainMenu } from "../siteConfig";
+import { mainMenu, MenuItem } from "../siteConfig";
 import { GetStaticProps } from "next";
 
-export default function HomePage({ homeContent, books, menu }) {
+export default function HomePage({
+  homeContent,
+  books,
+  menu,
+}: {
+  homeContent: ContentData;
+  books: Array<BookSummary>;
+  menu: Array<MenuItem>;
+}) {
   const { title, subtitle, bannerImage, welcome } = homeContent;
 
   const nav = (
@@ -34,7 +44,7 @@ export default function HomePage({ homeContent, books, menu }) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const homeContent = await getContentData(null, "index");
-  const books = await getSortedContentData("books");
+  const books = await getBookSummaries();
   return {
     props: {
       homeContent,

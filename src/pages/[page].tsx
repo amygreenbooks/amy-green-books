@@ -4,7 +4,7 @@ import Page from "../components/layouts/page";
 import {
   getAllContentIds,
   getContentData,
-  getSortedContentData,
+  getBookSummaries,
   Source,
 } from "../lib/content";
 import { mainMenu, MenuItem } from "../siteConfig";
@@ -44,16 +44,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({
-  params,
-}: {
-  params: { page: string };
-}) => {
-  const pageContent = await getContentData(contentType, params.page);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const pageContent = await getContentData(contentType, params?.page as string);
   return {
     props: {
       pageContent,
-      menu: mainMenu(await getSortedContentData("books")),
+      menu: mainMenu(await getBookSummaries()),
     },
   };
 };

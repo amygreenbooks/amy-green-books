@@ -14,7 +14,7 @@ import { socialLinks, author, mainMenu } from "../../siteConfig";
 const contentType = "books";
 
 export default function BookPage({ bookData, next, previous, history, menu }) {
-  const { id, title, releaseDate, description, image, isbn } = bookData;
+  const { title, releaseDate, description, image, isbn } = bookData;
 
   return (
     <Layout

@@ -11,12 +11,16 @@ export type Source = MDXRemoteSerializeResult<Record<string, unknown>>;
 export type ContentData = {
   id: string;
   source?: Source;
-  [key: string]: any;
+  date?: Date;
+  [key: string]: unknown;
 };
+
+export const getBookSummaries = async () =>
+  (await getSortedContentData("books")) as BookSummary[];
 
 export async function getSortedContentData(
   contentType: string,
-  includeContent: boolean = false
+  includeContent = false
 ): Promise<Array<ContentData>> {
   // Get file names under /content/{contentType}
   const dirPath = path.join(postsDirectory, contentType);
@@ -48,7 +52,7 @@ export async function getSortedContentData(
         const data = await transformMatter(n.data);
 
         // Combine the data with the id
-        let result: ContentData = {
+        const result: ContentData = {
           id: n.id,
           ...data,
         };
@@ -63,7 +67,7 @@ export async function getSortedContentData(
 
   // Sort posts by date
   return allData.sort((a, b) => {
-    if (!a.date || a.date < b.date) {
+    if (!a.date || !b.date || a.date < b.date) {
       return 1;
     } else {
       return -1;
@@ -86,7 +90,7 @@ export function getAllContentIds(contentType: string): Array<string> {
 }
 
 export async function getContentData(
-  contentType: string,
+  contentType: string | null,
   id: string
 ): Promise<ContentData> {
   const fullPath = contentType
@@ -95,9 +99,9 @@ export async function getContentData(
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
-  let { content, data } = matter(fileContents);
-  data = await transformMatter(data);
-  const mdxSource = await serialize(content);
+  const res = matter(fileContents);
+  const data = await transformMatter(res.data);
+  const mdxSource = await serialize(res.content);
 
   return {
     id,
@@ -108,20 +112,25 @@ export async function getContentData(
 
 export type BookSummary = {
   id: string;
+  title: string;
   image?: string;
   spineImage?: string;
-  title?: string;
   releaseDate?: Date;
   description?: string;
-  retailers?: Array<any>;
+  retailers?: Array<Retailer>;
+};
+
+export type Retailer = {
+  name: string;
+  link: string;
 };
 
 export const getBookSummaryData = (b: ContentData): BookSummary => ({
   id: b.id,
-  image: b.image || null,
-  spineImage: b.spineImage || null,
-  title: b.title || null,
-  releaseDate: b.releaseDate || null,
-  description: b.description || null,
-  retailers: b.retailers || [],
+  image: b.image as string,
+  spineImage: b.spineImage as string,
+  title: b.title as string,
+  releaseDate: b.releaseDate as Date,
+  description: b.description as string,
+  retailers: (b.retailers as Array<Retailer>) || [],
 });

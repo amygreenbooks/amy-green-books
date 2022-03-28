@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/layout";
 import Contact from "../components/layouts/contact";
-import { getContentData, getSortedContentData, Source } from "../lib/content";
+import { getContentData, getBookSummaries, Source } from "../lib/content";
 import { mainMenu, MenuItem } from "../siteConfig";
 
 export default function ContactPage({
@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       content,
-      menu: mainMenu(await getSortedContentData("books")),
+      menu: mainMenu(await getBookSummaries()),
     },
   };
 };

@@ -20,7 +20,7 @@ export default function Home({ books, welcome }) {
           </div>
         )}
         <div className="mw7 center flex-m flex-wrap items-start pt5">
-          {books.slice(hasFeaturedBook ? 1 : 0).map((book, i) => (
+          {books.slice(hasFeaturedBook ? 1 : 0).map((book) => (
             <BookSummary key={book.id} {...book} />
           ))}
         </div>

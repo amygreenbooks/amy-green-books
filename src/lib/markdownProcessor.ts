@@ -8,13 +8,13 @@ export const serialize = (
 ): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> =>
   mdxSerialize(content, { scope, mdxOptions: { rehypePlugins: [slug] } });
 
-export async function transformMatter(data: { [key: string]: any }) {
+export async function transformMatter(data: Record<string, unknown>) {
   data = stringifyDates(data);
-  data = parseMatterMd(data);
+  data = await parseMatterMd(data);
   return data;
 }
 
-async function parseMatterMd(data: { [key: string]: any }) {
+async function parseMatterMd(data: Record<string, unknown>) {
   return (
     await Promise.all(
       Object.entries(data).map(async ([key, value]) => {
@@ -23,27 +23,27 @@ async function parseMatterMd(data: { [key: string]: any }) {
         } else if (Array.isArray(value)) {
           value = await Promise.all(value.map(parseMatterMd));
         } else if (typeof value === "object") {
-          value = await parseMatterMd(value);
+          value = await parseMatterMd(value as Record<string, unknown>);
         } else if (key.endsWith("_md")) {
-          value = await serialize(value);
+          value = await serialize(value as string);
         }
 
-        return [key, value];
+        return { key, value };
       })
     )
-  ).reduce((acc, [key, value]) => {
+  ).reduce<Record<string, unknown>>((acc, { key, value }) => {
     acc[key] = value;
     return acc;
   }, {});
 }
 
-function stringifyDates(data: { [key: string]: any }) {
+function stringifyDates(data: Record<string, unknown>) {
   return Object.entries(data)
-    .map(([key, value]) => [
+    .map(([key, value]) => ({
       key,
-      value instanceof Date ? value.toISOString() : value,
-    ])
-    .reduce((acc, [key, value]) => {
+      value: value instanceof Date ? value.toISOString() : value,
+    }))
+    .reduce<Record<string, unknown>>((acc, { key, value }) => {
       acc[key] = value;
       return acc;
     }, {});

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import throttle from "lodash.throttle";
-import { eachDayOfInterval } from "date-fns/fp";
 
 export default class ScrollAnimation extends Component {
   constructor(props) {
@@ -215,6 +214,7 @@ export default class ScrollAnimation extends Component {
 
   render() {
     const {
+      /* eslint-disable @typescript-eslint/no-unused-vars */
       offset,
       duration,
       initiallyVisible,
@@ -226,6 +226,7 @@ export default class ScrollAnimation extends Component {
       afterAnimatedIn,
       afterAnimatedOut,
       scrollableParentSelector,
+      /* eslint-enable @typescript-eslint/no-unused-vars */
       className,
       style,
       children,
