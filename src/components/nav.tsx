@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { MenuItem } from "../siteConfig";
 import NavigationLink from "./navigationLink";
 

@@ -1,13 +1,25 @@
 import { parseISO } from "date-fns";
-import imgSrcSet from "../util/imgSrcSet";
+
+import { BookSummaryType } from "../../lib/content";
 import BookSummary from "../bookSummary";
 import Markdown from "../markdown";
+import imgSrcSet from "../util/imgSrcSet";
 
-export default function Home({ books, welcome }) {
+export default function Home({
+  books,
+  welcome,
+}: {
+  books: Array<BookSummaryType>;
+  welcome: {
+    heading: string;
+    text_md: string;
+    image: string;
+  };
+}) {
   const hasFeaturedBook =
     books.length > 0 &&
     books[0].releaseDate &&
-    parseISO(books[0].releaseDate) >= Date.now();
+    parseISO(books[0].releaseDate) >= new Date(Date.now());
 
   return (
     <>
@@ -15,13 +27,13 @@ export default function Home({ books, welcome }) {
         {hasFeaturedBook && (
           <div className="bg-white">
             <div className="mw7 center flex-m flex-wrap items-start pt5">
-              <BookSummary {...books[0]} featured />
+              <BookSummary book={books[0]} featured />
             </div>
           </div>
         )}
         <div className="mw7 center flex-m flex-wrap items-start pt5">
           {books.slice(hasFeaturedBook ? 1 : 0).map((book) => (
-            <BookSummary key={book.id} {...book} />
+            <BookSummary key={book.id} book={book} />
           ))}
         </div>
       </section>

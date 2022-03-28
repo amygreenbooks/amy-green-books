@@ -1,6 +1,7 @@
+import cn from "classnames";
+
 import ScrollAnimation from "./util/animateOnScroll";
 import imgSrcSet from "./util/imgSrcSet";
-import cn from "classnames";
 
 const rotate = 27;
 const spineActualWidthRems = 0.65;
@@ -13,6 +14,13 @@ const BookCover = ({
   className,
   animateIn = false,
   ...props
+}: {
+  Component?: React.ElementType;
+  title: string;
+  image: string;
+  spineImage?: string;
+  className?: string;
+  animateIn?: boolean;
 }) => {
   const book = (
     <>
@@ -28,7 +36,7 @@ const BookCover = ({
               h: 500,
             })}
             className="spine"
-            aria-hidden="true"
+            alt=""
           />
         )}
         <img

@@ -22,7 +22,8 @@ export default function Contact({ title, description, bannerImage, source }) {
             <input type="hidden" name="form-name" value="contact" />
             <p className="dn">
               <label>
-                Don’t fill this out if you're human: <input name="bot-field" />
+                Don’t fill this out if you&apos;re human:{" "}
+                <input name="bot-field" />
               </label>
             </p>
             <div className="flex-l mhn1-l">

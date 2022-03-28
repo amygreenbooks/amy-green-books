@@ -1,6 +1,6 @@
-import slug from "rehype-slug";
-import { serialize as mdxSerialize } from "next-mdx-remote/serialize";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize as mdxSerialize } from "next-mdx-remote/serialize";
+import slug from "rehype-slug";
 
 export const serialize = (
   content: string,

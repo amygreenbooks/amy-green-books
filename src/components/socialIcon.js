@@ -4,6 +4,7 @@ export default function SocialIcon({ svg, link, name }) {
       <a
         href={link}
         target="_blank"
+        rel="noreferrer"
         className="link bg-white black db relative br-100 pa2"
         aria-label={name}
       >

@@ -1,8 +1,10 @@
 import fs from "fs";
 import path from "path";
+
 import matter from "gray-matter";
-import { serialize, transformMatter } from "./markdownProcessor";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
+
+import { serialize, transformMatter } from "./markdownProcessor";
 
 const postsDirectory = path.join(process.cwd(), "content");
 
@@ -16,7 +18,7 @@ export type ContentData = {
 };
 
 export const getBookSummaries = async () =>
-  (await getSortedContentData("books")) as BookSummary[];
+  (await getSortedContentData("books")) as BookSummaryType[];
 
 export async function getSortedContentData(
   contentType: string,
@@ -110,12 +112,12 @@ export async function getContentData(
   };
 }
 
-export type BookSummary = {
+export type BookSummaryType = {
   id: string;
   title: string;
   image?: string;
   spineImage?: string;
-  releaseDate?: Date;
+  releaseDate?: string;
   description?: string;
   retailers?: Array<Retailer>;
 };
@@ -125,12 +127,12 @@ export type Retailer = {
   link: string;
 };
 
-export const getBookSummaryData = (b: ContentData): BookSummary => ({
+export const getBookSummaryData = (b: ContentData): BookSummaryType => ({
   id: b.id,
   image: b.image as string,
   spineImage: b.spineImage as string,
   title: b.title as string,
-  releaseDate: b.releaseDate as Date,
+  releaseDate: b.releaseDate as string,
   description: b.description as string,
   retailers: (b.retailers as Array<Retailer>) || [],
 });

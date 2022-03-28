@@ -1,8 +1,19 @@
-import Link from "next/link";
-import imgSrcSet from "./util/imgSrcSet";
 import cn from "classnames";
+import Link from "next/link";
 
-export default function HistorySummary({ id, title, image, flip }) {
+import imgSrcSet from "./util/imgSrcSet";
+
+export default function HistorySummary({
+  id,
+  title,
+  image,
+  flip = false,
+}: {
+  id: string;
+  title: string;
+  image: string;
+  flip?: boolean;
+}) {
   return (
     <>
       <Link href={`/history/${id}`}>

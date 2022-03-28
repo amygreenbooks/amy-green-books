@@ -1,36 +1,38 @@
+import cn from "classnames";
 import { parseISO } from "date-fns";
 import Link from "next/link";
-import DateCmp from "./date";
+
+import { BookSummaryType } from "../lib/content";
 import BookCover from "./bookCover";
-import cn from "classnames";
+import DateCmp from "./date";
 
 export default function BookSummary({
-  id,
-  image,
-  spineImage,
-  title,
-  releaseDate,
-  description,
-  featured,
-  retailers,
+  book: { id, releaseDate, retailers, title, image, spineImage, description },
+  featured = false,
+}: {
+  book: BookSummaryType;
+  featured?: boolean;
 }) {
-  const isReleased = !releaseDate || parseISO(releaseDate) < Date.now();
-  const retailer = retailers.reduce((acc, n) =>
+  const isReleased =
+    !releaseDate || parseISO(releaseDate) < new Date(Date.now());
+  const retailer = (retailers || []).reduce((acc, n) =>
     n.name === "Baker Book House" ? n : acc
   );
 
   return (
     <article className={cn({ featured })}>
-      <Link href={`/books/${id}`}>
-        <a className="side img-side">
-          <BookCover
-            title={title}
-            image={image}
-            spineImage={spineImage}
-            animateIn
-          />
-        </a>
-      </Link>
+      {image && (
+        <Link href={`/books/${id}`}>
+          <a className="side img-side">
+            <BookCover
+              title={title}
+              image={image}
+              spineImage={spineImage}
+              animateIn
+            />
+          </a>
+        </Link>
+      )}
 
       <div className="side text-side">
         <header>
@@ -53,6 +55,7 @@ export default function BookSummary({
               <a
                 href={retailer.link}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-primary white f6 btn raise"
               >
                 Pre-Order Now!

@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export default function NewsletterForm() {
   return (
     <div
@@ -47,7 +49,7 @@ export default function NewsletterForm() {
           Subscribe
         </button>
         <button
-          disabled="disabled"
+          disabled
           type="button"
           className="btn mb3 w-100 w-auto-ns mb0-ns bg-primary loading"
           style={{ display: "none" }}
@@ -90,12 +92,11 @@ export default function NewsletterForm() {
           display: "block",
         }}
         alt="."
-        border="0"
       />
-      <script
+      <Script
         src="https://static.mailerlite.com/js/w/webforms.min.js?vc25f966922c0a35ad9c2401af6506ef1"
         type="text/javascript"
-      ></script>
+      ></Script>
     </div>
   );
 }

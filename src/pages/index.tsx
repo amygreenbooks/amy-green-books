@@ -1,24 +1,33 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
+
 import Layout from "../components/layout";
-import Masthead from "../components/masthead";
 import Home from "../components/layouts/home";
+import Masthead from "../components/masthead";
 import {
   getContentData,
   getBookSummaries,
   getBookSummaryData,
-  ContentData,
-  BookSummary,
+  BookSummaryType,
 } from "../lib/content";
 import { mainMenu, MenuItem } from "../siteConfig";
-import { GetStaticProps } from "next";
 
 export default function HomePage({
   homeContent,
   books,
   menu,
 }: {
-  homeContent: ContentData;
-  books: Array<BookSummary>;
+  homeContent: {
+    title: string;
+    subtitle: string;
+    bannerImage: string;
+    welcome: {
+      text_md: string;
+      heading: string;
+      image: string;
+    };
+  };
+  books: Array<BookSummaryType>;
   menu: Array<MenuItem>;
 }) {
   const { title, subtitle, bannerImage, welcome } = homeContent;

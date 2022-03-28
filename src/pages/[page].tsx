@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+
 import Layout from "../components/layout";
 import Page from "../components/layouts/page";
 import {

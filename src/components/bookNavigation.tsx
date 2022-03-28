@@ -1,7 +1,21 @@
 import Link from "next/link";
+
 import imgSrcSet from "./util/imgSrcSet";
 
-function BookNavLink({ id, image, title, right }) {
+export interface BookNavItem {
+  id: string;
+  image: string;
+  title: string;
+}
+
+function BookNavLink({
+  id,
+  image,
+  title,
+  right = false,
+}: BookNavItem & {
+  right?: boolean;
+}) {
   return (
     <>
       <Link href={`/books/${id}`}>
@@ -46,7 +60,13 @@ function BookNavLink({ id, image, title, right }) {
   );
 }
 
-export default function BookNavigation({ next, previous }) {
+export default function BookNavigation({
+  next,
+  previous,
+}: {
+  next: BookNavItem;
+  previous?: BookNavItem;
+}) {
   return (
     <section className="mw6 mb5 ph3 center">
       <h2 className="lh-title primary f3 b mb1">Explore my other books</h2>

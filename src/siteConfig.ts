@@ -1,4 +1,4 @@
-import { BookSummary } from "./lib/content";
+import { BookSummaryType } from "./lib/content";
 
 export type MenuItem = {
   title: string;
@@ -13,7 +13,7 @@ function menuItem(title: string, url: string): MenuItem {
   };
 }
 
-function booksMenu(books: Array<BookSummary>): Array<MenuItem> {
+function booksMenu(books: Array<BookSummaryType>): Array<MenuItem> {
   if (books.length > 1) {
     return [
       {
@@ -29,7 +29,7 @@ function booksMenu(books: Array<BookSummary>): Array<MenuItem> {
   }
 }
 
-export const mainMenu = (books: Array<BookSummary>): Array<MenuItem> => [
+export const mainMenu = (books: Array<BookSummaryType>): Array<MenuItem> => [
   ...booksMenu(books),
   menuItem("Meet Amy", "/about"),
   menuItem("Contact", "/contact"),

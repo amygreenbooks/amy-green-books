@@ -1,7 +1,9 @@
 import React, { MouseEventHandler } from "react";
+
 import cn from "classnames";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 import { MenuItem } from "../siteConfig";
 
 export default function NavigationLink({
