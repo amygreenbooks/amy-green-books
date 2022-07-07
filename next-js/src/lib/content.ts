@@ -113,7 +113,6 @@ export async function getContentData(
 }
 
 export type BookSummaryType = {
-  id: string;
   title: string;
   image?: string;
   spineImage?: string;
@@ -128,7 +127,6 @@ export type Retailer = {
 };
 
 export const getBookSummaryData = (b: ContentData): BookSummaryType => ({
-  id: b.id,
   image: b.image as string,
   spineImage: b.spineImage as string,
   title: b.title as string,

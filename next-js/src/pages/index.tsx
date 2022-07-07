@@ -10,7 +10,7 @@ import {
   getBookSummaryData,
   BookSummaryType,
 } from "../lib/content";
-import { mainMenu, MenuItem } from "../siteConfig";
+import { mainMenu, MenuItem } from "../../../src/siteConfig";
 
 export default function HomePage({
   homeContent,

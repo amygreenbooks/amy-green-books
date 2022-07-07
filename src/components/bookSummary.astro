@@ -1,0 +1,103 @@
+---
+import { MarkdownInstance } from "astro";
+import { parseISO } from "date-fns";
+import { BookSummaryType } from "../util/book";
+
+import BookCover from "./bookCover";
+import DateCmp from "./date";
+
+export interface Props {
+  book: MarkdownInstance<BookSummaryType>;
+  featured?: boolean;
+}
+
+const { book, featured = false } = Astro.props;
+
+const { id, releaseDate, retailers, title, image, spineImage, description } =
+  book.frontmatter;
+const isReleased =
+  !releaseDate || parseISO(releaseDate) < new Date(Date.now()); const retailer = (retailers || []).reduce((acc, n) =>
+    n.name === "Baker Book House" ? n : acc
+  );
+---
+
+<article class={`${featured ? "featured" : "" } ${description ? 'items-start' : 'items-center' }`}>
+  {image && (
+  <a href={`/books/${id}`} class="side img-side">
+    <BookCover title={title} image={image} spineImage={spineImage} animateIn />
+  </a>
+  )}
+
+  <div class="side text-side">
+    <header>
+      <h3 class="f3 b lh-title mb1">
+        <em>{title}</em>
+      </h3>
+      {!isReleased && (
+      <p class="mid-gray lh-title mb2">
+        Releases:
+        <DateCmp dateString={releaseDate} />
+      </p>
+      )}
+    </header>
+    <p>{description}</p>
+    <footer>
+      <a href={`/books/${id}`} class="link">
+        Learn more →
+      </a>
+      {featured && !isReleased && retailer && (
+      <div class="mt2">
+        <a href={retailer.link} target="_blank" rel="noreferrer" class="bg-primary white f6 btn raise">
+          Pre-Order Now!
+        </a>
+      </div>
+      )}
+    </footer>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    padding-bottom: var(--spacing-extra-large);
+    min-width: 50%;
+  }
+
+  .featured {
+    background-color: white;
+  }
+
+  @media screen and (min-width: 50em) {
+    article {
+      width: 50%;
+    }
+
+    .featured {
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+
+    article.featured {
+      width: 100%;
+    }
+  }
+
+  .side {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-side {
+    min-width: 48%;
+    flex: 1 1;
+    padding: 0 var(--spacing-medium);
+  }
+
+  .img-side {
+    max-width: 18rem;
+    margin: 0 auto var(--spacing-medium);
+  }
+</style>

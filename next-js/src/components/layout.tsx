@@ -1,4 +1,4 @@
-import { MenuItem } from "../siteConfig";
+import { MenuItem } from "../../../src/siteConfig";
 import Footer from "./footer";
 import styles from "./layout.module.css";
 import Meta from "./meta";

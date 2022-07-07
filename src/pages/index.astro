@@ -1,0 +1,76 @@
+---
+import { parseISO } from "date-fns";
+import BookSummary from '../components/bookSummary.astro';
+import Masthead from '../components/masthead.astro';
+import Footer from '../components/footer.astro';
+import imgSrcSet from "../util/imgSrcSet";
+import { BookSummaryType } from "../util/book";
+import Meta from "../components/meta.astro";
+import { description, siteTitle as title } from "../siteConfig";
+let permalink = 'https://amygreenbooks.com/';
+
+const books = await Astro.glob<BookSummaryType>('./books/*.md');
+
+const hasFeaturedBook =
+  books.length > 0 &&
+  books[0].frontmatter.releaseDate &&
+  parseISO(books[0].frontmatter.releaseDate) >= new Date(Date.now());
+
+const welcomeImage = imgSrcSet({ src: "/media/home-amy.jpg", resize: "fit", w: 350, });
+---
+
+<html lang="en">
+
+<head>
+  <Meta {title} {description} {permalink} />
+</head>
+
+<body>
+  <Masthead title={title} subtitle="Historical Fiction Author" />
+  <main>
+    <section class="bg-grey-1">
+      {hasFeaturedBook && (
+      <div class="bg-white">
+        <div class="mw7 center flex-m flex-wrap items-start pt5">
+          <BookSummary book={books[0]} featured />
+        </div>
+      </div>
+      )}
+      <div class="mw7 center flex-m flex-wrap items-start pt5">
+        {books.slice(hasFeaturedBook ? 1 : 0).map((book) => (
+        <BookSummary book={book} />
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-off-white pb4 pt5">
+      <div class="mw7 center">
+        <div class="flex-m mb4">
+          <div class="ph3 order-last-m">
+            <img src={welcomeImage.src} srcset={welcomeImage.srcSet} alt="Amy Lynn Green" class="db mb2 center mw4" />
+          </div>
+
+          <div class="ph3">
+            <h3 class="f3 b lh-title mb1">Welcome!</h3>
+            <div class="cms">
+              <p>
+                Whether you heard about my historical novels, or know me from the writing world and are interested in
+                what I'm up to, or just want to follow my publication journey, I'm glad you stopped by.
+              </p>
+              <p>
+                Be sure to <a href="/contact/">leave me a message or ask a question</a>. I want this to have a community
+                feel. After all, we readers have to stick together!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</body>
+
+</html>
+
+<style>
+</style>

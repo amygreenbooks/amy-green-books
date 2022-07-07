@@ -1,0 +1,130 @@
+---
+import { parseISO } from "date-fns";
+import BookCover from "../components/bookCover";
+import Footer from "../components/footer.astro";
+import Meta from "../components/meta.astro";
+import DateComponent from "../components/date";
+import Endorsement from "../components/endorsement";
+import Retailer from "../components/retailer";
+import Nav from '../components/nav.astro';
+
+const { content } = Astro.props;
+let canonicalURL = Astro.canonicalURL;
+
+const { releaseDate, title, image, spineImage, retailers, endorsements } = content;
+
+const isReleased = releaseDate && parseISO(releaseDate) < new Date(Date.now());
+---
+
+<html lang={content.lang || "en"}>
+
+<head>
+  <Meta title={title} description={content.description} permalink={canonicalURL} />
+</head>
+
+<body>
+  <Nav />
+  <main>
+    <article class="book-details" itemscope itemtype="https://schema.org/Book">
+      <header class="header">
+        <h1 class="f2 lh-title b i mb3" itemprop="name">
+          {title}
+        </h1>
+        {!isReleased && releaseDate && (
+        <p class="grey-3 b lh-title mb2">
+          Releases:{" "}
+          <DateComponent dateString={releaseDate} itemProp="datePublished" />
+        </p>
+        )}
+      </header>
+
+      <div class="image">
+        <BookCover title={`Cover for ${title}`} image={image} spineImage={spineImage} />
+      </div>
+
+      <div class="cms body" itemprop="abstract">
+        <slot />
+      </div>
+
+      <section class="mt4 mb5 bg-grey-1 pv4 purchase">
+        <div class="mw6 ph3 center">
+          <h2 class="f3 b lh-title primary">
+            {isReleased ? "Purchase today at:" : "Pre-order now at:"}
+          </h2>
+
+          <div class="flex flex-wrap justify-center">
+            {retailers.map((retailer, i) => (
+            <Retailer {...retailer} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {endorsements && endorsements.length > 0 && (
+      <section class="mb5 endorsements">
+        {endorsements.map((endorsement, i) => (
+        <Endorsement {...endorsement} />
+        ))}
+      </section>
+      )}
+    </article>
+  </main>
+  <Footer />
+</body>
+
+</html>
+
+<style>
+  .book-details {
+    margin-top: var(--spacing-large);
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  @media screen and (min-width: 46em) {
+    .book-details {
+      display: grid;
+      grid-template-columns: 1fr 4rem 11rem 21rem 4rem 1fr;
+    }
+  }
+
+  @media screen and (min-width: 69em) {
+    .book-details {
+      grid-template-columns: 1fr 9rem 11rem 21rem 9rem 1fr;
+    }
+  }
+
+  .header,
+  .body,
+  .endorsements {
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+    width: 100%;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header {
+    grid-area: 1 / 4 / 2 / 6;
+  }
+
+  .image {
+    grid-area: 1 / 2 / 3 / 4;
+    max-width: 20rem;
+    margin: 0 auto var(--spacing-medium);
+  }
+
+  .body {
+    grid-area: 2 / 4 / 3 / 6;
+  }
+
+  .purchase {
+    grid-area: 3 / 1 / 4 / 7;
+  }
+
+  .endorsements {
+    grid-area: 4 / 3 / 5 / 5;
+  }
+</style>

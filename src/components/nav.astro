@@ -1,0 +1,21 @@
+---
+import { mainMenu } from '../siteConfig';
+import { BookSummaryType } from '../util/book';
+import NavigationLink from "./navigationLink";
+
+const books = await Astro.glob<BookSummaryType>('../pages/books/*.md');
+const mainMenuItems = mainMenu(books);
+---
+
+<nav class="bg-black relative white main-nav">
+  <div class="mw7 flex-ns flex-wrap justify-between items-center center">
+    <a href="/" class="pa3 fw6 db mr4-ns nowrap no-underline bg-primary bw1 b--primary bb bt">
+      Amy Lynn Green
+    </a>
+    <ul class="flex overflow-x-scroll overflow-x-visible-ns">
+      {mainMenuItems.map((menu) => (
+      <NavigationLink {...menu} client:load />
+      ))}
+    </ul>
+  </div>
+</nav>

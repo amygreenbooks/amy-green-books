@@ -7,7 +7,7 @@ import {
   description as siteDescription,
   domain,
   socialLinks,
-} from "../siteConfig";
+} from "../../../src/siteConfig";
 
 export default function Meta({
   home,
