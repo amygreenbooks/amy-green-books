@@ -5,7 +5,7 @@ date: 2022-02-28T06:00:00
 releaseDate: 2022-11-15
 description:
 image: /media/blackout-book-club.jpg
-spineImage:
+spineImage: /media/blackout-book-club-spine.jpg
 retailers:
   - image: /media/amazon.png
     link: https://www.amazon.com/Blackout-Book-Club-Lynn-Green/dp/0764239562/
