@@ -15,8 +15,7 @@ image: /media/history/tbbc/VictoryBook.jpg
 **Fact:** World War II was credited for helping to make America a nation of readers. Besides increased reading due to blackout regulations among civilians, publishing companies banded together to create an unexpectedly successful program giving away mass market paperbacks of new bestsellers and old classics to the troops. _A Tree Grows in Brooklyn_ and _The Great Gatsby_ were among its most popular offerings. Meanwhile, used books were given new life through the Victory Book Campaign. As in the novel, libraries often coordinated donations of used books to send to American troops. Rare books were also sold as fundraisers for the program. However, many people donated books that were in too poor condition to send on. In its first year, the VBC received 10,827,097 books, but had to discard nearly half of them.
 
 <figure>
-  <img src="/media/history/tbbc/VictoryBook.jpg?nf_resize=fit&w=580" width="580" />
-  <figcaption>World War 2 librarian with donated books</figcaption>
+  <img src="/media/history/tbbc/VictoryBook.jpg?nf_resize=fit&w=580" width="580" alt="World War 2 librarian with donated books"/>
 </figure>
 
 **Fiction:** The foundry where Martina and Ginny work casting war materials is fictional, but nearby Bath Iron Works, mentioned in the novel, was real and built an astounding eighty-two destroyers during the war. The Maine Maritime Museum has some delightful displays on the history of this important coastal defense factory.
@@ -26,7 +25,6 @@ image: /media/history/tbbc/VictoryBook.jpg
 **Fact and Fiction:** Rufus “Bud” Smith was the founder, organizer, and defender of the Picket Patrol/Corsair Fleet, affectionately (and sometimes not-so-affectionately) known as the Hooligan Navy. Ernest Hemingway, ever the outdoorsman adventurer, was one of the early participants, though it could be argued that his time at sea was spent doing more drinking than confronting U-boats. While the members of Russell‘s crew are fictional, all of their exploits really happened to Picket Patrol crews. To find out more about this unusual group and their short period of service, [take a look at this video](https://nshof.org/the-hooligan-navy-the-corsair-fleet/).
 
 <figure>
-  <img src="/media/history/tbbc/Hooligan.png?nf_resize=fit&w=580" width="580" />
-  <img src="/media/history/tbbc/UBoat.jpeg?nf_resize=fit&w=580" width="580" />
-  <figcaption>The Hooligan Navy hunting for UBoats</figcaption>
+  <img src="/media/history/tbbc/Hooligan.png?nf_resize=fit&w=580" width="580" alt="The hooligan navy"/>
+  <img src="/media/history/tbbc/UBoat.jpeg?nf_resize=fit&w=580" width="580" alt="A german UBoat"/>
 </figure>
