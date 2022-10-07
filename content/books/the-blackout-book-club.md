@@ -4,6 +4,11 @@ isbn: "9780764239564"
 date: 2022-02-28T06:00:00
 releaseDate: 2022-11-15
 description:
+  In 1942, a promise to her brother before he goes off to war puts Avis Montgomery
+  in the unlikely position of head librarian and book club organizer in small-town
+  Maine. The women of her club band together as the war comes dangerously close,
+  but their friendships are tested by secrets, and they must decide whether depending
+  on each other is worth the cost.
 image: /media/blackout-book-club.jpg
 spineImage: /media/blackout-book-club-spine.jpg
 retailers:
