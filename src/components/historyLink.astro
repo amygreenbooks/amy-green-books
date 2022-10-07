@@ -1,0 +1,31 @@
+---
+export interface Props {
+  href: string;
+}
+const { href } = Astro.props as Props;
+---
+
+<section class="mt5 bg-grey-1 pv4">
+  <a href={href} class="db mw6 pa3 center br1 border-box">
+    <h2 class="lh-title primary f3 b mb1">
+      <slot name="title" />
+    </h2>
+    <p class="mb0">
+      <slot /> →
+    </p>
+  </a>
+</section>
+<style>
+  a {
+    text-decoration: none;
+    transition: var(--hover-transition);
+  }
+
+  a:hover {
+    background: white;
+  }
+
+  a:hover p {
+    text-decoration: underline;
+  }
+</style>

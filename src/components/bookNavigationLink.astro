@@ -1,0 +1,44 @@
+---
+import { MarkdownInstance } from "astro";
+import { BookSummaryType } from "../util/book";
+import imgSrcSet from "../util/imgSrcSet";
+
+export interface Props {
+  book: MarkdownInstance<BookSummaryType>;
+  right?: boolean;
+}
+
+const { book, right = false } = Astro.props as Props;
+const { src, srcSet } = imgSrcSet({ src: book.frontmatter.image, resize: "fit", h: 120, });
+const id = book.url.replace('/', '-');
+---
+
+<a href={book.url} class="flex items-center pa2 book-link raise">
+  {!right && <span class="arrow mr2 db-ns dn">←</span>}
+  <img src={src} srcset={srcSet} aria-labelledby={`exp-${id}`} class="cover" />
+  <div class="ml3 ml2-ns">
+    <h4 class="f5 f6-ns b mb1" id={`exp-${id}`}>
+      <em>{book.frontmatter.title}</em>
+    </h4>
+    <p class="ma0 f6">View Book</p>
+  </div>
+  {right && <span class="arrow mr2 db-ns dn">→</span>}
+</a>
+
+<style>
+  .book-link {
+    text-decoration: none;
+  }
+
+  p {
+    color: var(--primary);
+  }
+
+  .book-link:hover p {
+    text-decoration: underline;
+  }
+
+  .cover {
+    height: 120px;
+  }
+</style>

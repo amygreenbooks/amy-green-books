@@ -1,78 +1,77 @@
 ---
 import { parseISO } from "date-fns";
 import BookCover from "../components/bookCover";
-import Footer from "../components/footer.astro";
-import Meta from "../components/meta.astro";
+import BookNavigation from "../components/bookNavigation.astro";
 import DateComponent from "../components/date";
 import Endorsement from "../components/endorsement";
+import HistoryLink from "../components/historyLink.astro";
 import Retailer from "../components/retailer";
-import Nav from '../components/nav.astro';
+import Layout from "./layout.astro";
 
 const { content } = Astro.props;
-let canonicalURL = Astro.canonicalURL;
-
 const { releaseDate, title, image, spineImage, retailers, endorsements } = content;
+const isReleased = releaseDate ? parseISO(releaseDate) < new Date(Date.now()) : false;
 
-const isReleased = releaseDate && parseISO(releaseDate) < new Date(Date.now());
+const historyPageUrl = `/history/${Astro.canonicalURL.pathname
+  .substring("/books/".length, Astro.canonicalURL.pathname.length - 1)}`;
+
+const history = (await Astro.glob('../pages/history/*.md')).find(
+  n => n.url === historyPageUrl
+);
 ---
 
-<html lang={content.lang || "en"}>
-
-<head>
-  <Meta title={title} description={content.description} permalink={canonicalURL} />
-</head>
-
-<body>
-  <Nav />
-  <main>
-    <article class="book-details" itemscope itemtype="https://schema.org/Book">
-      <header class="header">
-        <h1 class="f2 lh-title b i mb3" itemprop="name">
-          {title}
-        </h1>
-        {!isReleased && releaseDate && (
-        <p class="grey-3 b lh-title mb2">
-          Releases:{" "}
-          <DateComponent dateString={releaseDate} itemProp="datePublished" />
-        </p>
-        )}
-      </header>
-
-      <div class="image">
-        <BookCover title={`Cover for ${title}`} image={image} spineImage={spineImage} />
-      </div>
-
-      <div class="cms body" itemprop="abstract">
-        <slot />
-      </div>
-
-      <section class="mt4 mb5 bg-grey-1 pv4 purchase">
-        <div class="mw6 ph3 center">
-          <h2 class="f3 b lh-title primary">
-            {isReleased ? "Purchase today at:" : "Pre-order now at:"}
-          </h2>
-
-          <div class="flex flex-wrap justify-center">
-            {retailers.map((retailer, i) => (
-            <Retailer {...retailer} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {endorsements && endorsements.length > 0 && (
-      <section class="mb5 endorsements">
-        {endorsements.map((endorsement, i) => (
-        <Endorsement {...endorsement} />
-        ))}
-      </section>
+<Layout {title} {content.description}>
+  <article class="book-details" itemscope itemtype="https://schema.org/Book">
+    <header class="header">
+      <h1 class="f2 lh-title b i mb3" itemprop="name">
+        {title}
+      </h1>
+      {!isReleased && releaseDate && (
+      <p class="grey-3 b lh-title mb2">
+        Releases:{" "}
+        <DateComponent dateString={releaseDate} itemProp="datePublished" />
+      </p>
       )}
-    </article>
-  </main>
-  <Footer />
-</body>
+    </header>
 
-</html>
+    <div class="image">
+      <BookCover title={`Cover for ${title}`} image={image} spineImage={spineImage} />
+    </div>
+
+    <div class="cms body" itemprop="abstract">
+      <slot />
+    </div>
+
+    <section class="mt4 mb5 bg-grey-1 pv4 purchase">
+      <div class="mw6 ph3 center">
+        <h2 class="f3 b lh-title primary">
+          {isReleased ? "Purchase today at:" : "Pre-order now at:"}
+        </h2>
+
+        <div class="flex flex-wrap justify-center">
+          {retailers.map((retailer, i) => (
+          <Retailer {...retailer} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {endorsements && endorsements.length > 0 && (
+    <section class="mb5 endorsements">
+      {endorsements.map((endorsement, i) => (
+      <Endorsement {...endorsement} />
+      ))}
+    </section>
+    )}
+  </article>
+  <BookNavigation />
+  {history && (
+  <HistoryLink href={historyPageUrl}>
+    <span slot="title">History Behind <em>{history.frontmatter.title}</em></span>
+    Explore the real history behind <em>{history.frontmatter.title}</em>
+  </HistoryLink>
+  )}
+</Layout>
 
 <style>
   .book-details {

@@ -1,0 +1,29 @@
+---
+import { BookSummaryType } from "../util/book";
+import BookNavigationLink from "./bookNavigationLink.astro";
+
+const allBooks = await Astro.glob<BookSummaryType>('../pages/books/*.md');
+const trimmedUrl = Astro.canonicalURL.pathname.substring(0, Astro.canonicalURL.pathname.length - 1);
+const bookIndex = allBooks.findIndex(n => n.url === trimmedUrl);
+const nextBook = allBooks[(bookIndex + allBooks.length - 1) % allBooks.length];
+const prevBook = allBooks[(bookIndex + 1) % allBooks.length];
+---
+
+<section class="mw6 mb5 ph3 center">
+  <h2 class="lh-title primary f3 b mb1">Explore my other books</h2>
+  <div class="flex-ns">
+    <div class="book-nav">{nextBook &&
+      <BookNavigationLink book={nextBook} />}
+    </div>
+    <div class="book-nav">
+      {prevBook &&
+      <BookNavigationLink book={prevBook} right />}
+    </div>
+  </div>
+</section>
+
+<style>
+  .book-nav {
+    flex: 1 1 50%;
+  }
+</style>

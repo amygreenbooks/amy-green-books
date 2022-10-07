@@ -1,0 +1,19 @@
+---
+import imgSrcSet from "../util/imgSrcSet";
+import { description } from "../siteConfig";
+import Layout from "./layout.astro";
+
+const { content } = Astro.props;
+
+const { aboutImage, title } = content;
+const { src, srcSet } = imgSrcSet({ src: aboutImage, resize: "fit", w: 500, h: 500, });
+---
+
+<Layout {title} {description}>
+  <article class="mw5 center ph3 mt4 mb5 cms">
+    {aboutImage && (
+    <img src={src} srcset={srcSet} alt={title} />
+    )}
+    <slot />
+  </article>
+</Layout>
