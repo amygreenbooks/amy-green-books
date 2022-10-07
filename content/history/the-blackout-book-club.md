@@ -1,7 +1,7 @@
 ---
 title: The Blackout Book Club
 date: 2022-10-06T06:00:00
-image: /media/history/tbbc/VictoryBook.jpg
+image: /media/history/tbbc/VictoryBook-thumb.jpg
 ---
 
 **Fact:** A lucrative black market sprung up around the rationing system, particularly for gasoline, sometimes employing former bootleggers. Patrick’s illegal operation was based on a real incident on the Atlantic coast where a ship carried double its allotted amount of fuel and was caught trying to sell the surplus to U-boat crews. Other acts of racketeering included forgery of ration coupons, theft of actual ration books from Office of Price Administration, and sale of clandestine slaughterhouse meat to consumers at sky-high prices. The government created propaganda campaigns appealing to people’s patriotism so they wouldn’t participate in the black market, but it was still estimated that up to 8% of civilian oil during the war was purchased illegally.
