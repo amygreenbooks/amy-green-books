@@ -4,7 +4,7 @@ import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { MenuItem } from "../siteConfig";
+import { MenuItem } from "../../../src/siteConfig";
 
 export default function NavigationLink({
   home,

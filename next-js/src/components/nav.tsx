@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { MenuItem } from "../siteConfig";
+import { MenuItem } from "../../../src/siteConfig";
 import NavigationLink from "./navigationLink";
 
 export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {

@@ -1,0 +1,134 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/media" # Folder where user uploaded files should go
+public_folder: "/media"
+publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "books"
+    label: "Books"
+    label_singular: "Book"
+    folder: "content/books"
+    preview_path: "books/{{slug}}"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "ISBN", name: "isbn", widget: "string" }
+      - {
+          label: "Create Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ss",
+        }
+      - {
+          label: "Release Date",
+          name: "releaseDate",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+        }
+      - { label: "Summary", name: "description", widget: "text" }
+      - {
+          label: "Cover Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Spine Image",
+          name: "spineImage",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: Retailers
+        name: retailers
+        label_singular: Retailer
+        widget: list
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Link, name: link, widget: string }
+          - { label: Image, name: image, widget: image }
+      - label: Endorsements
+        name: endorsements
+        label_singular: endorsement
+        widget: list
+        fields:
+          - { label: Author, name: author_md, widget: "markdown" }
+          - { label: Quote, name: quote_md, widget: "markdown" }
+  - name: "history"
+    label: "History"
+    folder: "content/history"
+    preview_path: "{{slug}}"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ss",
+        }
+      - { label: "List Image", name: "image", widget: "image", required: false }
+      - { label: Body, name: body, widget: markdown }
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "content/pages"
+    preview_path: "{{slug}}"
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: description, widget: string, required: false }
+      - {
+          label: "Banner Image",
+          name: bannerImage,
+          widget: image,
+          required: false,
+        }
+      - { label: Body, name: body, widget: markdown }
+  - name: "defaultPages"
+    label: "Default Pages"
+    files:
+      - file: "content/index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - { label: "Banner Image", name: bannerImage, widget: image }
+          - {
+              label: "Welcome",
+              name: welcome,
+              widget: object,
+              fields:
+                [
+                  { label: "Heading", name: "heading", widget: string },
+                  { label: "Text", name: "text_md", widget: "markdown" },
+                  { label: "Image", name: "image", widget: "image" },
+                ],
+            }
+      - file: "content/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        preview_path: "contact"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: description, widget: string }
+          - { label: "Banner Image", name: bannerImage, widget: "image" }
+          - {
+              label: "Success Message",
+              name: successMessage_md,
+              widget: "markdown",
+            }
+          - { label: Body, name: body, widget: markdown }
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        preview_path: "about"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: aboutImage, widget: "image" }
+          - { label: Body, name: body, widget: markdown }

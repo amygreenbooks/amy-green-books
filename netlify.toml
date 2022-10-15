@@ -1,6 +1,10 @@
 [build]
-  command   = "yarn build"
-  publish   = ".next"
+publish = "dist"
+command = "npm run build"
 
-[build.environment]
-  NODE_VERSION = "16.14.0"
+[[edge_functions]]
+path = "/*"
+function = "entry.netlify-edge"
+
+[dev]
+framework = "#static"

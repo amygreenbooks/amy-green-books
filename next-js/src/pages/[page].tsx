@@ -8,7 +8,7 @@ import {
   getBookSummaries,
   Source,
 } from "../lib/content";
-import { mainMenu, MenuItem } from "../siteConfig";
+import { mainMenu, MenuItem } from "../../../src/siteConfig";
 
 const contentType = "pages";
 
