@@ -1,4 +1,4 @@
-import { BookSummaryType } from "../next-js/src/lib/content";
+import { BookSummaryType } from "./lib/content";
 
 export type MenuItem = {
   title: string;

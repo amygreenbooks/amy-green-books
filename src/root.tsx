@@ -1,4 +1,9 @@
-import { component$, useStore, useContextProvider } from "@builder.io/qwik";
+import {
+  component$,
+  useStore,
+  useContextProvider,
+  useServerMount$,
+} from "@builder.io/qwik";
 import {
   QwikCity,
   RouterOutlet,
@@ -7,12 +12,17 @@ import {
 import { GlobalStore, SiteStore } from "./context";
 import { RouterHead } from "./components/router-head/router-head";
 import { mainMenu } from "./siteConfig";
+import { getBookSummaries } from "./lib/content";
 
 import "./styles/main.css";
 
 export default component$(() => {
   const store = useStore<SiteStore>({
-    mainMenu: mainMenu([]),
+    mainMenu: [],
+  });
+
+  useServerMount$(async () => {
+    store.mainMenu = mainMenu(await getBookSummaries());
   });
 
   useContextProvider(GlobalStore, store);

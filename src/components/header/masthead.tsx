@@ -1,6 +1,11 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useContext, useStylesScoped$ } from "@builder.io/qwik";
+import { GlobalStore } from "~/context";
+import NavLink from "./navLink";
+import styles from "./masthead.css?inline";
 
 export default component$(() => {
+  useStylesScoped$(styles);
+  const globalStore = useContext(GlobalStore);
   return (
     <div className="hero cover bg-cover banner">
       <div
@@ -17,9 +22,9 @@ export default component$(() => {
 
         <nav className="flex justify-center bw2 white bg-black main-nav">
           <ul className="flex flex-wrap justify-between w-100 mw6">
-            {/* {mainMenu.map((menu) => (
-              <NavigationLink key={menu.title} {...menu} />
-            ))} */}
+            {globalStore.mainMenu.map((menu) => (
+              <NavLink {...menu} />
+            ))}
           </ul>
         </nav>
       </div>

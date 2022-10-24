@@ -1,0 +1,19 @@
+.book-nav {
+  flex: 1 1 50%;
+}
+
+.book-link {
+  text-decoration: none;
+}
+
+.book-link p {
+  color: var(--primary);
+}
+
+.book-link:hover p {
+  text-decoration: underline;
+}
+
+.book-link-cover {
+  height: 120px;
+}
