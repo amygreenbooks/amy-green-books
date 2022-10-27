@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
+import Masthead from "../components/header/masthead";
 import Layout from "../components/layout";
 import Home from "../components/layouts/home";
-import Masthead from "../components/masthead";
 import {
   getContentData,
   getBookSummaries,

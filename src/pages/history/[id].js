@@ -7,7 +7,7 @@ import {
   getAllContentIds,
 } from "../../lib/content";
 import { mainMenu } from "../../siteConfig";
-import HistoryLink from "../../components/historyLink";
+import HistoryLink from "../../components/book/historyLink";
 
 const contentType = "history";
 

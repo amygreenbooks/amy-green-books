@@ -1,8 +1,8 @@
 import { MenuItem } from "../siteConfig";
-import Footer from "./footer";
+import Footer from "./footer/footer";
+import Nav from "./header/nav";
 import styles from "./layout.module.css";
 import Meta from "./meta";
-import Nav from "./nav";
 
 export default function Layout({
   children,

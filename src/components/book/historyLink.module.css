@@ -1,0 +1,12 @@
+.link {
+  text-decoration: none;
+  transition: var(--hover-transition);
+}
+
+.link:hover {
+  background: white;
+}
+
+.link:hover p {
+  text-decoration: underline;
+}

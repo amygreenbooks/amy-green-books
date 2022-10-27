@@ -1,5 +1,5 @@
 import Layout from "../../components/layout";
-import HistorySummary from "../../components/historySummary";
+import HistorySummary from "../../components/history/historySummary";
 import HistoryLayout from "../../components/layouts/history";
 import { getContentData, getSortedContentData } from "../../lib/content";
 import { mainMenu } from "../../siteConfig";
