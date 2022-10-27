@@ -1,5 +1,5 @@
 import Markdown from "../markdown";
-import Jumbotron from "../jumbotron";
+import Jumbotron from "../header/jumbotron";
 
 export default function Contact({ title, description, bannerImage, source }) {
   return (

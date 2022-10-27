@@ -1,4 +1,4 @@
-import imgSrcSet from "./util/imgSrcSet";
+import imgSrcSet from "../util/imgSrcSet";
 
 export default function Retailer({
   link,

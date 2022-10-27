@@ -1,7 +1,7 @@
 import { parseISO } from "date-fns";
 
 import { BookSummaryType } from "../../lib/content";
-import BookSummary from "../bookSummary";
+import BookSummary from "../book/bookSummary";
 import Markdown from "../markdown";
 import imgSrcSet from "../util/imgSrcSet";
 

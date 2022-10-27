@@ -125,6 +125,12 @@ export type BookSummaryType = {
 export type Retailer = {
   name: string;
   link: string;
+  image: string;
+};
+
+export type Endorsement = {
+  author_md: string;
+  quote_md: string;
 };
 
 export const getBookSummaryData = (b: ContentData): BookSummaryType => ({

@@ -1,9 +1,22 @@
 import { parseISO } from "date-fns";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+
+import { Retailer, Endorsement } from "../../lib/content";
+import BookCover from "../book/bookCover";
+import EndorsementComp from "../book/endorsement";
+import RetailerComp from "../book/retailer";
 import DateComponent from "../date";
 import Markdown from "../markdown";
-import Retailer from "../retailer";
-import Endorsement from "../endorsement";
-import BookCover from "../bookCover";
+
+interface BookProps {
+  title: string;
+  releaseDate?: string;
+  image: string;
+  spineImage?: string;
+  source: MDXRemoteSerializeResult;
+  retailers: Retailer[];
+  endorsements: Endorsement[];
+}
 
 export default function Book({
   title,
@@ -13,8 +26,9 @@ export default function Book({
   source,
   retailers,
   endorsements,
-}) {
-  const isReleased = releaseDate && parseISO(releaseDate) < Date.now();
+}: BookProps) {
+  const isReleased =
+    releaseDate && parseISO(releaseDate) < new Date(Date.now());
 
   return (
     <article
@@ -54,7 +68,7 @@ export default function Book({
 
           <div className="flex flex-wrap justify-center">
             {retailers.map((retailer, i) => (
-              <Retailer key={`retailer-${i}`} {...retailer} />
+              <RetailerComp key={`retailer-${i}`} {...retailer} />
             ))}
           </div>
         </div>
@@ -63,7 +77,7 @@ export default function Book({
       {endorsements && endorsements.length > 0 && (
         <section className="mb5 endorsements">
           {endorsements.map((endorsement, i) => (
-            <Endorsement key={`endorsement-${i}`} {...endorsement} />
+            <EndorsementComp key={`endorsement-${i}`} {...endorsement} />
           ))}
         </section>
       )}

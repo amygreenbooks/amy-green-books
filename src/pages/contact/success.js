@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Layout from "../../components/layout";
 import Markdown from "../../components/markdown";
-import Jumbotron from "../../components/jumbotron";
+import Jumbotron from "../../components/header/jumbotron";
 import { getContentData, getSortedContentData } from "../../lib/content";
 import { mainMenu } from "../../siteConfig";
 

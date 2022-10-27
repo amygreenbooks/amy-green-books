@@ -1,0 +1,16 @@
+.side {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-side {
+  min-width: 48%;
+  flex: 1 1;
+  padding: 0 var(--spacing-medium);
+}
+
+.img-side {
+  max-width: 18rem;
+  margin: 0 auto var(--spacing-medium);
+}

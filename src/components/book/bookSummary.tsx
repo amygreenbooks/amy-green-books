@@ -2,9 +2,10 @@ import cn from "classnames";
 import { parseISO } from "date-fns";
 import Link from "next/link";
 
-import { BookSummaryType } from "../lib/content";
+import { BookSummaryType } from "../../lib/content";
+import DateCmp from "../date";
 import BookCover from "./bookCover";
-import DateCmp from "./date";
+import styles from "./bookSummary.module.css";
 
 export default function BookSummary({
   book: { id, releaseDate, retailers, title, image, spineImage, description },
@@ -22,19 +23,20 @@ export default function BookSummary({
   return (
     <article className={cn({ featured })}>
       {image && (
-        <Link href={`/books/${id}`}>
-          <a className="side img-side">
-            <BookCover
-              title={title}
-              image={image}
-              spineImage={spineImage}
-              animateIn
-            />
-          </a>
+        <Link
+          href={`/books/${id}`}
+          className={`${styles.side} ${styles["img-side"]}`}
+        >
+          <BookCover
+            title={title}
+            image={image}
+            spineImage={spineImage}
+            animateIn
+          />
         </Link>
       )}
 
-      <div className="side text-side">
+      <div className={`${styles.side} ${styles["text-side"]}`}>
         <header>
           <h3 className="f3 b lh-title mb1">
             <em>{title}</em>
@@ -47,8 +49,8 @@ export default function BookSummary({
         </header>
         <p>{description}</p>
         <footer>
-          <Link href={`/books/${id}`}>
-            <a className="link">Learn more →</a>
+          <Link href={`/books/${id}`} className="link">
+            Learn more →
           </Link>
           {featured && !isReleased && retailer && (
             <div className="mt2">
@@ -88,23 +90,6 @@ export default function BookSummary({
             padding-left: 4%;
             padding-right: 4%;
           }
-        }
-
-        .side {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .text-side {
-          min-width: 48%;
-          flex: 1 1;
-          padding: 0 var(--spacing-medium);
-        }
-
-        .img-side {
-          max-width: 18rem;
-          margin: 0 auto var(--spacing-medium);
         }
       `}</style>
     </article>

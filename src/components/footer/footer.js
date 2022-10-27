@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { socialLinks } from "../siteConfig";
+import { socialLinks } from "../../siteConfig";
 import NewsletterForm from "./newsletterForm";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
@@ -25,14 +25,14 @@ export default function Footer({ mainMenu }) {
 
           <ul className="mb3 center flex-ns flex-wrap justify-between mw5 tc">
             <li>
-              <Link href="/">
-                <a className="link">Home</a>
+              <Link href="/" className="link">
+                Home
               </Link>
             </li>
             {mainMenu.map(({ title, url }) => (
               <li key={url}>
-                <Link href={url}>
-                  <a className="link">{title}</a>
+                <Link href={url} className="link">
+                  {title}
                 </Link>
               </li>
             ))}

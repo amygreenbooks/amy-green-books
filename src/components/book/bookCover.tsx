@@ -1,7 +1,7 @@
 import cn from "classnames";
 
-import ScrollAnimation from "./util/animateOnScroll";
-import imgSrcSet from "./util/imgSrcSet";
+import ScrollAnimation from "../util/animateOnScroll";
+import imgSrcSet from "../util/imgSrcSet";
 
 const rotate = 27;
 const spineActualWidthRems = 0.65;
