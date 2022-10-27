@@ -25,7 +25,7 @@ export default component$(({ link, image, name }: RetailerProps) => {
             h: 100,
           })}
           alt={name}
-          class="db mw-100 br0 center"
+          class="db mw-100 br0 center retailer-img"
         />
       </a>
     </div>

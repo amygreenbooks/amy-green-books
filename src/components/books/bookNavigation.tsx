@@ -1,5 +1,4 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 import { BookSummaryType } from "~/lib/content";
 import imgSrcSet from "~/lib/imgSrcSet";
 import styles from "./bookNavigation.css";
@@ -35,7 +34,7 @@ export function BookNavLink({
   right = false,
 }: BookNavLinkProps) {
   return (
-    <Link href={`/books/${id}`} class="flex items-center pa2 book-link raise">
+    <a href={`/books/${id}`} class="flex items-center pa2 book-link raise">
       {!right && <span class="arrow mr2 db-ns dn">←</span>}
       <img
         {...imgSrcSet({
@@ -53,6 +52,6 @@ export function BookNavLink({
         <p class="ma0 f6">View Book</p>
       </div>
       {right && <span class="arrow mr2 db-ns dn">→</span>}
-    </Link>
+    </a>
   );
 }

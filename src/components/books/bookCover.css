@@ -1,0 +1,88 @@
+.book {
+  perspective: 1800px;
+  position: relative;
+  margin: 0.5rem;
+  z-index: 1;
+
+  --rotate: 27deg;
+  --spineWidth: 0.65rem;
+}
+
+.animated-book {
+  margin: 0.5rem 0.5rem 0.5rem calc(var(--spineWidth) + 1rem);
+}
+
+.cover,
+.spine {
+  transition: transform 1s ease 0s;
+  display: block;
+}
+
+img.spine,
+img.cover {
+  border-radius: 0;
+}
+
+.cover {
+  max-width: 100%;
+  max-height: 500px;
+  transform-origin: left;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  margin: 0 auto;
+}
+
+.spine {
+  background-color: #ccc;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  position: absolute;
+  transform-origin: right;
+  height: 100%;
+}
+
+.animated-book .cover,
+.animated.enter .animated-book .cover {
+  transform: rotateY(var(--rotate));
+  margin: 0;
+}
+
+.animated-book .spine,
+.animated.enter .animated-book .spine {
+  transform: rotateY(calc(var(--rotate) - 90deg));
+}
+
+.animated .animated-book .cover,
+.animated.enter .animated-book:hover .cover,
+.animated.enter .animated-book:focus .cover,
+.animated-book:hover .cover,
+.animated-book:focus .cover {
+  transform: rotateY(0deg) translateX(calc(var(--spineWidth) * -1));
+}
+
+.animated .animated-book .spine,
+.animated.enter .animated-book:hover .spine,
+.animated.enter .animated-book:focus .spine,
+.animated-book:hover .spine,
+.animated-book:focus .spine,
+.spine {
+  transform: rotateY(-90deg) translateZ(var(--spineWidth));
+}
+
+@media (prefers-reduced-motion) {
+  .animated .animated-book .cover,
+  .animated.enter .animated-book:hover .cover,
+  .animated.enter .animated-book:focus .cover,
+  .animated-book:hover .cover,
+  .animated-book:focus .cover {
+    transform: rotateY(var(--rotate));
+  }
+
+  .animated .animated-book .spine,
+  .animated.enter .animated-book:hover .spine,
+  .animated.enter .animated-book:focus .spine,
+  .animated-book:hover .spine,
+  .animated-book:focus .spine {
+    transform: rotateY(calc(var(--rotate) - 90deg));
+  }
+}

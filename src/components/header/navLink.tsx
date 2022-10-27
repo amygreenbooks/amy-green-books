@@ -6,7 +6,7 @@ import {
 } from "@builder.io/qwik";
 import { MenuItem } from "~/siteConfig";
 import cn from "classnames";
-import { Link, useLocation } from "@builder.io/qwik-city";
+import { useLocation } from "@builder.io/qwik-city";
 import styles from "./navLink.css";
 
 export const NavLink = component$(
@@ -55,9 +55,9 @@ export const NavLink = component$(
             </ul>
           </>
         ) : (
-          <Link href={url} class="nav-link">
+          <a href={url} class="nav-link">
             {title}
-          </Link>
+          </a>
         )}
       </li>
     );

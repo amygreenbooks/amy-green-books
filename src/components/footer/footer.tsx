@@ -1,5 +1,4 @@
 import { component$, useContext } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 import { NewsletterForm } from "./newsletterForm";
 import { SocialIcon } from "./socialIcon";
 import { Svg } from "./svg";
@@ -28,15 +27,15 @@ export default component$(() => {
 
           <ul class="mb3 center flex-ns flex-wrap justify-between mw5 tc">
             <li>
-              <Link href="/" class="link">
+              <a href="/" class="link">
                 Home
-              </Link>
+              </a>
             </li>
             {globalStore.mainMenu.map(({ title, url }) => (
               <li>
-                <Link class="link" href={url}>
+                <a class="link" href={url}>
                   {title}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

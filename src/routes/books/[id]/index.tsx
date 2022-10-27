@@ -17,6 +17,7 @@ import Retailer from "~/components/books/retailer";
 import Endorsement from "~/components/books/endorsement";
 import styles from "./book.css";
 import BookNavigation from "~/components/books/bookNavigation";
+import BookCover from "~/components/books/bookCover";
 
 export const contentType = "books";
 
@@ -49,7 +50,8 @@ export default component$(() => {
     title,
     releaseDate,
     // description,
-    // image,
+    image,
+    spineImage,
     // isbn,
     contentHtml,
     retailers,
@@ -78,11 +80,11 @@ export default component$(() => {
         </header>
 
         <div className="image">
-          {/* <BookCover
+          <BookCover
             title={`Cover for ${title}`}
             image={image}
             spineImage={spineImage}
-          /> */}
+          />
         </div>
 
         <div
