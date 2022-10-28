@@ -1,6 +1,13 @@
+import { Source } from "../../lib/content";
 import Markdown from "../markdown";
 
-export default function History({ id, title, source }) {
+interface HistoryPageProps {
+  id: string;
+  title: string;
+  source: Source;
+}
+
+export default function HistoryPage({ id, title, source }: HistoryPageProps) {
   return (
     <article id={id}>
       <header className="mt6 mb2">

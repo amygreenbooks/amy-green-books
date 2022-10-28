@@ -1,6 +1,19 @@
+import { MenuItem } from "../../siteConfig";
 import NavigationLink from "./navigationLink";
 
-export default function Masthead({ bannerImage, title, subtitle, mainMenu }) {
+interface MastheadProps {
+  bannerImage: string;
+  title: string;
+  subtitle: string;
+  mainMenu: MenuItem[];
+}
+
+export default function Masthead({
+  bannerImage,
+  title,
+  subtitle,
+  mainMenu,
+}: MastheadProps) {
   return (
     <div className="hero cover bg-cover banner">
       <div

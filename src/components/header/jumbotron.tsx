@@ -1,6 +1,12 @@
 import cn from "classnames";
 
-export default function Jumbotron({ title, subtitle, image }) {
+interface JumbotronProps {
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
+export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
   return (
     <div
       className={cn("pv5 ph3 pv6-l", {

@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Layout from "../../components/layout";
-import Book from "../../components/layouts/book";
+
 import BookNavigation from "../../components/book/bookNavigation";
 import HistoryLink from "../../components/book/historyLink";
+import Layout from "../../components/layout";
+import Book from "../../components/layouts/book";
 import {
   getAllContentIds,
   getContentData,

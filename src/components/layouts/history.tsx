@@ -1,6 +1,17 @@
+import { ReactNode } from "react";
+
+import { Source } from "../../lib/content";
 import Markdown from "../markdown";
 
-export default function History({ index, children }) {
+interface HistoryProps {
+  index: {
+    title: string;
+    source: Source;
+  };
+  children: ReactNode;
+}
+
+export default function History({ index, children }: HistoryProps) {
   const { title, source } = index;
   return (
     <div className="ph4">

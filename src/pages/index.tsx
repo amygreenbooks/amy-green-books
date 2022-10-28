@@ -9,6 +9,7 @@ import {
   getBookSummaries,
   getBookSummaryData,
   BookSummaryType,
+  Source,
 } from "../lib/content";
 import { mainMenu, MenuItem } from "../siteConfig";
 
@@ -22,7 +23,7 @@ export default function HomePage({
     subtitle: string;
     bannerImage: string;
     welcome: {
-      text_md: string;
+      text_md: Source;
       heading: string;
       image: string;
     };

@@ -1,7 +1,20 @@
-import Markdown from "../markdown";
+import { Source } from "../../lib/content";
 import Jumbotron from "../header/jumbotron";
+import Markdown from "../markdown";
 
-export default function Contact({ title, description, bannerImage, source }) {
+interface ContactProps {
+  title: string;
+  description: string;
+  bannerImage: string;
+  source: Source;
+}
+
+export default function Contact({
+  title,
+  description,
+  bannerImage,
+  source,
+}: ContactProps) {
   return (
     <>
       <Jumbotron title={title} subtitle={description} image={bannerImage} />
@@ -58,8 +71,8 @@ export default function Contact({ title, description, bannerImage, source }) {
                 id="message"
                 name="message"
                 placeholder="Your message"
-                rows="8"
-                cols="80"
+                rows={8}
+                cols={80}
                 className="textarea w-100"
               />
               <label htmlFor="message" className="label">

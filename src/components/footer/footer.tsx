@@ -1,10 +1,15 @@
 import Link from "next/link";
-import { socialLinks } from "../../siteConfig";
+
+import { MenuItem, socialLinks } from "../../siteConfig";
 import NewsletterForm from "./newsletterForm";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
 
-export default function Footer({ mainMenu }) {
+interface FooterProps {
+  mainMenu: MenuItem[];
+}
+
+export default function Footer({ mainMenu }: FooterProps) {
   return (
     <>
       <footer className="bg-black ph3 pv4 white">

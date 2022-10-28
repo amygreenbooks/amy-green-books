@@ -1,4 +1,11 @@
+import { DetailedHTMLProps, HTMLAttributes } from "react";
+
 import cn from "classnames";
+
+type HeaderProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLHeadingElement>,
+  HTMLHeadingElement
+>;
 
 export default function Header({
   children,
@@ -6,7 +13,7 @@ export default function Header({
   component: Component,
   className,
   ...props
-}) {
+}: HeaderProps & { component: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" }) {
   return (
     <>
       <Component className={cn("h", className)} {...props}>
@@ -89,9 +96,9 @@ export default function Header({
   );
 }
 
-export const H1 = (props) => <Header component="h1" {...props} />;
-export const H2 = (props) => <Header component="h2" {...props} />;
-export const H3 = (props) => <Header component="h3" {...props} />;
-export const H4 = (props) => <Header component="h4" {...props} />;
-export const H5 = (props) => <Header component="h5" {...props} />;
-export const H6 = (props) => <Header component="h6" {...props} />;
+export const H1 = (props: HeaderProps) => <Header component="h1" {...props} />;
+export const H2 = (props: HeaderProps) => <Header component="h2" {...props} />;
+export const H4 = (props: HeaderProps) => <Header component="h4" {...props} />;
+export const H3 = (props: HeaderProps) => <Header component="h3" {...props} />;
+export const H5 = (props: HeaderProps) => <Header component="h5" {...props} />;
+export const H6 = (props: HeaderProps) => <Header component="h6" {...props} />;

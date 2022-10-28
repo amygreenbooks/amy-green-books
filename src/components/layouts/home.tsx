@@ -1,6 +1,6 @@
 import { parseISO } from "date-fns";
 
-import { BookSummaryType } from "../../lib/content";
+import { BookSummaryType, Source } from "../../lib/content";
 import BookSummary from "../book/bookSummary";
 import Markdown from "../markdown";
 import imgSrcSet from "../util/imgSrcSet";
@@ -12,7 +12,7 @@ export default function Home({
   books: Array<BookSummaryType>;
   welcome: {
     heading: string;
-    text_md: string;
+    text_md: Source;
     image: string;
   };
 }) {

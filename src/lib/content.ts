@@ -129,8 +129,8 @@ export type Retailer = {
 };
 
 export type Endorsement = {
-  author_md: string;
-  quote_md: string;
+  author_md: Source;
+  quote_md: Source;
 };
 
 export const getBookSummaryData = (b: ContentData): BookSummaryType => ({

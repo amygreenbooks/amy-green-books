@@ -1,6 +1,13 @@
+import { Source } from "../../lib/content";
 import Markdown from "../markdown";
 
-export default function Page({ title, description, source }) {
+interface PageProps {
+  title: string;
+  description: string;
+  source: Source;
+}
+
+export default function Page({ title, description, source }: PageProps) {
   return (
     <div className="ph4">
       <article className="measure-wide center mt4 mb5">

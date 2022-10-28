@@ -1,4 +1,10 @@
-export default function SocialIcon({ svg, link, name }) {
+interface SocialIconProps {
+  svg: string;
+  link: string;
+  name: string;
+}
+
+export default function SocialIcon({ svg, link, name }: SocialIconProps) {
   return (
     <li className="dib ph2 raise">
       <a
