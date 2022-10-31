@@ -31,7 +31,7 @@
     "postcss-preset-env": "^7.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rehype-slug": "^5.0.1",
+    "rehype-slug": "^5.1.0",
     "remark-slug": "^7.0.1",
     "to-string-loader": "^1.1.6"
   },
