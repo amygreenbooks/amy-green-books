@@ -36,7 +36,7 @@
     "to-string-loader": "^1.1.6"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.0.0",
+    "@next/bundle-analyzer": "^13.0.4",
     "@types/lodash.throttle": "^4.1.7",
     "@types/react": "^18.0.23",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
