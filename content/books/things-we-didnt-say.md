@@ -34,50 +34,50 @@ retailers:
     link: "https://www.indiebound.org/book/9780764237164"
     name: Indie Bound
 endorsements:
-  - author_md: "Lynn Austin, author of *If I Were You*"
-    quote_md: |-
+  - author: "Lynn Austin, author of *If I Were You*"
+    quote: |-
       This compelling novel of life on the US home front during World War
       II fascinated me from beginning to end.
-  - author_md: >-
+  - author: >-
       Sarah Sundin, bestselling and award-winning author of *When Twilight
       Breaks* and the Sunrise at Normandy series
-    quote_md: >-
+    quote: >-
       With impeccable research, Amy Lynn Green casts a light on the POW camps in
       America during World War II and on the dangers of prejudice. Make space on
       your bookshelf, because this book is a keeper!
-  - author_md: "Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*"
-    quote_md: >-
+  - author: "Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*"
+    quote: >-
       *Things We Didn’t Say* is a stand-out novel as brilliant and brave as its
       heroine. . . . An utterly satisfying read you’ll want to share as soon as
       you reach its conclusion.
-  - author_md: Tracie Peterson
-    quote_md: |-
+  - author: Tracie Peterson
+    quote: |-
       Amy Green pens a fascinating story of intrigue and love in her book
       *Things We Didn’t Say*. Set against the backdrop of World War II, Amy
       takes care to bring history alive as she moves her characters through
       situations that force them to take a deeper look at who they are and
       what they really want out of life.
-  - author_md: "Rachel McMillan, author of *The London Restoration*"
-    quote_md: >-
+  - author: "Rachel McMillan, author of *The London Restoration*"
+    quote: >-
       A fascinating excavation of a little-known moment in US history executed
       with an inimitable voice and extremely clever style. Excessively readable,
       this winsome epistolary is underscored by a deep look at patriotism,
       prejudice, unwavering faith, duty, and love. . . .A dazzlingly smart and
       confident debut, *Things We Didn’t Say* is as moving as it is memorable.
-  - author_md: Beverly Lewis
-    quote_md: |-
+  - author: Beverly Lewis
+    quote: |-
       Amy Green’s debut novel kept me guessing to the very end—twist
       upon twist upon twist. She is a master plotter, so read every single
       word!
-  - author_md: "Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*"
-    quote_md: >-
+  - author: "Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*"
+    quote: >-
       *Things We Didn’t Say* is the best sort of book: where the characters feel
       like friends, the story feels like home, and the pages beckon you to turn
       them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
       expertly wields wit, heart, history, and enveloping storytelling in this
       glorious debut!
-  - author_md: "Julie Klassen, author of *The Bridge to Belle Island*"
-    quote_md: >-
+  - author: "Julie Klassen, author of *The Bridge to Belle Island*"
+    quote: >-
       Based on actual World War II experiences, and sparkling with humor and
       touches of romance, this is an impressive debut from a multitalented
       writer.

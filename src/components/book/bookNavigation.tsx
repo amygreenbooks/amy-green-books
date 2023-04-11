@@ -1,20 +1,15 @@
 import Link from "next/link";
 
+import { BookSummaryType } from "../../lib/content";
 import imgSrcSet from "../util/imgSrcSet";
 import styles from "./bookNavigation.module.css";
-
-export interface BookNavItem {
-  id: string;
-  image: string;
-  title: string;
-}
 
 function BookNavLink({
   id,
   image,
   title,
   right = false,
-}: BookNavItem & {
+}: BookSummaryType & {
   right?: boolean;
 }) {
   return (
@@ -24,15 +19,17 @@ function BookNavLink({
         className={`flex items-center pa2 ${styles["book-link"]} raise`}
       >
         {!right && <span className="arrow mr2 db-ns dn">←</span>}
-        <img
-          {...imgSrcSet({
-            src: image,
-            resize: "fit",
-            h: 120,
-          })}
-          aria-labelledby={`exp-book-${id}`}
-          className={styles.cover}
-        />
+        {image && (
+          <img
+            {...imgSrcSet({
+              src: image,
+              resize: "fit",
+              h: 120,
+            })}
+            aria-labelledby={`exp-book-${id}`}
+            className={styles.cover}
+          />
+        )}
         <div className="ml3 ml2-ns">
           <h4 className="f5 f6-ns b mb1" id={`exp-book-${id}`}>
             <em>{title}</em>
@@ -49,8 +46,8 @@ export default function BookNavigation({
   next,
   previous,
 }: {
-  next: BookNavItem;
-  previous?: BookNavItem;
+  next: BookSummaryType;
+  previous?: BookSummaryType;
 }) {
   return (
     <section className="mw6 mb5 ph3 center">

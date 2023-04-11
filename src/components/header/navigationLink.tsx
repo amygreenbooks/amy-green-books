@@ -1,8 +1,9 @@
-import React, { MouseEventHandler } from "react";
+"use client";
+import { useState, useEffect, MouseEventHandler } from "react";
 
 import cn from "classnames";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 import { MenuItem } from "../../siteConfig";
 import styles from "./navigationLink.module.css";
@@ -13,10 +14,10 @@ export default function NavigationLink({
   url,
   subMenus,
 }: MenuItem & { home?: boolean }) {
-  const router = useRouter();
-  const active = router.asPath.indexOf(url) !== -1;
+  const pathname = usePathname();
+  const active = pathname?.includes(url);
 
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const showMenu: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
@@ -24,7 +25,7 @@ export default function NavigationLink({
     setIsOpen(true);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const closeMenu = (event: MouseEvent) => {
       event.preventDefault();
       console.log("closing menu");

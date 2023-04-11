@@ -1,7 +1,6 @@
 import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
 
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function MarkdownLink({
   children,
@@ -11,8 +10,7 @@ export default function MarkdownLink({
   DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>,
   "ref"
 >) {
-  const router = useRouter();
-  if (!router || !href || (href && href.match(/:\/\//g))) {
+  if (!href || (href && href.match(/:\/\//g))) {
     return (
       <a href={href} target="_blank" rel="noreferrer" {...props}>
         {children}

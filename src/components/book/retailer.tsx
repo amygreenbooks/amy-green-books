@@ -1,4 +1,5 @@
 import imgSrcSet from "../util/imgSrcSet";
+import styles from "./retailer.module.css";
 
 export default function Retailer({
   link,
@@ -24,14 +25,9 @@ export default function Retailer({
             h: 100,
           })}
           alt={name}
-          className="db mw-100 br0 center"
+          className={`db mw-100 br0 center ${styles.img}`}
         />
       </a>
-      <style jsx>{`
-        img {
-          max-height: 100px;
-        }
-      `}</style>
     </div>
   );
 }

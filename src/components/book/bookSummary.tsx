@@ -21,7 +21,13 @@ export default function BookSummary({
   );
 
   return (
-    <article className={cn({ featured })}>
+    <article
+      className={cn(styles.article, {
+        [styles.featured]: featured,
+        "items-start": description,
+        "items-center": !description,
+      })}
+    >
       {image && (
         <Link
           href={`/books/${id}`}
@@ -66,32 +72,6 @@ export default function BookSummary({
           )}
         </footer>
       </div>
-
-      <style jsx>{`
-        article {
-          display: flex;
-          flex: 1 1 auto;
-          flex-wrap: wrap;
-          padding-bottom: var(--spacing-extra-large);
-          min-width: 50%;
-          align-items: ${description ? "flex-start" : "center"};
-        }
-
-        .featured {
-          background-color: white;
-        }
-
-        @media screen and (min-width: 50em) {
-          article {
-            width: ${featured ? "100%" : "50%"};
-          }
-
-          .featured {
-            padding-left: 4%;
-            padding-right: 4%;
-          }
-        }
-      `}</style>
     </article>
   );
 }

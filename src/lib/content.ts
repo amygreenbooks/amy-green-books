@@ -2,28 +2,25 @@ import fs from "fs";
 import path from "path";
 
 import matter from "gray-matter";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
-import { serialize, transformMatter } from "./markdownProcessor";
+import { transformMatter } from "./markdownProcessor";
 
 const postsDirectory = path.join(process.cwd(), "content");
 
-export type Source = MDXRemoteSerializeResult<Record<string, unknown>>;
-
 export type ContentData = {
   id: string;
-  source?: Source;
+  source?: string;
   date?: Date;
   [key: string]: unknown;
 };
 
 export const getBookSummaries = async () =>
-  (await getSortedContentData("books")) as BookSummaryType[];
+  await getSortedContentData<BookSummaryType>("books");
 
-export async function getSortedContentData(
+export async function getSortedContentData<TData extends ContentData>(
   contentType: string,
   includeContent = false
-): Promise<Array<ContentData>> {
+): Promise<Array<TData>> {
   // Get file names under /content/{contentType}
   const dirPath = path.join(postsDirectory, contentType);
   if (!fs.existsSync(dirPath)) {
@@ -31,7 +28,7 @@ export async function getSortedContentData(
   }
 
   const fileNames = fs.readdirSync(dirPath);
-  const allData: Array<ContentData> = await Promise.all(
+  const allData: Array<TData> = await Promise.all(
     fileNames
       .filter((fileName) => fileName.match(/\.md$/))
       .filter((fileName) => fileName !== "index.md")
@@ -60,10 +57,10 @@ export async function getSortedContentData(
         };
 
         if (includeContent) {
-          result.source = await serialize(n.content);
+          result.source = n.content;
         }
 
-        return result;
+        return result as TData;
       })
   );
 
@@ -91,10 +88,10 @@ export function getAllContentIds(contentType: string): Array<string> {
   return fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
 }
 
-export async function getContentData(
+export async function getContentData<TData extends ContentData = ContentData>(
   contentType: string | null,
   id: string
-): Promise<ContentData> {
+): Promise<TData> {
   const fullPath = contentType
     ? path.join(postsDirectory, contentType, `${id}.md`)
     : path.join(postsDirectory, `${id}.md`);
@@ -103,14 +100,24 @@ export async function getContentData(
   // Use gray-matter to parse the post metadata section
   const res = matter(fileContents);
   const data = await transformMatter(res.data);
-  const mdxSource = await serialize(res.content);
 
   return {
     id,
-    source: mdxSource,
+    source: res.content,
     ...data,
-  };
+  } as TData;
 }
+
+export type BookType = ContentData & {
+  title: string;
+  description: string;
+  isbn?: string;
+  releaseDate?: string;
+  image: string;
+  spineImage?: string;
+  retailers: Retailer[];
+  endorsements: Endorsement[];
+};
 
 export type BookSummaryType = {
   id: string;
@@ -119,7 +126,7 @@ export type BookSummaryType = {
   spineImage?: string;
   releaseDate?: string;
   description?: string;
-  retailers?: Array<Retailer>;
+  retailers: Array<Retailer>;
 };
 
 export type Retailer = {
@@ -129,16 +136,21 @@ export type Retailer = {
 };
 
 export type Endorsement = {
-  author_md: Source;
-  quote_md: Source;
+  author: string;
+  quote: string;
 };
 
-export const getBookSummaryData = (b: ContentData): BookSummaryType => ({
+export type HistoryType = ContentData & {
+  title: string;
+  image: string;
+};
+
+export const getBookSummaryData = (b: BookType): BookSummaryType => ({
   id: b.id,
-  image: b.image as string,
+  image: b.image,
   spineImage: b.spineImage as string,
-  title: b.title as string,
+  title: b.title,
   releaseDate: b.releaseDate as string,
   description: b.description as string,
-  retailers: (b.retailers as Array<Retailer>) || [],
+  retailers: b.retailers,
 });

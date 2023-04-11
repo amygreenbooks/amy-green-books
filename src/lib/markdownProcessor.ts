@@ -1,13 +1,3 @@
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
-import { serialize as mdxSerialize } from "next-mdx-remote/serialize";
-import slug from "rehype-slug";
-
-export const serialize = (
-  content: string,
-  scope?: Record<string, unknown>
-): Promise<MDXRemoteSerializeResult<Record<string, unknown>>> =>
-  mdxSerialize(content, { scope, mdxOptions: { rehypePlugins: [slug] } });
-
 export async function transformMatter(data: Record<string, unknown>) {
   data = stringifyDates(data);
   data = await parseMatterMd(data);
@@ -24,8 +14,6 @@ async function parseMatterMd(data: Record<string, unknown>) {
           value = await Promise.all(value.map(parseMatterMd));
         } else if (typeof value === "object") {
           value = await parseMatterMd(value as Record<string, unknown>);
-        } else if (key.endsWith("_md")) {
-          value = await serialize(value as string);
         }
 
         return { key, value };
