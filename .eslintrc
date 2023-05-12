@@ -20,6 +20,7 @@
         "react/require-default-props": "off", // Allow non-defined react props as undefined
         "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
         "@next/next/no-img-element": "off",
+        "@next/next/no-page-custom-font": "off",
         "import/order": [
           "error",
           {

@@ -4,8 +4,8 @@ import styles from "./historyLink.module.css";
 
 interface HistoryLinkProps {
   href: string;
-  title: string;
-  description: string;
+  title: React.ReactNode;
+  description: React.ReactNode;
 }
 
 export default function HistoryLink({
@@ -22,7 +22,6 @@ export default function HistoryLink({
         <h2 className="lh-title primary f3 b mb1">{title}</h2>
         <p className="mb0">{description} →</p>
       </Link>
-      <style jsx>{``}</style>
     </section>
   );
 }

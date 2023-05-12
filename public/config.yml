@@ -56,8 +56,8 @@ collections: # A list of collections the CMS should be able to edit
         label_singular: endorsement
         widget: list
         fields:
-          - { label: Author, name: author_md, widget: "markdown" }
-          - { label: Quote, name: quote_md, widget: "markdown" }
+          - { label: Author, name: author, widget: "markdown" }
+          - { label: Quote, name: quote, widget: "markdown" }
   - name: "history"
     label: "History"
     folder: "content/history"
@@ -106,7 +106,7 @@ collections: # A list of collections the CMS should be able to edit
               fields:
                 [
                   { label: "Heading", name: "heading", widget: string },
-                  { label: "Text", name: "text_md", widget: "markdown" },
+                  { label: "Text", name: "text", widget: "markdown" },
                   { label: "Image", name: "image", widget: "image" },
                 ],
             }
@@ -120,7 +120,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: "Banner Image", name: bannerImage, widget: "image" }
           - {
               label: "Success Message",
-              name: successMessage_md,
+              name: successMessage,
               widget: "markdown",
             }
           - { label: Body, name: body, widget: markdown }

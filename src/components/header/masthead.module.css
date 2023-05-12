@@ -1,0 +1,22 @@
+.banner {
+  background-image: url("/media/typewriter-banner.jpg?nf_resize=fit&h=350");
+  background-image: image-set(
+    url("/media/typewriter-banner.jpg?nf_resize=fit&h=350") 1x,
+    url("/media/typewriter-banner.jpg?nf_resize=fit&h=700") 2x
+  );
+  background-position: 10% 70%;
+}
+
+.dim {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 60em) {
+  .banner {
+    background-image: url("/media/typewriter-banner.jpg?nf_resize=fit&h=600");
+    background-image: image-set(
+      url("/media/typewriter-banner.jpg?nf_resize=fit&h=600") 1x,
+      url("/media/typewriter-banner.jpg?nf_resize=fit&h=1200") 2x
+    );
+  }
+}

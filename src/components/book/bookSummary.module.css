@@ -1,3 +1,15 @@
+.article {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  padding-bottom: var(--spacing-extra-large);
+  min-width: 50%;
+}
+
+.featured {
+  background-color: white;
+}
+
 .side {
   display: block;
   margin-left: auto;
@@ -13,4 +25,16 @@
 .img-side {
   max-width: 18rem;
   margin: 0 auto var(--spacing-medium);
+}
+
+@media screen and (min-width: 50em) {
+  .article {
+    width: 50%;
+  }
+
+  .article.featured {
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+  }
 }

@@ -2,6 +2,8 @@ import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 import cn from "classnames";
 
+import styles from "./h.module.css";
+
 type HeaderProps = DetailedHTMLProps<
   HTMLAttributes<HTMLHeadingElement>,
   HTMLHeadingElement
@@ -16,8 +18,11 @@ export default function Header({
 }: HeaderProps & { component: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" }) {
   return (
     <>
-      <Component className={cn("h", className)} {...props}>
-        <a className="anchor" id={id} href={`#${id}`} aria-hidden="true">
+      <Component
+        className={cn(styles.h, styles[Component], className)}
+        {...props}
+      >
+        <a className={styles.anchor} id={id} href={`#${id}`} aria-hidden="true">
           <svg
             focusable="false"
             role="img"
@@ -32,66 +37,6 @@ export default function Header({
         </a>
         {children}
       </Component>
-      <style jsx>{`
-        .anchor {
-          float: left;
-          padding-right: 0.2em;
-          margin-left: -0.8em;
-          color: #ccc;
-          text-decoration: none;
-          opacity: 0;
-          transition: opacity 200ms ease;
-        }
-
-        .anchor:hover {
-          color: var(--primary);
-          background-color: transparent;
-        }
-
-        .h:hover .anchor {
-          opacity: 1;
-        }
-
-        .anchor:focus {
-          color: var(--primary);
-          box-shadow: none !important;
-        }
-
-        .anchor svg {
-          height: 0.6em;
-        }
-
-        .h {
-          font-weight: var(--bold-font-weight);
-          line-height: 1.25;
-          margin-bottom: var(--spacing-small);
-        }
-
-        h1 {
-          margin-top: var(--spacing-extra-extra-extra-large);
-          font-size: 2.25rem;
-        }
-
-        h2 {
-          margin-top: var(--spacing-extra-extra-large);
-          font-size: 1.5rem;
-        }
-
-        h3 {
-          margin-top: var(--spacing-extra-large);
-          font-size: 1.25rem;
-        }
-
-        h4 {
-          margin-top: var(--spacing-large);
-          font-size: 1rem;
-        }
-
-        h5 {
-          margin-top: var(--spacing-medium);
-          font-size: 0.875rem;
-        }
-      `}</style>
     </>
   );
 }

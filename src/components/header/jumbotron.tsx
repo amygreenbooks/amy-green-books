@@ -1,8 +1,10 @@
+"use client";
+
 import cn from "classnames";
 
 interface JumbotronProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   image: string;
 }
 
