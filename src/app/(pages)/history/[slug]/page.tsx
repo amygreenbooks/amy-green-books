@@ -1,4 +1,3 @@
-import Markdown from "../../../../components/markdown";
 import {
   HistoryType,
   getAllContentIds,
@@ -12,10 +11,11 @@ export default async function HistoryPage({
 }: {
   params: { slug: string };
 }) {
-  const { id, title, source } = await getContentData<HistoryType>(
-    contentType,
-    params.slug
-  );
+  const {
+    id,
+    frontmatter: { title },
+    content,
+  } = await getContentData<HistoryType>(contentType, params.slug);
 
   return (
     <article id={id}>
@@ -24,11 +24,7 @@ export default async function HistoryPage({
           The History Behind <em>{title}</em>
         </h2>
       </header>
-      {source && (
-        <div className="cms">
-          <Markdown source={source} />
-        </div>
-      )}
+      {content && <div className="cms">{content}</div>}
     </article>
   );
 }

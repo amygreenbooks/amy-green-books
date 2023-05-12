@@ -6,6 +6,8 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getContentData<HistoryType>("history", "index");
+  const data = await getContentData<HistoryType>("history", "index", {
+    noParagraph: true,
+  });
   return <HistoryLayout {...data}>{children}</HistoryLayout>;
 }

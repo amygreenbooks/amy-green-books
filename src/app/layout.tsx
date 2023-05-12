@@ -1,8 +1,7 @@
 import "../styles/main.css";
 
 export const metadata = {
-  charSet: "utf-8",
-  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
+  metadataBase: new URL("https://amygreenbooks.com"),
 };
 
 export default async function RootLayout({

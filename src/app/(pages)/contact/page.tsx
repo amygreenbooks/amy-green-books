@@ -1,28 +1,26 @@
 import Jumbotron from "../../../components/header/jumbotron";
-import Markdown from "../../../components/markdown";
-import { ContentData, getContentData } from "../../../lib/content";
+import { getContentData } from "../../../lib/content";
 
-export type ContactType = ContentData & {
+export type ContactType = {
   title: string;
+  date: number;
   description: string;
   bannerImage: string;
   successMessage: string;
 };
 
 export default async function ContactPage() {
-  const { title, description, bannerImage, source } =
-    await getContentData<ContactType>(null, "contact");
+  const {
+    frontmatter: { title, description, bannerImage },
+    content,
+  } = await getContentData<ContactType>(null, "contact");
 
   return (
     <>
       <Jumbotron title={title} subtitle={description} image={bannerImage} />
 
       <article className="mw6 center ph3 mt4 mb5">
-        {source && (
-          <div className="cms">
-            <Markdown source={source} />
-          </div>
-        )}
+        {content && <div className="cms">{content}</div>}
 
         <div className="mb4">
           <form

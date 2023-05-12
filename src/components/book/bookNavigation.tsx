@@ -1,15 +1,14 @@
 import Link from "next/link";
 
-import { BookSummaryType } from "../../lib/content";
+import { MarkdownResult, BookType } from "../../lib/content";
 import imgSrcSet from "../util/imgSrcSet";
 import styles from "./bookNavigation.module.css";
 
 function BookNavLink({
   id,
-  image,
-  title,
+  frontmatter: { image, title },
   right = false,
-}: BookSummaryType & {
+}: MarkdownResult<BookType> & {
   right?: boolean;
 }) {
   return (
@@ -46,8 +45,8 @@ export default function BookNavigation({
   next,
   previous,
 }: {
-  next: BookSummaryType;
-  previous?: BookSummaryType;
+  next: MarkdownResult<BookType>;
+  previous?: MarkdownResult<BookType>;
 }) {
   return (
     <section className="mw6 mb5 ph3 center">

@@ -1,20 +1,16 @@
-import Markdown from "../../../components/markdown";
-import {
-  ContentData,
-  getAllContentIds,
-  getContentData,
-} from "../../../lib/content";
+import { getAllContentIds, getContentData } from "../../../lib/content";
 
-export type PageType = ContentData & {
+export type PageType = {
   description: string;
+  date: number;
   title: string;
 };
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { description, title, source } = await getContentData<PageType>(
-    "pages",
-    params.slug
-  );
+  const {
+    frontmatter: { description, title },
+    content,
+  } = await getContentData<PageType>("pages", params.slug);
 
   return (
     <div className="ph4">
@@ -25,11 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <p className="mid-gray lh-title mb2">{description}</p>
           )}
         </header>
-        {source && (
-          <div className="cms">
-            <Markdown source={source} />
-          </div>
-        )}
+        {content && <div className="cms">{content}</div>}
       </article>
     </div>
   );

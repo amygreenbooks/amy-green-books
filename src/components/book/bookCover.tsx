@@ -5,7 +5,6 @@ import imgSrcSet from "../util/imgSrcSet";
 import styles from "./bookCover.module.css";
 
 const BookCover = ({
-  Component = "figure",
   title,
   image,
   spineImage,
@@ -13,7 +12,6 @@ const BookCover = ({
   animateIn = false,
   ...props
 }: {
-  Component?: React.ElementType;
   title: string;
   image: string;
   spineImage?: string;
@@ -21,35 +19,33 @@ const BookCover = ({
   animateIn?: boolean;
 }) => {
   const book = (
-    <>
-      <Component
-        className={cn(className, styles.book, {
-          [styles.animatedBook]: !!spineImage,
-        })}
-        {...props}
-      >
-        {spineImage && (
-          <img
-            {...imgSrcSet({
-              src: spineImage,
-              resize: "fit",
-              h: 500,
-            })}
-            className={styles.spine}
-            alt=""
-          />
-        )}
+    <figure
+      className={cn(className, styles.book, {
+        [styles.animatedBook]: !!spineImage,
+      })}
+      {...props}
+    >
+      {spineImage && (
         <img
           {...imgSrcSet({
-            src: image,
+            src: spineImage,
             resize: "fit",
             h: 500,
           })}
-          alt={title}
-          className={styles.cover}
+          className={styles.spine}
+          alt=""
         />
-      </Component>
-    </>
+      )}
+      <img
+        {...imgSrcSet({
+          src: image,
+          resize: "fit",
+          h: 500,
+        })}
+        alt={title}
+        className={styles.cover}
+      />
+    </figure>
   );
 
   if (animateIn) {

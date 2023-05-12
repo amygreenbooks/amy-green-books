@@ -6,8 +6,9 @@ import { getContentData } from "../../../../lib/content";
 import { ContactType } from "../page";
 
 export default async function ContactSuccessPage() {
-  const { title, bannerImage, successMessage } =
-    await getContentData<ContactType>(null, "contact");
+  const {
+    frontmatter: { title, bannerImage, successMessage },
+  } = await getContentData<ContactType>(null, "contact");
   return (
     <>
       <Jumbotron title={title} image={bannerImage} />

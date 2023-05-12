@@ -1,15 +1,13 @@
-import { parseISO } from "date-fns";
-
 import BookSummary from "../components/book/bookSummary";
 import Markdown from "../components/markdown";
 import imgSrcSet from "../components/util/imgSrcSet";
-import { BookSummaryType } from "../lib/content";
+import { BookType, MarkdownResult } from "../lib/content";
 
 export default function HomePage({
   books,
   welcome,
 }: {
-  books: Array<BookSummaryType>;
+  books: Array<MarkdownResult<BookType>>;
   welcome: {
     heading: string;
     text: string;
@@ -18,8 +16,8 @@ export default function HomePage({
 }) {
   const hasFeaturedBook =
     books.length > 0 &&
-    books[0].releaseDate &&
-    parseISO(books[0].releaseDate) >= new Date(Date.now());
+    books[0].frontmatter.releaseDate &&
+    books[0].frontmatter.releaseDate >= new Date(Date.now());
 
   return (
     <>

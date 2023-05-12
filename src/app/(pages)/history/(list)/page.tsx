@@ -7,7 +7,13 @@ export default async function HistoryPage() {
   return (
     <>
       {posts.map((post, i) => (
-        <HistorySummary key={post.id} {...post} flip={i % 2 == 1} />
+        <HistorySummary
+          key={post.id}
+          id={post.id}
+          image={post.frontmatter.image}
+          title={post.frontmatter.title}
+          flip={i % 2 == 1}
+        />
       ))}
     </>
   );

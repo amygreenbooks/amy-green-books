@@ -1,4 +1,4 @@
-import { BookSummaryType } from "./lib/content";
+import { BookType, MarkdownResult } from "./lib/content";
 
 export type MenuItem = {
   title: string;
@@ -13,13 +13,15 @@ function menuItem(title: string, url: string): MenuItem {
   };
 }
 
-function booksMenu(books: Array<BookSummaryType>): Array<MenuItem> {
+function booksMenu(books: Array<MarkdownResult<BookType>>): Array<MenuItem> {
   if (books.length > 1) {
     return [
       {
         title: "Books",
         url: `/books/${books[0].id}`,
-        subMenus: books.map((b) => menuItem(b.title, `/books/${b.id}`)),
+        subMenus: books.map((b) =>
+          menuItem(b.frontmatter.title, `/books/${b.id}`)
+        ),
       },
     ];
   } else if (books.length === 1) {
@@ -29,7 +31,9 @@ function booksMenu(books: Array<BookSummaryType>): Array<MenuItem> {
   }
 }
 
-export const mainMenu = (books: Array<BookSummaryType>): Array<MenuItem> => [
+export const mainMenu = (
+  books: Array<MarkdownResult<BookType>>
+): Array<MenuItem> => [
   ...booksMenu(books),
   menuItem("Meet Amy", "/about"),
   menuItem("Contact", "/contact"),

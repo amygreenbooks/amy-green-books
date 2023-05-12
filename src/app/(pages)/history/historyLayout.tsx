@@ -1,15 +1,16 @@
 import HistoryLink from "../../../components/book/historyLink";
-import Markdown from "../../../components/markdown";
 
 export default function HistoryLayout({
   children,
-  source,
-  title,
+  content,
+  frontmatter: { title },
   showMoreLink = false,
 }: {
   children: React.ReactNode;
-  source?: string;
-  title: string;
+  frontmatter: {
+    title: string;
+  };
+  content?: React.ReactElement;
   showMoreLink?: boolean;
 }) {
   return (
@@ -18,11 +19,7 @@ export default function HistoryLayout({
         <div className="measure-wide center mt4 mb5">
           <header className="mb4">
             <h1 className="db primary f2 b lh-title mb1 mt6">{title}</h1>
-            {source && (
-              <p className="mid-gray lh-title mb2">
-                <Markdown source={source} noParagraph />
-              </p>
-            )}
+            {content && <p className="mid-gray lh-title mb2">{content}</p>}
           </header>
 
           {children}

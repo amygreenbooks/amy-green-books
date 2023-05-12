@@ -1,17 +1,17 @@
-import Markdown from "../../../components/markdown";
 import imgSrcSet from "../../../components/util/imgSrcSet";
-import { ContentData, getContentData } from "../../../lib/content";
+import { getContentData } from "../../../lib/content";
 
-export type AboutContent = ContentData & {
+export type AboutContent = {
   aboutImage: string;
+  date: number;
   title: string;
 };
 
 export default async function AboutPage() {
-  const { aboutImage, title, source } = await getContentData<AboutContent>(
-    null,
-    "about"
-  );
+  const {
+    frontmatter: { aboutImage, title },
+    content,
+  } = await getContentData<AboutContent>(null, "about");
 
   return (
     <article className="mw5 center ph3 mt4 mb5 cms">
@@ -26,7 +26,7 @@ export default async function AboutPage() {
           alt={title}
         />
       )}
-      {source && <Markdown source={source} />}
+      {content}
     </article>
   );
 }

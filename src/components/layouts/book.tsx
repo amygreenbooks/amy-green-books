@@ -1,24 +1,25 @@
-import { parseISO } from "date-fns";
-
 import { BookType } from "../../lib/content";
 import BookCover from "../book/bookCover";
 import EndorsementComp from "../book/endorsement";
 import RetailerComp from "../book/retailer";
 import DateComponent from "../date";
-import Markdown from "../markdown";
 import styles from "./book.module.css";
 
 export default function Book({
-  title,
-  releaseDate,
-  image,
-  spineImage,
-  source,
-  retailers,
-  endorsements,
-}: BookType) {
-  const isReleased =
-    releaseDate && parseISO(releaseDate) < new Date(Date.now());
+  frontmatter: {
+    title,
+    releaseDate,
+    image,
+    spineImage,
+    retailers,
+    endorsements,
+  },
+  content,
+}: {
+  frontmatter: BookType;
+  content: React.ReactElement;
+}) {
+  const isReleased = releaseDate && releaseDate < new Date(Date.now());
 
   return (
     <article
@@ -33,7 +34,7 @@ export default function Book({
         {!isReleased && releaseDate && (
           <p className="grey-3 b lh-title mb2">
             Releases:{" "}
-            <DateComponent dateString={releaseDate} itemProp="datePublished" />
+            <DateComponent date={releaseDate} itemProp="datePublished" />
           </p>
         )}
       </header>
@@ -46,9 +47,9 @@ export default function Book({
         />
       </div>
 
-      {source && (
+      {content && (
         <div className={`cms ${styles.body}`} itemProp="abstract">
-          <Markdown source={source} />
+          {content}
         </div>
       )}
 

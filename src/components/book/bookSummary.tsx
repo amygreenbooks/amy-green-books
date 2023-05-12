@@ -1,21 +1,29 @@
 import cn from "classnames";
-import { parseISO } from "date-fns";
 import Link from "next/link";
 
-import { BookSummaryType } from "../../lib/content";
+import { BookType, MarkdownResult } from "../../lib/content";
 import DateCmp from "../date";
 import BookCover from "./bookCover";
 import styles from "./bookSummary.module.css";
 
 export default function BookSummary({
-  book: { id, releaseDate, retailers, title, image, spineImage, description },
+  book: {
+    id,
+    frontmatter: {
+      releaseDate,
+      retailers,
+      title,
+      image,
+      spineImage,
+      description,
+    },
+  },
   featured = false,
 }: {
-  book: BookSummaryType;
+  book: MarkdownResult<BookType>;
   featured?: boolean;
 }) {
-  const isReleased =
-    !releaseDate || parseISO(releaseDate) < new Date(Date.now());
+  const isReleased = !releaseDate || releaseDate < new Date(Date.now());
   const retailer = (retailers || []).reduce((acc, n) =>
     n.name === "Baker Book House" ? n : acc
   );
@@ -49,7 +57,7 @@ export default function BookSummary({
           </h3>
           {!isReleased && (
             <p className="mid-gray lh-title mb2">
-              Releases: <DateCmp dateString={releaseDate} />
+              Releases: <DateCmp date={releaseDate} />
             </p>
           )}
         </header>

@@ -1,6 +1,6 @@
 import Footer from "../components/footer/footer";
 import Masthead from "../components/header/masthead";
-import { getContentData, getBookSummaries, ContentData } from "../lib/content";
+import { getContentData, getBookSummaries } from "../lib/content";
 import { mainMenu } from "../siteConfig";
 import HomePage from "./home-page";
 
@@ -8,8 +8,9 @@ export const metadata = {
   title: "Amy Green Books",
 };
 
-interface HomeContent extends ContentData {
+type HomeContent = {
   title: string;
+  date: number;
   subtitle: string;
   bannerImage: string;
   welcome: {
@@ -17,11 +18,12 @@ interface HomeContent extends ContentData {
     heading: string;
     image: string;
   };
-}
+};
 
 export default async function Page() {
-  const { title, subtitle, bannerImage, welcome } =
-    await getContentData<HomeContent>(null, "index");
+  const {
+    frontmatter: { title, subtitle, bannerImage, welcome },
+  } = await getContentData<HomeContent>(null, "index");
   const books = await getBookSummaries();
   const menu = mainMenu(books);
   return (
