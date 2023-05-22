@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 import imgSrcSet from "@/components/util/imgSrcSet";
-
 import { getContentData } from "@/lib/content";
 
 export type AboutContent = {

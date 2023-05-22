@@ -1,5 +1,4 @@
 import Jumbotron from "@/components/header/jumbotron";
-
 import { getContentData } from "@/lib/content";
 
 export type ContactType = {

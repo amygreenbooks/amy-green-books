@@ -1,5 +1,6 @@
-import HistorySummary from "../historySummary";
 import { getHistoryPages } from "@/lib/content";
+
+import HistorySummary from "../historySummary";
 
 export default async function HistoryPage() {
   const posts = await getHistoryPages();

@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import Book from "@/components/book/book";
 import BookNavigation from "@/components/book/bookNavigation";
 import HistoryLink from "@/components/book/historyLink";
-
 import {
   BookType,
   getAllContentIds,
