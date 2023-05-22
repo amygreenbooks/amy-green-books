@@ -1,9 +1,10 @@
 import Link from "next/link";
 
-import Jumbotron from "../../../../components/header/jumbotron";
-import Markdown from "../../../../components/markdown";
-import { getContentData } from "../../../../lib/content";
+import Jumbotron from "@/components/header/jumbotron";
+import Markdown from "@/components/markdown";
+
 import { ContactType } from "../page";
+import { getContentData } from "@/lib/content";
 
 export default async function ContactSuccessPage() {
   const {

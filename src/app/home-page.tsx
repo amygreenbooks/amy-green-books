@@ -1,7 +1,8 @@
-import BookSummary from "../components/book/bookSummary";
-import Markdown from "../components/markdown";
-import imgSrcSet from "../components/util/imgSrcSet";
-import { BookType, MarkdownResult } from "../lib/content";
+import BookSummary from "@/components/book/bookSummary";
+import Markdown from "@/components/markdown";
+import imgSrcSet from "@/components/util/imgSrcSet";
+
+import { BookType, MarkdownResult } from "@/lib/content";
 
 export default function HomePage({
   books,

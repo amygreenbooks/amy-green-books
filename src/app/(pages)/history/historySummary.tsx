@@ -1,7 +1,8 @@
 import cn from "classnames";
 import Link from "next/link";
 
-import imgSrcSet from "../../../components/util/imgSrcSet";
+import imgSrcSet from "@/components/util/imgSrcSet";
+
 import styles from "./historySummary.module.css";
 
 export default function HistorySummary({

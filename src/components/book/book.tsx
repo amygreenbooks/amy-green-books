@@ -1,9 +1,9 @@
-import { BookType } from "../../lib/content";
-import BookCover from "../book/bookCover";
-import EndorsementComp from "../book/endorsement";
-import RetailerComp from "../book/retailer";
 import DateComponent from "../date";
 import styles from "./book.module.css";
+import BookCover from "./bookCover";
+import EndorsementComp from "./endorsement";
+import RetailerComp from "./retailer";
+import { BookType } from "@/lib/content";
 
 export default function Book({
   frontmatter: {

@@ -1,10 +1,6 @@
 import { Metadata } from "next";
 
-import {
-  PageType,
-  getAllContentIds,
-  getContentData,
-} from "../../../lib/content";
+import { PageType, getAllContentIds, getContentData } from "@/lib/content";
 
 type PageParams = { slug: string };
 

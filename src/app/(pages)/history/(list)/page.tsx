@@ -1,8 +1,8 @@
-import { HistoryType, getSortedContentData } from "../../../../lib/content";
 import HistorySummary from "../historySummary";
+import { getHistoryPages } from "@/lib/content";
 
 export default async function HistoryPage() {
-  const posts = await getSortedContentData<HistoryType>("history");
+  const posts = await getHistoryPages();
 
   return (
     <>

@@ -1,6 +1,6 @@
 import Footer from "../components/footer/footer";
 import Masthead from "../components/header/masthead";
-import { getContentData, getBookSummaries } from "../lib/content";
+import { getContentData, getBooks } from "../lib/content";
 import { mainMenu } from "../siteConfig";
 import HomePage from "./home-page";
 
@@ -20,7 +20,7 @@ export default async function Page() {
   const {
     frontmatter: { title, subtitle, bannerImage, welcome },
   } = await getContentData<HomeContent>(null, "index");
-  const books = await getBookSummaries();
+  const books = await getBooks();
   const menu = mainMenu(books);
   return (
     <>

@@ -1,10 +1,6 @@
 import { Metadata } from "next";
 
-import {
-  HistoryType,
-  getAllContentIds,
-  getContentData,
-} from "../../../../lib/content";
+import { HistoryType, getAllContentIds, getContentData } from "@/lib/content";
 
 const contentType = "history";
 

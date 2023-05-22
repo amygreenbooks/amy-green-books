@@ -1,6 +1,6 @@
 import Footer from "../../components/footer/footer";
 import Nav from "../../components/header/nav";
-import { getBookSummaries } from "../../lib/content";
+import { getBooks } from "../../lib/content";
 import { mainMenu } from "../../siteConfig";
 import styles from "./layout.module.css";
 
@@ -13,7 +13,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const books = await getBookSummaries();
+  const books = await getBooks();
 
   return (
     <>

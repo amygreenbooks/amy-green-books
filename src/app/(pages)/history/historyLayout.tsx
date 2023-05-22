@@ -1,4 +1,4 @@
-import HistoryLink from "../../../components/book/historyLink";
+import HistoryLink from "@/components/book/historyLink";
 
 export default function HistoryLayout({
   children,

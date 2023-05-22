@@ -1,5 +1,5 @@
-import { HistoryType, getContentData } from "../../../../lib/content";
 import HistoryLayout from "../historyLayout";
+import { HistoryType, getContentData } from "@/lib/content";
 
 export default async function Layout({
   children,

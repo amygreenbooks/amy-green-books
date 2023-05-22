@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import "../styles/main.css";
-import { siteTitle, description } from "../siteConfig";
+import { siteTitle, description } from "@/siteConfig";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://amygreenbooks.com"),

@@ -11,8 +11,14 @@ export type MarkdownResult<TFrontmatter = Record<string, unknown>> = {
   frontmatter: TFrontmatter;
 };
 
-export const getBookSummaries = async () =>
+export const getBooks = async () =>
   await getSortedContentData<BookType>("books");
+
+export const getPages = async () =>
+  await getSortedContentData<PageType>("pages");
+
+export const getHistoryPages = async () =>
+  await getSortedContentData<HistoryType>("history");
 
 export async function getSortedContentData<
   TData extends Record<string, unknown> & { date: Date }

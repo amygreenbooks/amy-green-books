@@ -1,29 +1,28 @@
 import { Metadata } from "next";
 
-import BookNavigation from "../../../../components/book/bookNavigation";
-import HistoryLink from "../../../../components/book/historyLink";
-import Book from "../../../../components/layouts/book";
+import Book from "@/components/book/book";
+import BookNavigation from "@/components/book/bookNavigation";
+import HistoryLink from "@/components/book/historyLink";
+
 import {
   BookType,
-  HistoryType,
   getAllContentIds,
+  getBooks,
   getContentData,
-  getSortedContentData,
-} from "../../../../lib/content";
-import { author, domain } from "../../../../siteConfig";
+  getHistoryPages,
+} from "@/lib/content";
+import { author, domain } from "@/siteConfig";
 
 type BookPageParams = { slug: string };
 
 export default async function BookPage({ params }: { params: BookPageParams }) {
   const bookData = await getContentData<BookType>("books", params.slug);
-  const allBooks = await getSortedContentData<BookType>("books");
+  const allBooks = await getBooks();
   const bookIndex = allBooks.findIndex((n) => n.id === params.slug);
   const previous = allBooks[(bookIndex + 1) % allBooks.length];
   const next = allBooks[(bookIndex + allBooks.length - 1) % allBooks.length];
   const history =
-    (await getSortedContentData<HistoryType>("history")).find(
-      (n) => n.id === params.slug
-    ) || null;
+    (await getHistoryPages()).find((n) => n.id === params.slug) || null;
 
   return (
     <>
