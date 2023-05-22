@@ -4,10 +4,6 @@ import { getContentData, getBookSummaries } from "../lib/content";
 import { mainMenu } from "../siteConfig";
 import HomePage from "./home-page";
 
-export const metadata = {
-  title: "Amy Green Books",
-};
-
 type HomeContent = {
   title: string;
   date: number;

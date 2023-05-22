@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import BookNavigation from "../../../../components/book/bookNavigation";
 import HistoryLink from "../../../../components/book/historyLink";
 import Book from "../../../../components/layouts/book";
@@ -8,7 +10,7 @@ import {
   getContentData,
   getSortedContentData,
 } from "../../../../lib/content";
-import { author, domain, siteTitle } from "../../../../siteConfig";
+import { author, domain } from "../../../../siteConfig";
 
 type BookPageParams = { slug: string };
 
@@ -53,13 +55,18 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: BookPageParams }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: BookPageParams;
+}): Promise<Metadata> {
   const { frontmatter: bookData } = await getContentData<BookType>(
     "books",
     params.slug
   );
   return {
-    title: `${bookData.title} | ${siteTitle}`,
+    title: bookData.title,
+    description: bookData.description,
     openGraph: {
       title: bookData.title,
       description: bookData.description,

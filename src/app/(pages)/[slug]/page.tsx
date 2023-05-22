@@ -1,12 +1,14 @@
-import { getAllContentIds, getContentData } from "../../../lib/content";
+import { Metadata } from "next";
 
-export type PageType = {
-  description: string;
-  date: number;
-  title: string;
-};
+import {
+  PageType,
+  getAllContentIds,
+  getContentData,
+} from "../../../lib/content";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+type PageParams = { slug: string };
+
+export default async function Page({ params }: { params: PageParams }) {
   const {
     frontmatter: { description, title },
     content,
@@ -31,4 +33,19 @@ export async function generateStaticParams() {
   return getAllContentIds("pages").map((id) => ({
     slug: id,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: PageParams;
+}): Promise<Metadata> {
+  const {
+    frontmatter: { description, title },
+  } = await getContentData<PageType>("pages", params.slug);
+
+  return {
+    title,
+    description,
+  };
 }

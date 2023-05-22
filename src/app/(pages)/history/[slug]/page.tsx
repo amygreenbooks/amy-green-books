@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import {
   HistoryType,
   getAllContentIds,
@@ -6,10 +8,14 @@ import {
 
 const contentType = "history";
 
+type HistoryPageParams = {
+  slug: string;
+};
+
 export default async function HistoryPage({
   params,
 }: {
-  params: { slug: string };
+  params: HistoryPageParams;
 }) {
   const {
     id,
@@ -33,4 +39,17 @@ export async function generateStaticParams() {
   return getAllContentIds(contentType).map((id) => ({
     slug: id,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: HistoryPageParams;
+}): Promise<Metadata> {
+  const {
+    frontmatter: { title },
+  } = await getContentData<HistoryType>(contentType, params.slug);
+  return {
+    title: `The History Behind ${title}`,
+  };
 }

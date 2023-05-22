@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import imgSrcSet from "../../../components/util/imgSrcSet";
 import { getContentData } from "../../../lib/content";
 
@@ -30,3 +32,7 @@ export default async function AboutPage() {
     </article>
   );
 }
+
+export const metadata: Metadata = {
+  title: "About Amy Lynn Green",
+};

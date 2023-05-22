@@ -121,3 +121,9 @@ export type HistoryType = {
   title: string;
   image: string;
 };
+
+export type PageType = {
+  description: string;
+  date: Date;
+  title: string;
+};
