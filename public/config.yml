@@ -5,6 +5,7 @@ backend:
 media_folder: "public/media" # Folder where user uploaded files should go
 public_folder: "/media"
 publish_mode: editorial_workflow
+site_url: https://amygreenbooks.com
 
 collections: # A list of collections the CMS should be able to edit
   - name: "books"
