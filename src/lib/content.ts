@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 
+import { notFound } from "next/navigation";
+
 import { compile } from "./markdownProcessor";
 
 const postsDirectory = path.join(process.cwd(), "content");
@@ -91,6 +93,11 @@ export async function getContentData<
   const fullPath = contentType
     ? path.join(postsDirectory, contentType, `${id}.md`)
     : path.join(postsDirectory, `${id}.md`);
+
+  if (!fs.existsSync(fullPath)) {
+    notFound();
+  }
+
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   return {
