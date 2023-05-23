@@ -17,7 +17,7 @@ export default function Footer({ mainMenu }: FooterProps) {
       <footer className="bg-black ph3 pv4 white">
         <div className="mw7 center pt3">
           <div className="measure center mb4">
-            <h1 className="db center mb4 primary f2 b i tc serif">
+            <h1 className="db center mb4 primary f2 b tc serif">
               Amy Lynn Green
             </h1>
 
