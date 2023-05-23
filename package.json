@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.0.0",
+    "@netlify/plugin-nextjs": "^4.40.1",
     "@types/lodash.throttle": "^4.1.7",
     "@types/node": "20.8.9",
     "@types/react": "^18.2.31",
