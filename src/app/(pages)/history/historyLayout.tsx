@@ -17,7 +17,7 @@ export default function HistoryLayout({
     <>
       <div className="ph4">
         <div className="measure-wide center mt4 mb5">
-          <header className="mb4">
+          <header className="mb4 serif">
             <h1 className="db primary f2 b lh-title mb1 mt6">{title}</h1>
             {content && <p className="mid-gray lh-title mb2">{content}</p>}
           </header>

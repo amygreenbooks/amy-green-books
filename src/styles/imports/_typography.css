@@ -48,6 +48,10 @@ sup {
   vertical-align: super;
 }
 
+.serif {
+  font-family: var(--serif-font-family);
+}
+
 /* Measure is limited to ~66 characters */
 .measure {
   max-width: 30em;

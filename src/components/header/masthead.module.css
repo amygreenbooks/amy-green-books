@@ -1,17 +1,24 @@
 .banner {
-  background-image: url("/media/typewriter-banner.jpg?nf_resize=fit&h=350");
+  /* background-image: url("/media/typewriter-banner.jpg?nf_resize=fit&h=350");
   background-image: image-set(
     url("/media/typewriter-banner.jpg?nf_resize=fit&h=350") 1x,
     url("/media/typewriter-banner.jpg?nf_resize=fit&h=700") 2x
   );
-  background-position: 10% 70%;
+  background-position: 10% 70%; */
+
+  background: linear-gradient(
+    145deg,
+    hsl(146 100% 17% / 1),
+    hsl(146 100% 9% / 1)
+  );
+  min-height: 95vh;
 }
 
 .dim {
-  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(0, 0, 0, 0.1); */
 }
 
-@media screen and (min-width: 60em) {
+/* @media screen and (min-width: 60em) {
   .banner {
     background-image: url("/media/typewriter-banner.jpg?nf_resize=fit&h=600");
     background-image: image-set(
@@ -19,4 +26,4 @@
       url("/media/typewriter-banner.jpg?nf_resize=fit&h=1200") 2x
     );
   }
-}
+} */

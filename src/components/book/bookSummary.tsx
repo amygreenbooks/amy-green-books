@@ -52,9 +52,7 @@ export default function BookSummary({
 
       <div className={`${styles.side} ${styles["text-side"]}`}>
         <header>
-          <h3 className="f3 b lh-title mb1">
-            <em>{title}</em>
-          </h3>
+          <h3 className="f3 b i lh-title mb1 serif">{title}</h3>
           {!isReleased && (
             <p className="mid-gray lh-title mb2">
               Releases: <DateCmp date={releaseDate} />

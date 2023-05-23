@@ -34,9 +34,7 @@ export default function HistorySummary({
 
         <div className={cn("ph3 flex-auto", { "tr-ns": flip })}>
           <p className="mb0 grey-3 f6">Explore the history behind</p>
-          <h2 className="f3 b lh-title mb1">
-            <em>{title}</em>
-          </h2>
+          <h2 className="f3 b i lh-title mb1 serif">{title}</h2>
           <p className="mb0">Read Post →</p>
         </div>
       </article>

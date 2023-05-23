@@ -19,7 +19,7 @@ export default function HistoryLink({
         href={href}
         className={`db mw6 pa3 center br1 border-box ${styles.link}`}
       >
-        <h2 className="lh-title primary f3 b mb1">{title}</h2>
+        <h2 className="lh-title primary f3 b mb1 serif">{title}</h2>
         <p className="mb0">{description} →</p>
       </Link>
     </section>

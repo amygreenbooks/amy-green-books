@@ -19,7 +19,7 @@ export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
         <div className="db mb3">
           <div className="mw7 relative mb2">
             <h1
-              className={cn("f2 f1-l b di lh-title", {
+              className={cn("f2 f1-l b di lh-title serif", {
                 "ph2 bg-black white": image,
                 primary: !image,
               })}
@@ -30,7 +30,7 @@ export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
           <div className="mw7 relative">
             {subtitle && (
               <p
-                className={cn("f4 fw5 di lh-title", {
+                className={cn("f4 fw5 di lh-title serif", {
                   "ph2 bg-primary white": image,
                   "grey-3": !image,
                 })}

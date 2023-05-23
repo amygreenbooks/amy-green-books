@@ -70,7 +70,7 @@ export default function NewsletterForm() {
         style={{ display: "none" }}
       >
         <div className="ml-form-successContent tc">
-          <h4 className="f3 primary b">Thank You!</h4>
+          <h4 className="f3 primary b serif">Thank You!</h4>
           <p>You are now signed up for my newsletters.</p>
         </div>
       </div>

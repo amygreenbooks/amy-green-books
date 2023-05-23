@@ -29,7 +29,7 @@ export default function Book({
       itemType="https://schema.org/Book"
     >
       <header className={styles.header}>
-        <h1 className="f2 lh-title b i mb3" itemProp="name">
+        <h1 className="f2 lh-title b i mb3 serif" itemProp="name">
           {title}
         </h1>
         {!isReleased && releaseDate && (
@@ -56,7 +56,7 @@ export default function Book({
 
       <section className={`mt4 mb5 bg-grey-1 pv4 ${styles.purchase}`}>
         <div className="mw6 ph3 center">
-          <h2 className="f3 b lh-title primary">
+          <h2 className="f3 b lh-title primary serif">
             {isReleased ? "Purchase today at:" : "Pre-order now at:"}
           </h2>
 

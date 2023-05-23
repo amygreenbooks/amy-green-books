@@ -22,7 +22,7 @@ export default async function HistoryPage({
   return (
     <article id={id}>
       <header className="mt6 mb2">
-        <h2 className="f3 b">
+        <h2 className="f3 b serif">
           The History Behind <em>{title}</em>
         </h2>
       </header>

@@ -52,7 +52,7 @@ export default function HomePage({
             </div>
 
             <div className="ph3">
-              <h3 className="f3 b lh-title mb1">{welcome.heading}</h3>
+              <h3 className="f3 b lh-title mb1 serif">{welcome.heading}</h3>
               <div className="cms">
                 <Markdown source={welcome.text} />
               </div>
