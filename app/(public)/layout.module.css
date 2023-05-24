@@ -1,6 +1,5 @@
 .body {
-  background-color: #f0f2ee;
-  background: url("/media/gray-clean-paperboard.jpg");
+  background: url("/media/gray-clean-paperboard.jpg") #f0f2ee;
   background-size: 600px;
 }
 
