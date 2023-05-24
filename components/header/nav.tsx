@@ -50,14 +50,16 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
     if (animationsEnabled) {
       const timeout = window.setTimeout(() => {
         setAnimationsEnabled(false);
-      }, 500);
+      }, 200);
       return () => window.clearTimeout(timeout);
     }
   }, [animationsEnabled]);
 
   function toggleNav() {
     setAnimationsEnabled(true);
-    setOpenDrawer((s) => !s);
+    window.requestAnimationFrame(() => {
+      setOpenDrawer((s) => !s);
+    });
   }
 
   const isHome = pathname === "/";
@@ -101,7 +103,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
           </div>
           <ul
             className={cn(
-              "flex flex-wrap bg-black justify-between flex-column flex-row-ns db-ns",
+              "flex-ns flex-wrap bg-black justify-between flex-column flex-row-ns db-ns",
               "fixed top-3 left-0 z-3 w-100 static-ns",
               styles.navList,
               {

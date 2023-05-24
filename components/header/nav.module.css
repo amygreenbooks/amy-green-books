@@ -15,7 +15,7 @@
   padding: 0;
   flex-shrink: 0;
 
-  transition: color 0.2s ease-out;
+  /* transition: color 0.2s ease-out; */
 }
 
 .menuLines {
@@ -52,6 +52,7 @@
 
 .home .title {
   transform: translateY(-100%);
+  display: none;
 }
 
 .home .title.in {
@@ -62,7 +63,13 @@
   transition: transform 0.2s ease-out;
 }
 
+.home .title.animate,
+.home .title.in {
+  display: block;
+}
+
 .navList {
+  display: none;
   transform: translateY(calc(-100% - var(--spacing-extra-large)));
 }
 
@@ -72,6 +79,11 @@
 
 .navList.animate {
   transition: transform 0.2s ease-out;
+}
+
+.navList.animate,
+.navList.in {
+  display: flex;
 }
 
 @media screen and (min-width: 40em) {
