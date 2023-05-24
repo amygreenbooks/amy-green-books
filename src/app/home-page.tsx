@@ -53,11 +53,9 @@ export default function HomePage({
             </div>
           </div>
         )}
-        <div className="pt5">
-          {books.slice(hasFeaturedBook ? 1 : 0).map((book, i) => (
-            <BookSummary key={book.id} book={book} flipped={i % 2 === 1} />
-          ))}
-        </div>
+        {books.slice(hasFeaturedBook ? 1 : 0).map((book, i) => (
+          <BookSummary key={book.id} book={book} flipped={i % 2 === 1} />
+        ))}
       </section>
 
       <section className="pb4 pt5 mw7 center flex-m mb4">

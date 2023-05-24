@@ -17,7 +17,7 @@ export default async function RootLayout({
   return (
     <>
       <Nav mainMenu={mainMenu(books)} />
-      <main id="main-content" className="pt5">
+      <main id="main-content" className="pt5-ns">
         {children}
       </main>
       <Footer mainMenu={mainMenu(books)} />
