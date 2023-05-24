@@ -80,6 +80,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
               className={cn("dn-ns z-5", styles.menu, {
                 white: !isHome || openDrawer,
                 black: isHome && !openDrawer,
+                [styles.in]: openDrawer,
               })}
               onClick={toggleNav}
               ref={buttonRef}
@@ -103,7 +104,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
           </div>
           <ul
             className={cn(
-              "flex-ns flex-wrap bg-black justify-between flex-column flex-row-ns db-ns",
+              "flex-ns flex-wrap-ns bg-black justify-between flex-column flex-row-ns db-ns",
               "fixed top-3 left-0 z-3 w-100 static-ns",
               styles.navList,
               {

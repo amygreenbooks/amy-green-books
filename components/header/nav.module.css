@@ -34,6 +34,8 @@
   width: 40%;
   background-color: currentcolor;
   position: absolute;
+
+  transition: 0.2s ease-out;
 }
 
 .menuLines:after {
@@ -48,6 +50,18 @@
   top: 0.4rem;
   width: 100%;
   left: 0;
+}
+
+.menu.in .menuLines {
+  background-color: transparent;
+}
+
+.menu.in .menuLines:after {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+
+.menu.in .menuLines:before {
+  transform: translateY(-0.4rem) rotate(-45deg);
 }
 
 .home .title {
@@ -71,6 +85,8 @@
 .navList {
   display: none;
   transform: translateY(calc(-100% - var(--spacing-extra-large)));
+  max-height: calc(100% - var(--spacing-extra-large));
+  overflow-y: scroll;
 }
 
 .navList.in {
