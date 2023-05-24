@@ -75,7 +75,7 @@ export default function Book({
       </section>
 
       {endorsements && endorsements.length > 0 && (
-        <section className={`mb5 ${styles.endorsements}`}>
+        <section className={`mb5 flex flex-wrap ${styles.endorsements}`}>
           {endorsements.map((endorsement, i) => (
             <EndorsementComp key={`endorsement-${i}`} {...endorsement} />
           ))}

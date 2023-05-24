@@ -19,12 +19,16 @@
 }
 
 .header,
-.body,
-.endorsements {
+.body {
   padding-left: var(--spacing-medium);
   padding-right: var(--spacing-medium);
-  width: 100%;
   max-width: 32rem;
+}
+
+.header,
+.body,
+.endorsements {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,5 +52,5 @@
 }
 
 .endorsements {
-  grid-area: 4 / 3 / 5 / 5;
+  grid-area: 4 / 2 / 5 / 6;
 }

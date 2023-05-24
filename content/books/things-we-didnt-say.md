@@ -46,6 +46,11 @@ endorsements:
       With impeccable research, Amy Lynn Green casts a light on the POW camps in
       America during World War II and on the dangers of prejudice. Make space on
       your bookshelf, because this book is a keeper!
+  - author: Beverly Lewis
+    quote: |-
+      Amy Green’s debut novel kept me guessing to the very end—twist
+      upon twist upon twist. She is a master plotter, so read every single
+      word!
   - author: "Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*"
     quote: >-
       *Things We Didn’t Say* is a stand-out novel as brilliant and brave as its
@@ -65,11 +70,6 @@ endorsements:
       this winsome epistolary is underscored by a deep look at patriotism,
       prejudice, unwavering faith, duty, and love. . . .A dazzlingly smart and
       confident debut, *Things We Didn’t Say* is as moving as it is memorable.
-  - author: Beverly Lewis
-    quote: |-
-      Amy Green’s debut novel kept me guessing to the very end—twist
-      upon twist upon twist. She is a master plotter, so read every single
-      word!
   - author: "Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*"
     quote: >-
       *Things We Didn’t Say* is the best sort of book: where the characters feel

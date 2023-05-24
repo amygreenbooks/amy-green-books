@@ -3,9 +3,14 @@ import Markdown from "../markdown";
 
 export default function EndorsementComp({ quote, author }: Endorsement) {
   return (
-    <blockquote className="bg-off-white paper-2 pa3 mb4 br1 mw6 center">
+    <blockquote className="mb4 br1 mw6 center ph3 w-33-l w-50-m w-100 border-box">
+      <p
+        className="f1 primary serif lh-solid"
+        style={{ marginBottom: "-0.75rem" }}
+      >
+        &#8220;
+      </p>
       <p className="f5 mb1">
-        <span className="f1 primary serif lh-solid">&#8220;</span>
         <Markdown source={quote} noParagraph />
       </p>
       <cite className="tr db grey-3 serif fw5">
