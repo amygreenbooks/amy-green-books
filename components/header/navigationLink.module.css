@@ -38,11 +38,9 @@
 }
 
 .dropdown {
-  position: absolute;
-  background-color: var(--black);
   color: var(--white);
+  background-color: var(--grey-4);
   display: none;
-  z-index: 30000;
 }
 
 .dropdown.open {
@@ -57,4 +55,14 @@
   padding-left: var(--spacing-medium);
   padding-right: var(--spacing-medium);
   border-bottom-style: none;
+}
+
+@media screen and (min-width: 40em) {
+  .dropdown {
+    position: absolute;
+    background-color: var(--black);
+    color: var(--white);
+    display: none;
+    z-index: 30000;
+  }
 }
