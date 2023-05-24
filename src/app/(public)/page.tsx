@@ -1,25 +1,28 @@
 import BookSummary from "@/components/book/bookSummary";
 import Markdown from "@/components/markdown";
 import imgSrcSet from "@/components/util/imgSrcSet";
-import { BookType, MarkdownResult } from "@/lib/content";
+import { getContentData, getBooks } from "@/lib/content";
 
-import styles from "./home-page.module.css";
+import styles from "./page.module.css";
 
-export default function HomePage({
-  books,
-  welcome,
-  title,
-  subtitle,
-}: {
-  books: Array<MarkdownResult<BookType>>;
+type HomeContent = {
+  title: string;
+  date: number;
+  subtitle: string;
+  bannerImage: string;
   welcome: {
-    heading: string;
     text: string;
+    heading: string;
     image: string;
   };
-  title: string;
-  subtitle: string;
-}) {
+};
+
+export default async function Page() {
+  const {
+    frontmatter: { welcome, title, subtitle },
+  } = await getContentData<HomeContent>(null, "index");
+  const books = await getBooks();
+
   const hasFeaturedBook =
     books.length > 0 &&
     books[0].frontmatter.releaseDate &&
