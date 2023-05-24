@@ -4,7 +4,7 @@ import cn from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { MenuItem } from "../../siteConfig";
+import { MenuItem } from "../../lib/siteConfig";
 import styles from "./nav.module.css";
 import NavigationLink from "./navigationLink";
 

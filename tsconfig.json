@@ -21,9 +21,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/lib/*": ["src/lib/*"],
-      "@/siteConfig": ["src/siteConfig"]
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],

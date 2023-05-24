@@ -1,4 +1,4 @@
-import { BookType, MarkdownResult } from "./lib/content";
+import { BookType, MarkdownResult } from "./content";
 
 export type MenuItem = {
   title: string;

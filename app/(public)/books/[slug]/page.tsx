@@ -10,7 +10,7 @@ import {
   getContentData,
   getHistoryPages,
 } from "@/lib/content";
-import { author, domain } from "@/siteConfig";
+import { author, domain } from "@/lib/siteConfig";
 
 type BookPageParams = { slug: string };
 

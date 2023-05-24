@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
-import { getBooks, getHistoryPages, getPages } from "../lib/content";
-import { domain } from "../siteConfig";
+import { getBooks, getHistoryPages, getPages } from "@/lib/content";
+import { domain } from "@/lib/siteConfig";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const books = (await getBooks()).map((b) => ({

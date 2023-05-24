@@ -5,7 +5,8 @@ import cn from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { MenuItem } from "../../siteConfig";
+import { MenuItem } from "@/lib/siteConfig";
+
 import styles from "./navigationLink.module.css";
 
 export default function NavigationLink({

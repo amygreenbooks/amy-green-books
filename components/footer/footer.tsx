@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 
-import { MenuItem, socialLinks } from "../../siteConfig";
+import { MenuItem, socialLinks } from "@/lib/siteConfig";
+
 import NewsletterForm from "./newsletterForm";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
