@@ -44,8 +44,9 @@ export default async function Page() {
           <p className="f4 fw5 i lh-title mw-100 grey-4 o-60">{subtitle}</p>
         </div>
       </header>
+
       <section>
-        <BookSummary book={books[0]} featured />
+        <BookSummary book={books[0]} />
       </section>
 
       <NewsletterSection />
@@ -55,6 +56,7 @@ export default async function Page() {
           <BookSummary key={book.id} book={book} flipped={i % 2 === 0} />
         ))}
       </section>
+
       <section className="pb4 pt5 mw7 center flex-m mb4">
         <div className="ph3 order-last-m">
           <img
@@ -64,7 +66,7 @@ export default async function Page() {
               w: 350,
             })}
             alt="Amy Lynn Green"
-            className="db mb2 center mw4"
+            className="db mb2 center mw4-ns"
           />
         </div>
 

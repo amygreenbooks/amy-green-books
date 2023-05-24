@@ -15,7 +15,6 @@
 }
 .mw4 {
   max-width: 16rem;
-  max-width: calc(min(16rem, 100%));
 }
 .mw5 {
   max-width: 24rem;

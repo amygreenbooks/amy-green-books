@@ -19,11 +19,9 @@ export default function BookSummary({
       paperTint,
     },
   },
-  featured = false,
   flipped = false,
 }: {
   book: MarkdownResult<BookType>;
-  featured?: boolean;
   flipped?: boolean;
 }) {
   const isReleased = !releaseDate || releaseDate < new Date(Date.now());
@@ -72,21 +70,19 @@ export default function BookSummary({
             )}
           </header>
           <p>{description}</p>
-          <footer>
-            <Link href={`/books/${id}`} className="btn">
+          <footer className="flex">
+            <Link href={`/books/${id}`} className="btn raise">
               Learn more →
             </Link>
-            {featured && !isReleased && retailer && (
-              <div className="mt2">
-                <a
-                  href={retailer.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-primary white f6 btn raise"
-                >
-                  Pre-Order Now!
-                </a>
-              </div>
+            {!isReleased && retailer && (
+              <a
+                href={retailer.link}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary white f6 btn raise ml2"
+              >
+                Pre-Order Now!
+              </a>
             )}
           </footer>
         </div>
