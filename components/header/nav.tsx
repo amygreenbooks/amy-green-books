@@ -84,6 +84,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
               })}
               onClick={toggleNav}
               ref={buttonRef}
+              aria-label="Navigation Menu"
             >
               <div className={styles.menuLines} />
             </button>
