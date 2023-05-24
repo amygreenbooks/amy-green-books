@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { MenuItem, socialLinks } from "@/lib/siteConfig";
 
-import NewsletterForm from "./newsletterForm";
+import NewsletterForm from "../newsletter/newsletterForm";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
 
@@ -30,7 +30,7 @@ export default function Footer({ mainMenu }: FooterProps) {
               and&nbsp;bookish&nbsp;fun!
             </p>
 
-            <NewsletterForm />
+            <NewsletterForm id="2157310" />
           </div>
 
           <ul className="mb3 center flex-ns flex-wrap justify-between mw5 tc">

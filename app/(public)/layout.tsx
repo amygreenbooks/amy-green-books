@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Script from "next/script";
 
 import Footer from "@/components/footer/footer";
 import Nav from "@/components/header/nav";
@@ -49,6 +50,8 @@ export default async function RootLayout({
         <Nav mainMenu={menu} />
         <main id="main-content">{children}</main>
         <Footer mainMenu={menu} />
+
+        <Script src="https://static.mailerlite.com/js/w/webforms.min.js?vc25f966922c0a35ad9c2401af6506ef1"></Script>
       </body>
     </html>
   );

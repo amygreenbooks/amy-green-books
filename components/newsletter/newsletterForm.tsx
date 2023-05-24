@@ -1,17 +1,33 @@
-import Script from "next/script";
+"use client";
 
-export default function NewsletterForm() {
+import { useEffect, useState } from "react";
+
+export default function NewsletterForm({ id }: { id: string }) {
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    const win = window as unknown as Record<string, () => void>;
+    win[`ml_webform_success_${id}`] = function () {
+      setSuccess(true);
+    };
+
+    return () => {
+      delete win[`ml_webform_success_${id}`];
+    };
+  }, [id]);
+
   return (
     <div
-      id="mlb2-2157310"
-      className="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-2157310"
+      id={`mlb2-${id}`}
+      className={`ml-form-embedContainer ml-subscribe-form ml-subscribe-form-${id}`}
     >
       <form
-        className="ml-block-form flex-ns mb3"
+        className="ml-block-form flex-ns"
         action="https://app.mailerlite.com/webforms/submit/n6v2g4"
         data-code="n6v2g4"
         method="post"
         target="_blank"
+        style={{ display: success ? "none" : undefined }}
       >
         <div className="flex-auto mb2 mb0-ns mr2-ns relative">
           <input
@@ -43,7 +59,7 @@ export default function NewsletterForm() {
         </div>
 
         <button
-          className="btn mb3 w-100 w-auto-ns mb0-ns raise bg-primary primary white"
+          className="btn w-100 w-auto-ns mb0-ns raise bg-primary primary white"
           type="submit"
         >
           Subscribe
@@ -51,7 +67,7 @@ export default function NewsletterForm() {
         <button
           disabled
           type="button"
-          className="btn mb3 w-100 w-auto-ns mb0-ns bg-primary loading"
+          className="btn w-100 w-auto-ns mb0-ns bg-primary loading"
           style={{ display: "none" }}
           aria-label="Subscribing"
         >
@@ -67,36 +83,13 @@ export default function NewsletterForm() {
       </form>
       <div
         className="ml-form-successBody row-success"
-        style={{ display: "none" }}
+        style={{ display: success ? undefined : "none" }}
       >
         <div className="ml-form-successContent tc">
           <h4 className="f3 primary b serif">Thank You!</h4>
           <p>You are now signed up for my newsletters.</p>
         </div>
       </div>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `function ml_webform_success_2157310(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-2157310 .row-success").show(),r(".ml-subscribe-form-2157310 .row-form").hide()}`,
-        }}
-      ></script>
-      <img
-        src="https://track.mailerlite.com/webforms/o/2157310/n6v2g4?vc25f966922c0a35ad9c2401af6506ef1"
-        width="1"
-        height="1"
-        style={{
-          maxWidth: 1,
-          maxHeight: 1,
-          visibility: "hidden",
-          padding: 0,
-          margin: 0,
-          display: "block",
-        }}
-        alt="."
-      />
-      <Script
-        src="https://static.mailerlite.com/js/w/webforms.min.js?vc25f966922c0a35ad9c2401af6506ef1"
-        type="text/javascript"
-      ></Script>
     </div>
   );
 }

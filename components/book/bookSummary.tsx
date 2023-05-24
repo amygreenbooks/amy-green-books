@@ -41,9 +41,6 @@ export default function BookSummary({
       <article
         className={cn(
           styles.article,
-          {
-            [styles.featured]: featured,
-          },
           "items-center flex flex-wrap pv4 mw7 center flex-m flex-wrap items-start"
         )}
       >
