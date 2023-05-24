@@ -113,5 +113,7 @@
 
   .navList {
     transform: translateY(0%);
+    max-height: none;
+    overflow-y: visible;
   }
 }

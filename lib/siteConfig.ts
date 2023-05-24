@@ -18,7 +18,7 @@ function booksMenu(books: Array<MarkdownResult<BookType>>): Array<MenuItem> {
     return [
       {
         title: "Books",
-        url: `/books/${books[0].id}`,
+        url: `/books`,
         subMenus: books.map((b) =>
           menuItem(b.frontmatter.title, `/books/${b.id}`)
         ),
