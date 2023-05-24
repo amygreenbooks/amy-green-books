@@ -1,7 +1,7 @@
 import { Endorsement } from "../../lib/content";
 import Markdown from "../markdown";
 
-export function EndorsementComp({ quote, author }: Endorsement) {
+export function EndorsementComp({ quote, author, authorDesc }: Endorsement) {
   return (
     <blockquote className="mb4 br1 mw6 ph3 w-33-l w-50-m w-100 border-box">
       <p
@@ -10,12 +10,13 @@ export function EndorsementComp({ quote, author }: Endorsement) {
       >
         &#8220;
       </p>
-      <p className="f5 mb1">
+      <p className="f6 mb1">
         <Markdown source={quote} noParagraph />
       </p>
-      <cite className="tr db grey-3 serif fw5">
-        <Markdown source={author} noParagraph />
-      </cite>
+      <cite className="db black serif fw6 mt3">{author}</cite>
+      <p className="f6 grey-3 serif">
+        <Markdown source={authorDesc} noParagraph />
+      </p>
     </blockquote>
   );
 }

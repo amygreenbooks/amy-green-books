@@ -127,6 +127,7 @@ export type Retailer = {
 
 export type Endorsement = {
   author: string;
+  authorDesc: string;
   quote: string;
 };
 
