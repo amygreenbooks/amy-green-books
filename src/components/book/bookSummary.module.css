@@ -1,9 +1,5 @@
 .article {
-  display: flex;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-  padding-bottom: var(--spacing-extra-large);
-  min-width: 50%;
+  width: 100%;
 }
 
 .featured {
@@ -12,14 +8,13 @@
 
 .side {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .text-side {
   min-width: 48%;
   flex: 1 1;
-  padding: 0 var(--spacing-medium);
+  padding: var(--spacing-large);
+  background: white;
 }
 
 .img-side {
@@ -28,10 +23,6 @@
 }
 
 @media screen and (min-width: 50em) {
-  .article {
-    width: 50%;
-  }
-
   .article.featured {
     padding-left: 4%;
     padding-right: 4%;

@@ -26,6 +26,7 @@ export default async function AboutPage() {
             h: 500,
           })}
           alt={title}
+          className="br-100"
         />
       )}
       {content}

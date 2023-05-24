@@ -11,6 +11,7 @@ description: >-
   blurred, she must decide where her heart truly lies.
 image: /media/things-we-didnt-say.jpg
 spineImage: /media/things-we-didnt-say-spine.jpg
+paperTint: rgb(210 34 42 / 32%)
 retailers:
   - image: /media/amazon.png
     link: "https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/"

@@ -3,7 +3,7 @@ import Markdown from "../markdown";
 
 export default function EndorsementComp({ quote, author }: Endorsement) {
   return (
-    <blockquote className="bg-grey-1 pa3 mb3 br1 mw6 center">
+    <blockquote className="bg-off-white paper-2 pa3 mb4 br1 mw6 center">
       <p className="f5 mb1">
         <span className="f1 primary serif lh-solid">&#8220;</span>
         <Markdown source={quote} noParagraph />

@@ -116,6 +116,7 @@ export type BookType = {
   spineImage?: string;
   retailers: Retailer[];
   endorsements: Endorsement[];
+  paperTint?: string;
 };
 
 export type Retailer = {

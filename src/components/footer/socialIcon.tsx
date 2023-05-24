@@ -11,7 +11,7 @@ export default function SocialIcon({ svg, link, name }: SocialIconProps) {
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="link bg-white black db relative br-100 pa2"
+        className="link bg-off-white black db relative br-100 pa2"
         aria-label={name}
       >
         <svg width="16px" height="16px" className="db">

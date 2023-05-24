@@ -11,6 +11,7 @@ description:
   on each other is worth the cost.
 image: /media/blackout-book-club.jpg
 spineImage: /media/blackout-book-club-spine.jpg
+paperTint: rgb(59 156 157 / 53%)
 retailers:
   - image: /media/amazon.png
     link: https://www.amazon.com/Blackout-Book-Club-Lynn-Green/dp/0764239562/

@@ -1,7 +1,11 @@
-import Footer from "../components/footer/footer";
-import Masthead from "../components/header/masthead";
-import { getContentData, getBooks } from "../lib/content";
-import { mainMenu } from "../siteConfig";
+import cn from "classnames";
+
+import Footer from "@/components/footer/footer";
+import Masthead from "@/components/header/masthead";
+import Nav from "@/components/header/nav";
+import { getContentData, getBooks } from "@/lib/content";
+import { mainMenu } from "@/siteConfig";
+
 import HomePage from "./home-page";
 
 type HomeContent = {
@@ -18,20 +22,27 @@ type HomeContent = {
 
 export default async function Page() {
   const {
-    frontmatter: { title, subtitle, bannerImage, welcome },
+    frontmatter: { welcome, title, subtitle },
   } = await getContentData<HomeContent>(null, "index");
   const books = await getBooks();
   const menu = mainMenu(books);
+  const useMasthead = true;
   return (
     <>
-      <Masthead
-        title={title}
-        subtitle={subtitle}
-        bannerImage={bannerImage}
-        mainMenu={menu}
-      />
-      <main id="maincontent">
-        <HomePage books={books} welcome={welcome} />
+      {useMasthead ? <Masthead mainMenu={menu} /> : <Nav mainMenu={menu} />}
+
+      <main
+        id="main-content"
+        className={cn({
+          pt5: !useMasthead,
+        })}
+      >
+        <HomePage
+          subtitle={subtitle}
+          title={title}
+          books={books}
+          welcome={welcome}
+        />
       </main>
       <Footer mainMenu={menu} />
     </>

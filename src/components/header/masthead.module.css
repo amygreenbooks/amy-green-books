@@ -6,12 +6,20 @@
   );
   background-position: 10% 70%; */
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     145deg,
     hsl(146 100% 17% / 1),
     hsl(146 100% 9% / 1)
   );
-  min-height: 95vh;
+  min-height: 100vh; */
+}
+
+.background {
+  /* background: linear-gradient(
+    145deg,
+    hsl(146 100% 17% / 1),
+    hsl(146 100% 9% / 1)
+  ); */
 }
 
 .dim {

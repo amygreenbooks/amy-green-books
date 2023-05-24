@@ -5,10 +5,11 @@
 .nav-link {
   background: transparent;
   box-sizing: border-box;
-  border-color: var(--black);
+  border-top-color: transparent;
+  border-bottom-color: var(--black);
   border-width: var(--spacing-extra-small);
+  border-top-style: solid;
   border-bottom-style: solid;
-  border-bottom-width: 6px;
   border-radius: 0;
   color: inherit;
   display: block;
@@ -26,7 +27,7 @@
 }
 
 .active > .nav-link {
-  border-color: var(--primary);
+  border-bottom-color: var(--primary);
 }
 
 .nav-link:hover,
@@ -39,6 +40,7 @@
 .dropdown {
   position: absolute;
   background-color: var(--black);
+  color: var(--white);
   display: none;
   z-index: 30000;
 }

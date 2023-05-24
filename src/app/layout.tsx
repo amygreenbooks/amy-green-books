@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import "../styles/main.css";
 import { siteTitle, description } from "@/siteConfig";
 
+import styles from "./layout.module.css";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://amygreenbooks.com"),
   title: siteTitle,
@@ -35,7 +37,12 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className={styles.body}>
+        <div id="skip" className={styles.skip}>
+          <a href="#main-content">Skip to main content</a>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

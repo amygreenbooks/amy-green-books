@@ -14,6 +14,7 @@ export default function Book({
     spineImage,
     retailers,
     endorsements,
+    paperTint,
   },
   content,
 }: {
@@ -54,9 +55,14 @@ export default function Book({
         </div>
       )}
 
-      <section className={`mt4 mb5 bg-grey-1 pv4 ${styles.purchase}`}>
+      <section
+        className={`mt4 mb5 pv4 ${styles.purchase}`}
+        style={{
+          backgroundColor: paperTint,
+        }}
+      >
         <div className="mw6 ph3 center">
-          <h2 className="f3 b lh-title primary serif">
+          <h2 className="f3 b lh-title serif">
             {isReleased ? "Purchase today at:" : "Pre-order now at:"}
           </h2>
 

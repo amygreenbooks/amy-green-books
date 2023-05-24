@@ -9,7 +9,7 @@
 }
 
 .animatedBook {
-  margin: 0.5rem 0.5rem 0.5rem calc(1rem + var(--spine-actual-width-rems));
+  margin: 0.5rem 0 0.5rem calc(1rem + var(--spine-actual-width-rems));
 }
 
 .cover,
