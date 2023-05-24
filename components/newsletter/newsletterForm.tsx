@@ -34,12 +34,12 @@ export default function NewsletterForm({ id }: { id: string }) {
             type="text"
             className="form-control input w-100"
             data-inputmask=""
-            id="newsletter-fname"
+            id={`newsletter-fname-${id}`}
             name="fields[name]"
             placeholder="First Name"
             autoComplete="name"
           />
-          <label htmlFor="newsletter-fname" className="label">
+          <label htmlFor={`newsletter-fname-${id}`} className="label">
             First Name
           </label>
         </div>
@@ -48,12 +48,12 @@ export default function NewsletterForm({ id }: { id: string }) {
             type="email"
             className="form-control input w-100"
             data-inputmask=""
-            id="newsletter-email"
+            id={`newsletter-email-${id}`}
             name="fields[email]"
             placeholder="Email"
             autoComplete="email"
           />
-          <label htmlFor="newsletter-email" className="label">
+          <label htmlFor={`newsletter-email-${id}`} className="label">
             Email
           </label>
         </div>
