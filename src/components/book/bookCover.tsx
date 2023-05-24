@@ -17,7 +17,7 @@ const BookCover = ({
   spineImage?: string;
   className?: string;
   animateIn?: boolean;
-}) => {
+} & React.HTMLAttributes<HTMLElement>) => {
   const book = (
     <figure
       className={cn(className, styles.book, {

@@ -39,6 +39,16 @@ endorsements:
     quote: |-
       This compelling novel of life on the US home front during World War
       II fascinated me from beginning to end.
+  - author: "Julie Klassen, author of *The Bridge to Belle Island*"
+    quote: >-
+      Based on actual World War II experiences, and sparkling with humor and
+      touches of romance, this is an impressive debut from a multitalented
+      writer.
+  - author: Beverly Lewis
+    quote: |-
+      Amy Green’s debut novel kept me guessing to the very end—twist
+      upon twist upon twist. She is a master plotter, so read every single
+      word!
   - author: >-
       Sarah Sundin, bestselling and award-winning author of *When Twilight
       Breaks* and the Sunrise at Normandy series
@@ -46,11 +56,6 @@ endorsements:
       With impeccable research, Amy Lynn Green casts a light on the POW camps in
       America during World War II and on the dangers of prejudice. Make space on
       your bookshelf, because this book is a keeper!
-  - author: Beverly Lewis
-    quote: |-
-      Amy Green’s debut novel kept me guessing to the very end—twist
-      upon twist upon twist. She is a master plotter, so read every single
-      word!
   - author: "Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*"
     quote: >-
       *Things We Didn’t Say* is a stand-out novel as brilliant and brave as its
@@ -77,11 +82,6 @@ endorsements:
       them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
       expertly wields wit, heart, history, and enveloping storytelling in this
       glorious debut!
-  - author: "Julie Klassen, author of *The Bridge to Belle Island*"
-    quote: >-
-      Based on actual World War II experiences, and sparkling with humor and
-      touches of romance, this is an impressive debut from a multitalented
-      writer.
 ---
 
 Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future&nbsp;.&nbsp;.&nbsp;. plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.

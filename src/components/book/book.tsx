@@ -3,7 +3,7 @@ import { BookType } from "@/lib/content";
 import DateComponent from "../date";
 import styles from "./book.module.css";
 import BookCover from "./bookCover";
-import EndorsementComp from "./endorsement";
+import Endorsements from "./endorsements";
 import RetailerComp from "./retailer";
 
 export default function Book({
@@ -46,6 +46,10 @@ export default function Book({
           title={`Cover for ${title}`}
           image={image}
           spineImage={spineImage}
+          style={{
+            position: "sticky",
+            top: "6rem",
+          }}
         />
       </div>
 
@@ -61,12 +65,12 @@ export default function Book({
           backgroundColor: paperTint,
         }}
       >
-        <div className="mw6 ph3 center">
-          <h2 className="f3 b lh-title serif">
+        <div className={`ph3 center ${styles.purchaseContainer}`}>
+          <h2 className="f3 b lh-title serif mb2">
             {isReleased ? "Purchase today at:" : "Pre-order now at:"}
           </h2>
 
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap mhn2 justify-center">
             {retailers.map((retailer, i) => (
               <RetailerComp key={`retailer-${i}`} {...retailer} />
             ))}
@@ -74,13 +78,9 @@ export default function Book({
         </div>
       </section>
 
-      {endorsements && endorsements.length > 0 && (
-        <section className={`mb5 flex flex-wrap ${styles.endorsements}`}>
-          {endorsements.map((endorsement, i) => (
-            <EndorsementComp key={`endorsement-${i}`} {...endorsement} />
-          ))}
-        </section>
-      )}
+      <div className={styles.endorsements}>
+        <Endorsements endorsements={endorsements} />
+      </div>
     </article>
   );
 }

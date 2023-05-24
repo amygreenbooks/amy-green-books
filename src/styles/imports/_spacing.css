@@ -393,12 +393,12 @@
   margin-right: calc(-1 * var(--spacing-extra-small));
 }
 .mhn2 {
-  margin-left: -var(--spacing-small);
-  margin-right: -var(--spacing-small);
+  margin-left: calc(-1 * var(--spacing-small));
+  margin-right: calc(-1 * var(--spacing-small));
 }
 .mhn3 {
-  margin-left: -var(--spacing-medium);
-  margin-right: -var(--spacing-medium);
+  margin-left: calc(-1 * var(--spacing-medium));
+  margin-right: calc(-1 * var(--spacing-medium));
 }
 
 @media (--breakpoint-not-small) {
