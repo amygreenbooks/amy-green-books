@@ -1,5 +1,11 @@
 .body {
-  background: url("/media/gray-clean-paperboard.jpg") #f0f2ee;
+  background: url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=600")
+    #f0f2ee;
+  background: image-set(
+      url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=600") 1x,
+      url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=1200") 2x
+    )
+    #f0f2ee;
   background-size: 600px;
 }
 

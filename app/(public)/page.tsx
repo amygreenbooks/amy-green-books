@@ -1,3 +1,5 @@
+import cn from "classnames";
+
 import BookSummary from "@/components/book/bookSummary";
 import Markdown from "@/components/markdown";
 import NewsletterSection from "@/components/newsletter/newsletterSection";
@@ -27,7 +29,10 @@ export default async function Page() {
   return (
     <>
       <header
-        className={`flex flex-column flex-row-ns items-center center mw7 pv5 ph3 serif`}
+        className={cn(
+          `flex flex-column flex-row-ns items-center`,
+          `justify-center pv5 ph3 serif`
+        )}
       >
         <img
           {...imgSrcSet({
@@ -38,6 +43,10 @@ export default async function Page() {
           })}
           className={`db br-100 w-100 mr5-ns paper-2 ${styles.headShot}`}
           alt="A photo of Amy Lynn Green"
+          style={{
+            minWidth: 240,
+            minHeight: 240,
+          }}
         />
         <div>
           <h1 className="f1 fw9 lh-title black mt3">{title}</h1>
