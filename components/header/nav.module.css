@@ -1,4 +1,5 @@
 .title {
+  display: block;
   line-height: 2rem;
   padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-medium)
     calc(var(--spacing-medium) + 3rem);
@@ -107,11 +108,14 @@
     padding: var(--spacing-medium);
   }
 
-  .home .title {
+  .home .title,
+  .home .title.animate,
+  .home .title.in {
     display: none;
   }
 
   .navList {
+    display: flex;
     transform: translateY(0%);
     max-height: none;
     overflow-y: visible;

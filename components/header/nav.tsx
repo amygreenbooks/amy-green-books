@@ -90,7 +90,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
             <Link
               href="/"
               className={cn(
-                "f4 fw6 db mr4-ns nowrap no-underline bg-primary",
+                "f4 fw6 mr4-ns nowrap no-underline bg-primary",
                 "i w-100 w-auto-ns z-4",
                 styles.title,
                 {
@@ -104,7 +104,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
           </div>
           <ul
             className={cn(
-              "flex-ns flex-wrap-ns bg-black justify-between flex-column flex-row-ns db-ns",
+              "flex-wrap-ns bg-black justify-between flex-column flex-row-ns",
               "fixed top-3 left-0 z-3 w-100 static-ns",
               styles.navList,
               {
