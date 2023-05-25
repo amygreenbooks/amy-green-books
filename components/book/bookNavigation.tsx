@@ -50,9 +50,7 @@ export default function BookNavigation({
 }) {
   return (
     <section className="mw6 mb5 ph3 center">
-      <h2 className="lh-title primary f3 b mb1 serif">
-        Explore my other books
-      </h2>
+      <h2 className="lh-title black f3 b mb1 serif">Explore my other books</h2>
       <div className="flex-ns">
         <div className={styles["book-nav"]}>
           {next && <BookNavLink {...next} />}

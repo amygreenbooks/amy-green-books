@@ -1,9 +1,9 @@
 :root {
   /* Colors */
-  --primary: hsl(146 100% 21% / 1);
+  --primary: #2e5338;
   --highlight: hsl(152, 44%, 89%);
   --white: rgba(255, 255, 255, 1);
-  --off-white: rgb(255, 252, 252);
+  --off-white: rgb(244 253 251 / 53%);
   --grey-1: rgb(245, 242, 242);
   --grey-2: rgb(200, 199, 199);
   --grey-3: rgb(89, 86, 86);

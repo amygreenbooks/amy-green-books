@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-export default function NewsletterForm({ id }: { id: string }) {
+export default function NewsletterForm({
+  id,
+}: // footer,
+{
+  id: string;
+  footer: boolean;
+}) {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
@@ -15,6 +21,9 @@ export default function NewsletterForm({ id }: { id: string }) {
       delete win[`ml_webform_success_${id}`];
     };
   }, [id]);
+
+  // const btnStyles = footer ? "bg-white primary b--white" : "bg-primary white";
+  const btnStyles = "bg-primary white";
 
   return (
     <div
@@ -59,7 +68,7 @@ export default function NewsletterForm({ id }: { id: string }) {
         </div>
 
         <button
-          className="btn w-100 w-auto-ns mb0-ns raise bg-primary primary white"
+          className={`btn w-100 w-auto-ns mb0-ns raise ${btnStyles}`}
           type="submit"
         >
           Subscribe
@@ -67,7 +76,7 @@ export default function NewsletterForm({ id }: { id: string }) {
         <button
           disabled
           type="button"
-          className="btn w-100 w-auto-ns mb0-ns bg-primary loading"
+          className={`btn w-100 w-auto-ns mb0-ns loading ${btnStyles}`}
           style={{ display: "none" }}
           aria-label="Subscribing"
         >

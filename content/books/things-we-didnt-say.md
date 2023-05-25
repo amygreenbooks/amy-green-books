@@ -31,7 +31,7 @@ retailers:
     link: >-
       https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
     name: Christian Book
-  - image: /media/indie-bound.jpg
+  - image: /media/indie-bound.png
     link: "https://www.indiebound.org/book/9780764237164"
     name: Indie Bound
 endorsements:

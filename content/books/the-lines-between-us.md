@@ -30,7 +30,7 @@ retailers:
     link: >-
       https://www.christianbook.com/the-lines-between-us/amy-green/9780764237171/pd/237177
     name: Christian Book
-  - image: /media/indie-bound.jpg
+  - image: /media/indie-bound.png
     link: https://www.indiebound.org/book/9780764237171
     name: Indie Bound
 endorsements: []

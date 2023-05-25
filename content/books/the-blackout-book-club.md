@@ -31,7 +31,7 @@ retailers:
     link: >-
       https://www.christianbook.com/the-blackout-book-club/9780764239564/pd/239564
     name: Christian Book
-  - image: /media/indie-bound.jpg
+  - image: /media/indie-bound.png
     link: https://www.indiebound.org/book/9780764239564
     name: Indie Bound
 endorsements:

@@ -49,7 +49,7 @@ export default async function Page() {
           }}
         />
         <div>
-          <h1 className="f1 fw9 lh-title black mt3">{title}</h1>
+          <h1 className="f1 fw9 lh-title primary mt3">{title}</h1>
           <p className="f4 fw5 i lh-title mw-100 grey-4 o-60">{subtitle}</p>
         </div>
       </header>
