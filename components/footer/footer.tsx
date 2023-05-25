@@ -1,10 +1,8 @@
-"use client";
-
 import Link from "next/link";
 
 import { MenuItem, socialLinks } from "@/lib/siteConfig";
 
-import NewsletterForm from "../newsletter/newsletterForm";
+import NewsletterSection from "../newsletter/newsletterSection";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
 
@@ -22,15 +20,7 @@ export default function Footer({ mainMenu }: FooterProps) {
               Amy Lynn Green
             </h1>
 
-            <p className="f3 lh-title light-gray b tc mb2 serif">
-              Sign Up for my Newsletter
-            </p>
-            <p className="tc">
-              Enter your email address for quarterly writing updates
-              and&nbsp;bookish&nbsp;fun!
-            </p>
-
-            <NewsletterForm id="2157310" />
+            <NewsletterSection id="2157310" footer />
           </div>
 
           <ul className="mb3 center flex-ns flex-wrap justify-between mw5 tc">

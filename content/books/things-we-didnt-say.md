@@ -37,7 +37,7 @@ retailers:
 endorsements:
   - author: Lynn Austin
     authorDesc: "author of *If I Were You*"
-    quote: |-
+    quote: >-
       This compelling novel of life on the US home front during World War
       II fascinated me from beginning to end.
   - author: Julie Klassen
@@ -47,7 +47,7 @@ endorsements:
       touches of romance, this is an impressive debut from a multitalented
       writer.
   - author: Beverly Lewis
-    quote: |-
+    quote: >-
       Amy Green’s debut novel kept me guessing to the very end—twist
       upon twist upon twist. She is a master plotter, so read every single
       word!

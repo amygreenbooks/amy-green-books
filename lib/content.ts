@@ -139,6 +139,7 @@ export type HistoryType = {
 
 export type PageType = {
   description: string;
+  bannerImage?: string;
   date: Date;
   title: string;
 };

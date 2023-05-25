@@ -1,6 +1,8 @@
 import Jumbotron from "@/components/header/jumbotron";
 import { getContentData } from "@/lib/content";
 
+import styles from "./contact.module.css";
+
 export type ContactType = {
   title: string;
   date: number;
@@ -19,10 +21,12 @@ export default async function ContactPage() {
     <>
       <Jumbotron title={title} subtitle={description} image={bannerImage} />
 
-      <article className="mw6 center ph3 mt4 mb5">
-        {content && <div className="cms">{content}</div>}
+      <div className="relative z-0">
+        <article
+          className={`mw6 center pa3 mt4 mb5 paper-2 br1 bg-white ${styles.letter}`}
+        >
+          {content && <div className="cms">{content}</div>}
 
-        <div className="mb4">
           <form
             name="contact"
             method="POST"
@@ -83,8 +87,8 @@ export default async function ContactPage() {
               </button>
             </div>
           </form>
-        </div>
-      </article>
+        </article>
+      </div>
     </>
   );
 }

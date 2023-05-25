@@ -58,7 +58,7 @@ export default async function Page() {
         <BookSummary book={books[0]} />
       </section>
 
-      <NewsletterSection />
+      <NewsletterSection id="2157311" />
 
       <section>
         {books.slice(1).map((book, i) => (
