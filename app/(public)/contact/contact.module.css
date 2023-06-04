@@ -1,0 +1,38 @@
+.letter {
+  --border-width: 15px;
+
+  border: solid var(--border-width) transparent;
+  position: relative;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+
+.letter:before {
+  --red: #f46a6e;
+  --blue: #648dc1;
+
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: calc(-1 * var(--border-width));
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--red) 0,
+    var(--red) 20px,
+    white 20px,
+    white 40px,
+    var(--blue) 40px,
+    var(--blue) 60px,
+    white 60px,
+    white 80px
+  );
+}
+
+.letter :global(.cms) h2 {
+  margin-top: 0;
+}

@@ -11,6 +11,7 @@ description:
   on each other is worth the cost.
 image: /media/blackout-book-club.jpg
 spineImage: /media/blackout-book-club-spine.jpg
+paperTint: rgb(59 156 157 / 53%)
 retailers:
   - image: /media/amazon.png
     link: https://www.amazon.com/Blackout-Book-Club-Lynn-Green/dp/0764239562/
@@ -30,10 +31,34 @@ retailers:
     link: >-
       https://www.christianbook.com/the-blackout-book-club/9780764239564/pd/239564
     name: Christian Book
-  - image: /media/indie-bound.jpg
+  - image: /media/indie-bound.png
     link: https://www.indiebound.org/book/9780764239564
     name: Indie Bound
-endorsements: []
+endorsements:
+  - author: J'nell Ciesielski
+    authorDesc: "bestselling author of *The Socialite*"
+    quote: >-
+      A heartwarming tribute to the power of reading and the friendships it forges during the darkest of times. Green weaves together the struggle of war, the resilience of the home front, and the love that can bind a community together in her novel *The Blackout Book Club*, reminding readers that hope can often be found where least expected.
+  - author: Sarah Sundin
+    authorDesc: "bestselling and award-winning author of *Until Leaves Fall in Paris*"
+    quote: >-
+      A salute to the power of books and of friendship! Not only does the writing sparkle with Green's trademark wit, but the characters become your dear friends, slowly exposing the hurts and secrets that have shaped them. Come to *The Blackout Book Club* for the fun--stay for the depth
+  - author: Addison Armstrong
+    authorDesc: "author of *The Light of Luna Park* and *The War Librarian*"
+    quote: >-
+      *The Blackout Book Club* is an ode to books and libraries, but it's also an ode to human connection. Amy Lynn Green's entire cast of characters comes vividly to life, each woman with a distinct voice that makes the reader feel as much like her friend as her fellow book club members are. I couldn't put this book down!
+  - author: Rachel McMillan
+    authorDesc: "author of *The London Restoration* and *The Mozart Code*"
+    quote: >-
+      Fans of Madeline Martin and Katherine Reay will relish this tender, intimate look at the resilience of words and the power they wield in forging the strongest of bonds in the darkest of times. *The Blackout Book Club* is a delicious peek behind the curtain of nostalgia and a stunning portrait of the men and women whose lives are threaded through the poignant tapestry of storytelling: in letters and documents and in books. A book lover's dream, *The Blackout Book Club* solidifies Green as an inimitable chronicler of the American home-front experience.
+  - author: Lynn Austin
+    authorDesc: "author of *Long Way Home*"
+    quote: >-
+      *The Blackout Book Club* is an engaging story that illustrates the power of books to unite and encourage us in trying times. The wonderfully diverse cast of quirky characters brings to life the shared worries and hopes of people on the WWII home front. A wonderful read.
+  - author: Madeline Martin
+    authorDesc: "*New York Times* bestselling author of *The Last Bookshop in London*"
+    quote: >-
+      *The Blackout Book Club* is a fabulous novel that will warm the hearts of readers everywhere. Amy Lynn Green gives us a poignant look at life on the home front during WWII and how comfort and camaraderie can be found in the shared love of books. This will be a wonderful book club read!
 ---
 
 In 1942, an impulsive promise to her brother before he goes off to the European front puts Avis Montgomery in the unlikely position of head librarian in small-town Maine. Though she has never been much of a reader, when wartime needs threaten to close the library, she invents a book club to keep its doors open. The women she convinces to attend the first meeting couldn't be more different&mdash;a wealthy spinster determined to aid the war effort, an exhausted mother looking for a fresh start, and a determined young war worker.

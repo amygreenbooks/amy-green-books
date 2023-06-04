@@ -11,6 +11,7 @@ description: >-
   blurred, she must decide where her heart truly lies.
 image: /media/things-we-didnt-say.jpg
 spineImage: /media/things-we-didnt-say-spine.jpg
+paperTint: rgb(210 34 42 / 32%)
 retailers:
   - image: /media/amazon.png
     link: "https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/"
@@ -30,22 +31,36 @@ retailers:
     link: >-
       https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
     name: Christian Book
-  - image: /media/indie-bound.jpg
+  - image: /media/indie-bound.png
     link: "https://www.indiebound.org/book/9780764237164"
     name: Indie Bound
 endorsements:
-  - author: "Lynn Austin, author of *If I Were You*"
-    quote: |-
+  - author: Lynn Austin
+    authorDesc: "author of *If I Were You*"
+    quote: >-
       This compelling novel of life on the US home front during World War
       II fascinated me from beginning to end.
-  - author: >-
-      Sarah Sundin, bestselling and award-winning author of *When Twilight
-      Breaks* and the Sunrise at Normandy series
+  - author: Julie Klassen
+    authorDesc: "author of *The Bridge to Belle Island*"
+    quote: >-
+      Based on actual World War II experiences, and sparkling with humor and
+      touches of romance, this is an impressive debut from a multitalented
+      writer.
+  - author: Beverly Lewis
+    quote: >-
+      Amy Green’s debut novel kept me guessing to the very end—twist
+      upon twist upon twist. She is a master plotter, so read every single
+      word!
+  - author: Sarah Sundin
+    authorDesc: >-
+      bestselling and award-winning author of *When Twilight Breaks* and the
+      Sunrise at Normandy series
     quote: >-
       With impeccable research, Amy Lynn Green casts a light on the POW camps in
       America during World War II and on the dangers of prejudice. Make space on
       your bookshelf, because this book is a keeper!
-  - author: "Jocelyn Green, Christy Award–winning author of *Veiled in Smoke*"
+  - author: Jocelyn Green
+    authorDesc: "Christy Award–winning author of *Veiled in Smoke*"
     quote: >-
       *Things We Didn’t Say* is a stand-out novel as brilliant and brave as its
       heroine. . . . An utterly satisfying read you’ll want to share as soon as
@@ -57,30 +72,22 @@ endorsements:
       takes care to bring history alive as she moves her characters through
       situations that force them to take a deeper look at who they are and
       what they really want out of life.
-  - author: "Rachel McMillan, author of *The London Restoration*"
+  - author: Rachel McMillan
+    authorDesc: "author of *The London Restoration*"
     quote: >-
       A fascinating excavation of a little-known moment in US history executed
       with an inimitable voice and extremely clever style. Excessively readable,
       this winsome epistolary is underscored by a deep look at patriotism,
       prejudice, unwavering faith, duty, and love. . . .A dazzlingly smart and
       confident debut, *Things We Didn’t Say* is as moving as it is memorable.
-  - author: Beverly Lewis
-    quote: |-
-      Amy Green’s debut novel kept me guessing to the very end—twist
-      upon twist upon twist. She is a master plotter, so read every single
-      word!
-  - author: "Amanda Dykes, author of *Set the Stars Alight* and *Whose Waves These Are*"
+  - author: Amanda Dykes
+    authorDesc: "author of *Set the Stars Alight* and *Whose Waves These Are*"
     quote: >-
       *Things We Didn’t Say* is the best sort of book: where the characters feel
       like friends, the story feels like home, and the pages beckon you to turn
       them ceaselessly, immersing you in an absorbing world. Amy Lynn Green
       expertly wields wit, heart, history, and enveloping storytelling in this
       glorious debut!
-  - author: "Julie Klassen, author of *The Bridge to Belle Island*"
-    quote: >-
-      Based on actual World War II experiences, and sparkling with humor and
-      touches of romance, this is an impressive debut from a multitalented
-      writer.
 ---
 
 Headstrong Johanna Berglund, a linguistics student at the University of Minnesota, has very definite plans for her future&nbsp;.&nbsp;.&nbsp;. plans that do not include returning to her hometown and the secrets and heartaches she left behind there. But the US Army wants her to work as a translator at a nearby camp for German POWs.

@@ -1,0 +1,25 @@
+.body {
+  background: url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=600")
+    #f0f2ee;
+  background: image-set(
+      url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=600") 1x,
+      url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=1200") 2x
+    )
+    #f0f2ee;
+  background-size: 600px;
+}
+
+.skip a {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip a:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}

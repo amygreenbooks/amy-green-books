@@ -1,0 +1,88 @@
+.book {
+  perspective: 1800px;
+  position: relative;
+  margin: 0.5rem;
+  z-index: 1;
+
+  --spine-actual-width-rems: 0.65rem;
+  --rotate: 27deg;
+}
+
+.animatedBook {
+  margin: 0.5rem 0 0.5rem calc(1rem + var(--spine-actual-width-rems));
+}
+
+.cover,
+.spine {
+  transition: transform 1s ease 0s;
+  display: block;
+}
+
+img.cover,
+img.spine {
+  border-radius: 0;
+}
+
+.cover {
+  max-width: 100%;
+  max-height: 500px;
+  transform-origin: left;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  margin: 0 auto;
+}
+
+.spine {
+  background-color: #ccc;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  position: absolute;
+  transform-origin: right;
+  height: 100%;
+}
+
+.animatedBook .cover,
+:global(.animated.enter) .animatedBook .cover {
+  transform: rotateY(var(--rotate));
+  margin: 0;
+}
+
+.animatedBook .spine,
+:global(.animated.enter) .animatedBook .spine {
+  transform: rotateY(calc(var(--rotate) - 90deg));
+}
+
+:global(.animated) .animatedBook .cover,
+:global(.animated.enter) .animatedBook:hover .cover,
+:global(.animated.enter) .animatedBook:focus .cover,
+.animatedBook:hover .cover,
+.animatedBook:focus .cover {
+  transform: rotateY(0deg) translateX(calc(var(--spine-actual-width-rems) * -1));
+}
+
+:global(.animated) .animatedBook .spine,
+:global(.animated.enter) .animatedBook:hover .spine,
+:global(.animated.enter) .animatedBook:focus .spine,
+.animatedBook:hover .spine,
+.animatedBook:focus .spine,
+.spine {
+  transform: rotateY(-90deg) translateZ(var(--spine-actual-width-rems));
+}
+
+@media (prefers-reduced-motion) {
+  :global(.animated) .animatedBook .cover,
+  :global(.animated.enter) .animatedBook:hover .cover,
+  :global(.animated.enter) .animatedBook:focus .cover,
+  .animatedBook:hover .cover,
+  .animatedBook:focus .cover {
+    transform: rotateY(var(--rotate));
+  }
+
+  :global(.animated) .animatedBook .spine,
+  :global(.animated.enter) .animatedBook:hover .spine,
+  :global(.animated.enter) .animatedBook:focus .spine,
+  .animatedBook:hover .spine,
+  .animatedBook:focus .spine {
+    transform: rotateY(calc(var(--rotate) - 90deg));
+  }
+}

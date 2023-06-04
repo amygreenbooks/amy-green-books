@@ -10,6 +10,7 @@ description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   truth they uncover may lead to an impossible—and dangerous—choice.
 image: /media/the-lines-between-us.jpg
 spineImage: /media/the-lines-between-us-spine.jpg
+paperTint: rgb(233 180 106 / 40%)
 retailers:
   - image: /media/amazon.png
     link: https://www.amazon.com/Lines-Between-Amy-Lynn-Green/dp/0764237179/
@@ -29,7 +30,7 @@ retailers:
     link: >-
       https://www.christianbook.com/the-lines-between-us/amy-green/9780764237171/pd/237177
     name: Christian Book
-  - image: /media/indie-bound.jpg
+  - image: /media/indie-bound.png
     link: https://www.indiebound.org/book/9780764237171
     name: Indie Bound
 endorsements: []

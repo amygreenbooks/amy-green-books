@@ -57,7 +57,13 @@ collections: # A list of collections the CMS should be able to edit
         label_singular: endorsement
         widget: list
         fields:
-          - { label: Author, name: author, widget: "markdown" }
+          - { label: Author, name: author, widget: "string" }
+          - {
+              label: Author Description,
+              name: authorDesc,
+              widget: "markdown",
+              required: false,
+            }
           - { label: Quote, name: quote, widget: "markdown" }
   - name: "history"
     label: "History"

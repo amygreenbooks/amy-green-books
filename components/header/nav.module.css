@@ -1,0 +1,123 @@
+.title {
+  display: block;
+  line-height: 2rem;
+  padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-medium)
+    calc(var(--spacing-medium) + 3rem);
+}
+
+.menu {
+  position: absolute;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 3rem;
+  height: var(--spacing-extra-large);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+
+  /* transition: color 0.2s ease-out; */
+}
+
+.menuLines {
+  top: 55%;
+  margin-top: -0.125em;
+}
+
+.menuLines,
+.menuLines:after,
+.menuLines:before {
+  height: 1px;
+  pointer-events: none;
+  display: block;
+  content: "";
+  left: 30%;
+  width: 40%;
+  background-color: currentcolor;
+  position: absolute;
+
+  transition: 0.2s ease-out;
+}
+
+.menuLines:after {
+  /* Move bottom line below center line */
+  top: -0.4rem;
+  width: 100%;
+  left: 0;
+}
+
+.menuLines:before {
+  /* Move top line on top of center line */
+  top: 0.4rem;
+  width: 100%;
+  left: 0;
+}
+
+.menu.in .menuLines {
+  background-color: transparent;
+}
+
+.menu.in .menuLines:after {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+
+.menu.in .menuLines:before {
+  transform: translateY(-0.4rem) rotate(-45deg);
+}
+
+.home .title {
+  transform: translateY(-100%);
+  display: none;
+}
+
+.home .title.in {
+  transform: translateY(0%);
+}
+
+.home .title.animate {
+  transition: transform 0.2s ease-out;
+}
+
+.home .title.animate,
+.home .title.in {
+  display: block;
+}
+
+.navList {
+  display: none;
+  transform: translateY(calc(-100% - var(--spacing-extra-large)));
+  max-height: calc(100% - var(--spacing-extra-large));
+  overflow-y: scroll;
+}
+
+.navList.in {
+  transform: translateY(0%);
+}
+
+.navList.animate {
+  transition: transform 0.2s ease-out;
+}
+
+.navList.animate,
+.navList.in {
+  display: flex;
+}
+
+@media screen and (min-width: 40em) {
+  .title {
+    padding: var(--spacing-medium);
+  }
+
+  .home .title,
+  .home .title.animate,
+  .home .title.in {
+    display: none;
+  }
+
+  .navList {
+    display: flex;
+    transform: translateY(0%);
+    max-height: none;
+    overflow-y: visible;
+  }
+}

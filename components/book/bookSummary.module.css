@@ -1,0 +1,19 @@
+.article {
+  width: 100%;
+}
+
+.side {
+  display: block;
+}
+
+.text-side {
+  min-width: 48%;
+  flex: 1 1;
+  padding: var(--spacing-large);
+  background: white;
+}
+
+.img-side {
+  max-width: 18rem;
+  margin: 0 auto var(--spacing-medium);
+}
