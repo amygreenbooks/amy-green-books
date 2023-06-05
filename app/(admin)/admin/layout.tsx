@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Script from "next/script";
 
-import { description, siteTitle } from "@/lib/siteConfig";
+import { description, siteTitle, themeColor } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.amygreenbooks.com"),
@@ -22,9 +22,9 @@ export default async function RootLayout({
         <link
           rel="mask-icon"
           href="/media/safari-pinned-tab.svg"
-          color="#006b2e"
+          color={themeColor}
         />
-        <meta name="theme-color" content="#006b2e" />
+        <meta name="theme-color" content={themeColor} />
       </head>
       <body>
         {children}
