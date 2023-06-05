@@ -25,9 +25,12 @@ export default function BookSummary({
   flipped?: boolean;
 }) {
   const isReleased = !releaseDate || releaseDate < new Date(Date.now());
-  const retailer = (retailers || []).reduce((acc, n) =>
-    n.name === "Baker Book House" ? n : acc
-  );
+  let retailer = null;
+  if (retailers && retailers.length > 0) {
+    retailer = retailers.reduce((acc, n) =>
+      n.name === "Baker Book House" ? n : acc
+    );
+  }
 
   return (
     <div
