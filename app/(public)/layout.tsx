@@ -4,7 +4,7 @@ import Script from "next/script";
 import Footer from "@/components/footer/footer";
 import Nav from "@/components/header/nav";
 import { getBooks } from "@/lib/content";
-import { description, mainMenu, siteTitle } from "@/lib/siteConfig";
+import { description, mainMenu, siteTitle, themeColor } from "@/lib/siteConfig";
 
 import "../../styles/main.css";
 import styles from "./layout.module.css";
@@ -28,9 +28,9 @@ export default async function RootLayout({
         <link
           rel="mask-icon"
           href="/media/safari-pinned-tab.svg"
-          color="#006b2e"
+          color={themeColor}
         />
-        <meta name="theme-color" content="#006b2e" />
+        <meta name="theme-color" content={themeColor} />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

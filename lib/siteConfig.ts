@@ -50,3 +50,4 @@ export const siteTitle = "Amy Lynn Green";
 export const author = "Amy Lynn Green";
 export const description =
   "Amy Lynn Green is a lifelong lover of books, history, and library cards. She worked in publishing for six years before writing her first historical fiction novel, based on the WWII home-front of Minnesota, the state where she lives, works, and survives long winters.";
+export const themeColor = "#2e5338";
