@@ -10,7 +10,7 @@ description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   truth they uncover may lead to an impossible—and dangerous—choice.
 image: /media/the-lines-between-us.jpg
 spineImage: /media/the-lines-between-us-spine.jpg
-paperTint: rgb(233 180 106 / 40%)
+paperTint: rgb(231 178 84 / 47%)
 retailers:
   - image: /media/amazon.png
     link: https://www.amazon.com/Lines-Between-Amy-Lynn-Green/dp/0764237179/
