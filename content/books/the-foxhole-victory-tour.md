@@ -1,16 +1,17 @@
 ---
 title: The Foxhole Victory Tour
-isbn:
-date: 2023-06-04T06:00:00
+isbn: "9780764239571"
+date: 2023-06-28T06:00:00
 releaseDate: 2024-01-31
 description: >-
   During World War II, Catherine Duquette and Maggie McCleod come from different worlds but are thrown together on a USO variety show touring North Africa. While they each have secret reasons for accepting the job, neither anticipates the danger and intrigue they'll encounter performing so close to the front lines.
 image: /media/the-foxhole-victory-tour.jpg
 spineImage:
-# paperTint: rgb(9 119 96 / 52%)
-# paperTint: rgb(210 157 133 / 40%)
 paperTint: rgb(236 155 122 / 39%)
-retailers: []
+retailers:
+  - image: /media/baker-book-house.png
+    link: "https://bakerbookhouse.com/products/542729"
+    name: Baker Book House
 endorsements: []
 ---
 
