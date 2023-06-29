@@ -10,7 +10,7 @@ export default function imgSrcSet({
   w?: number;
 }) {
   if (process.env.NODE_ENV === "development") {
-    src = `https://www.amygreenbooks.com${src}`;
+    //src = `https://www.amygreenbooks.com${src}`;
   }
   let srcSet;
   if (resize) {
