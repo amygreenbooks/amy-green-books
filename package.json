@@ -27,7 +27,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.4.3",
+    "@next/bundle-analyzer": "^13.4.19",
     "@types/lodash.throttle": "^4.1.7",
     "@types/node": "20.2.3",
     "@types/react": "^18.2.6",
