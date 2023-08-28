@@ -19,7 +19,7 @@
     "next": "^13.4.19",
     "next-mdx-remote": "^4.4.1",
     "postcss": "^8.4.28",
-    "postcss-custom-media": "^9.1.3",
+    "postcss-custom-media": "^10.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^8.3.2",
