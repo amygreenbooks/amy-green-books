@@ -71,7 +71,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
           {
             ["fixed-ns"]: !isHome,
             [styles.home]: isHome,
-          }
+          },
         )}
       >
         <div className="mw7 flex-ns justify-between items-center center">
@@ -97,7 +97,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
                 {
                   [styles.in]: openDrawer,
                   [styles.animate]: animationsEnabled,
-                }
+                },
               )}
             >
               Amy Lynn Green
@@ -112,7 +112,7 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
                 "w-100": isHome,
                 [styles.in]: openDrawer,
                 [styles.animate]: animationsEnabled,
-              }
+              },
             )}
             ref={drawerRef}
           >

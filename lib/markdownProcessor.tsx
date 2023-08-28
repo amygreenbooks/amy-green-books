@@ -5,7 +5,7 @@ import MarkdownLink from "../components/typography/link";
 
 export async function compile<TData extends Record<string, unknown>>(
   source: string,
-  options: { noParagraph: boolean } = { noParagraph: false }
+  options: { noParagraph: boolean } = { noParagraph: false },
 ) {
   const components: MDXRemoteProps["components"] = {
     h1: H1,

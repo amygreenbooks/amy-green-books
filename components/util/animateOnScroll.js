@@ -108,7 +108,7 @@ export default class ScrollAnimation extends Component {
         this.scrollableParent.addEventListener("scroll", this.listener);
       } else {
         console.warn(
-          `Cannot find element by locator: ${this.props.scrollableParentSelector}`
+          `Cannot find element by locator: ${this.props.scrollableParentSelector}`,
         );
       }
       if (this.props.animatePreScroll) {
