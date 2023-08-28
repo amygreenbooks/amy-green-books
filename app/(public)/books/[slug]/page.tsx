@@ -60,7 +60,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { frontmatter: bookData } = await getContentData<BookType>(
     "books",
-    params.slug
+    params.slug,
   );
   return {
     title: bookData.title,

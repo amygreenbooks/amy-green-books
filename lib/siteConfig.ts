@@ -20,7 +20,7 @@ function booksMenu(books: Array<MarkdownResult<BookType>>): Array<MenuItem> {
         title: "Books",
         url: `/books`,
         subMenus: books.map((b) =>
-          menuItem(b.frontmatter.title, `/books/${b.id}`)
+          menuItem(b.frontmatter.title, `/books/${b.id}`),
         ),
       },
     ];
@@ -32,7 +32,7 @@ function booksMenu(books: Array<MarkdownResult<BookType>>): Array<MenuItem> {
 }
 
 export const mainMenu = (
-  books: Array<MarkdownResult<BookType>>
+  books: Array<MarkdownResult<BookType>>,
 ): Array<MenuItem> => [
   ...booksMenu(books),
   menuItem("Meet Amy", "/about"),

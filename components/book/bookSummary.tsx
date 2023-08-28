@@ -28,7 +28,7 @@ export default function BookSummary({
   let retailer = null;
   if (retailers && retailers.length > 0) {
     retailer = retailers.reduce((acc, n) =>
-      n.name === "Baker Book House" ? n : acc
+      n.name === "Baker Book House" ? n : acc,
     );
   }
 
@@ -42,7 +42,7 @@ export default function BookSummary({
       <article
         className={cn(
           styles.article,
-          "items-center flex flex-wrap pv4 mw7 center flex-m flex-wrap items-start"
+          "items-center flex flex-wrap pv4 mw7 center flex-m flex-wrap items-start",
         )}
       >
         {image && (

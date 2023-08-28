@@ -23,7 +23,7 @@ export const getHistoryPages = async () =>
   await getSortedContentData<HistoryType>("history");
 
 export async function getSortedContentData<
-  TData extends Record<string, unknown> & { date: Date }
+  TData extends Record<string, unknown> & { date: Date },
 >(contentType: string): Promise<Array<MarkdownResult<TData>>> {
   // Get file names under /content/{contentType}
   const dirPath = path.join(postsDirectory, contentType);
@@ -48,13 +48,13 @@ export async function getSortedContentData<
           id,
           ...(await compile<TData>(fileContents)),
         };
-      })
+      }),
   );
 
   // Sort posts by date
   return allData
     .filter(
-      (d) => !d.frontmatter.date || d.frontmatter.date < new Date(Date.now())
+      (d) => !d.frontmatter.date || d.frontmatter.date < new Date(Date.now()),
     )
     .sort((a, b) => {
       if (
@@ -84,11 +84,11 @@ export function getAllContentIds(contentType: string): Array<string> {
 }
 
 export async function getContentData<
-  TData extends Record<string, unknown> = Record<string, unknown>
+  TData extends Record<string, unknown> = Record<string, unknown>,
 >(
   contentType: string | null,
   id: string,
-  options: { noParagraph: boolean } = { noParagraph: false }
+  options: { noParagraph: boolean } = { noParagraph: false },
 ): Promise<MarkdownResult<TData>> {
   const fullPath = contentType
     ? path.join(postsDirectory, contentType, `${id}.md`)

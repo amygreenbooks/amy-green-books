@@ -23,7 +23,6 @@ const Markdown = ({ source, noParagraph = false }: MarkdownProps) => {
     components.p = ({ children }) => <>{children}</>;
   }
 
-  // @ts-expect-error 'MDXRemote' cannot be used as a JSX component.
   return <MDXRemote source={source} components={components} />;
 };
 

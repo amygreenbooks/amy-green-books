@@ -31,7 +31,7 @@ export default async function Page() {
       <header
         className={cn(
           `flex flex-column flex-row-ns items-center`,
-          `justify-center pv5 ph3 serif`
+          `justify-center pv5 ph3 serif`,
         )}
       >
         <img
