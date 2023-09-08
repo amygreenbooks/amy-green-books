@@ -9,9 +9,27 @@ image: /media/the-foxhole-victory-tour.jpg
 spineImage:
 paperTint: rgb(236 155 122 / 39%)
 retailers:
+  - image: /media/amazon.png
+    link: https://www.amazon.com/Foxhole-Victory-Tour-Historical-Fiction/dp/0764239570/
+    name: Amazon
   - image: /media/baker-book-house.png
     link: "https://bakerbookhouse.com/products/542729"
     name: Baker Book House
+  - image: /media/bam.png
+    link: >-
+      https://www.booksamillion.com/p/Foxhole-Victory-Tour/Amy-Lynn-Green/9780764239571
+    name: BAM
+  - image: /media/barnes-and-noble.png
+    link: >-
+      https://www.barnesandnoble.com/w/the-foxhole-victory-tour-amy-lynn-green/1143717360
+    name: Barnes & Noble
+  - image: /media/christian-book.png
+    link: >-
+      https://www.christianbook.com/the-foxhole-victory-tour-softcover/amy-green/9780764239571/pd/239575
+    name: Christian Book
+  - image: /media/indie-bound.png
+    link: https://bookshop.org/p/books/the-foxhole-victory-tour-amy-lynn-green/20204050
+    name: Indie Bound
 endorsements: []
 ---
 
