@@ -2,9 +2,9 @@ import Link from "next/link";
 
 import { MenuItem, socialLinks } from "@/lib/siteConfig";
 
-import NewsletterSection from "../newsletter/newsletterSection";
 import SocialIcon from "./socialIcon";
 import Svg from "./svg";
+import NewsletterSection from "../newsletter/newsletterSection";
 
 interface FooterProps {
   mainMenu: MenuItem[];

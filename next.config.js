@@ -1,9 +1,9 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
+  enabled: true,
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
   reactStrictMode: true,
   output: "export",
   images: {
@@ -11,4 +11,8 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+if (process.env.ANALYZE === "true") {
+  nextConfig = withBundleAnalyzer(nextConfig);
+}
+
+module.exports = nextConfig;

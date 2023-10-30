@@ -1,8 +1,8 @@
 import cn from "classnames";
 
+import styles from "./bookCover.module.css";
 import ScrollAnimation from "../util/animateOnScroll";
 import imgSrcSet from "../util/imgSrcSet";
-import styles from "./bookCover.module.css";
 
 const BookCover = ({
   title,

@@ -6,9 +6,9 @@ import cn from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { MenuItem } from "../../lib/siteConfig";
 import styles from "./nav.module.css";
 import NavigationLink from "./navigationLink";
+import { MenuItem } from "../../lib/siteConfig";
 
 export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
   const pathname = usePathname();

@@ -1,5 +1,5 @@
-import imgSrcSet from "../util/imgSrcSet";
 import styles from "./retailer.module.css";
+import imgSrcSet from "../util/imgSrcSet";
 
 export default function Retailer({
   link,

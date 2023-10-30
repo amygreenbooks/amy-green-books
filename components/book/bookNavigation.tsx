@@ -1,8 +1,8 @@
 import Link from "next/link";
 
+import styles from "./bookNavigation.module.css";
 import { MarkdownResult, BookType } from "../../lib/content";
 import imgSrcSet from "../util/imgSrcSet";
-import styles from "./bookNavigation.module.css";
 
 function BookNavLink({
   id,

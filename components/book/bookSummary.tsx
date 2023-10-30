@@ -1,10 +1,10 @@
 import cn from "classnames";
 import Link from "next/link";
 
-import { BookType, MarkdownResult } from "../../lib/content";
-import DateCmp from "../date";
 import BookCover from "./bookCover";
 import styles from "./bookSummary.module.css";
+import { BookType, MarkdownResult } from "../../lib/content";
+import DateCmp from "../date";
 
 export default function BookSummary({
   book: {
