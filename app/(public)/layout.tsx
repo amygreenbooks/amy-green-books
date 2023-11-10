@@ -44,6 +44,8 @@ export default async function RootLayout({
           color={themeColor}
         />
         <meta name="theme-color" content={themeColor} />
+        <link rel="preconnect" href="https://assets.mlcdn.com" />
+        <link rel="preconnect" href="https://res.cloudinary.com" />
       </head>
       <body className={styles.body}>
         <div id="skip" className={styles.skip}>

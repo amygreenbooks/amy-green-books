@@ -39,6 +39,7 @@ export default async function Page() {
           alt="A photo of Amy Lynn Green"
           width={240}
           height={240}
+          priority
           style={{
             width: "100%",
             height: "auto",
@@ -53,7 +54,7 @@ export default async function Page() {
       </header>
 
       <section>
-        <BookSummary book={books[0]} />
+        <BookSummary book={books[0]} priority />
       </section>
 
       <NewsletterSection id="2157311" />

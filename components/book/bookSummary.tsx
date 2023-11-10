@@ -20,9 +20,11 @@ export default function BookSummary({
     },
   },
   flipped = false,
+  priority = false,
 }: {
   book: MarkdownResult<BookType>;
   flipped?: boolean;
+  priority?: boolean;
 }) {
   const isReleased = !releaseDate || releaseDate < new Date(Date.now());
   let retailer = null;
@@ -56,6 +58,7 @@ export default function BookSummary({
               title={title}
               image={image}
               spineImage={spineImage}
+              priority={priority}
               animateIn
             />
           </Link>

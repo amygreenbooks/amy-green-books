@@ -10,6 +10,7 @@ const BookCover = ({
   spineImage,
   className,
   animateIn = false,
+  priority = false,
   ...props
 }: {
   title: string;
@@ -17,6 +18,7 @@ const BookCover = ({
   spineImage?: string;
   className?: string;
   animateIn?: boolean;
+  priority?: boolean;
 } & React.HTMLAttributes<HTMLElement>) => {
   const book = (
     <figure
@@ -32,6 +34,7 @@ const BookCover = ({
           alt=""
           width={58}
           height={500}
+          priority={priority}
         />
       )}
 
@@ -41,6 +44,7 @@ const BookCover = ({
         alt={title}
         width={324}
         height={500}
+        priority={priority}
       />
     </figure>
   );
