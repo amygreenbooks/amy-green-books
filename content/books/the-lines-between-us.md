@@ -8,8 +8,8 @@ description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   to fight fires as a smokejumper, while she joined the Army Corps. When a
   tragic accident raises suspicions, they’re forced to work together, but the
   truth they uncover may lead to an impossible—and dangerous—choice.
-image: /media/the-lines-between-us.jpg
-spineImage: /media/the-lines-between-us-spine.jpg
+image: /the-lines-between-us.jpg
+spineImage: /the-lines-between-us-spine.jpg
 paperTint: rgb(231 178 84 / 47%)
 retailers:
   - image: /media/amazon.png

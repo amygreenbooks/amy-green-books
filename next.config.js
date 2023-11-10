@@ -7,7 +7,8 @@ let nextConfig = {
   reactStrictMode: true,
   output: "export",
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./cloudinary-loader.ts",
   },
 };
 

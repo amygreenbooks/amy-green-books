@@ -2,6 +2,8 @@ import { Metadata } from "next";
 
 import { HistoryType, getAllContentIds, getContentData } from "@/lib/content";
 
+import HistoryLayout from "../historyLayout";
+
 const contentType = "history";
 
 type HistoryPageParams = {
@@ -13,6 +15,10 @@ export default async function HistoryPage({
 }: {
   params: HistoryPageParams;
 }) {
+  const layoutData = await getContentData<HistoryType>("history", "index", {
+    noParagraph: true,
+  });
+
   const {
     id,
     frontmatter: { title },
@@ -20,14 +26,16 @@ export default async function HistoryPage({
   } = await getContentData<HistoryType>(contentType, params.slug);
 
   return (
-    <article id={id}>
-      <header className="mt6 mb2">
-        <h2 className="f3 b serif">
-          The History Behind <em>{title}</em>
-        </h2>
-      </header>
-      {content && <div className="cms">{content}</div>}
-    </article>
+    <HistoryLayout {...layoutData} showMoreLink>
+      <article id={id} className="mt6">
+        <header className="mb2">
+          <h2 className="f3 b serif">
+            The History Behind <em>{title}</em>
+          </h2>
+        </header>
+        {content && <div className="cms">{content}</div>}
+      </article>
+    </HistoryLayout>
   );
 }
 

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
-import imgSrcSet from "@/components/util/imgSrcSet";
 import { getContentData } from "@/lib/content";
 
 export type AboutContent = {
@@ -18,15 +18,17 @@ export default async function AboutPage() {
   return (
     <article className="mw5 center ph3 mt4 mb5 cms">
       {aboutImage && (
-        <img
-          {...imgSrcSet({
-            src: aboutImage,
-            resize: "fit",
-            w: 500,
-            h: 500,
-          })}
+        <Image
+          src={aboutImage}
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
           alt={title}
+          width={396}
+          height={396}
           className="br-100"
+          sizes="(min-width: 960px) 484px, 484px"
         />
       )}
       {content}

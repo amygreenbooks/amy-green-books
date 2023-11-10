@@ -25,7 +25,7 @@ export default async function ContactPage() {
         <article
           className={`mw6 center pa3 mt4 mb5 paper-2 br1 bg-white ${styles.letter}`}
         >
-          {content && <div className="cms">{content}</div>}
+          {content && <div className="cms mb4">{content}</div>}
 
           <form
             name="contact"

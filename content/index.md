@@ -3,7 +3,7 @@ title: Amy Lynn Green
 subtitle: Historical Fiction Author
 welcome:
   heading: Welcome!
-  image: /media/home-amy.jpg
+  image: /home-amy.jpg
   text: >-
     Whether you heard about my historical novels, or know me from the writing
     world and are interested in what I’m up to, or just want to follow my

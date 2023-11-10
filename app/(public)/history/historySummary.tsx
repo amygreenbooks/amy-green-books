@@ -1,7 +1,6 @@
 import cn from "classnames";
+import Image from "next/image";
 import Link from "next/link";
-
-import imgSrcSet from "@/components/util/imgSrcSet";
 
 import styles from "./historySummary.module.css";
 
@@ -20,13 +19,10 @@ export default function HistorySummary({
     <Link href={`/history/${id}`} className={`${styles.link} db pv3 mb4 br1`}>
       <article id={id} className="flex-ns items-center">
         <div className={cn("ph3", { "order-last-ns": flip })}>
-          <img
-            {...imgSrcSet({
-              src: image,
-              resize: "smartcrop",
-              w: 260,
-              h: 150,
-            })}
+          <Image
+            src={`/ar_26:15,c_fill/${image}`}
+            width={260}
+            height={150}
             alt={`The History Behind ${title}`}
             className="db center"
           />

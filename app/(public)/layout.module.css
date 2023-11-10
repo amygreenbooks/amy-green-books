@@ -1,9 +1,11 @@
 .body {
-  background: url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=600")
+  background: url("https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_600,q_auto/paperboard")
     #f0f2ee;
   background: image-set(
-      url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=600") 1x,
-      url("/media/gray-clean-paperboard.jpg?nf_resize=fit&w=1200") 2x
+      url("https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_600,q_auto/paperboard")
+        1x,
+      url("https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1200,q_auto/paperboard")
+        2x
     )
     #f0f2ee;
   background-size: 600px;

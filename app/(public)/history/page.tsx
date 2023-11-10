@@ -1,12 +1,17 @@
-import { getHistoryPages } from "@/lib/content";
+import { HistoryType, getContentData, getHistoryPages } from "@/lib/content";
 
-import HistorySummary from "../historySummary";
+import HistoryLayout from "./historyLayout";
+import HistorySummary from "./historySummary";
 
 export default async function HistoryPage() {
   const posts = await getHistoryPages();
 
+  const layoutData = await getContentData<HistoryType>("history", "index", {
+    noParagraph: true,
+  });
+
   return (
-    <>
+    <HistoryLayout {...layoutData}>
       {posts.map((post, i) => (
         <HistorySummary
           key={post.id}
@@ -16,6 +21,6 @@ export default async function HistoryPage() {
           flip={i % 2 == 1}
         />
       ))}
-    </>
+    </HistoryLayout>
   );
 }

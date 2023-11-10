@@ -6,7 +6,7 @@
 }
 
 .link:hover {
-  background: var(--white);
+  background: rgb(0 0 0 / 3%);
 }
 
 .link:hover h2 {

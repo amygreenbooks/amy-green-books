@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./bookNavigation.module.css";
 import { MarkdownResult, BookType } from "../../lib/content";
-import imgSrcSet from "../util/imgSrcSet";
 
 function BookNavLink({
   id,
@@ -19,13 +19,12 @@ function BookNavLink({
       >
         {!right && <span className="arrow mr2 db-ns dn">←</span>}
         {image && (
-          <img
-            {...imgSrcSet({
-              src: image,
-              resize: "fit",
-              h: 120,
-            })}
+          <Image
+            src={image}
+            height={120}
+            width={78}
             aria-labelledby={`exp-book-${id}`}
+            alt=""
             className={styles.cover}
           />
         )}
