@@ -5,7 +5,7 @@ import { PageType, getContentData } from "@/lib/content";
 export default async function NewsletterPage() {
   const {
     frontmatter: { title, description, bannerImage },
-  } = await getContentData<PageType>("pages", "newsletter");
+  } = await getContentData<PageType>(null, "newsletter");
   return (
     <>
       {bannerImage && (

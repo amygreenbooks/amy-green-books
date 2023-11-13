@@ -1,4 +1,5 @@
 import HistoryLink from "@/components/book/historyLink";
+import PageLayout from "@/components/pageLayout";
 
 export default function HistoryLayout({
   children,
@@ -15,16 +16,9 @@ export default function HistoryLayout({
 }) {
   return (
     <>
-      <div className="ph4">
-        <div className="measure-wide center mt5 mb5 paper-2 bg-white pa4 br1">
-          <header className="mb4 serif">
-            <h1 className="db primary f2 b lh-title mb1 mt3">{title}</h1>
-            {content && <p className="mid-gray lh-title mb2">{content}</p>}
-          </header>
-
-          {children}
-        </div>
-      </div>
+      <PageLayout title={title} description={content}>
+        {children}
+      </PageLayout>
       {showMoreLink && (
         <HistoryLink
           href="/history"

@@ -12,15 +12,17 @@ export default async function HistoryPage() {
 
   return (
     <HistoryLayout {...layoutData}>
-      {posts.map((post, i) => (
-        <HistorySummary
-          key={post.id}
-          id={post.id}
-          image={post.frontmatter.image}
-          title={post.frontmatter.title}
-          flip={i % 2 == 1}
-        />
-      ))}
+      <div className="flex flex-column">
+        {posts.map((post, i) => (
+          <HistorySummary
+            key={post.id}
+            id={post.id}
+            image={post.frontmatter.image}
+            title={post.frontmatter.title}
+            flip={i % 2 == 1}
+          />
+        ))}
+      </div>
     </HistoryLayout>
   );
 }

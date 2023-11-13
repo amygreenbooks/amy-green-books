@@ -1,8 +1,8 @@
 .link {
   text-decoration: none;
   transition: var(--hover-transition);
-  margin-left: calc(-1 * var(--spacing-medium));
-  margin-right: calc(-1 * var(--spacing-medium));
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .link:hover {
@@ -11,4 +11,11 @@
 
 .link:hover h2 {
   color: var(--primary);
+}
+
+@media screen and (min-width: 40em) {
+  .link {
+    margin-left: calc(-1 * var(--spacing-medium));
+    margin-right: calc(-1 * var(--spacing-medium));
+  }
 }

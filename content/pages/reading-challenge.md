@@ -2,7 +2,8 @@
 title: Reading Challenge
 description: "Giveaways and Fun "
 ---
-<h2 className="mt6" id="welcome">
+
+<h2 className="mt4" id="welcome">
   <img src="/media/reading-challenge-banner.svg" alt="Welcome, avid readers of christian fiction! I'm Amy Lynn Green, historical fiction author, and I love books and pizza" />
 </h2>
 
@@ -19,7 +20,7 @@ There is a link to a form to enter a pizza giveaway below, but here’s my sugge
 Here are a few “resources” (read: fun goodies) I created to motivate you, if the thought of delicious cheesy goodness isn’t enough.
 
 <a href="/media/pizza_placemat.pdf" download><h2 style={{ marginTop: "var(--spacing-extra-large)" }} id="placemat">
-  <img src="/media/reading-challenge-1.svg" alt="Downloadable Placemat" /></h2></a>
+<img src="/media/reading-challenge-1.svg" alt="Downloadable Placemat" /></h2></a>
 
 You remember the good ol’ days of getting to color your own paper placemat? <a href="/media/pizza_placemat.pdf" download>Now, by clicking here to print these, you can re-live the experience.</a>
 
@@ -51,23 +52,23 @@ Want to do more than just reward yourself with pizza delivery? Here are some par
 
 ### Pizza Party with Family
 
-* Let family members create personal pan pizzas with their toppings of choice.
-* Consider playing a game that pairs well with pizza, such as setting up empty 2-liter bottles filled partway with water to create an in-house bowling alley.
-* Don’t forget to set out some crayons for the placemats! And be sure to compare answers and see who came closest on the trivia questions.
-* Read a pizza-themed kids book out loud. (Here are [a few suggestions](https://www.giftofcuriosity.com/books-about-pizza-for-kids/) if you want to search your local library.
+- Let family members create personal pan pizzas with their toppings of choice.
+- Consider playing a game that pairs well with pizza, such as setting up empty 2-liter bottles filled partway with water to create an in-house bowling alley.
+- Don’t forget to set out some crayons for the placemats! And be sure to compare answers and see who came closest on the trivia questions.
+- Read a pizza-themed kids book out loud. (Here are [a few suggestions](https://www.giftofcuriosity.com/books-about-pizza-for-kids/) if you want to search your local library.
 
 ### Pizza Party with Friends (or your book club)
 
-* If you’re making your own pizzas, have everyone bring an unusual pizza topping to share—anything from mini meatballs to goat cheese to banana peppers.
-* Alternately, if weather permits, plan on a bonfire. [Here are some great ways to make simple pizzas over an open flame](https://www.takethetruck.com/blog/campfire-camping-pizza).
-* Print a blank bracket and fill it in with toppings before making copies. Have everyone vote on the champion, then let the debates begin! Alternately, you could use local or chain pizza places.
-* Break out the board games afterward, watch a movie set in Italy, or enjoy a sports game together.
+- If you’re making your own pizzas, have everyone bring an unusual pizza topping to share—anything from mini meatballs to goat cheese to banana peppers.
+- Alternately, if weather permits, plan on a bonfire. [Here are some great ways to make simple pizzas over an open flame](https://www.takethetruck.com/blog/campfire-camping-pizza).
+- Print a blank bracket and fill it in with toppings before making copies. Have everyone vote on the champion, then let the debates begin! Alternately, you could use local or chain pizza places.
+- Break out the board games afterward, watch a movie set in Italy, or enjoy a sports game together.
 
 ### Pizza Party Date Night
 
-* If you’re making the pizza from scratch (or a pre-bought crust, we won’t tell), form it into the shape of a heart.
-* Make a toast to each other with your beverage of choice before starting in.
-* Play some fun Italian music to set the mood. It’s easy to find a playlist on a music streaming site or even YouTube.
-* Afterward, consider taking a virtual trip to Italy [via one of these links](https://www.thecrowdedplanet.com/virtual-tours-of-italy/), including webinars and 360 art galleries online. Feel free to dream about a future vacation!
+- If you’re making the pizza from scratch (or a pre-bought crust, we won’t tell), form it into the shape of a heart.
+- Make a toast to each other with your beverage of choice before starting in.
+- Play some fun Italian music to set the mood. It’s easy to find a playlist on a music streaming site or even YouTube.
+- Afterward, consider taking a virtual trip to Italy [via one of these links](https://www.thecrowdedplanet.com/virtual-tours-of-italy/), including webinars and 360 art galleries online. Feel free to dream about a future vacation!
 
 Thank you all for joining in the pizza-and-books fun with me. I love this group of readers so much, and I hope your 2022 is equally full of amazing books!
