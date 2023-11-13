@@ -13,25 +13,25 @@ image: /blackout-book-club.jpg
 spineImage: /blackout-book-club-spine.jpg
 paperTint: rgb(59 156 157 / 53%)
 retailers:
-  - image: /media/amazon.png
+  - image: Amazon
     link: https://www.amazon.com/Blackout-Book-Club-Lynn-Green/dp/0764239562/
     name: Amazon
-  - image: /media/baker-book-house.png
+  - image: BakerBookHouse
     link: https://bakerbookhouse.com/products/431778
     name: Baker Book House
-  - image: /media/bam.png
+  - image: BAM
     link: >-
       https://www.booksamillion.com/p/Blackout-Book-Club/Amy-Lynn-Green/9780764239564?id=7838045165670
     name: BAM
-  - image: /media/barnes-and-noble.png
+  - image: BarnesAndNoble
     link: >-
       https://www.barnesandnoble.com/w/the-blackout-book-club-amy-lynn-green/1141012099?ean=9780764239564
     name: Barnes & Noble
-  - image: /media/christian-book.png
+  - image: ChristianBook
     link: >-
       https://www.christianbook.com/the-blackout-book-club/9780764239564/pd/239564
     name: Christian Book
-  - image: /media/indie-bound.png
+  - image: IndieBound
     link: https://www.indiebound.org/book/9780764239564
     name: Indie Bound
 endorsements:
