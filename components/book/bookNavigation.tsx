@@ -6,13 +6,14 @@ import { MarkdownResult, BookType } from "../../lib/content";
 
 function BookNavLink({
   id,
-  frontmatter: { image, title },
+  frontmatter: { image, title, paperTint },
 }: MarkdownResult<BookType>) {
   return (
     <>
       <Link
         href={`/books/${id}`}
-        className={`flex items-center pa2 ${styles["book-link"]} raise`}
+        className={`flex items-center pa2 br1 ${styles["book-link"]}`}
+        style={{ "--paper-tint": paperTint } as React.CSSProperties}
       >
         {image && (
           <Image

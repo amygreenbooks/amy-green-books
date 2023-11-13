@@ -1,13 +1,14 @@
 .book-link {
   text-decoration: none;
+  transition: var(--hover-transition);
+}
+
+.book-link:hover {
+  background-color: var(--paper-tint, var(--off-white));
 }
 
 .book-link p {
   color: var(--primary);
-}
-
-.book-link:hover p {
-  text-decoration: underline;
 }
 
 .cover {
