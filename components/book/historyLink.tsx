@@ -14,7 +14,7 @@ export default function HistoryLink({
   description,
 }: HistoryLinkProps) {
   return (
-    <section className="mt5 bg-off-white pv4">
+    <section className="bg-off-white pv4">
       <Link
         href={href}
         className={`db mw6 pa3 center br1 border-box ${styles.link}`}

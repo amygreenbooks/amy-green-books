@@ -7,17 +7,13 @@ import { MarkdownResult, BookType } from "../../lib/content";
 function BookNavLink({
   id,
   frontmatter: { image, title },
-  right = false,
-}: MarkdownResult<BookType> & {
-  right?: boolean;
-}) {
+}: MarkdownResult<BookType>) {
   return (
     <>
       <Link
         href={`/books/${id}`}
         className={`flex items-center pa2 ${styles["book-link"]} raise`}
       >
-        {!right && <span className="arrow mr2 db-ns dn">←</span>}
         {image && (
           <Image
             src={image}
@@ -34,30 +30,26 @@ function BookNavLink({
           </h4>
           <p className="ma0 f6">View Book</p>
         </div>
-        {right && <span className="arrow mr2 db-ns dn">→</span>}
       </Link>
     </>
   );
 }
 
 export default function BookNavigation({
-  next,
-  previous,
+  otherBooks,
 }: {
-  next: MarkdownResult<BookType>;
-  previous?: MarkdownResult<BookType>;
+  otherBooks: MarkdownResult<BookType>[];
 }) {
   return (
-    <section className="mw6 mb5 ph3 center">
+    <>
       <h2 className="lh-title black f3 b mb1 serif">Explore my other books</h2>
       <div className="flex-ns">
-        <div className={styles["book-nav"]}>
-          {next && <BookNavLink {...next} />}
-        </div>
-        <div className={styles["book-nav"]}>
-          {previous && <BookNavLink {...previous} right />}
-        </div>
+        {otherBooks.map((book) => (
+          <div className={styles["book-nav"]} key={book.id}>
+            <BookNavLink {...book} />
+          </div>
+        ))}
       </div>
-    </section>
+    </>
   );
 }

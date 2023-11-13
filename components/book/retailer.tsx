@@ -11,7 +11,7 @@ export default function Retailer({
   name: string;
 }) {
   return (
-    <div className="w-16-m w-third-ns w-50 pa2 border-box flex w100">
+    <div className="w-third-ns w-50 pa2 border-box flex w100">
       <a
         className="db pa2 raise bg-off-white flex items-center w-100 br1"
         target="_blank"

@@ -66,7 +66,11 @@ export default async function Page() {
       </section>
 
       <section className="pb4 pt5 mw7 center flex-m mb4">
-        <div className="ph3 order-last-m">
+        <div
+          className={cn("ph3", {
+            ["order-last-m"]: books.length % 2 === 1,
+          })}
+        >
           <Image
             src={welcome.image}
             width={350}
