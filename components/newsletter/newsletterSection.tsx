@@ -27,7 +27,7 @@ export default function NewsletterSection({
         Enter your email address for quarterly writing updates
         and&nbsp;bookish&nbsp;fun!
       </p>
-      <NewsletterForm id={id} footer={footer} />
+      <NewsletterForm id={id} />
     </article>
   );
 }

@@ -1,4 +1,4 @@
 ---
 title: Newsletter
-bannerImage: /media/contactheader.jpg
+bannerImage: ContactHeader
 ---

@@ -2,13 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function NewsletterForm({
-  id,
-}: // footer,
-{
-  id: string;
-  footer: boolean;
-}) {
+export default function NewsletterForm({ id }: { id: string }) {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
@@ -22,7 +16,6 @@ export default function NewsletterForm({
     };
   }, [id]);
 
-  // const btnStyles = footer ? "bg-white primary b--white" : "bg-primary white";
   const btnStyles = "bg-primary white";
 
   return (
