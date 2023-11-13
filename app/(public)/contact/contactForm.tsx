@@ -96,7 +96,7 @@ export default function ContactForm({
                 </label>
               </p>
               <div className="flex-l mhn1-l">
-                <div className="pr1-l w-50-l relative">
+                <div className="ph1-l w-50-l relative">
                   <input
                     type="text"
                     id="name"
@@ -111,7 +111,7 @@ export default function ContactForm({
                     Name
                   </label>
                 </div>
-                <div className="pl1-l w-50-l relative">
+                <div className="ph1-l w-50-l relative">
                   <input
                     type="email"
                     id="email"
