@@ -9,8 +9,8 @@ description: >-
   prisoner of war camp. There, amid old secrets and prejudice, she finds that
   the POWs have hidden depths. When the lines between compassion and treason are
   blurred, she must decide where her heart truly lies.
-image: /things-we-didnt-say.jpg
-spineImage: /things-we-didnt-say-spine.jpg
+image: /things-we-didnt-say
+spineImage: /things-we-didnt-say-spine
 paperTint: rgb(210 34 42 / 32%)
 retailers:
   - image: Amazon

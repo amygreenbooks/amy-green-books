@@ -9,8 +9,8 @@ description:
   Maine. The women of her club band together as the war comes dangerously close,
   but their friendships are tested by secrets, and they must decide whether depending
   on each other is worth the cost.
-image: /blackout-book-club.jpg
-spineImage: /blackout-book-club-spine.jpg
+image: /blackout-book-club
+spineImage: /blackout-book-club-spine
 paperTint: rgb(59 156 157 / 53%)
 retailers:
   - image: Amazon
