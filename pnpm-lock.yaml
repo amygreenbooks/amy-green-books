@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@next/mdx':
-    specifier: ^14.0.2
-    version: 14.0.2
+    specifier: ^14.0.4
+    version: 14.0.4
   classnames:
     specifier: ^2.3.2
     version: 2.3.2
@@ -592,8 +592,8 @@ packages:
       glob: 7.1.7
     dev: true
 
-  /@next/mdx@14.0.2:
-    resolution: {integrity: sha512-MFjfSeGDmjwLLRHojlyaDIs2dQz5kFBQh/jcTIb57VIlbOvRjJsgnwLTH3DzUT25dUaX0QaR6t+ITNcdyfwozQ==}
+  /@next/mdx@14.0.4:
+    resolution: {integrity: sha512-w0b+A2LRdlqqTIzmaeqPOaafid2cYYYjETA+G+3ZFwkNbBQjvZp57P1waOexF3MGHzcCEoXEnhYpAc+FO6S0Rg==}
     peerDependencies:
       '@mdx-js/loader': '>=0.15.0'
       '@mdx-js/react': '>=0.15.0'
