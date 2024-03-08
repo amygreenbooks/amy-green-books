@@ -62,12 +62,14 @@ export default async function Page() {
           job, neither anticipates the danger and intrigue they&#8217;ll
           encounter performing so close to the front lines.
         </blockquote>
-        <Image
-          src="the-foxhole-victory-tour.jpg"
-          width={364}
-          height={560}
-          alt="Book cover of The Foxhole Victory Tour"
-        />
+        <Link href="/books/the-foxhole-victory-tour">
+          <Image
+            src="the-foxhole-victory-tour.jpg"
+            width={364}
+            height={560}
+            alt="Book cover of The Foxhole Victory Tour"
+          />
+        </Link>
         <H3>Would You Make it on the Foxhole Circuit?</H3>
         <p>
           Like I said, I love research and basing my novels on real WWII events,
