@@ -7,11 +7,8 @@ import cn from "classnames";
 import styles from "./contact.module.css";
 import ContactSuccess from "./contactSuccess";
 
-const encode = (data: Record<string, string>) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+const subject = (formState: { name: string }) =>
+  `New submission from ${formState.name}`;
 
 export default function ContactForm({
   content,
@@ -22,7 +19,7 @@ export default function ContactForm({
     name: "",
     email: "",
     message: "",
-    "bot-field": "",
+    _gotcha: "",
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -40,14 +37,15 @@ export default function ContactForm({
     const form = event.currentTarget;
 
     try {
-      await fetch("/", {
+      await fetch(form.action, {
         method: form.method,
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        body: encode({
-          "form-name": form.getAttribute("name") || "contact",
+        body: JSON.stringify({
           ...formState,
+          subject: subject(formState),
         }),
       });
       setSuccess(true);
@@ -76,20 +74,17 @@ export default function ContactForm({
           <>
             {content && <div className="cms mb4">{content}</div>}
             <form
-              name="contact"
               method="POST"
-              action="/contact/success"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              action="https://formspree.io/f/xwkgqnoo"
               onSubmit={handleSubmit}
             >
-              <input type="hidden" name="form-name" value="contact" />
+              <input name="subject" type="hidden" value={subject(formState)} />
               <p className="dn">
                 <label>
                   Don&apos;t fill this out if you&apos;re human:{" "}
                   <input
-                    name="bot-field"
-                    value={formState["bot-field"]}
+                    name="_gotcha"
+                    value={formState["_gotcha"]}
                     onChange={handleChange}
                     disabled={submitting}
                   />
