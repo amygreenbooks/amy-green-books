@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 import Book from "@/components/book/book";
-import BookNavigation from "@/components/book/bookNavigation";
 import HistoryLink from "@/components/book/historyLink";
 import {
   BookType,
@@ -17,16 +16,13 @@ type BookPageParams = { slug: string };
 export default async function BookPage({ params }: { params: BookPageParams }) {
   const bookData = await getContentData<BookType>("books", params.slug);
   const allBooks = await getBooks();
-  const bookIndex = allBooks.findIndex((n) => n.id === params.slug);
-  const previous = allBooks[(bookIndex + 1) % allBooks.length];
-  const next = allBooks[(bookIndex + allBooks.length - 1) % allBooks.length];
+  const otherBooks = allBooks.filter((n) => n.id !== params.slug);
   const history =
     (await getHistoryPages()).find((n) => n.id === params.slug) || null;
 
   return (
     <>
-      <Book {...bookData} />
-      <BookNavigation next={next} previous={previous} />
+      <Book {...bookData} otherBooks={otherBooks} />
       {history && (
         <HistoryLink
           href={`/history/${history.id}`}

@@ -8,29 +8,29 @@ description: After Pearl Harbor, sweethearts Gordon Hooper and Dorie Armitage
   to fight fires as a smokejumper, while she joined the Army Corps. When a
   tragic accident raises suspicions, they’re forced to work together, but the
   truth they uncover may lead to an impossible—and dangerous—choice.
-image: /media/the-lines-between-us.jpg
-spineImage: /media/the-lines-between-us-spine.jpg
+image: /the-lines-between-us
+spineImage: /the-lines-between-us-spine
 paperTint: rgb(231 178 84 / 47%)
 retailers:
-  - image: /media/amazon.png
+  - image: Amazon
     link: https://www.amazon.com/Lines-Between-Amy-Lynn-Green/dp/0764237179/
     name: Amazon
-  - image: /media/baker-book-house.png
+  - image: BakerBookHouse
     link: https://bakerbookhouse.com/products/277335
     name: Baker Book House
-  - image: /media/bam.png
+  - image: BAM
     link: >-
       https://www.booksamillion.com/p/Lines-Between-Us/Amy-Lynn-Green/9780764237171?id=8146067149628
     name: BAM
-  - image: /media/barnes-and-noble.png
+  - image: BarnesAndNoble
     link: >-
       https://www.barnesandnoble.com/w/the-lines-between-us-amy-lynn-green/1138791237
     name: Barnes & Noble
-  - image: /media/christian-book.png
+  - image: ChristianBook
     link: >-
       https://www.christianbook.com/the-lines-between-us/amy-green/9780764237171/pd/237177
     name: Christian Book
-  - image: /media/indie-bound.png
+  - image: IndieBound
     link: https://www.indiebound.org/book/9780764237171
     name: Indie Bound
 endorsements: []

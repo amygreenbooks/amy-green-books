@@ -1,8 +1,8 @@
 import cn from "classnames";
+import Image from "next/image";
 
 import styles from "./bookCover.module.css";
 import ScrollAnimation from "../util/animateOnScroll";
-import imgSrcSet from "../util/imgSrcSet";
 
 const BookCover = ({
   title,
@@ -10,6 +10,7 @@ const BookCover = ({
   spineImage,
   className,
   animateIn = false,
+  priority = false,
   ...props
 }: {
   title: string;
@@ -17,6 +18,7 @@ const BookCover = ({
   spineImage?: string;
   className?: string;
   animateIn?: boolean;
+  priority?: boolean;
 } & React.HTMLAttributes<HTMLElement>) => {
   const book = (
     <figure
@@ -26,24 +28,23 @@ const BookCover = ({
       {...props}
     >
       {spineImage && (
-        <img
-          {...imgSrcSet({
-            src: spineImage,
-            resize: "fit",
-            h: 500,
-          })}
+        <Image
+          src={spineImage}
           className={styles.spine}
           alt=""
+          width={58}
+          height={500}
+          priority={priority}
         />
       )}
-      <img
-        {...imgSrcSet({
-          src: image,
-          resize: "fit",
-          h: 500,
-        })}
-        alt={title}
+
+      <Image
+        src={image}
         className={styles.cover}
+        alt={title}
+        width={324}
+        height={500}
+        priority={priority}
       />
     </figure>
   );

@@ -5,29 +5,29 @@ date: 2023-06-28T06:00:00
 releaseDate: 2024-01-31
 description: >-
   During World War II, Catherine Duquette and Maggie McCleod come from different worlds but are thrown together on a USO variety show touring North Africa. While they each have secret reasons for accepting the job, neither anticipates the danger and intrigue they'll encounter performing so close to the front lines.
-image: /media/the-foxhole-victory-tour.jpg
-spineImage:
+image: /the-foxhole-victory-tour
+spineImage: /the-foxhole-victory-tour-spine
 paperTint: rgb(236 155 122 / 39%)
 retailers:
-  - image: /media/amazon.png
+  - image: Amazon
     link: https://www.amazon.com/Foxhole-Victory-Tour-Historical-Fiction/dp/0764239570/
     name: Amazon
-  - image: /media/baker-book-house.png
+  - image: BakerBookHouse
     link: "https://bakerbookhouse.com/products/542729"
     name: Baker Book House
-  - image: /media/bam.png
+  - image: BAM
     link: >-
       https://www.booksamillion.com/p/Foxhole-Victory-Tour/Amy-Lynn-Green/9780764239571
     name: BAM
-  - image: /media/barnes-and-noble.png
+  - image: BarnesAndNoble
     link: >-
       https://www.barnesandnoble.com/w/the-foxhole-victory-tour-amy-lynn-green/1143717360
     name: Barnes & Noble
-  - image: /media/christian-book.png
+  - image: ChristianBook
     link: >-
       https://www.christianbook.com/the-foxhole-victory-tour-softcover/amy-green/9780764239571/pd/239575
     name: Christian Book
-  - image: /media/indie-bound.png
+  - image: IndieBound
     link: https://bookshop.org/p/books/the-foxhole-victory-tour-amy-lynn-green/20204050
     name: Indie Bound
 endorsements: []

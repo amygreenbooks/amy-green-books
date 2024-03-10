@@ -1,7 +1,7 @@
 ---
 title: Contact
 description: I'd love to hear from you.
-bannerImage: /media/contactheader.jpg
+bannerImage: ContactHeader
 successMessage: "Thanks for your message!"
 ---
 

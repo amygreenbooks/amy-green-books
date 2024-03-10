@@ -25,13 +25,13 @@ export default function Footer({ mainMenu }: FooterProps) {
 
           <ul className="mb3 center flex-ns flex-wrap justify-between mw5 tc">
             <li>
-              <Link href="/" className="link">
+              <Link href="/" className="link pv3 db lh-solid">
                 Home
               </Link>
             </li>
             {mainMenu.map(({ title, url }) => (
               <li key={url}>
-                <Link href={url} className="link">
+                <Link href={url} className="link pv3 db lh-solid">
                   {title}
                 </Link>
               </li>

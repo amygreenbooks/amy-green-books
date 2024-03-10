@@ -1,9 +1,9 @@
 import cn from "classnames";
+import Image from "next/image";
 
 import BookSummary from "@/components/book/bookSummary";
 import Markdown from "@/components/markdown";
 import NewsletterSection from "@/components/newsletter/newsletterSection";
-import imgSrcSet from "@/components/util/imgSrcSet";
 import { getContentData, getBooks } from "@/lib/content";
 
 import styles from "./page.module.css";
@@ -34,20 +34,19 @@ export default async function Page() {
           `justify-center pv5 ph3 serif`,
         )}
       >
-        <img
-          {...imgSrcSet({
-            src: "/media/meet-amy.png",
-            resize: "fit",
-            w: 240,
-            h: 240,
-          })}
-          className={`db br-100 w-100 mr5-ns paper-2 ${styles.headShot}`}
+        <Image
+          src="/meet-amy.png"
           alt="A photo of Amy Lynn Green"
+          width={240}
+          height={240}
+          priority
           style={{
-            minWidth: 240,
-            minHeight: 240,
+            width: "100%",
+            height: "auto",
           }}
+          className={`db br-100 mr5-ns paper-2 ${styles.headShot}`}
         />
+
         <div>
           <h1 className="f1 fw9 lh-title primary mt3">{title}</h1>
           <p className="f4 fw5 i lh-title mw-100 grey-4 o-60">{subtitle}</p>
@@ -55,7 +54,7 @@ export default async function Page() {
       </header>
 
       <section>
-        <BookSummary book={books[0]} />
+        <BookSummary book={books[0]} priority />
       </section>
 
       <NewsletterSection id="2157311" />
@@ -67,15 +66,17 @@ export default async function Page() {
       </section>
 
       <section className="pb4 pt5 mw7 center flex-m mb4">
-        <div className="ph3 order-last-m">
-          <img
-            {...imgSrcSet({
-              src: welcome.image,
-              resize: "fit",
-              w: 350,
-            })}
+        <div
+          className={cn("ph3", {
+            ["order-last-m"]: books.length % 2 === 1,
+          })}
+        >
+          <Image
+            src={welcome.image}
+            width={350}
+            height={464}
             alt="Amy Lynn Green"
-            className="db mb2 center mw4-ns"
+            className="db mb2 center"
           />
         </div>
 

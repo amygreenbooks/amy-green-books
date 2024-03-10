@@ -1,7 +1,6 @@
 import cn from "classnames";
+import Image from "next/image";
 import Link from "next/link";
-
-import imgSrcSet from "@/components/util/imgSrcSet";
 
 import styles from "./historySummary.module.css";
 
@@ -17,22 +16,24 @@ export default function HistorySummary({
   flip?: boolean;
 }) {
   return (
-    <Link href={`/history/${id}`} className={`${styles.link} db pv3 mb4 br1`}>
+    <Link href={`/history/${id}`} className={cn(styles.link, "db pv3 mb4 br1")}>
       <article id={id} className="flex-ns items-center">
         <div className={cn("ph3", { "order-last-ns": flip })}>
-          <img
-            {...imgSrcSet({
-              src: image,
-              resize: "smartcrop",
-              w: 260,
-              h: 150,
-            })}
+          <Image
+            src={`/ar_26:15,c_fill/${image}`}
+            width={260}
+            height={150}
             alt={`The History Behind ${title}`}
             className="db center"
           />
         </div>
 
-        <div className={cn("ph3 flex-auto", { "tr-ns": flip })}>
+        <div
+          className={cn("ph3 flex-auto tc mt2 mt0-ns", {
+            "tr-ns": flip,
+            "tl-ns": !flip,
+          })}
+        >
           <p className="mb0 grey-3 f6">Explore the history behind</p>
           <h2 className="f3 b i lh-title mb1 serif">{title}</h2>
           <p className="mb0">Read Post →</p>

@@ -29,6 +29,8 @@ img.spine {
   transform-origin: left;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 .spine {
@@ -39,6 +41,7 @@ img.spine {
   position: absolute;
   transform-origin: right;
   height: 100%;
+  width: auto;
 }
 
 .animatedBook .cover,

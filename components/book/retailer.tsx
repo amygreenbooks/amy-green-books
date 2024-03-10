@@ -1,5 +1,6 @@
+import Image from "next/image";
+
 import styles from "./retailer.module.css";
-import imgSrcSet from "../util/imgSrcSet";
 
 export default function Retailer({
   link,
@@ -11,22 +12,20 @@ export default function Retailer({
   name: string;
 }) {
   return (
-    <div className="w-16-m w-third-ns w-50 pa2 border-box flex w100">
+    <div className="w-third-ns w-50 pa2 border-box flex w100">
       <a
-        className="db pa2 raise bg-off-white flex items-center w-100 br1"
+        className="db pa4 pa3-ns pa2-m raise bg-off-white flex items-center w-100 br1"
         target="_blank"
         rel="noreferrer"
         href={link}
       >
-        <img
-          {...imgSrcSet({
-            src: image,
-            resize: "fit",
-            h: 100,
-          })}
+        <Image
+          width={300}
+          height={100}
+          src={image}
           alt={name}
           className={`db mw-100 br0 center ${styles.img}`}
-        />
+        ></Image>
       </a>
     </div>
   );

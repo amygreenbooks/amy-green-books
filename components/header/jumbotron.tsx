@@ -1,6 +1,7 @@
 "use client";
 
 import cn from "classnames";
+import Image from "next/image";
 
 interface JumbotronProps {
   title: string;
@@ -10,11 +11,8 @@ interface JumbotronProps {
 
 export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
   return (
-    <div
-      className={cn("pv5 ph3 pv6-l", {
-        "bg-center cover banner": image,
-      })}
-    >
+    <div className={cn("pv5 ph3 pv6-l relative")}>
+      <Image src={image} fill alt="" className="of-cover br0" priority />
       <div className="mw7 center">
         <div className="db mb3">
           <div className="mw7 relative mb2">
@@ -41,25 +39,6 @@ export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .banner {
-          background-image: url("${image}?nf_resize=fit&h=250");
-          background-image: image-set(
-            url("${image}?nf_resize=fit&h=250") 1x,
-            url("${image}?nf_resize=fit&h=500") 2x
-          );
-        }
-
-        @media screen and (min-width: 60em) {
-          .banner {
-            background-image: url("${image}?nf_resize=fit&h=500");
-            background-image: image-set(
-              url("${image}?nf_resize=fit&h=500") 1x,
-              url("${image}?nf_resize=fit&h=1000") 2x
-            );
-          }
-        }
-      `}</style>
     </div>
   );
 }

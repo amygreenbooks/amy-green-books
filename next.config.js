@@ -6,7 +6,8 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 let nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./cloudinary-loader.ts",
   },
 };
 

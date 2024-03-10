@@ -9,29 +9,29 @@ description: >-
   prisoner of war camp. There, amid old secrets and prejudice, she finds that
   the POWs have hidden depths. When the lines between compassion and treason are
   blurred, she must decide where her heart truly lies.
-image: /media/things-we-didnt-say.jpg
-spineImage: /media/things-we-didnt-say-spine.jpg
+image: /things-we-didnt-say
+spineImage: /things-we-didnt-say-spine
 paperTint: rgb(210 34 42 / 32%)
 retailers:
-  - image: /media/amazon.png
+  - image: Amazon
     link: "https://www.amazon.com/Things-Didnt-Say-Lynn-Green/dp/0764237160/"
     name: Amazon
-  - image: /media/baker-book-house.png
+  - image: BakerBookHouse
     link: "https://bakerbookhouse.com/products/things-we-didn-t-say-9780764237164"
     name: Baker Book House
-  - image: /media/bam.png
+  - image: BAM
     link: >-
       https://www.booksamillion.com/p/Things-We-Didnt-Say/Amy-Lynn-Green/9780764237164
     name: BAM
-  - image: /media/barnes-and-noble.png
+  - image: BarnesAndNoble
     link: >-
       https://www.barnesandnoble.com/w/things-we-didnt-say-amy-lynn-green/1136472139
     name: Barnes & Noble
-  - image: /media/christian-book.png
+  - image: ChristianBook
     link: >-
       https://www.christianbook.com/things-we-didnt-say/amy-green/9780764237164/pd/237164
     name: Christian Book
-  - image: /media/indie-bound.png
+  - image: IndieBound
     link: "https://www.indiebound.org/book/9780764237164"
     name: Indie Bound
 endorsements:

@@ -5,18 +5,12 @@ import { PageType, getContentData } from "@/lib/content";
 export default async function NewsletterPage() {
   const {
     frontmatter: { title, description, bannerImage },
-  } = await getContentData<PageType>("pages", "newsletter");
+  } = await getContentData<PageType>(null, "newsletter");
   return (
     <>
       {bannerImage && (
         <Jumbotron title={title} subtitle={description} image={bannerImage} />
       )}
-      {/*
-      {content && (
-        <article className="measure-wide center mt4 mb5">
-          <div className="cms">{content}</div>
-        </article>
-      )} */}
 
       <NewsletterSection id="2157311" />
     </>

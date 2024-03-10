@@ -1,14 +1,16 @@
 ---
 title: Things We Didn't Say
 date: 2020-11-02T00:00:00
-image: /media/translatorschool.jpg
+image: TranslatorSchool
 ---
 
 **Fact:** Almost everything about the Military Intelligence Service’s Japanese Language school is accurate. Peter Ito is fictional, but the dynamics between Hawaiian and Californian students, the increased pressure to turn out translators quickly, and even students studying in the privy late at night are all taken directly from my research. [The Densho Encylopedia](https://encyclopedia.densho.org/Military_Intelligence_Service_Language_School/) has a great summary for anyone wanting to learn more, with plenty of links to other resources.
 
 <figure>
-  <img src="/media/translatorschool.jpg?nf_resize=fit&w=580" width="580" />
-  <figcaption>Some of the students at the MIS language school pausing work to pose for a photo. Photo courtesy of the Minnesota Historical Society Collections</figcaption>
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/TranslatorSchool" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/TranslatorSchool 2x" width="580" />
+  <figcaption>
+    Some of the students at the MIS language school pausing work to pose for a photo. Photo courtesy of the Minnesota Historical Society Collections
+  </figcaption>
 </figure>
 
 **Fiction:** Ironside Lake is only a real place in my imagination, though the events that took place there are based on many real experiences in small towns hosting POW camps in Minnesota. Thawing Day is also a tradition that I invented for the story, inspired by my tendency to lose gloves in snow drifts.
@@ -16,8 +18,10 @@ image: /media/translatorschool.jpg
 **Fact:** Minnesotans did protest POWs getting highly-rationed ham at Easter, causing a local newspaper to write a story listing the POWs’ diets and forcing them to change the amount of meat offered to prisoners. Many other small details about Americans’ negative reaction toward POWs in the novel were borrowed from real life. Be sure to visit the [Algona POW Camp Museum](https://www.pwcampalgona.org/) in Algona, Iowa to see more artifacts, stories, and exhibits about daily life in the Midwest camps. You can even read letters from POWs like the ones Jo censored!
 
 <figure>
-  <img src="/media/pows.jpg?nf_resize=fit&w=580" width="580" />
-  <figcaption>German POWs in their barracks. Photo courtesy of the Minnesota Historical Society Collections</figcaption>
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/pows" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/pows 2x" width="580" />
+  <figcaption>
+    German POWs in their barracks. Photo courtesy of the Minnesota Historical Society Collections
+  </figcaption>
 </figure>
 
 **Fiction:** While several larger POW branches had newspapers written by POWs and distributed among the camp residents and staff, “The POW Potato Brigade” column was invented for the novel, and as far as I’m aware, there was no real-world equivalent.
@@ -29,8 +33,10 @@ image: /media/translatorschool.jpg
 **John Aiso:** Later a lawyer and judge, the head of the MIS language school brilliantly managed a large staff and developed the curriculum for thousands of linguists during WWII. The quote that Peter shares with Jo about blossoming like cherry trees is also something he actually said. I was so inspired in my research by his dedication that I knew I had to include him in the novel. [Learn more about his life and accomplishments here.](https://encyclopedia.densho.org/John_Aiso/)
 
 <figure>
-  <img src="/media/johnaiso.jpg?nf_resize=fit&h=500" height="500" />
-  <figcaption>John Aiso, head of the language school. Photo courtesy of Japanese American Archival Collection, California State University</figcaption>
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/johnaiso" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/johnaiso 2x" height="500" />
+  <figcaption>
+    John Aiso, head of the language school. Photo courtesy of Japanese American Archival Collection, California State University
+  </figcaption>
 </figure>
 
 **Dr. Howard Hong:** This former philosophy professor really did visit all of the Minnesota camps on behalf of YMCA War Prisoners’ Aid, bringing books, musical instruments, and other leisure-time aids, as well as helping camps develop programs and classes to keep the men productively occupied until the war’s end. Many POWs credit him with their positive experience in Minnesota camps.

@@ -1,7 +1,8 @@
-import { BookType } from "@/lib/content";
+import { BookType, MarkdownResult } from "@/lib/content";
 
 import styles from "./book.module.css";
 import BookCover from "./bookCover";
+import BookNavigation from "./bookNavigation";
 import Endorsements from "./endorsements";
 import RetailerComp from "./retailer";
 import DateComponent from "../date";
@@ -17,9 +18,11 @@ export default function Book({
     paperTint,
   },
   content,
+  otherBooks,
 }: {
   frontmatter: BookType;
   content: React.ReactElement;
+  otherBooks: MarkdownResult<BookType>[];
 }) {
   const isReleased = releaseDate && releaseDate < new Date(Date.now());
 
@@ -48,7 +51,7 @@ export default function Book({
           spineImage={spineImage}
           style={{
             position: "sticky",
-            top: "6rem",
+            top: "calc(min(7rem, 20vh))",
           }}
         />
       </div>
@@ -65,7 +68,7 @@ export default function Book({
           backgroundColor: paperTint,
         }}
       >
-        <div className={`ph3 center ${styles.purchaseContainer}`}>
+        <div className={`center ${styles.purchaseContainer}`}>
           <h2 className="f3 b lh-title serif mb2">
             {isReleased ? "Purchase today at:" : "Pre-order now at:"}
           </h2>
@@ -78,9 +81,13 @@ export default function Book({
         </div>
       </section>
 
-      <div className={styles.endorsements}>
+      <section className={styles.endorsements}>
         <Endorsements endorsements={endorsements} />
-      </div>
+      </section>
+
+      <section className={styles.bookNavigation}>
+        <BookNavigation otherBooks={otherBooks} />
+      </section>
     </article>
   );
 }

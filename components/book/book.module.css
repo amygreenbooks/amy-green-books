@@ -1,21 +1,9 @@
 .book {
   margin-top: var(--spacing-large);
-  grid-template-rows: repeat(4, auto);
+  margin-bottom: var(--spacing-extra-large);
+  grid-template-rows: repeat(3, auto) 3rem repeat(2, auto);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-}
-
-@media screen and (min-width: 46em) {
-  .book {
-    display: grid;
-    grid-template-columns: 1fr 4rem 11rem 21rem 4rem 1fr;
-  }
-}
-
-@media screen and (min-width: 69em) {
-  .book {
-    grid-template-columns: 1fr 9rem 11rem 21rem 9rem 1fr;
-  }
 }
 
 .header,
@@ -29,27 +17,60 @@
 }
 
 .header {
-  grid-area: 1 / 4 / 2 / 6;
+  grid-area: 1 / 5 / 2 / 6;
 }
 
 .image {
-  grid-area: 1 / 2 / 3 / 4;
+  grid-area: 1 / 2 / 4 / 4;
   max-width: 20rem;
   margin: 0 auto var(--spacing-medium);
 }
 
 .body {
-  grid-area: 2 / 4 / 3 / 6;
+  grid-area: 2 / 5 / 3 / 6;
 }
 
 .purchase {
-  grid-area: 3 / 1 / 4 / 7;
+  grid-area: 3 / 1 / 4 / 8;
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
 }
 
 .purchaseContainer {
-  max-width: 50rem;
+  grid-area: 1 / 5 / 2 / 6;
 }
 
 .endorsements {
-  grid-area: 4 / 2 / 5 / 6;
+  grid-area: 5 / 2 / 6 / 7;
+}
+
+.bookNavigation {
+  grid-area: 6 / 3 / 7 / 6;
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+}
+
+@media screen and (min-width: 50em) {
+  .book {
+    display: grid;
+    grid-template-columns: 1fr 1rem 14rem 1rem 23rem 1rem 1fr;
+  }
+  .purchase {
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  .purchase,
+  .bookNavigation,
+  .header,
+  .body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .book {
+    grid-template-columns: 1fr 1rem 19rem 1rem 28rem 1rem 1fr;
+  }
 }
