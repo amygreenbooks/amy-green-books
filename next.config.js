@@ -1,9 +1,11 @@
+const withMDX = require("@next/mdx")();
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: true,
 });
 
 /** @type {import('next').NextConfig} */
 let nextConfig = {
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   reactStrictMode: true,
   output: "export",
   images: {
@@ -11,6 +13,8 @@ let nextConfig = {
     loaderFile: "./cloudinary-loader.ts",
   },
 };
+
+nextConfig = withMDX(nextConfig);
 
 if (process.env.ANALYZE === "true") {
   nextConfig = withBundleAnalyzer(nextConfig);

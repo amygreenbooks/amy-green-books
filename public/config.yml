@@ -88,8 +88,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
-    folder: "content/pages"
-    preview_path: "{{slug}}"
+    folder: "app/(public)/(mdx)"
+    preview_path: "{{slug}}/page"
+    extension: mdx
     create: true
     fields:
       - { label: Title, name: title, widget: string }
