@@ -16,15 +16,23 @@ export default async function Page() {
         <p>
           Welcome to the Christian Fiction Scavenger Hunt! If you&#8217;ve just
           discovered the hunt, be sure to start at{" "}
-          <Link href="https://LisaTawnBergren.com">Stop #1</Link>, and collect
-          the clues through all the stops, in order, so you can enter to win one
-          of our top 5 grand prizes!
+          <Link href="https://lisatawnbergren.com/2024/03/scavenger-hunt-stop-1-3/">
+            Stop #1
+          </Link>
+          , and collect the clues through all the stops, in order, so you can
+          enter to win one of our top 5 grand prizes!
         </p>
         <ul>
           <li>
             The hunt BEGINS on 3/14 at noon MST with{" "}
-            <Link href="https://LisaTawnBergren.com">Stop #1</Link> at{" "}
-            <Link href="https://LisaTawnBergren.com">LisaTawnBergren.com</Link>.
+            <Link href="https://lisatawnbergren.com/2024/03/scavenger-hunt-stop-1-3/">
+              Stop #1
+            </Link>{" "}
+            at{" "}
+            <Link href="https://lisatawnbergren.com/2024/03/scavenger-hunt-stop-1-3/">
+              LisaTawnBergren.com
+            </Link>
+            .
           </li>
           <li>
             Hunt through our loop using Chrome or Firefox as your browser (not
@@ -145,7 +153,8 @@ export default async function Page() {
           or at your local bookstore!
         </p>
         <p>
-          <strong>Clue to Write Down:</strong> any day.
+          <strong>Clue to Write Down:</strong>{" "}
+          <strong style={{ color: "var(--red, #f46a6e)" }}>any day</strong>
         </p>
         <p>
           <strong>Link to Stop #30, the Next Stop on the Loop:</strong>{" "}
