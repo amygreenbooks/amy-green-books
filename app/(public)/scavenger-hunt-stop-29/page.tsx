@@ -158,7 +158,9 @@ export default async function Page() {
         </p>
         <p>
           <strong>Link to Stop #30, the Next Stop on the Loop:</strong>{" "}
-          <Link href="#">Angela Strong&#8217;s site!</Link>
+          <Link href="https://www.angelaruthstrong.com/single-post/christian-fiction-scavenger-hunt-stop-30">
+            Angela Strong&#8217;s site!
+          </Link>
         </p>
         <hr />
         <Image
