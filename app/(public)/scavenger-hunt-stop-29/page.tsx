@@ -58,7 +58,7 @@ export default async function Page() {
           I love to share fascinating historical details on Facebook and book
           recommendations and glimpses of the writing life on Instagram (feel
           free to join me there). In January, my latest novel,{" "}
-          <Link href="/books/the-foxhole-victory-tour">
+          <Link href="/books/the-foxhole-victory-tour" target="_blank">
             <em>The Foxhole Victory Tour</em>
           </Link>{" "}
           released. Here&#8217;s a little teaser for the plot:
@@ -70,7 +70,7 @@ export default async function Page() {
           job, neither anticipates the danger and intrigue they&#8217;ll
           encounter performing so close to the front lines.
         </blockquote>
-        <Link href="/books/the-foxhole-victory-tour">
+        <Link href="/books/the-foxhole-victory-tour" target="_blank">
           <Image
             src="the-foxhole-victory-tour.jpg"
             width={364}
@@ -127,7 +127,7 @@ export default async function Page() {
         </p>
         <p>
           My performers in{" "}
-          <Link href="/books/the-foxhole-victory-tour">
+          <Link href="/books/the-foxhole-victory-tour" target="_blank">
             <em>The Foxhole Victory Tour</em>
           </Link>{" "}
           kept these rules (well…mostly)…could you?
@@ -135,7 +135,7 @@ export default async function Page() {
         <H3>Here are the Stop #29 Basics:</H3>
         <p>
           If you&#8217;re interested, you can order{" "}
-          <Link href="/books/the-foxhole-victory-tour">
+          <Link href="/books/the-foxhole-victory-tour" target="_blank">
             <em>The Foxhole Victory Tour</em>
           </Link>{" "}
           on{" "}
@@ -173,7 +173,7 @@ export default async function Page() {
         <p>
           Here&#8217;s something extra fun! I&#8217;m offering a download code
           for the audiobook version of{" "}
-          <Link href="/books/the-foxhole-victory-tour">
+          <Link href="/books/the-foxhole-victory-tour" target="_blank">
             <em>The Foxhole Victory Tour</em>
           </Link>{" "}
           as well as a fun 1940s spring paper doll set from Retro Paper Dolls to
