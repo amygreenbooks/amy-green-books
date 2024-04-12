@@ -5,7 +5,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
-  output: "export",
   images: {
     loader: "custom",
     loaderFile: "./cloudinary-loader.ts",
