@@ -20,7 +20,7 @@
     "postcss-custom-media": "^10.0.6",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^9.5.13",
+    "postcss-preset-env": "^9.5.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
