@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import cn from "classnames";
+import { cn } from "@/lib/utils";
 
 import styles from "./contact.module.css";
 import ContactSuccess from "./contactSuccess";
@@ -61,18 +61,21 @@ export default function ContactForm({
   };
 
   return (
-    <div className="relative z-0 ph3">
+    <div className="relative z-0 px-4">
       <article
-        className={cn(`mw6 center pa3 mt4 mb5 paper-2 br1 bg-white`, {
-          [styles.envelope]: success,
-          [styles.letter]: !success,
-        })}
+        className={cn(
+          `mx-auto mb-16 mt-8 max-w-lg rounded bg-white p-4 drop-shadow`,
+          {
+            [styles.envelope]: success,
+            [styles.letter]: !success,
+          },
+        )}
       >
         {success ? (
           <ContactSuccess />
         ) : (
           <>
-            {content && <div className="cms mb4">{content}</div>}
+            {content && <div className="cms mb-8">{content}</div>}
             <form
               method="POST"
               action="https://formspree.io/f/xwkgqnoo"
@@ -90,14 +93,14 @@ export default function ContactForm({
                   />
                 </label>
               </p>
-              <div className="flex-l mhn1-l">
-                <div className="ph1-l w-50-l relative">
+              <div className="lg:mhn1 lg:flex">
+                <div className="lg:w-50 relative lg:px-1">
                   <input
                     type="text"
                     id="name"
                     name="name"
                     placeholder="Name"
-                    className="input w-100 mb2"
+                    className="input mb-2 w-full"
                     value={formState.name}
                     onChange={handleChange}
                     disabled={submitting}
@@ -106,13 +109,13 @@ export default function ContactForm({
                     Name
                   </label>
                 </div>
-                <div className="ph1-l w-50-l relative">
+                <div className="lg:w-50 relative lg:px-1">
                   <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Email"
-                    className="input w-100 mb2"
+                    className="input mb-2 w-full"
                     value={formState.email}
                     onChange={handleChange}
                     disabled={submitting}
@@ -130,7 +133,7 @@ export default function ContactForm({
                   placeholder="Your message"
                   rows={8}
                   cols={80}
-                  className="textarea w-100"
+                  className="textarea w-full"
                   value={formState.message}
                   onChange={handleChange}
                   disabled={submitting}
@@ -142,7 +145,7 @@ export default function ContactForm({
               <div className="tc">
                 <button
                   type="submit"
-                  className="btn w-100 w-auto-ns raise"
+                  className="btn raise w-full sm:w-auto"
                   disabled={submitting}
                 >
                   Submit
@@ -150,7 +153,9 @@ export default function ContactForm({
               </div>
               {error && (
                 <div>
-                  <p className={cn(styles.error, "mb0 mt2 b tc")}>{error}</p>
+                  <p className={cn(styles.error, "tc mb-0 mt-2 font-bold")}>
+                    {error}
+                  </p>
                 </div>
               )}
             </form>

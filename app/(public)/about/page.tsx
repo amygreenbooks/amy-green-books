@@ -16,7 +16,7 @@ export default async function AboutPage() {
   } = await getContentData<AboutContent>(null, "about");
 
   return (
-    <article className="mw5 center ph3 mt4 mb5 cms">
+    <article className="cms mx-auto mb-16 mt-8 max-w-sm px-4">
       {aboutImage && (
         <Image
           src={aboutImage}

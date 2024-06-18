@@ -12,7 +12,7 @@ export default async function HistoryPage() {
 
   return (
     <HistoryLayout {...layoutData}>
-      <div className="flex flex-column">
+      <div className="flex flex-col">
         {posts.map((post, i) => (
           <HistorySummary
             key={post.id}

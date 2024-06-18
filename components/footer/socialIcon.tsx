@@ -6,15 +6,15 @@ interface SocialIconProps {
 
 export default function SocialIcon({ svg, link, name }: SocialIconProps) {
   return (
-    <li className="dib ph2 raise">
+    <li className="dib raise px-2">
       <a
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="link bg-off-white black db relative br-100 pa2"
+        className="link black br-100 relative block bg-off-white p-2"
         aria-label={name}
       >
-        <svg width="16px" height="16px" className="db">
+        <svg width="16px" height="16px" className="block">
           <use xlinkHref={`#${svg}`}></use>
         </svg>
       </a>

@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
-import cn from "classnames";
+import { cn } from "@/lib/utils";
 
 import styles from "./h.module.css";
 
@@ -18,7 +18,7 @@ export default function Header({
   return (
     <>
       <Component
-        className={cn(styles.h, styles[Component], className, "serif")}
+        className={cn(styles.h, styles[Component], className, "font-serif")}
         {...props}
       >
         {/* <a className={styles.anchor} id={id} href={`#${id}`} aria-hidden="true">

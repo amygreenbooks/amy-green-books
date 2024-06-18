@@ -2,9 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import cn from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
 
 import styles from "./nav.module.css";
 import NavigationLink from "./navigationLink";
@@ -67,17 +68,17 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
     <>
       <nav
         className={cn(
-          "bg-black relative white main-nav serif top-0 left-0 right-0 z-3",
+          "white main-nav z-3 relative left-0 right-0 top-0 bg-black font-serif",
           {
-            ["fixed-ns"]: !isHome,
+            ["sm:fixed"]: !isHome,
             [styles.home]: isHome,
           },
         )}
       >
-        <div className="mw7 flex-ns justify-between items-center center">
-          <div className="flex z-4 fixed static-ns w-100 w-auto-ns">
+        <div className="mx-auto max-w-3xl items-center justify-between sm:flex">
+          <div className="z-4 fixed flex w-full sm:static sm:w-auto">
             <button
-              className={cn("dn-ns z-5", styles.menu, {
+              className={cn("sm:dn z-5", styles.menu, {
                 white: !isHome || openDrawer,
                 black: isHome && !openDrawer,
                 [styles.in]: openDrawer,
@@ -91,8 +92,8 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
             <Link
               href="/"
               className={cn(
-                "f4 fw6 mr4-ns nowrap no-underline bg-primary",
-                "i w-100 w-auto-ns z-4",
+                "nowrap bg-primary text-xl font-semibold no-underline sm:mr-8",
+                "z-4 w-full italic sm:w-auto",
                 styles.title,
                 {
                   [styles.in]: openDrawer,
@@ -105,11 +106,11 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
           </div>
           <ul
             className={cn(
-              "flex-wrap-ns bg-black justify-between flex-column flex-row-ns",
-              "fixed top-3 left-0 z-3 w-100 static-ns",
+              "flex-col justify-between bg-black sm:flex-row sm:flex-wrap",
+              "z-3 fixed left-0 top-3 w-full sm:static",
               styles.navList,
               {
-                "w-100": isHome,
+                "w-full": isHome,
                 [styles.in]: openDrawer,
                 [styles.animate]: animationsEnabled,
               },
@@ -123,8 +124,8 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
         </div>
       </nav>
       <div
-        className={cn("pt5", {
-          "pt0-ns": isHome,
+        className={cn("pt-16", {
+          "sm:pt-0": isHome,
         })}
       />
     </>

@@ -1,12 +1,10 @@
-import cn from "classnames";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 import BookSummary from "@/components/book/bookSummary";
 import Markdown from "@/components/markdown";
 import NewsletterSection from "@/components/newsletter/newsletterSection";
 import { getContentData, getBooks } from "@/lib/content";
-
-import styles from "./page.module.css";
 
 type HomeContent = {
   title: string;
@@ -28,12 +26,7 @@ export default async function Page() {
 
   return (
     <>
-      <header
-        className={cn(
-          `flex flex-column flex-row-ns items-center`,
-          `justify-center pv5 ph3 serif`,
-        )}
-      >
+      <header className="flex flex-col items-center justify-center px-4 py-16 font-serif sm:flex-row">
         <Image
           src="/meet-amy.png"
           alt="A photo of Amy Lynn Green"
@@ -44,12 +37,16 @@ export default async function Page() {
             width: "100%",
             height: "auto",
           }}
-          className={`db br-100 mr5-ns paper-2 ${styles.headShot}`}
+          className="block max-w-48 rounded-full shadow-lg sm:mr-16"
         />
 
         <div>
-          <h1 className="f1 fw9 lh-title primary mt3">{title}</h1>
-          <p className="f4 fw5 i lh-title mw-100 grey-4 o-60">{subtitle}</p>
+          <h1 className="mt-4 text-5xl font-extrabold leading-tight text-primary">
+            {title}
+          </h1>
+          <p className="max-w-full text-xl font-normal italic leading-tight text-grey-4 opacity-60">
+            {subtitle}
+          </p>
         </div>
       </header>
 
@@ -65,10 +62,10 @@ export default async function Page() {
         ))}
       </section>
 
-      <section className="pb4 pt5 mw7 center flex-m mb4">
+      <section className="mx-auto mb-8 max-w-3xl pb-8 pt-16 sm:flex">
         <div
-          className={cn("ph3", {
-            ["order-last-m"]: books.length % 2 === 1,
+          className={cn("px-4", {
+            ["md:order-last"]: books.length % 2 === 1,
           })}
         >
           <Image
@@ -76,12 +73,14 @@ export default async function Page() {
             width={350}
             height={464}
             alt="Amy Lynn Green"
-            className="db mb2 center"
+            className="mx-auto mb-2 block rounded sm:min-w-48 md:min-w-64"
           />
         </div>
 
-        <div className="ph3">
-          <h3 className="f3 b lh-title mb1 serif">{welcome.heading}</h3>
+        <div className="px-4">
+          <h3 className="mb-1 font-serif text-2xl font-bold leading-tight">
+            {welcome.heading}
+          </h3>
           <div className="cms">
             <Markdown source={welcome.text} />
           </div>

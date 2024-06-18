@@ -7,8 +7,7 @@ import Nav from "@/components/header/nav";
 import { getBooks } from "@/lib/content";
 import { description, mainMenu, siteTitle, themeColor } from "@/lib/siteConfig";
 
-import "../../styles/main.css";
-import styles from "./layout.module.css";
+import "../global.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.amygreenbooks.com"),
@@ -47,9 +46,14 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://assets.mlcdn.com" />
         <link rel="preconnect" href="https://res.cloudinary.com" />
       </head>
-      <body className={styles.body}>
-        <div id="skip" className={styles.skip}>
-          <a href="#main-content">Skip to main content</a>
+      <body className="bg-paper-texture">
+        <div id="skip">
+          <a
+            href="#main-content"
+            className="absolute left-[-10000px] top-auto h-[1px] w-[1px] overflow-hidden focus:static focus:h-auto focus:w-auto"
+          >
+            Skip to main content
+          </a>
         </div>
         <Nav mainMenu={menu} />
         <main id="main-content">{children}</main>

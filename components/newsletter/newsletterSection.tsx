@@ -19,8 +19,8 @@ export default function NewsletterSection({
   }
 
   return (
-    <article className="measure center ph3 mv5">
-      <p className="f3 lh-title light-gray b tc mb2 serif">
+    <article className="mx-auto my-16 max-w-prose px-4">
+      <p className="light-gray tc mb-2 font-serif text-2xl font-bold leading-tight">
         Sign Up for my Newsletter
       </p>
       <p className="tc">

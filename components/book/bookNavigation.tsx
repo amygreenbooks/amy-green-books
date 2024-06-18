@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./bookNavigation.module.css";
 import { MarkdownResult, BookType } from "../../lib/content";
 
 function BookNavLink({
@@ -12,7 +11,7 @@ function BookNavLink({
     <>
       <Link
         href={`/books/${id}`}
-        className={`flex items-center pa2 br1 ${styles["book-link"]}`}
+        className="flex items-center rounded p-2 no-underline transition-colors hover:bg-[var(--paper-tint,_var(--off-white))]"
         style={{ "--paper-tint": paperTint } as React.CSSProperties}
       >
         {image && (
@@ -22,14 +21,17 @@ function BookNavLink({
             width={78}
             aria-labelledby={`exp-book-${id}`}
             alt=""
-            className={styles.cover}
+            className="h-[120px]"
           />
         )}
-        <div className="ml3 ml2-ns">
-          <h4 className="f5 f6-ns b i mb1 serif" id={`exp-book-${id}`}>
+        <div className="ml-4 sm:ml-2">
+          <h4
+            className="mb-1 font-serif text-base font-bold italic sm:text-sm"
+            id={`exp-book-${id}`}
+          >
             {title}
           </h4>
-          <p className="ma0 f6">View Book</p>
+          <p className="m-0 text-sm font-light text-primary">View Book</p>
         </div>
       </Link>
     </>
@@ -43,10 +45,12 @@ export default function BookNavigation({
 }) {
   return (
     <>
-      <h2 className="lh-title black f3 b mb1 serif">Explore my other books</h2>
-      <div className="flex-ns">
+      <h2 className="mb-1 font-serif text-2xl font-bold leading-tight text-black">
+        Explore my other books
+      </h2>
+      <div className="sm:flex">
         {otherBooks.map((book) => (
-          <div className={styles["book-nav"]} key={book.id}>
+          <div className="flex-1" key={book.id}>
             <BookNavLink {...book} />
           </div>
         ))}

@@ -1,5 +1,6 @@
-import cn from "classnames";
 import Image from "next/image";
+
+import { cn } from "@/lib/utils";
 
 import styles from "./bookCover.module.css";
 import ScrollAnimation from "../util/animateOnScroll";

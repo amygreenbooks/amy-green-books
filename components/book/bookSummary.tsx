@@ -1,8 +1,8 @@
-import cn from "classnames";
 import Link from "next/link";
 
+import { cn } from "@/lib/utils";
+
 import BookCover from "./bookCover";
-import styles from "./bookSummary.module.css";
 import { BookType, MarkdownResult } from "../../lib/content";
 import DateCmp from "../date";
 
@@ -41,17 +41,12 @@ export default function BookSummary({
         backgroundColor: paperTint,
       }}
     >
-      <article
-        className={cn(
-          styles.article,
-          "items-center flex flex-wrap pv4 mw7 center flex-m flex-wrap items-start",
-        )}
-      >
+      <article className="mx-auto flex w-full max-w-3xl flex-wrap items-center py-8 md:flex">
         {image && (
           <Link
             href={`/books/${id}`}
-            className={cn(`${styles.side} ${styles["img-side"]}`, {
-              "order-last-ns": flipped,
+            className={cn("black mx-auto mb-4 mt-0 max-w-72", {
+              "sm:order-last": flipped,
             })}
           >
             <BookCover
@@ -64,18 +59,18 @@ export default function BookSummary({
           </Link>
         )}
 
-        <div
-          className={`${styles.side} paper-2 br1 mh3 mw5-m ${styles["text-side"]}`}
-        >
+        <div className="mx-4 block min-w-[48%] flex-1 rounded bg-white p-8 drop-shadow md:max-w-sm">
           <header>
-            <h3 className="f3 b i lh-title mb1 serif">{title}</h3>
+            <h3 className="mb-1 font-serif text-2xl font-bold italic leading-tight">
+              {title}
+            </h3>
             {!isReleased && (
-              <p className="mid-gray lh-title mb2">
+              <p className="mb-2 leading-tight text-grey-3">
                 Releases: <DateCmp date={releaseDate} />
               </p>
             )}
           </header>
-          <p>{description}</p>
+          <p className="font-light">{description}</p>
           <footer className="flex">
             <Link href={`/books/${id}`} className="btn raise">
               Learn more →
@@ -85,7 +80,7 @@ export default function BookSummary({
                 href={retailer.link}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-primary white f6 btn raise ml2"
+                className="white btn raise ml-2 bg-primary text-sm"
               >
                 Pre-Order Now!
               </a>

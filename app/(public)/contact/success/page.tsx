@@ -1,4 +1,4 @@
-import cn from "classnames";
+import { cn } from "@/lib/utils";
 
 import Jumbotron from "@/components/header/jumbotron";
 import { getContentData } from "@/lib/content";
@@ -14,10 +14,10 @@ export default async function ContactSuccessPage() {
   return (
     <>
       <Jumbotron title={title} subtitle={description} image={bannerImage} />
-      <div className="relative z-0 ph3">
+      <div className="relative z-0 px-4">
         <div
           className={cn(
-            `mw6 center pa3 mt4 mb5 paper-2 br1 bg-white`,
+            `mx-auto mb-16 mt-8 max-w-lg rounded bg-white p-4 drop-shadow`,
             styles.envelope,
           )}
         >

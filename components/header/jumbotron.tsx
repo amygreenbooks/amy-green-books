@@ -1,7 +1,8 @@
 "use client";
 
-import cn from "classnames";
 import Image from "next/image";
+
+import { cn } from "@/lib/utils";
 
 interface JumbotronProps {
   title: string;
@@ -11,27 +12,33 @@ interface JumbotronProps {
 
 export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
   return (
-    <div className={cn("pv5 ph3 pv6-l relative")}>
+    <div className={cn("relative px-4 py-16 lg:py-32")}>
       <Image src={image} fill alt="" className="of-cover br0" priority />
-      <div className="mw7 center">
-        <div className="db mb3">
-          <div className="mw7 relative mb2">
+      <div className="mx-auto max-w-3xl">
+        <div className="mb-4 block">
+          <div className="relative mb-2 max-w-3xl">
             <h1
-              className={cn("f2 f1-l b di lh-title serif", {
-                "ph2 bg-black white": image,
-                primary: !image,
-              })}
+              className={cn(
+                "di font-serif text-4xl font-bold leading-tight lg:text-5xl",
+                {
+                  "white bg-black px-2": image,
+                  "text-primary": !image,
+                },
+              )}
             >
               {title}
             </h1>
           </div>
-          <div className="mw7 relative">
+          <div className="relative max-w-3xl">
             {subtitle && (
               <p
-                className={cn("f4 fw5 di lh-title serif", {
-                  "ph2 bg-primary white": image,
-                  "grey-3": !image,
-                })}
+                className={cn(
+                  "di font-serif text-xl font-medium leading-tight",
+                  {
+                    "white bg-primary px-2": image,
+                    "text-grey-3": !image,
+                  },
+                )}
               >
                 {subtitle}
               </p>

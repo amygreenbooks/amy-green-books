@@ -10,12 +10,14 @@ export default function PageLayout({
   description?: ReactNode;
 }) {
   return (
-    <div className="ph2">
-      <div className="measure-wide center mv2 mv4-ns mv5-m paper-2 bg-white pa3 pa4-ns br1">
-        <header className="mb4 serif">
-          <h1 className="db primary f2 b lh-title mb1">{title}</h1>
+    <div className="px-2">
+      <div className="mx-auto my-2 max-w-prose rounded bg-white p-4 drop-shadow sm:my-8 sm:p-8 md:my-16">
+        <header className="mb-8 font-serif">
+          <h1 className="mb-1 block text-4xl font-bold leading-tight text-primary">
+            {title}
+          </h1>
           {description && (
-            <p className="mid-gray lh-title mb2">{description}</p>
+            <p className="mid-gray mb-2 leading-tight">{description}</p>
           )}
         </header>
         {children}

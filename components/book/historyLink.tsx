@@ -14,13 +14,15 @@ export default function HistoryLink({
   description,
 }: HistoryLinkProps) {
   return (
-    <section className="bg-off-white pv4">
+    <section className="bg-off-white py-8">
       <Link
         href={href}
-        className={`db mw6 pa3 center br1 border-box ${styles.link}`}
+        className={`border-box mx-auto block max-w-lg rounded p-4 ${styles.link}`}
       >
-        <h2 className="lh-title primary f3 b mb1 serif">{title}</h2>
-        <p className="mb0">{description} →</p>
+        <h2 className="mb-1 font-serif text-2xl font-bold leading-tight text-primary">
+          {title}
+        </h2>
+        <p className="mb-0">{description} →</p>
       </Link>
     </section>
   );

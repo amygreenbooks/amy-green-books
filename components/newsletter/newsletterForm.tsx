@@ -24,17 +24,17 @@ export default function NewsletterForm({ id }: { id: string }) {
       className={`ml-form-embedContainer ml-subscribe-form ml-subscribe-form-${id}`}
     >
       <form
-        className="ml-block-form flex-ns"
+        className="ml-block-form sm:flex"
         action="https://app.mailerlite.com/webforms/submit/n6v2g4"
         data-code="n6v2g4"
         method="post"
         target="_blank"
         style={{ display: success ? "none" : undefined }}
       >
-        <div className="flex-auto mb2 mb0-ns mr2-ns relative">
+        <div className="relative mb-2 flex-auto sm:mb-0 sm:mr-2">
           <input
             type="text"
-            className="form-control input w-100"
+            className="form-control input w-full"
             data-inputmask=""
             id={`newsletter-fname-${id}`}
             name="fields[name]"
@@ -45,10 +45,10 @@ export default function NewsletterForm({ id }: { id: string }) {
             First Name
           </label>
         </div>
-        <div className="flex-auto mb2 mb0-ns mr2-ns relative">
+        <div className="relative mb-2 flex-auto sm:mb-0 sm:mr-2">
           <input
             type="email"
-            className="form-control input w-100"
+            className="form-control input w-full"
             data-inputmask=""
             id={`newsletter-email-${id}`}
             name="fields[email]"
@@ -61,7 +61,7 @@ export default function NewsletterForm({ id }: { id: string }) {
         </div>
 
         <button
-          className={`btn w-100 w-auto-ns mb0-ns raise ${btnStyles}`}
+          className={`btn raise w-full sm:mb-0 sm:w-auto ${btnStyles}`}
           type="submit"
         >
           Subscribe
@@ -69,7 +69,7 @@ export default function NewsletterForm({ id }: { id: string }) {
         <button
           disabled
           type="button"
-          className={`btn w-100 w-auto-ns mb0-ns loading ${btnStyles}`}
+          className={`btn loading w-full sm:mb-0 sm:w-auto ${btnStyles}`}
           style={{ display: "none" }}
           aria-label="Subscribing"
         >
@@ -88,7 +88,9 @@ export default function NewsletterForm({ id }: { id: string }) {
         style={{ display: success ? undefined : "none" }}
       >
         <div className="ml-form-successContent tc">
-          <h4 className="f3 primary b serif">Thank You!</h4>
+          <h4 className="font-serif text-2xl font-bold text-primary">
+            Thank You!
+          </h4>
           <p>You are now signed up for my newsletters.</p>
         </div>
       </div>

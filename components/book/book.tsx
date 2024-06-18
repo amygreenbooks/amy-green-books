@@ -1,6 +1,5 @@
 import { BookType, MarkdownResult } from "@/lib/content";
 
-import styles from "./book.module.css";
 import BookCover from "./bookCover";
 import BookNavigation from "./bookNavigation";
 import Endorsements from "./endorsements";
@@ -28,23 +27,26 @@ export default function Book({
 
   return (
     <article
-      className={styles.book}
+      className="mb-16 mt-8 grid-cols-[1fr_1rem_minmax(13rem,_19rem)_1rem_minmax(35ch,_45ch)_1rem_1fr] grid-rows-[repeat(3,_auto)_3rem_repeat(2,_auto)] gap-0 md:grid"
       itemScope
       itemType="https://schema.org/Book"
     >
-      <header className={styles.header}>
-        <h1 className="f2 lh-title b i mb3 serif" itemProp="name">
+      <header className="col-start-5 mx-auto w-full max-w-[32rem] px-4 md:px-0">
+        <h1
+          className="mb-4 font-serif text-4xl font-bold italic leading-tight"
+          itemProp="name"
+        >
           {title}
         </h1>
         {!isReleased && releaseDate && (
-          <p className="grey-3 b lh-title mb2">
+          <p className="mb-2 font-bold leading-tight text-grey-3">
             Releases:{" "}
             <DateComponent date={releaseDate} itemProp="datePublished" />
           </p>
         )}
       </header>
 
-      <div className={styles.image}>
+      <div className="col-span-2 col-start-2 row-span-3 row-start-1 mx-auto mb-4 mt-0 max-w-80">
         <BookCover
           title={`Cover for ${title}`}
           image={image}
@@ -57,35 +59,38 @@ export default function Book({
       </div>
 
       {content && (
-        <div className={`cms ${styles.body}`} itemProp="abstract">
+        <div
+          className="cms col-start-5 row-start-2 mx-auto w-full max-w-[32rem] px-4 font-light md:px-0"
+          itemProp="abstract"
+        >
           {content}
         </div>
       )}
 
       <section
-        className={`mt4 mb5 pv4 ${styles.purchase}`}
+        className="col-span-7 col-start-1 row-start-3 mb-16 mt-8 px-4 py-8 md:grid md:grid-cols-subgrid md:px-0"
         style={{
           backgroundColor: paperTint,
         }}
       >
-        <div className={`center ${styles.purchaseContainer}`}>
-          <h2 className="f3 b lh-title serif mb2">
+        <div className="col-start-5 mx-auto">
+          <h2 className="mb-2 font-serif text-2xl font-bold leading-tight">
             {isReleased ? "Purchase today at:" : "Pre-order now at:"}
           </h2>
 
-          <div className="flex flex-wrap mhn2 justify-center">
-            {retailers.map((retailer, i) => (
-              <RetailerComp key={`retailer-${i}`} {...retailer} />
+          <div className="mx-[-0.5rem] flex flex-wrap justify-center">
+            {retailers.map((retailer) => (
+              <RetailerComp key={retailer.name} {...retailer} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className={styles.endorsements}>
+      <section className="col-span-5 col-start-2 row-start-5">
         <Endorsements endorsements={endorsements} />
       </section>
 
-      <section className={styles.bookNavigation}>
+      <section className="col-span-3 col-start-3 row-start-6 px-4 md:px-0">
         <BookNavigation otherBooks={otherBooks} />
       </section>
     </article>
