@@ -1,20 +1,28 @@
 "use client";
 import { useState, useEffect, MouseEventHandler } from "react";
 
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { MenuItem } from "@/lib/siteConfig";
+import { cn } from "@/lib/utils";
 
-import styles from "./navigationLink.module.css";
+const linkStyles = ({ active = false, subMenuItem = false }) =>
+  cn(
+    "block w-full whitespace-nowrap border-y-4 border-solid border-b-black border-t-transparent bg-transparent p-4 no-underline",
+    "hover:border-primary hover:bg-primary hover:outline-none focus-visible:border-primary focus-visible:bg-primary focus-visible:outline-none",
+    {
+      "border-b-primary": active,
+      "px-4 border-none": subMenuItem,
+    },
+  );
 
 export default function NavigationLink({
-  home,
   title,
   url,
+  subMenuItem = false,
   subMenus,
-}: MenuItem & { home?: boolean }) {
+}: MenuItem & { subMenuItem?: boolean }) {
   const pathname = usePathname();
   const active = pathname?.includes(url);
 
@@ -43,12 +51,7 @@ export default function NavigationLink({
   const name = `menu-${title.replace(" ", "-")}`;
 
   return (
-    <li
-      className={cn("tc", styles.container, {
-        [styles.home]: home,
-        [styles.active]: active,
-      })}
-    >
+    <li className="flex-auto flex-shrink-0 text-center">
       {subMenus ? (
         <>
           <button
@@ -56,7 +59,7 @@ export default function NavigationLink({
             id={name}
             aria-haspopup="true"
             aria-expanded="false"
-            className={styles["nav-link"]}
+            className={linkStyles({ active, subMenuItem })}
             onClick={showMenu}
           >
             {title}
@@ -64,15 +67,20 @@ export default function NavigationLink({
           <ul
             role="menu"
             aria-labelledby={name}
-            className={cn(styles.dropdown, { [styles.open]: isOpen })}
+            className={cn(
+              "hidden bg-gray-800 text-white sm:absolute sm:z-50 sm:bg-foreground sm:text-background",
+              {
+                block: isOpen,
+              },
+            )}
           >
             {subMenus.map((menu) => (
-              <NavigationLink key={menu.title} {...menu} />
+              <NavigationLink key={menu.title} subMenuItem {...menu} />
             ))}
           </ul>
         </>
       ) : (
-        <Link href={url} className={styles["nav-link"]}>
+        <Link href={url} className={linkStyles({ active, subMenuItem })}>
           {title}
         </Link>
       )}

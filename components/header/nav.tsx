@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 
-import styles from "./nav.module.css";
 import NavigationLink from "./navigationLink";
 import { MenuItem } from "../../lib/siteConfig";
 
@@ -68,36 +67,47 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
     <>
       <nav
         className={cn(
-          "white main-nav z-3 relative left-0 right-0 top-0 bg-black font-serif",
+          "relative left-0 right-0 top-0 z-10 bg-black font-serif text-primary-foreground",
           {
             ["sm:fixed"]: !isHome,
-            [styles.home]: isHome,
           },
         )}
       >
         <div className="mx-auto max-w-3xl items-center justify-between sm:flex">
-          <div className="z-4 fixed flex w-full sm:static sm:w-auto">
+          <div className="fixed z-40 flex w-full sm:static sm:w-auto">
             <button
-              className={cn("sm:dn z-5", styles.menu, {
-                white: !isHome || openDrawer,
-                black: isHome && !openDrawer,
-                [styles.in]: openDrawer,
-              })}
+              className={cn(
+                "absolute z-50 h-16 w-12 flex-shrink-0 cursor-pointer border-none bg-transparent p-0 outline-none sm:hidden",
+                {
+                  "text-primary-foreground": !isHome || openDrawer,
+                  "text-foreground": isHome && !openDrawer,
+                },
+              )}
               onClick={toggleNav}
               ref={buttonRef}
               aria-label="Navigation Menu"
             >
-              <div className={styles.menuLines} />
+              <div
+                className={cn(
+                  "pointer-events-none absolute left-[30%] top-[55%] mt-[-0.125em] block h-[1px] w-[40%] bg-current transition-transform",
+                  "before:absolute before:left-0 before:top-[0.4rem] before:block before:h-[1px] before:w-full before:bg-current before:transition-transform",
+                  "after:absolute after:left-0 after:top-[-0.4rem] after:block after:h-[1px] after:w-full after:bg-current after:transition-transform",
+                  {
+                    ["bg-transparent before:translate-y-[-7.1px] before:rotate-[135deg] after:translate-y-[7.1px] after:rotate-45"]:
+                      openDrawer,
+                  },
+                )}
+              />
             </button>
             <Link
               href="/"
               className={cn(
-                "nowrap bg-primary text-xl font-semibold no-underline sm:mr-8",
-                "z-4 w-full italic sm:w-auto",
-                styles.title,
+                "z-40 block w-full text-nowrap bg-primary p-4 text-xl font-semibold italic leading-8 no-underline max-sm:pl-16 sm:mr-8 sm:w-auto",
                 {
-                  [styles.in]: openDrawer,
-                  [styles.animate]: animationsEnabled,
+                  "hidden -translate-y-full": isHome,
+                  "translate-y-0": isHome && openDrawer,
+                  "transition-transform": isHome && animationsEnabled,
+                  "max-sm:block": isHome && (openDrawer || animationsEnabled),
                 },
               )}
             >
@@ -106,13 +116,12 @@ export default function Nav({ mainMenu }: { mainMenu: Array<MenuItem> }) {
           </div>
           <ul
             className={cn(
-              "flex-col justify-between bg-black sm:flex-row sm:flex-wrap",
-              "z-3 fixed left-0 top-3 w-full sm:static",
-              styles.navList,
+              "fixed left-0 top-16 z-30 hidden w-full flex-col justify-between bg-black max-sm:max-h-[calc(100%-4rem)] max-sm:translate-y-[calc(-100%-4rem)] max-sm:overflow-y-scroll sm:static sm:flex sm:flex-row sm:flex-wrap",
               {
                 "w-full": isHome,
-                [styles.in]: openDrawer,
-                [styles.animate]: animationsEnabled,
+                "max-sm:translate-y-0": openDrawer,
+                "transition-transform": animationsEnabled,
+                flex: openDrawer || animationsEnabled,
               },
             )}
             ref={drawerRef}

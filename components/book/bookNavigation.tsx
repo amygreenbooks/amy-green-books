@@ -11,7 +11,7 @@ function BookNavLink({
     <>
       <Link
         href={`/books/${id}`}
-        className="flex items-center rounded p-2 no-underline transition-colors hover:bg-[var(--paper-tint,_var(--off-white))]"
+        className="flex items-center rounded p-2 no-underline transition-colors hover:bg-[var(--paper-tint,_var(--muted))]"
         style={{ "--paper-tint": paperTint } as React.CSSProperties}
       >
         {image && (

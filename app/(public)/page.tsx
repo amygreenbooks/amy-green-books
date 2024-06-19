@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 import BookSummary from "@/components/book/bookSummary";
 import Markdown from "@/components/markdown";
 import NewsletterSection from "@/components/newsletter/newsletterSection";
 import { getContentData, getBooks } from "@/lib/content";
+import { cn } from "@/lib/utils";
 
 type HomeContent = {
   title: string;
@@ -44,7 +44,7 @@ export default async function Page() {
           <h1 className="mt-4 text-5xl font-extrabold leading-tight text-primary">
             {title}
           </h1>
-          <p className="max-w-full text-xl font-normal italic leading-tight text-grey-4 opacity-60">
+          <p className="max-w-full text-xl font-normal italic leading-tight text-foreground text-opacity-40">
             {subtitle}
           </p>
         </div>

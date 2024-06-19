@@ -39,7 +39,7 @@ export default function Book({
           {title}
         </h1>
         {!isReleased && releaseDate && (
-          <p className="mb-2 font-bold leading-tight text-grey-3">
+          <p className="mb-2 font-bold leading-tight text-foreground text-opacity-40">
             Releases:{" "}
             <DateComponent date={releaseDate} itemProp="datePublished" />
           </p>

@@ -11,7 +11,7 @@ export function EndorsementComp({ quote, author, authorDesc }: Endorsement) {
       <cite className="mt-4 block font-serif font-semibold text-black">
         {author}
       </cite>
-      <p className="font-serif text-sm text-grey-3">
+      <p className="font-serif text-sm text-foreground text-opacity-40">
         <Markdown source={authorDesc} noParagraph />
       </p>
     </blockquote>

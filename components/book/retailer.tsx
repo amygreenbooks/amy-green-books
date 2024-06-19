@@ -12,7 +12,7 @@ export default function Retailer({
   return (
     <div className="flex w-1/2 p-2 sm:w-1/3">
       <a
-        className="flex w-full items-center rounded bg-off-white p-8 transition-all hover:-translate-y-1 focus:-translate-y-1 active:opacity-50 sm:p-4 md:p-2"
+        className="flex w-full items-center rounded bg-muted bg-opacity-55 p-8 transition-all hover:-translate-y-1 focus:-translate-y-1 active:opacity-50 sm:p-4 md:p-2"
         target="_blank"
         rel="noreferrer"
         href={link}

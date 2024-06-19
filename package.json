@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@next/mdx": "^14.2.3",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",

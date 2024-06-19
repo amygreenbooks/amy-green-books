@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+import { buttonVariants } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 import BookCover from "./bookCover";
@@ -59,20 +68,21 @@ export default function BookSummary({
           </Link>
         )}
 
-        <div className="mx-4 block min-w-[48%] flex-1 rounded bg-white p-8 drop-shadow md:max-w-sm">
-          <header>
-            <h3 className="mb-1 font-serif text-2xl font-bold italic leading-tight">
-              {title}
-            </h3>
+        <Card className="mx-4 min-w-[48%] flex-1 md:max-w-sm">
+          <CardHeader>
+            <CardTitle>{title}</CardTitle>
             {!isReleased && (
-              <p className="mb-2 leading-tight text-grey-3">
+              <CardDescription>
                 Releases: <DateCmp date={releaseDate} />
-              </p>
+              </CardDescription>
             )}
-          </header>
-          <p className="font-light">{description}</p>
-          <footer className="flex">
-            <Link href={`/books/${id}`} className="btn raise">
+          </CardHeader>
+          <CardContent>{description}</CardContent>
+          <CardFooter className="flex flex-wrap gap-2">
+            <Link
+              className={buttonVariants({ variant: "outline" })}
+              href={`/books/${id}`}
+            >
               Learn more →
             </Link>
             {!isReleased && retailer && (
@@ -80,13 +90,15 @@ export default function BookSummary({
                 href={retailer.link}
                 target="_blank"
                 rel="noreferrer"
-                className="white btn raise ml-2 bg-primary text-sm"
+                className={buttonVariants({
+                  variant: "default",
+                })}
               >
                 Pre-Order Now!
               </a>
             )}
-          </footer>
-        </div>
+          </CardFooter>
+        </Card>
       </article>
     </div>
   );

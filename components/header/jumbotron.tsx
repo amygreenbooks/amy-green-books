@@ -36,7 +36,7 @@ export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
                   "di font-serif text-xl font-medium leading-tight",
                   {
                     "white bg-primary px-2": image,
-                    "text-grey-3": !image,
+                    "text-foreground text-opacity-40": !image,
                   },
                 )}
               >

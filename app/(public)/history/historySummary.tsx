@@ -1,6 +1,7 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 
 import styles from "./historySummary.module.css";
 
@@ -37,7 +38,9 @@ export default function HistorySummary({
             "sm:tl": !flip,
           })}
         >
-          <p className="mb-0 text-sm text-grey-3">Explore the history behind</p>
+          <p className="mb-0 text-sm text-foreground text-opacity-40">
+            Explore the history behind
+          </p>
           <h2 className="mb-1 font-serif text-2xl font-bold italic leading-tight">
             {title}
           </h2>

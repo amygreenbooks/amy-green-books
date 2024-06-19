@@ -7,7 +7,7 @@ import Nav from "@/components/header/nav";
 import { getBooks } from "@/lib/content";
 import { description, mainMenu, siteTitle, themeColor } from "@/lib/siteConfig";
 
-import "../global.css";
+import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.amygreenbooks.com"),
