@@ -4,12 +4,12 @@
   margin: 0.5rem;
   z-index: 1;
 
-  --spine-actual-width-rems: 0.65rem;
+  --spine-actual-width: 0.65rem;
   --rotate: 27deg;
 }
 
 .animatedBook {
-  margin: 0.5rem 0 0.5rem calc(1rem + var(--spine-actual-width-rems));
+  margin: 0.5rem 0 0.5rem calc(1rem + var(--spine-actual-width));
 }
 
 .cover,
@@ -60,7 +60,7 @@ img.spine {
 :global(.animated.enter) .animatedBook:focus .cover,
 .animatedBook:hover .cover,
 .animatedBook:focus .cover {
-  transform: rotateY(0deg) translateX(calc(var(--spine-actual-width-rems) * -1));
+  transform: rotateY(0deg) translateX(calc(var(--spine-actual-width) * -1));
 }
 
 :global(.animated) .animatedBook .spine,
@@ -69,7 +69,7 @@ img.spine {
 .animatedBook:hover .spine,
 .animatedBook:focus .spine,
 .spine {
-  transform: rotateY(-90deg) translateZ(var(--spine-actual-width-rems));
+  transform: rotateY(-90deg) translateZ(var(--spine-actual-width));
 }
 
 @media (prefers-reduced-motion) {

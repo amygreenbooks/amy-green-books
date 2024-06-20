@@ -19,9 +19,9 @@ export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
           <div className="relative mb-2 max-w-3xl">
             <h1
               className={cn(
-                "di font-serif text-4xl font-bold leading-tight lg:text-5xl",
+                "inline font-serif text-4xl font-bold leading-tight lg:text-5xl",
                 {
-                  "white bg-black px-2": image,
+                  "bg-black px-2 text-white": image,
                   "text-primary": !image,
                 },
               )}
@@ -33,9 +33,9 @@ export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
             {subtitle && (
               <p
                 className={cn(
-                  "di font-serif text-xl font-medium leading-tight",
+                  "inline font-serif text-xl font-medium leading-tight",
                   {
-                    "white bg-primary px-2": image,
+                    "bg-primary px-2 text-white": image,
                     "text-foreground text-opacity-40": !image,
                   },
                 )}

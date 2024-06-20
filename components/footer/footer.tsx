@@ -13,32 +13,38 @@ interface FooterProps {
 export default function Footer({ mainMenu }: FooterProps) {
   return (
     <>
-      <footer className="white bg-black px-4 py-8">
+      <footer className="bg-black px-4 py-8 text-white">
         <div className="mx-auto max-w-3xl pt-4">
           <div className="mx-auto mb-8 max-w-prose">
-            <h1 className="white tc mx-auto mb-8 block font-serif text-4xl font-black">
+            <h1 className="mx-auto mb-8 block text-center font-serif text-4xl font-black text-white">
               Amy Lynn Green
             </h1>
 
             <NewsletterSection id="2157310" footer />
           </div>
 
-          <ul className="tc mx-auto mb-4 max-w-sm flex-wrap justify-between sm:flex">
+          <ul className="mx-auto mb-4 max-w-sm flex-wrap justify-between text-center sm:flex">
             <li>
-              <Link href="/" className="link lh-solid block py-4">
+              <Link
+                href="/"
+                className="block py-4 font-light leading-tight hover:underline"
+              >
                 Home
               </Link>
             </li>
             {mainMenu.map(({ title, url }) => (
               <li key={url}>
-                <Link href={url} className="link lh-solid block py-4">
+                <Link
+                  href={url}
+                  className="block py-4 font-light leading-tight hover:underline"
+                >
                   {title}
                 </Link>
               </li>
             ))}
           </ul>
 
-          <ul className="mhn2 tc">
+          <ul className="-mx-2 text-center">
             <SocialIcon
               link={socialLinks.facebook}
               name="Facebook"
