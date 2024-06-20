@@ -41,10 +41,10 @@ export default async function Page() {
         />
 
         <div>
-          <h1 className="mt-4 text-5xl font-extrabold leading-tight text-primary">
+          <h1 className="mt-4 text-5xl font-extrabold leading-tight text-primary max-sm:text-center">
             {title}
           </h1>
-          <p className="max-w-full text-xl font-normal italic leading-tight text-foreground text-opacity-40">
+          <p className="max-w-full text-xl font-normal italic leading-tight text-foreground text-opacity-40 max-sm:text-center">
             {subtitle}
           </p>
         </div>

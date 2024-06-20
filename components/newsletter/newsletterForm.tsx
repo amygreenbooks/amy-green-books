@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from "react";
 
+import { Loader2 } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
 export default function NewsletterForm({ id }: { id: string }) {
   const [success, setSuccess] = useState(false);
 
@@ -15,8 +21,6 @@ export default function NewsletterForm({ id }: { id: string }) {
       delete win[`ml_webform_success_${id}`];
     };
   }, [id]);
-
-  const btnStyles = "bg-primary white";
 
   return (
     <div
@@ -32,54 +36,46 @@ export default function NewsletterForm({ id }: { id: string }) {
         style={{ display: success ? "none" : undefined }}
       >
         <div className="relative mb-2 flex-auto sm:mb-0 sm:mr-2">
-          <input
+          <Input
             type="text"
-            className="form-control input w-full"
             data-inputmask=""
             id={`newsletter-fname-${id}`}
             name="fields[name]"
             placeholder="First Name"
             autoComplete="name"
+            required
           />
-          <label htmlFor={`newsletter-fname-${id}`} className="label">
+          <Label htmlFor={`newsletter-fname-${id}`} variant="floating">
             First Name
-          </label>
+          </Label>
         </div>
         <div className="relative mb-2 flex-auto sm:mb-0 sm:mr-2">
-          <input
+          <Input
             type="email"
-            className="form-control input w-full"
             data-inputmask=""
             id={`newsletter-email-${id}`}
             name="fields[email]"
             placeholder="Email"
             autoComplete="email"
+            required
           />
-          <label htmlFor={`newsletter-email-${id}`} className="label">
+          <Label htmlFor={`newsletter-email-${id}`} variant="floating">
             Email
-          </label>
+          </Label>
         </div>
 
-        <button
-          className={`btn raise w-full sm:mb-0 sm:w-auto ${btnStyles}`}
-          type="submit"
-        >
+        <Button className="primary w-full sm:mb-0 sm:w-auto" type="submit">
           Subscribe
-        </button>
-        <button
+        </Button>
+        <Button
           disabled
-          type="button"
-          className={`btn loading w-full sm:mb-0 sm:w-auto ${btnStyles}`}
           style={{ display: "none" }}
-          aria-label="Subscribing"
+          type="button"
+          className="loading w-full sm:mb-0 sm:w-auto"
         >
-          <div className="ml-form-embedSubmitLoad">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </button>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          Subscribing
+        </Button>
 
         <input type="hidden" name="ml-submit" value="1" />
       </form>
@@ -87,11 +83,13 @@ export default function NewsletterForm({ id }: { id: string }) {
         className="ml-form-successBody row-success"
         style={{ display: success ? undefined : "none" }}
       >
-        <div className="ml-form-successContent tc">
+        <div className="ml-form-successContent text-center">
           <h4 className="font-serif text-2xl font-bold text-primary">
             Thank You!
           </h4>
-          <p>You are now signed up for my newsletters.</p>
+          <p className="font-light">
+            You are now signed up for my newsletters.
+          </p>
         </div>
       </div>
     </div>

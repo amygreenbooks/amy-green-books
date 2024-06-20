@@ -20,10 +20,10 @@ export default function NewsletterSection({
 
   return (
     <article className="mx-auto my-16 max-w-prose px-4">
-      <p className="light-gray tc mb-2 font-serif text-2xl font-bold leading-tight">
+      <p className="mb-2 text-center font-serif text-2xl font-bold leading-tight text-foreground text-opacity-85">
         Sign Up for my Newsletter
       </p>
-      <p className="tc">
+      <p className="mb-4 text-center font-light">
         Enter your email address for quarterly writing updates
         and&nbsp;bookish&nbsp;fun!
       </p>
