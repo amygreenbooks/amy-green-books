@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@next/mdx": "^14.2.3",
+    "@next/mdx": "^14.2.7",
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "lodash.throttle": "^4.1.1",
