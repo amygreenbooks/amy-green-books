@@ -62,24 +62,26 @@ export default function Book({
         </div>
       )}
 
-      <section
-        className={`mt4 mb5 pv4 ${styles.purchase}`}
-        style={{
-          backgroundColor: paperTint,
-        }}
-      >
-        <div className={`center ${styles.purchaseContainer}`}>
-          <h2 className="f3 b lh-title serif mb2">
-            {isReleased ? "Purchase today at:" : "Pre-order now at:"}
-          </h2>
+      {retailers && (
+        <section
+          className={`mt4 mb5 pv4 ${styles.purchase}`}
+          style={{
+            backgroundColor: paperTint,
+          }}
+        >
+          <div className={`center ${styles.purchaseContainer}`}>
+            <h2 className="f3 b lh-title serif mb2">
+              {isReleased ? "Purchase today at:" : "Pre-order now at:"}
+            </h2>
 
-          <div className="flex flex-wrap mhn2 justify-center">
-            {retailers.map((retailer, i) => (
-              <RetailerComp key={`retailer-${i}`} {...retailer} />
-            ))}
+            <div className="flex flex-wrap mhn2 justify-center">
+              {retailers.map((retailer, i) => (
+                <RetailerComp key={`retailer-${i}`} {...retailer} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className={styles.endorsements}>
         <Endorsements endorsements={endorsements} />
