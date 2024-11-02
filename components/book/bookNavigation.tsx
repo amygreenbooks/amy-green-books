@@ -44,7 +44,7 @@ export default function BookNavigation({
   return (
     <>
       <h2 className="lh-title black f3 b mb1 serif">Explore my other books</h2>
-      <div className="flex-ns">
+      <div className="flex-ns flex-wrap mhn2">
         {otherBooks.map((book) => (
           <div className={styles["book-nav"]} key={book.id}>
             <BookNavLink {...book} />
