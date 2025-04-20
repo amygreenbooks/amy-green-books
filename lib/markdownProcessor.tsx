@@ -1,4 +1,4 @@
-import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc";
+import { compileMDX } from "next-mdx-remote/rsc";
 
 import { H1, H2, H3, H4, H5, H6 } from "../components/typography/h";
 import MarkdownLink from "../components/typography/link";
@@ -7,7 +7,7 @@ export async function compile<TData extends Record<string, unknown>>(
   source: string,
   options: { noParagraph: boolean } = { noParagraph: false },
 ) {
-  const components: MDXRemoteProps["components"] = {
+  const components = {
     h1: H1,
     h2: H2,
     h3: H3,
@@ -18,7 +18,16 @@ export async function compile<TData extends Record<string, unknown>>(
   };
 
   if (options.noParagraph) {
-    components.p = ({ children }) => <>{children}</>;
+    return await compileMDX<TData>({
+      source,
+      options: {
+        parseFrontmatter: true,
+      },
+      components: {
+        ...components,
+        p: ({ children }) => <>{children}</>,
+      },
+    });
   }
 
   return await compileMDX<TData>({

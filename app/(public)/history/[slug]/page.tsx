@@ -6,15 +6,16 @@ import HistoryLayout from "../historyLayout";
 
 const contentType = "history";
 
-type HistoryPageParams = {
+type HistoryPageParams = Promise<{
   slug: string;
-};
+}>;
 
 export default async function HistoryPage({
   params,
 }: {
   params: HistoryPageParams;
 }) {
+  const { slug } = await params;
   const layoutData = await getContentData<HistoryType>("history", "index", {
     noParagraph: true,
   });
@@ -23,7 +24,7 @@ export default async function HistoryPage({
     id,
     frontmatter: { title },
     content,
-  } = await getContentData<HistoryType>(contentType, params.slug);
+  } = await getContentData<HistoryType>(contentType, slug);
 
   return (
     <HistoryLayout {...layoutData} showMoreLink>
@@ -50,9 +51,10 @@ export async function generateMetadata({
 }: {
   params: HistoryPageParams;
 }): Promise<Metadata> {
+  const { slug } = await params;
   const {
     frontmatter: { title },
-  } = await getContentData<HistoryType>(contentType, params.slug);
+  } = await getContentData<HistoryType>(contentType, slug);
   return {
     title: `The History Behind ${title}`,
   };

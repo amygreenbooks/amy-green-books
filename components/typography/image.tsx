@@ -7,7 +7,7 @@ export default function Image({
   alt,
   width,
   height,
-}: ImgHTMLAttributes<HTMLImageElement>) {
+}: ImgHTMLAttributes<HTMLImageElement> & { src: string }) {
   if (!src || !alt || !width || !height) return null;
   return (
     <NextImage

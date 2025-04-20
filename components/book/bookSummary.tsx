@@ -26,7 +26,7 @@ export default function BookSummary({
   flipped?: boolean;
   priority?: boolean;
 }) {
-  const isReleased = !releaseDate || releaseDate < new Date(Date.now());
+  const isReleased = !releaseDate || Date.parse(releaseDate) < Date.now();
   let retailer = null;
   if (retailers && retailers.length > 0) {
     retailer = retailers.reduce((acc, n) =>

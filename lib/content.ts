@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 import { notFound } from "next/navigation";
 
@@ -23,7 +23,7 @@ export const getHistoryPages = async () =>
   await getSortedContentData<HistoryType>("history");
 
 export async function getSortedContentData<
-  TData extends Record<string, unknown> & { date: Date },
+  TData extends Record<string, unknown> & { date: string },
 >(contentType: string): Promise<Array<MarkdownResult<TData>>> {
   // Get file names under /content/{contentType}
   const dirPath = path.join(postsDirectory, contentType);
@@ -54,7 +54,7 @@ export async function getSortedContentData<
   // Sort posts by date
   return allData
     .filter(
-      (d) => !d.frontmatter.date || d.frontmatter.date < new Date(Date.now()),
+      (d) => !d.frontmatter.date || Date.parse(d.frontmatter.date) < Date.now(),
     )
     .sort((a, b) => {
       if (
@@ -108,10 +108,10 @@ export async function getContentData<
 
 export type BookType = {
   title: string;
-  date: Date;
+  date: string;
   description: string;
   isbn?: string;
-  releaseDate?: Date;
+  releaseDate?: string;
   image: string;
   spineImage?: string;
   retailers: Retailer[];
@@ -132,7 +132,7 @@ export type Endorsement = {
 };
 
 export type HistoryType = {
-  date: Date;
+  date: string;
   title: string;
   image: string;
 };
@@ -140,6 +140,6 @@ export type HistoryType = {
 export type PageType = {
   description: string;
   bannerImage?: string;
-  date: Date;
+  date: string;
   title: string;
 };

@@ -53,9 +53,11 @@ export default async function Page() {
         </div>
       </header>
 
-      <section>
-        <BookSummary book={books[0]} priority />
-      </section>
+      {books.length > 0 && (
+        <section>
+          <BookSummary book={books[0]} priority />
+        </section>
+      )}
 
       <NewsletterSection id="2157311" />
 

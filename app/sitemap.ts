@@ -3,6 +3,8 @@ import { MetadataRoute } from "next";
 import { getBooks, getHistoryPages, getPages } from "@/lib/content";
 import { domain } from "@/lib/siteConfig";
 
+export const dynamic = "force-static";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const books = (await getBooks()).map((b) => ({
     url: `${domain}/books/${b.id}`,

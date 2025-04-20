@@ -24,7 +24,7 @@ export default function Book({
   content: React.ReactElement;
   otherBooks: MarkdownResult<BookType>[];
 }) {
-  const isReleased = releaseDate && releaseDate < new Date(Date.now());
+  const isReleased = releaseDate && Date.parse(releaseDate) < Date.now();
 
   return (
     <article

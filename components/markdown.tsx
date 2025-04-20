@@ -1,4 +1,4 @@
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { H1, H2, H3, H4, H5, H6 } from "./typography/h";
 import MarkdownLink from "./typography/link";
@@ -9,7 +9,7 @@ interface MarkdownProps {
 }
 
 const Markdown = ({ source, noParagraph = false }: MarkdownProps) => {
-  const components: MDXRemoteProps["components"] = {
+  const components = {
     h1: H1,
     h2: H2,
     h3: H3,
@@ -20,7 +20,15 @@ const Markdown = ({ source, noParagraph = false }: MarkdownProps) => {
   };
 
   if (noParagraph) {
-    components.p = ({ children }) => <>{children}</>;
+    return (
+      <MDXRemote
+        source={source}
+        components={{
+          ...components,
+          p: ({ children }) => <>{children}</>,
+        }}
+      />
+    );
   }
 
   return <MDXRemote source={source} components={components} />;

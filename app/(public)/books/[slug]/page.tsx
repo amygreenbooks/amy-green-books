@@ -11,14 +11,14 @@ import {
 } from "@/lib/content";
 import { author, domain } from "@/lib/siteConfig";
 
-type BookPageParams = { slug: string };
+type BookPageParams = Promise<{ slug: string }>;
 
 export default async function BookPage({ params }: { params: BookPageParams }) {
-  const bookData = await getContentData<BookType>("books", params.slug);
+  const { slug } = await params;
+  const bookData = await getContentData<BookType>("books", slug);
   const allBooks = await getBooks();
-  const otherBooks = allBooks.filter((n) => n.id !== params.slug);
-  const history =
-    (await getHistoryPages()).find((n) => n.id === params.slug) || null;
+  const otherBooks = allBooks.filter((n) => n.id !== slug);
+  const history = (await getHistoryPages()).find((n) => n.id === slug) || null;
 
   return (
     <>
@@ -54,9 +54,10 @@ export async function generateMetadata({
 }: {
   params: BookPageParams;
 }): Promise<Metadata> {
+  const { slug } = await params;
   const { frontmatter: bookData } = await getContentData<BookType>(
     "books",
-    params.slug,
+    slug,
   );
   return {
     title: bookData.title,
@@ -67,7 +68,9 @@ export async function generateMetadata({
       type: "book",
       authors: [author],
       isbn: bookData.isbn,
-      releaseDate: bookData.releaseDate?.toISOString(),
+      releaseDate: bookData.releaseDate
+        ? new Date(Date.parse(bookData.releaseDate)).toISOString()
+        : undefined,
       images: [
         {
           url: `${domain}${bookData.image}`,
