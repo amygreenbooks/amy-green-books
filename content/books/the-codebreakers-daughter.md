@@ -18,7 +18,7 @@ retailers:
   - image: BAM
     link: https://www.booksamillion.com/p/Codebreakers-Daughter/Amy-Lynn-Green/9780764242991
     name: BAM
-   - image: BarnesAndNoble
+  - image: BarnesAndNoble
     link: https://www.barnesandnoble.com/w/the-codebreakers-daughter-amy-lynn-green/1146440630
     name: Barnes & Noble
   - image: ChristianBook
