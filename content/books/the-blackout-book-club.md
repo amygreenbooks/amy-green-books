@@ -20,16 +20,13 @@ retailers:
     link: https://bakerbookhouse.com/products/431778
     name: Baker Book House
   - image: BAM
-    link: >-
-      https://www.booksamillion.com/p/Blackout-Book-Club/Amy-Lynn-Green/9780764239564?id=7838045165670
+    link: https://www.booksamillion.com/p/Blackout-Book-Club/Amy-Lynn-Green/9780764239564
     name: BAM
   - image: BarnesAndNoble
-    link: >-
-      https://www.barnesandnoble.com/w/the-blackout-book-club-amy-lynn-green/1141012099?ean=9780764239564
+    link: https://www.barnesandnoble.com/w/the-blackout-book-club-amy-lynn-green/1141012099
     name: Barnes & Noble
   - image: ChristianBook
-    link: >-
-      https://www.christianbook.com/the-blackout-book-club/9780764239564/pd/239564
+    link: https://www.christianbook.com/the-blackout-book-club/9780764239564/pd/239564
     name: Christian Book
   - image: IndieBound
     link: https://www.indiebound.org/book/9780764239564
