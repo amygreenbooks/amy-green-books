@@ -33,6 +33,7 @@ export default function BookSummary({
       n.name === "Baker Book House" ? n : acc,
     );
   }
+  console.log("retailer", retailer);
 
   return (
     <div
@@ -80,14 +81,14 @@ export default function BookSummary({
             <Link href={`/books/${id}`} className="btn raise">
               Learn more →
             </Link>
-            {!isReleased && retailer && (
+            {retailer && (
               <a
                 href={retailer.link}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-primary white f6 btn raise ml2"
               >
-                Pre-Order Now!
+                {isReleased ? "Purchase" : "Pre-Order Now!"}
               </a>
             )}
           </footer>
