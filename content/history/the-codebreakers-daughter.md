@@ -8,16 +8,16 @@ image: OSSWomen_oobf1w
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/RiverbankPool_tqkobv" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/RiverbankPool_tqkobv 2x" width="580"/>
-  <figcaption className="tc">Guests swimming in George Fabyan's Roman-themed swimming pool</figcaption>
+  <figcaption className="tc">The pool at Riverbank.</figcaption>
 </figure>
 
 **Fiction**: There were several notable arrests of fifth column spies during the war years, many of whom were once associated with organizations like the German Bund, but the OSS never identified any infiltrators. A few agents suspected of fascist or strong communist leanings were weeded out during interviews and psychological testing, however, so _The Codebreaker’s Daughter_ serves as my “what-if” for the scenario of a double agent making it through.
 
-**Fact**: The board game Juden Raus! was created in 1938 by a private company just as Mr. Agnew describes. It showed no Nazi insignias (the Nazis felt the game trivialized the serious deportation policies they supported). The goal of the game was to round up six caricatured Jewish pawns and bring them to the collection site to be sent away to Palestine. The Wiener Holocaust Library has two copies on display as a reminder of the appalling effect of antisemitism aimed at the country’s youngest citizens.
+**Fact**: The board game _Juden Raus_! was created in 1938 by a private company just as Mr. Agnew describes. It showed no Nazi insignias (the Nazis felt the game trivialized the serious deportation policies they supported). The goal of the game was to round up six caricatured Jewish pawns and bring them to the collection site to be sent away to Palestine. The Wiener Holocaust Library has two copies on display as a reminder of the appalling effect of antisemitism aimed at the country’s youngest citizens.
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/BoardGame_h1fc5v" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/BoardGame_h1fc5v 2x" width="580"/>
-  <figcaption className="tc">The game board from Juden Raus!</figcaption>
+  <figcaption className="tc">The game board from _Juden Raus_!</figcaption>
 </figure>
 
 **Fiction**: While the OSS created and used ciphers in their work and supported resistance groups in occupied countries, the Italian resistance cipher Dinah works on in the novel is fictional (although the book she uses for research in the Freidmans’ collection does exist). I chose not to give the credit for an actual project to my fictional character.
@@ -29,7 +29,7 @@ image: OSSWomen_oobf1w
   <figcaption className="tc">Members of the OSS in front of the National Archives building in 1944</figcaption>
 </figure>
 
-**Fact** and Fiction: All of the specific Morale Operations campaigns discussed in the novel are accurate, such as The League of Lonely War Women, the poster with the moth and flame written in Japanese, and the infamous Hitler-patterned toilet paper. The rumors Dinah submits for use in the Soldatensender radio station are loosely based on real ones leaked to the German army. However, none of the named OSS characters (aside from references to higher-ups like William Donovan) are historical figures. Another change I made was combining Morale Operations offices in D.C. and New York City into one location to better include the wide range of activities the branch participated in.
+**Fact and Fiction**: All of the specific Morale Operations campaigns discussed in the novel are accurate, such as The League of Lonely War Women, the poster with the moth and flame written in Japanese, and the infamous Hitler-patterned toilet paper. The rumors Dinah submits for use in the _Soldatensender_ radio station are loosely based on real ones leaked to the German army. However, none of the named OSS characters (aside from references to higher-ups like William Donovan) are historical figures. Another change I made was combining Morale Operations offices in D.C. and New York City into one location to better include the wide range of activities the branch participated in.
 
 ---
 

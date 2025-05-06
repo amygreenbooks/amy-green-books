@@ -22,9 +22,9 @@ export default function BookSummary({
   flipped = false,
   priority = false,
 }: {
-  book: MarkdownResult<BookType>;
-  flipped?: boolean;
-  priority?: boolean;
+  readonly book: MarkdownResult<BookType>;
+  readonly flipped?: boolean;
+  readonly priority?: boolean;
 }) {
   const isReleased = !releaseDate || Date.parse(releaseDate) < Date.now();
   let retailer = null;
@@ -33,7 +33,6 @@ export default function BookSummary({
       n.name === "Baker Book House" ? n : acc,
     );
   }
-  console.log("retailer", retailer);
 
   return (
     <div
