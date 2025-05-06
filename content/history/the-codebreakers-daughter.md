@@ -13,11 +13,11 @@ image: OSSWomen_oobf1w
 
 **Fiction**: There were several notable arrests of fifth column spies during the war years, many of whom were once associated with organizations like the German Bund, but the OSS never identified any infiltrators. A few agents suspected of fascist or strong communist leanings were weeded out during interviews and psychological testing, however, so _The Codebreaker’s Daughter_ serves as my “what-if” for the scenario of a double agent making it through.
 
-**Fact**: The board game _Juden Raus_! was created in 1938 by a private company just as Mr. Agnew describes. It showed no Nazi insignias (the Nazis felt the game trivialized the serious deportation policies they supported). The goal of the game was to round up six caricatured Jewish pawns and bring them to the collection site to be sent away to Palestine. The Wiener Holocaust Library has two copies on display as a reminder of the appalling effect of antisemitism aimed at the country’s youngest citizens.
+**Fact**: The board game _Juden Raus!_ was created in 1938 by a private company just as Mr. Agnew describes. It showed no Nazi insignias (the Nazis felt the game trivialized the serious deportation policies they supported). The goal of the game was to round up six caricatured Jewish pawns and bring them to the collection site to be sent away to Palestine. The Wiener Holocaust Library has two copies on display as a reminder of the appalling effect of antisemitism aimed at the country’s youngest citizens.
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/BoardGame_h1fc5v" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/BoardGame_h1fc5v 2x" width="580"/>
-  <figcaption className="tc">The game board from _Juden Raus_!</figcaption>
+  <figcaption className="tc">The game board from _Juden Raus!_</figcaption>
 </figure>
 
 **Fiction**: While the OSS created and used ciphers in their work and supported resistance groups in occupied countries, the Italian resistance cipher Dinah works on in the novel is fictional (although the book she uses for research in the Freidmans’ collection does exist). I chose not to give the credit for an actual project to my fictional character.
