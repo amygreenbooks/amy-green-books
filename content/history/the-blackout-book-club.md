@@ -28,3 +28,7 @@ image: VictoryBook_uirj3v
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/Hooligan" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/Hooligan 2x" width="580" alt="The hooligan navy"/>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/UBoat" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/UBoat 2x" width="580" alt="A german UBoat"/>
 </figure>
+
+---
+
+**Wondering about a detail of _The Blackout Book Club_ I didn’t mention here?** Feel free to send me an email via my [Contact](/contact) page, and I’ll let you know what’s fact and fiction.

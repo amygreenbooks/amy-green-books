@@ -8,9 +8,7 @@ image: TranslatorSchool
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/TranslatorSchool" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/TranslatorSchool 2x" width="580" />
-  <figcaption>
-    Some of the students at the MIS language school pausing work to pose for a photo. Photo courtesy of the Minnesota Historical Society Collections
-  </figcaption>
+  <figcaption className="tc">Some of the students at the MIS language school pausing work to pose for a photo. Photo courtesy of the Minnesota Historical Society Collections</figcaption>
 </figure>
 
 **Fiction:** Ironside Lake is only a real place in my imagination, though the events that took place there are based on many real experiences in small towns hosting POW camps in Minnesota. Thawing Day is also a tradition that I invented for the story, inspired by my tendency to lose gloves in snow drifts.
@@ -19,9 +17,7 @@ image: TranslatorSchool
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/pows" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/pows 2x" width="580" />
-  <figcaption>
-    German POWs in their barracks. Photo courtesy of the Minnesota Historical Society Collections
-  </figcaption>
+  <figcaption className="tc">German POWs in their barracks. Photo courtesy of the Minnesota Historical Society Collections</figcaption>
 </figure>
 
 **Fiction:** While several larger POW branches had newspapers written by POWs and distributed among the camp residents and staff, “The POW Potato Brigade” column was invented for the novel, and as far as I’m aware, there was no real-world equivalent.
@@ -34,9 +30,7 @@ image: TranslatorSchool
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/johnaiso" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/johnaiso 2x" height="500" />
-  <figcaption>
-    John Aiso, head of the language school. Photo courtesy of Japanese American Archival Collection, California State University
-  </figcaption>
+  <figcaption className="tc">John Aiso, head of the language school. Photo courtesy of Japanese American Archival Collection, California State University</figcaption>
 </figure>
 
 **Dr. Howard Hong:** This former philosophy professor really did visit all of the Minnesota camps on behalf of YMCA War Prisoners’ Aid, bringing books, musical instruments, and other leisure-time aids, as well as helping camps develop programs and classes to keep the men productively occupied until the war’s end. Many POWs credit him with their positive experience in Minnesota camps.
