@@ -5,7 +5,7 @@ date: 2024-10-28T06:00:00
 releaseDate: 2025-06-17
 description: >-
   Lillian once cracked ciphers during WWI—now, her daughter, Dinah, creates Allied rumors and propaganda for the WWII OSS. Though Lillian is hesitant to return to wartime work, she is drawn to Washington, DC, by an old friend. As a web of intrigue grows ever wider, mother and daughter must confront secrets in DC before the impending D-Day is compromised.
-image: /codebreakers-daughter
+image: /codebreakers-daughter-v2
 spineImage: /codebreakers-daughter-spine
 paperTint: rgb(181 126 106 / 29%)
 retailers:
