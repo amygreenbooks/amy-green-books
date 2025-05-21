@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: amygreenbooks/amy-green-books
   branch: main
 
 media_library:
