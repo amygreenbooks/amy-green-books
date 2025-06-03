@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@next/mdx':
-        specifier: ^15.3.2
+        specifier: ^15.3.3
         version: 15.3.3(@mdx-js/react@3.1.0(@types/react@19.1.6)(react@19.1.0))
       classnames:
         specifier: ^2.5.1
