@@ -27,7 +27,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^15.3.2",
     "@types/lodash.throttle": "^4.1.9",
-    "@types/node": "22.15.21",
+    "@types/node": "22.15.30",
     "@types/react": "^19.1.5",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.32.1",
