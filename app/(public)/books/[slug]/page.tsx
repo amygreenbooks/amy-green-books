@@ -34,7 +34,6 @@ export default async function BookPage({ params }: { params: BookPageParams }) {
     retailers,
     endorsements,
     paperTint,
-    isbn,
   } = bookData.frontmatter;
   const isReleased = releaseDate && Date.parse(releaseDate) < Date.now();
 
