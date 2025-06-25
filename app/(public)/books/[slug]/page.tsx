@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import BookCover from "@/components/book/bookCover";
 import BookNavigation from "@/components/book/bookNavigation";
 import Endorsements from "@/components/book/endorsements";
-import GoodReads from "@/components/book/goodReads";
+// import GoodReads from "@/components/book/goodReads";
 import HistoryLink from "@/components/book/historyLink";
 import RetailerComp from "@/components/book/retailer";
 import DateComponent from "@/components/date";
@@ -121,7 +121,7 @@ export default async function BookPage({ params }: { params: BookPageParams }) {
         </section>
       )}
 
-      {isbn && <GoodReads className={styles.goodReads} isbn={isbn} />}
+      {/* {isbn && <GoodReads className={styles.goodReads} isbn={isbn} />} */}
     </article>
   );
 }
