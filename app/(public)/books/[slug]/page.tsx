@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 
-import styles from "./book.module.css";
-import DateComponent from "@/components/date";
 import BookCover from "@/components/book/bookCover";
-import RetailerComp from "@/components/book/retailer";
-import Endorsements from "@/components/book/endorsements";
 import BookNavigation from "@/components/book/bookNavigation";
-import HistoryLink from "@/components/book/historyLink";
+import Endorsements from "@/components/book/endorsements";
 import GoodReads from "@/components/book/goodReads";
+import HistoryLink from "@/components/book/historyLink";
+import RetailerComp from "@/components/book/retailer";
+import DateComponent from "@/components/date";
 import {
   BookType,
   getAllContentIds,
@@ -16,6 +15,8 @@ import {
   getHistoryPages,
 } from "@/lib/content";
 import { author, domain } from "@/lib/siteConfig";
+
+import styles from "./book.module.css";
 
 type BookPageParams = Promise<{ slug: string }>;
 

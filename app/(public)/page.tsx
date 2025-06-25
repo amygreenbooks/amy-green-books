@@ -1,11 +1,10 @@
 import cn from "classnames";
 
 import BookSummary from "@/components/book/bookSummary";
+import CldImage from "@/components/CldImage";
 import Markdown from "@/components/markdown";
 import NewsletterSection from "@/components/newsletter/newsletterSection";
 import { getContentData, getBooks } from "@/lib/content";
-
-import CldImage from "@/components/CldImage";
 
 type HomeContent = {
   title: string;

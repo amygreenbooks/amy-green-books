@@ -1,6 +1,7 @@
 "use client";
 
 import cn from "classnames";
+
 import CldImage from "../CldImage";
 
 interface JumbotronProps {

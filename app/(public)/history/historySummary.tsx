@@ -1,9 +1,9 @@
 import cn from "classnames";
-import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./historySummary.module.css";
 import CldImage from "@/components/CldImage";
+
+import styles from "./historySummary.module.css";
 
 export default function HistorySummary({
   id,

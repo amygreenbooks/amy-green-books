@@ -1,9 +1,8 @@
 import cn from "classnames";
-import Image from "next/image";
 
 import styles from "./bookCover.module.css";
-import ScrollAnimation from "../util/animateOnScroll";
 import CldImage from "../CldImage";
+import ScrollAnimation from "../util/animateOnScroll";
 
 const BookCover = ({
   title,

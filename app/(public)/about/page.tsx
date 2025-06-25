@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
-import { getContentData } from "@/lib/content";
 import CldImage from "@/components/CldImage";
+import { getContentData } from "@/lib/content";
 
 export type AboutContent = {
   date: number;
