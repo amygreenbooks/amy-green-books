@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import styles from "./retailer.module.css";
+import CldImage from "../CldImage";
 
 export default function Retailer({
   link,
@@ -19,13 +18,13 @@ export default function Retailer({
         rel="noreferrer"
         href={link}
       >
-        <Image
+        <CldImage
           width={300}
           height={100}
           src={image}
           alt={name}
           className={`db mw-100 br0 center ${styles.img}`}
-        ></Image>
+        />
       </a>
     </div>
   );

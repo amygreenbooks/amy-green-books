@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./historySummary.module.css";
+import CldImage from "@/components/CldImage";
 
 export default function HistorySummary({
   id,
@@ -19,10 +20,12 @@ export default function HistorySummary({
     <Link href={`/history/${id}`} className={cn(styles.link, "db pv3 mb4 br1")}>
       <article id={id} className="flex-ns items-center">
         <div className={cn("ph3", { "order-last-ns": flip })}>
-          <Image
-            src={`/ar_26:15,c_fill/${image}`}
+          <CldImage
+            src={image}
             width={260}
             height={150}
+            aspectRatio="26:15"
+            crop="fill"
             alt={`The History Behind ${title}`}
             className="db center"
           />

@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import styles from "./bookCover.module.css";
 import ScrollAnimation from "../util/animateOnScroll";
+import CldImage from "../CldImage";
 
 const BookCover = ({
   title,
@@ -28,7 +29,7 @@ const BookCover = ({
       {...props}
     >
       {spineImage && (
-        <Image
+        <CldImage
           src={spineImage}
           className={styles.spine}
           alt=""
@@ -38,7 +39,7 @@ const BookCover = ({
         />
       )}
 
-      <Image
+      <CldImage
         src={image}
         className={styles.cover}
         alt={title}

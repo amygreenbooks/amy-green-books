@@ -1,7 +1,7 @@
 "use client";
 
 import cn from "classnames";
-import Image from "next/image";
+import CldImage from "../CldImage";
 
 interface JumbotronProps {
   title: string;
@@ -12,7 +12,14 @@ interface JumbotronProps {
 export default function Jumbotron({ title, subtitle, image }: JumbotronProps) {
   return (
     <div className={cn("pv5 ph3 pv6-l relative")}>
-      <Image src={image} fill alt="" className="of-cover br0" priority />
+      <CldImage
+        src={image}
+        fill
+        alt=""
+        className="of-cover br0"
+        priority
+        sizes="100vw"
+      />
       <div className="mw7 center">
         <div className="db mb3">
           <div className="mw7 relative mb2">

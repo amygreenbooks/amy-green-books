@@ -1,12 +1,11 @@
 import cn from "classnames";
-import Image from "next/image";
 
 import BookSummary from "@/components/book/bookSummary";
 import Markdown from "@/components/markdown";
 import NewsletterSection from "@/components/newsletter/newsletterSection";
 import { getContentData, getBooks } from "@/lib/content";
 
-import styles from "./page.module.css";
+import CldImage from "@/components/CldImage";
 
 type HomeContent = {
   title: string;
@@ -16,7 +15,6 @@ type HomeContent = {
   welcome: {
     text: string;
     heading: string;
-    image: string;
   };
 };
 
@@ -34,17 +32,14 @@ export default async function Page() {
           `justify-center pv5 ph3 serif`,
         )}
       >
-        <Image
-          src="/meet-amy.png"
+        <CldImage
+          src="Amy_Lynn_Green_glvzmk"
           alt="A photo of Amy Lynn Green"
           width={240}
           height={240}
+          crop="fill"
           priority
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-          className={`db br-100 mr5-ns paper-2 ${styles.headShot}`}
+          className={`db br-100 mr5-ns paper-2`}
         />
 
         <div>
@@ -73,12 +68,15 @@ export default async function Page() {
             ["order-last-m"]: books.length % 2 === 1,
           })}
         >
-          <Image
-            src={welcome.image}
+          <CldImage
+            src="Amy_Lynn_Green2_ixvivg"
             width={350}
             height={464}
+            crop="fill"
+            gravity="auto"
+            zoom="1.3"
             alt="Amy Lynn Green"
-            className="db mb2 center"
+            className="db mb2 center mw-100 mw-none-ns h-auto h-100-ns"
           />
         </div>
 

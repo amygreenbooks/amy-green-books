@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./bookNavigation.module.css";
 import { MarkdownResult, BookType } from "../../lib/content";
+import CldImage from "../CldImage";
 
 function BookNavLink({
   id,
@@ -16,7 +16,7 @@ function BookNavLink({
         style={{ "--paper-tint": paperTint } as React.CSSProperties}
       >
         {image && (
-          <Image
+          <CldImage
             src={image}
             height={120}
             width={78}

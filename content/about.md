@@ -1,6 +1,5 @@
 ---
 title: Meet Amy
-aboutImage: /meet-amy.png
 ---
 
 Amy Lynn Green is a lifelong lover of books, history, and library cards. She worked in publishing for six years before writing her first historical fiction novel, based on the WWII home front of Minnesota, the state where she lives, works, and survives long winters. She has taught classes on marketing at writer’s conferences and regularly encourages established and aspiring authors in their publication journeys. In her novels (and her daily life), she loves exploring the intersection of faith and fiction and searches for answers to present-day questions by looking to the past.
