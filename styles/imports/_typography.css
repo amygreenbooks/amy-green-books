@@ -16,7 +16,7 @@ html {
 }
 
 html {
-  background-color: var(#f0f2ee);
+  background-color: #f0f2ee;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
   font-weight: var(--body-font-weight);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(#f0f2ee);
+  background-color: #f0f2ee;
 }
 
 p {
