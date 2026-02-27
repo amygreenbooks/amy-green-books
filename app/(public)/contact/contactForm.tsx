@@ -63,7 +63,7 @@ export default function ContactForm({
   return (
     <div className="relative z-0 ph3">
       <article
-        className={cn(`mw6 center pa3 mt4 mb5 paper-2 br1 bg-white`, {
+        className={cn(`mw6 center pa3 mt4 mb5 paper-1 br1 bg-white`, {
           [styles.envelope]: success,
           [styles.letter]: !success,
         })}

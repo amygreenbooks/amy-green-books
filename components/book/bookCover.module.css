@@ -41,7 +41,7 @@ img.spine {
   position: absolute;
   transform-origin: right;
   height: 100%;
-  width: auto;
+  width: 58px;
 }
 
 .animatedBook .cover,

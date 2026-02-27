@@ -9,30 +9,19 @@ function BookNavLink({
   frontmatter: { image, title, paperTint },
 }: MarkdownResult<BookType>) {
   return (
-    <>
-      <Link
-        href={`/books/${id}`}
-        className={`flex items-center pa2 br1 ${styles["book-link"]}`}
-        style={{ "--paper-tint": paperTint } as React.CSSProperties}
-      >
-        {image && (
-          <CldImage
-            src={image}
-            height={120}
-            width={78}
-            aria-labelledby={`exp-book-${id}`}
-            alt=""
-            className={styles.cover}
-          />
-        )}
-        <div className="ml3 ml2-ns">
-          <h4 className="f5 f6-ns b i mb1 serif" id={`exp-book-${id}`}>
-            {title}
-          </h4>
-          <p className="ma0 f6">View Book</p>
-        </div>
-      </Link>
-    </>
+    <Link
+      href={`/books/${id}`}
+      className={`flex items-center justify-center pa2 br1 ${styles["book-link"]}`}
+      style={{ "--paper-tint": paperTint } as React.CSSProperties}
+    >
+      <CldImage
+        src={image}
+        height={280}
+        width={182}
+        alt={title}
+        className={styles.cover}
+      />
+    </Link>
   );
 }
 
@@ -44,12 +33,12 @@ export default function BookNavigation({
   return (
     <>
       <h2 className="lh-title black f3 b mb1 serif">Explore my other books</h2>
-      <div className="flex-ns flex-wrap mhn2">
-        {otherBooks.map((book) => (
-          <div className={styles["book-nav"]} key={book.id}>
-            <BookNavLink {...book} />
-          </div>
-        ))}
+      <div className={`mhn2 ${styles["book-nav-container"]}`}>
+        {otherBooks
+          .filter((b) => !!b.frontmatter.image)
+          .map((book) => (
+            <BookNavLink {...book} key={book.id} />
+          ))}
       </div>
     </>
   );

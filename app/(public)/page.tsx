@@ -37,8 +37,8 @@ export default async function Page() {
           width={240}
           height={240}
           crop="fill"
-          priority
-          className={`db br-100 mr5-ns paper-2`}
+          preload
+          className={`db br-100 mr5-ns paper-1`}
         />
 
         <div>
