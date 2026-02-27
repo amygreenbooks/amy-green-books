@@ -80,7 +80,7 @@ export default async function BookPage({ params }: { params: BookPageParams }) {
             backgroundColor: paperTint,
           }}
         >
-          <div className={`center ${styles.purchaseContainer}`}>
+          <div className={styles.purchaseContainer}>
             <h2 className="f3 b lh-title serif mb2">
               {isReleased ? "Purchase today at:" : "Pre-order now at:"}
             </h2>
