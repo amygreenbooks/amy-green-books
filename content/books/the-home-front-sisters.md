@@ -1,6 +1,6 @@
 ---
 title: The Home Front Sisters
-isbn:
+isbn: "9780764243004"
 date: 2026-02-26T06:00:00
 releaseDate: 2026-11-17
 image: /home-front-sisters
