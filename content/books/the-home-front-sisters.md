@@ -10,9 +10,15 @@ retailers:
   - image: Amazon
     link: https://www.amazon.com/Home-Front-Sisters-Women-Inspired-Historical/dp/0764243004
     name: Amazon
+  - image: BakerBookHouse
+    link: "https://bakerbookhouse.com/products/9780764243004_the-home-front-sisters"
+    name: Baker Book House
   - image: BarnesAndNoble
     link: https://www.barnesandnoble.com/w/the-home-front-sisters-amy-lynn-green/1149555785
     name: Barnes & Noble
+  - image: IndieBound
+    link: "https://bookshop.org/p/books/the-home-front-sisters-a-world-war-ii-novel-of-little-women-amy-lynn-green/2b65e4ce1a43ef9e"
+    name: Indie Bound
 endorsements:
 ---
 
