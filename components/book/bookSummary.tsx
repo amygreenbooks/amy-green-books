@@ -42,10 +42,7 @@ export default function BookSummary({
       }}
     >
       <article
-        className={cn(
-          styles.article,
-          "items-center flex flex-wrap pv4 mw7 center flex-m flex-wrap items-start",
-        )}
+        className={cn(styles.article, "items-center pv4 mw7 center flex-m")}
       >
         {image && (
           <Link
@@ -65,7 +62,7 @@ export default function BookSummary({
         )}
 
         <div
-          className={`${styles.side} paper-2 br1 mh3 mw5-m ${styles["text-side"]}`}
+          className={`${styles.side} paper-1 br1 mh3 mw5-m ${styles["text-side"]}`}
         >
           <header>
             <h3 className="f3 b i lh-title mb1 serif">{title}</h3>

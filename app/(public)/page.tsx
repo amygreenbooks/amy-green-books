@@ -37,11 +37,11 @@ export default async function Page() {
           width={240}
           height={240}
           crop="fill"
-          priority
-          className={`db br-100 mr5-ns paper-2`}
+          preload
+          className={`db br-100 mr5-ns paper-1`}
         />
 
-        <div>
+        <div className="tc tl-ns">
           <h1 className="f1 fw9 lh-title primary mt3">{title}</h1>
           <p className="f4 fw5 i lh-title mw-100 grey-4 o-60">{subtitle}</p>
         </div>
