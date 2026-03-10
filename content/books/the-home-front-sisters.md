@@ -3,6 +3,8 @@ title: The Home Front Sisters
 isbn: "9780764243004"
 date: 2026-02-26T06:00:00
 releaseDate: 2026-11-17
+description: |
+  World War II pulls the Alcott sisters in different directions. Joan is restless for adventure and finds herself driving a trolley through Philadelphia’s streets, while Amelia serves with the Navy in Florida alongside Lawrence Whitman, the boy next door. Will faith, courage, and sisterhood bonds be enough to see them through to the end of the war?
 image: /home-front-sisters
 spineImage: /home-front-sisters-spine
 paperTint: rgb(136 184 170 / 53%)
