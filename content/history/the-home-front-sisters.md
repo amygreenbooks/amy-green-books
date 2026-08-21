@@ -1,7 +1,7 @@
 ---
 title: The Home Front Sisters
 date: 2026-08-21T06:00:00
-image: WomanDriver
+image: JoanOnSteetcar
 ---
 
 **Fact:** The sinking of the SS _Dorchester_ was a tragic event that shook the nation to its core, especially the story that emerged about how the four chaplains on board gave up their life vests and preached courage and faith to the sailors as the vessel went down. All four chaplains (five in my novel to include my fictional character) were posthumously awarded the Distinguished Service Cross and Purple Heart, and Congress designated February 3 as “Four Chaplains Day” to honor their memory.
@@ -18,7 +18,7 @@ image: WomanDriver
 **Fiction:** While there were WAVE gunnery instructors stationed in Hollywood, Florida and an active USO club that included them in a variety of activities, from dances to “cake parties” to Easter egg dying contests, there’s no record of a talent show or dessert benefit taking place that summer. The parade where Amelia meets Vernon, however, is based in a real and elaborate war bond parade where the WAVEs and soldiers marched through town, along with floats put together by civilians.
 
 <figure>
-  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/NavyGunner" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/NavyGunner 2x" width="580" />
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/NavyGunnerPoster" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/NavyGunnerPoster 2x" width="580" />
   <figcaption className="tc">A wartime recruiting poster for Navy gunners.</figcaption>
 </figure>
 
@@ -27,8 +27,8 @@ image: WomanDriver
 **Fact:** I enjoy including cameos from real, historical characters in my novels. For _The Home Front Sisters_, that includes Carolyn Davenport Moore, one of the organizers of the NAACP resistance to the strike. [Listen to her son talk about her work here](https://www.youtube.com/watch?v=X6ZYtRwNHjI). As I mentioned in the Author’s Note, the Philadelphia Transit Strike of 1944 happened as portrayed in the novel and is considered one of the most damaging home front actions to war production ([read more about it here](https://exhibits.temple.edu/s/civil-rights-in-a-northern-cit/page/what--the-philadelphia-transit)). Charles Stewart was inspired by James Stewart, one of the new Black trolley drivers during and after the strike, pictured below during his training, though James was a musician before becoming a streetcar driver rather than being promoted from within the company. More humorously, it was fun to give a nod to Mike Chrest, the exuberant owner of Mike’s Bar and Grill in Hollywood, friend to locals and sailors alike.
 
 <figure>
-  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/StrikeDriver" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/StrikeDriver 2x" width="580" />
-  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/WomanDriver" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/WomanDriver 2x" width="580" />
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/CharlesStewart" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/CharlesStewart 2x" width="580" />
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/JoanOnSteetcar" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/JoanOnSteetcar 2x" width="580" />
   <figcaption className="tc">James Stewart during his training as a Philadelphia streetcar driver, and a woman at the controls of a wartime trolley.</figcaption>
 </figure>
 
