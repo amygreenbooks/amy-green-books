@@ -1,6 +1,6 @@
 ---
 title: The Home Front Sisters
-date: 2026-10-06T06:00:00
+date: 2026-08-21T06:00:00
 image: WomanDriver
 ---
 
