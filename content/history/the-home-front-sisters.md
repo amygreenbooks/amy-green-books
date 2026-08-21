@@ -1,7 +1,7 @@
 ---
 title: The Home Front Sisters
 date: 2026-08-21T06:00:00
-image: JoanOnSteetcar
+image: JoanOnStreetcar
 ---
 
 **Fact:** The sinking of the SS _Dorchester_ was a tragic event that shook the nation to its core, especially the story that emerged about how the four chaplains on board gave up their life vests and preached courage and faith to the sailors as the vessel went down. All four chaplains (five in my novel to include my fictional character) were posthumously awarded the Distinguished Service Cross and Purple Heart, and Congress designated February 3 as “Four Chaplains Day” to honor their memory.
@@ -28,7 +28,7 @@ image: JoanOnSteetcar
 
 <figure>
   <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/CharlesStewart" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/CharlesStewart 2x" width="580" />
-  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/JoanOnSteetcar" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/JoanOnSteetcar 2x" width="580" />
+  <img src="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_580,q_auto/JoanOnStreetcar" srcSet="https://res.cloudinary.com/dlgzqc5p3/image/upload/f_auto,c_fill,w_1160,q_auto/JoanOnStreetcar 2x" width="580" />
   <figcaption className="tc">James Stewart during his training as a Philadelphia streetcar driver, and a woman at the controls of a wartime trolley.</figcaption>
 </figure>
 
