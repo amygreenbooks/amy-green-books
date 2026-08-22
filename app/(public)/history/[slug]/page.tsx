@@ -28,7 +28,7 @@ export default async function HistoryPage({
 
   return (
     <HistoryLayout {...layoutData} showMoreLink>
-      <article id={id} className="mt6">
+      <article id={id} className="mt4 mt5-ns">
         <header className="mb2">
           <h2 className="f3 b serif">
             The History Behind <em>{title}</em>
