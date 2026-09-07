@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "homeway": {
+      "type": "http",
+      "url": "https://homeway.io/api/mcp"
+    }
+  }
+}
