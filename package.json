@@ -28,7 +28,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^16.1.6",
     "@types/lodash.throttle": "^4.1.9",
-    "@types/node": "24.10.1",
+    "@types/node": "26.6.6",
     "@types/react": "^19.2.14",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
@@ -40,5 +40,5 @@
     "prettier": "^3.8.1",
     "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f"
+  "packageManager": "pnpm@12.16.1"
 }
