@@ -18,10 +18,10 @@
     "next-cloudinary": "^7.0.0",
     "next-mdx-remote": "^6.0.0",
     "postcss": "^8.5.32",
-    "postcss-custom-media": "^11.0.6",
+    "postcss-custom-media": "^12.0.3",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^16.2.0",
-    "postcss-preset-env": "^10.6.1",
+    "postcss-import": "^17.0.1",
+    "postcss-preset-env": "^11.6.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
