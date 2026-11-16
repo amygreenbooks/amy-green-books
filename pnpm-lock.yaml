@@ -182,8 +182,8 @@ importers:
         specifier: ^16.4.5
         version: 16.4.5(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       next-cloudinary:
-        specifier: ^7.0.0
-        version: 7.0.0(next@16.4.5(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
+        specifier: ^7.1.0
+        version: 7.1.0(next@16.4.5(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1)
       next-mdx-remote:
         specifier: ^6.0.0
         version: 6.0.0(@types/react@19.3.0)(react@19.3.1)(supports-color@7.2.0)
@@ -2468,8 +2468,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  next-cloudinary@7.0.0:
-    resolution: {integrity: sha512-+u+kbUU11wiiLuGtT50/UrBHjsMJ5SXUX20I/QEI0QO0aJZb72jJFoWf/rDY9jb7o+VMItcEuoPQJJbIkUxilA==}
+  next-cloudinary@7.1.0:
+    resolution: {integrity: sha512-xqvFjfVWytLNQ2aM2nr85cQiKq+1jt01ugLqlc6TfZ36g6nZhV84kTkxdjuzln8JbnCv1/W+f8pzecE/E+D5wQ==}
     engines: {node: '>=22'}
     peerDependencies:
       next: ^16
@@ -5724,7 +5724,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-cloudinary@7.0.0(next@16.4.5(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1):
+  next-cloudinary@7.1.0(next@16.4.5(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.6)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(react@19.3.1):
     dependencies:
       '@cloudinary-util/types': 1.7.0
       '@cloudinary-util/url-loader': 6.3.2
